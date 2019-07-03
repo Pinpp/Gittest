@@ -1,0 +1,22 @@
+#!/usr/bin/expect
+
+set ip [lindex $argv 0]
+#screen_senssion_name:xot
+set cmd {screen -x -S xot -X stuff $"/home/gwac/xsoft/newxgwacmatchsoft/xot.sh\n"}
+set msg "Restart $ip"
+
+set timeout 30
+log_user 0
+
+spawn -noecho ssh gwac@172.28.2.$ip "$cmd"
+expect {
+	"ssh :" { send_user "$msg : Failed, please check.\n"; exit }
+	timeout { send_user "$msg : Failed, please check.\n"; exit }
+	"yes/no" { send "yes\r"; exp_continue}
+	"*password*" { send "gwac1234\r" }
+	
+}
+expect {
+	"There*screen*" { send_user "$msg : Failed, please check.\n"; exit }
+	eof { send_user "$msg : OK.\n"; exit }
+}

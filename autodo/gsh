@@ -1,0 +1,30 @@
+#!/usr/bin/expect --
+
+log_user 0
+set timeout -1
+
+if { $argc==1 } {
+	set ip [lindex $argv 0]
+	send_user "== ssh gwac@$ip =="
+	spawn -noecho ssh gwac@$ip
+}
+
+if { $argc!=1 } {
+	set args [lindex $argv 0]
+	set ip [lindex $argv 1]
+	send_user "== ssh $args gwac@$ip =="
+	spawn -noecho ssh $args gwac@$ip
+}
+
+send_user "\n"
+
+expect {
+	eof { exit }
+        "yes/no" { send "yes\r"; exp_continue } 
+        "*password*" { send "gwac1234\r" }
+}
+expect 
+	"*try*again*" 
+	 send "123456\r"
+
+interact

@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+
+set timeout 30
+log_user 0
+
+set ip [lindex $argv 0]
+set msg "ssh $ip"
+
+spawn -noecho ssh gwac@172.28.2.$ip
+expect {
+        "ssh :" { send_user "$msg : Failed, please check.\n"; exit }
+        timeout { send_user "$msg : Failed, please check.\n"; exit }
+        "yes/no" { send "yes\r"; exp_continue}
+        "*password" { send "gwac1234\r"}
+}
+interact

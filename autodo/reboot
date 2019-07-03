@@ -1,0 +1,21 @@
+#!/usr/bin/expect
+
+log_user 0
+set timeout 30
+
+set ip [lindex $argv 0]
+set cmd "sudo reboot"
+set msg "Reboot $ip"
+
+spawn -noecho ssh -t gwac@172.28.2.$ip "$cmd"
+expect {
+        "ssh :" { send_user "$msg : Failed, please check.\n"; exit }
+        timeout { send_user "$msg : Failed, please check.\n"; exit }
+        "yes/no" { send "yes\r"; exp_continue}
+        "*password*" { send "gwac1234\r"; exp_continue}
+        "*password*" { send "gwac1234\r"}
+}
+#expect eof
+#        send_user "$msg : OK.\n"; exit
+send_user "$msg : OK.\n"
+exit

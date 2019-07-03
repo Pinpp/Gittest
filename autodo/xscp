@@ -1,0 +1,22 @@
+#!/usr/bin/expect --
+
+log_user 0
+set timeout 30
+
+set ip [lindex $argv 0]
+set file [lindex $argv 1]
+set re_path [lindex $argv 2]
+
+send_user "scp $file to $re_path in $ip"
+
+spawn -noecho bash -c "scp -r $file gwac@$ip:$re_path"
+expect {
+        timeout { send_user "Timeout.\n"; exit }
+        #timeout { exit }
+        "yes/no" { send "yes\r"; exp_continue}
+        "*password*" { send "gwac1234\r"}
+}
+
+expect eof
+        send_user " OK.\n"; exit
+        exit
