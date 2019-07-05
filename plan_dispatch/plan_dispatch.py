@@ -70,12 +70,13 @@ def con_db():
     database = 'gwacyw'
     user = 'yunwei'
     password = 'gwac1234'
-    try:
-        db = psycopg2.connect(host=host, port=5432, user=user, password=password, database=database)
-        return db
-    except psycopg2.Error, e:
-        print e
-        return False
+    while true:
+        try:
+            db = psycopg2.connect(host=host, port=5432, user=user, password=password, database=database)
+        except psycopg2.Error, e:
+            print e
+        else:
+            return db
 
 def sql_get(sql, n=1):
     db = con_db()
@@ -185,6 +186,10 @@ def get_obj_inf(obj):            ### Get the infomation.
         if group_id  == "XL002":
             filter = "Lum"
         if group_id  == "XL003":
+            filter = "R"
+            print "\nWARNING: The filter of %s input Error, using filter R." % obj
+    if filter == "U":
+        if group_id  == "XL002":
             filter = "R"
             print "\nWARNING: The filter of %s input Error, using filter R." % obj
     if len(obj_name) > 20:
