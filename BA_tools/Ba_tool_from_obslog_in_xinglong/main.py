@@ -123,9 +123,9 @@ for obj in objs2:
                 if res:
                     print log
                     #lf.write("\n%s %s\n" % (log,item_t))
-                    bk_mark = 0
+                    mark = 0
                     for item in res:
-                        #print item.strip()
+                        print item.strip()
                         bk_t = re.search(r'^(\d\d:\d\d:\d\d) >>',item)
                         if bk_t and item_t == dt_b and bk_t.group(1) < '12:00:00':
                             print '\nBreak in beg'
@@ -140,13 +140,16 @@ for obj in objs2:
                             b_t = item_t +'T'+ res_re_b.group(1)
                             b_t = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(b_t, "%Y%m%dT%H:%M:%S"))).strftime("%Y-%m-%dT%H:%M:%S")
                             u_id_b = res_re_b.group(2)
+                            mark = 1
                         res_re_e = re.search(r'(\d\d:\d\d:\d\d) >> plan<.*?> on <001:(.*?)> is over',item)
                         if res_re_e:
                             e_t = item_t +'T'+ res_re_e.group(1)
                             e_t = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(e_t, "%Y%m%dT%H:%M:%S"))).strftime("%Y-%m-%dT%H:%M:%S")
                             u_id_e = res_re_e.group(2)
+                            if mark == 1:
+                                mark = 2
                         #lf.write('\n'+item)
-                        if (b_t and e_t and u_id_b and u_id_e) and e_t > b_t and u_id_b == u_id_e:
+                        if mark == 2 and (b_t and e_t and u_id_b and u_id_e) and e_t > b_t and u_id_b == u_id_e:
                             print "\n%s %s %s %s %s %s %s %s\n" % (res_x[0][0],res_x[0][1],res_x[0][2],res_x[0][3],res_x[0][4],b_t,e_t,u_id_b)
                             lf.write("\n%s %s %s %s %s %s %s %s\n" % (res_x[0][0],res_x[0][1],res_x[0][2],res_x[0][3],res_x[0][4],b_t,e_t,u_id_b))
             lf.write('\n')
