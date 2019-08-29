@@ -70,13 +70,12 @@ def con_db():
     database = 'gwacyw'
     user = 'yunwei'
     password = 'gwac1234'
-    while true:
-        try:
-            db = psycopg2.connect(host=host, port=5432, user=user, password=password, database=database)
-        except psycopg2.Error, e:
-            print e
-        else:
-            return db
+    try:
+        db = psycopg2.connect(host=host, port=5432, user=user, password=password, database=database)
+        return db
+    except psycopg2.Error, e:
+        print e
+        return False
 
 def sql_get(sql, n=1):
     db = con_db()
@@ -186,10 +185,6 @@ def get_obj_inf(obj):            ### Get the infomation.
         if group_id  == "XL002":
             filter = "Lum"
         if group_id  == "XL003":
-            filter = "R"
-            print "\nWARNING: The filter of %s input Error, using filter R." % obj
-    if filter == "U":
-        if group_id  == "XL002":
             filter = "R"
             print "\nWARNING: The filter of %s input Error, using filter R." % obj
     if len(obj_name) > 20:
@@ -354,17 +349,45 @@ def send_db_in_end(obj):
     infs = get_obj_inf(obj)
     group_id = infs["group_id"]
     obs_stag = ''
-    i = 0
-    while True:
-        i += 1
-        res = pg_db(pd_log_tab,'select',[['obs_stag','obj_comp_time','unit_id'],{'obj_id':obj}])
-        if res:
-            obs_stag, obj_comp_time, unit_id = res[0][:]
-            break
+    # i = 0
+    # while True:
+    #     i += 1
+        # ###
+        # sql = "SELECT obs_stag, obj_comp_time, unit_id FROM " + pd_log_tab + " WHERE obj_id=" + "'" + obj + "'" + " AND (obs_stag='' or obs_stag='' or obs_stag='') ORDER BY id"
+        # res = sql_get(sql)
+        # ###
+    time.sleep(1.5)
+    res = pg_db(pd_log_tab,'select',[['obs_stag','obj_comp_time','unit_id'],{'obj_id':obj}])
+    if res:
+        if len(res) > 1:
+            #print res,len(res)
+            res_dic = {}
+            for it in res:
+                res_dic[it[0]] = it
+            if None in res_dic.keys():
+                del [res_dic[None]]
+            if 'complete' in res_dic.keys():
+                obs_stag = 'complete'
+                obj_comp_time = res_dic['complete'][1]
+                unit_id = res_dic['complete'][2]
+            elif 'break' in res_dic.keys():
+                obs_stag = 'complete'
+                obj_comp_time = res_dic['complete'][1]
+                unit_id = res_dic['complete'][2]
+            elif 'pass' in res_dic.keys():
+                obs_stag = 'complete'
+                obj_comp_time = res_dic['complete'][1]
+                unit_id = res_dic['complete'][2]
+            else:
+                pass
+            #print obj_comp_time,unit_id
         else:
-            if i == 9:
-                print '\nWARNING: There is no record in send_db_in_end of %s. Pass to update it.' % obj
-                break
+            obs_stag, obj_comp_time, unit_id = res[0][:]
+        #break
+    else:
+        #if i == 9:
+        print '\nWARNING: There is no record in send_db_in_end of %s. Pass to update it.' % obj
+            #break
             #print '\nWARNING: There is no record in send_db_in_end of %s.' % obj
             #obj_comp_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time()))
             #pass
@@ -585,6 +608,7 @@ def check_log_dist(obj,obj_infs):
                                 if log_dist_time >= log_sent_time:
                                     log_dist_id = re.search(r'<system id = (.*?)>', it).group(1)
                                     dist_mark = 1
+                                    break
                                 else:
                                     dist_mark = 0
                         if dist_mark in [1, 2]:
@@ -1374,11 +1398,8 @@ def check_new():
                 else:
                     gwac_used_units = []
                     pri_list1 = ['0']
-                # gwac_init_send = get_free_teles_from_log('XL001')
-                # if not gwac_init_send:
-                #     gwac_init_send = []
                 if 'GW' in str(get_obj_inf(gwac_new_objs[0])['objsour']):
-                    gwac_units = gwac_init + ['003']
+                    gwac_units = gwac_init #+ ['003']
                 else:
                     gwac_units = gwac_init #['002','004']
                 if not gwac_used_units:
@@ -1406,10 +1427,10 @@ def check_new():
                                 if time_res == 1:
                                     print '\n###### The obj %s of GWAC: 1\n' % obj 
                                     send_beg_time, send_end_time = send_cmd(obj, unit_id)[0:2]
-                                    time.sleep(1.5)
                                     if check_log_sent(obj, send_beg_time, send_end_time):
+                                        time.sleep(1.5)
                                         client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                        time.sleep(0.5)
+                                        #time.sleep(0.5)
                                         print "\n###### The obj %s of GWAC: Send ok.\n" % obj 
                                         lf.write("\n##### The obj %s of GWAC: Send ok." % obj)
                                         send_db_in_beg(obj)
@@ -1425,6 +1446,7 @@ def check_new():
                                         lf.write("\n##### The obj %s of GWAC: Send Wrong." % obj)
                                         #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])
                                         pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                        time.sleep(1.5)
                                         #break
                                 elif time_res == 0:
                                     print '\n###### The obj %s of GWAC: 0\n' % obj 
@@ -1462,10 +1484,10 @@ def check_new():
                                         if time_res == 1:
                                             print '\n###### The obj %s of GWAC: 1\n' % obj
                                             send_beg_time, send_end_time = send_cmd(obj, unit_id)[0:2]
-                                            time.sleep(1.5)
                                             if check_log_sent(obj, send_beg_time, send_end_time):
+                                                time.sleep(1.5)
                                                 client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                                time.sleep(0.5)
+                                                #time.sleep(0.5)
                                                 print '\n###### The obj %s of GWAC: Send ok.\n' % obj
                                                 lf.write("\n##### The obj %s of GWAC: Send ok." % obj) 
                                                 send_db_in_beg(obj)
@@ -1481,6 +1503,7 @@ def check_new():
                                                 lf.write("\n##### The obj %s of GWAC: Send Wrong." % obj) 
                                                 #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                     
                                                 pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                                time.sleep(1.5)
                                                 #break
                                         elif time_res == 0:
                                             print '\n###### The obj %s of GWAC: 0\n' % obj 
@@ -1524,19 +1547,12 @@ def check_new():
                 else:
                     f60_used_units = []
                     pri_list2 = ['0']
-                f60_init_send = get_free_teles_from_log('XL002')
-                if not f60_init_send:
-                    f60_init_send = []
-                f60_units = f60_init_send#['001']
-                if f60_units:
-                    if not f60_used_units:
-                        f60_unused_units = f60_units[:]
-                    else:
-                        f60_unused_units = list(set(f60_units) - set(f60_used_units))
-                    f60_for_new_units = f60_unused_units + f60_used_units
+                f60_units = f60_init#['001']
+                if not f60_used_units:
+                    f60_unused_units = f60_units[:]
                 else:
-                    f60_unused_units = []
-                    f60_for_new_units = []
+                    f60_unused_units = list(set(f60_units) - set(f60_used_units))
+                f60_for_new_units = f60_unused_units + f60_used_units
                 print '\n###### ',pri_list2, f60_unused_units, f60_for_new_units
                 lf.write('\n##### f60_ready: '+' '.join(pri_list2)+','+' '.join(f60_unused_units)+','+' '.join(f60_for_new_units))
                 #f60_com_objs = com_objs[1]#get_com_indb("XL002")
@@ -1558,6 +1574,7 @@ def check_new():
                                     print '\n###### The obj %s of F60: 1\n' % obj
                                     send_beg_time, send_end_time = send_cmd(obj, unit_id)[:]
                                     if check_log_sent(obj, send_beg_time, send_end_time):
+                                        time.sleep(1.5)
                                         client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
                                         print '\n###### The obj %s of F60: Send ok.\n' % obj 
                                         lf.write("\n##### The obj %s of F60: Send ok." % obj)
@@ -1574,6 +1591,7 @@ def check_new():
                                         lf.write("\n##### The obj %s of F60: Send Wrong." % obj)
                                         #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
                                         pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                        time.sleep(1.5)
                                         #break
                                 elif time_res == 0:
                                     print '\n###### The obj %s of F60: 0\n' % obj
@@ -1611,6 +1629,7 @@ def check_new():
                                             print '\n###### The obj %s of F60: 1\n' % obj
                                             send_beg_time, send_end_time = send_cmd(obj, unit_id)[:]
                                             if check_log_sent(obj, send_beg_time, send_end_time):
+                                                time.sleep(1.5)
                                                 client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
                                                 print '\n###### The obj %s of F60: Send ok.\n' % obj 
                                                 lf.write("\n##### The obj %s of F60: Send ok." % obj)
@@ -1627,6 +1646,7 @@ def check_new():
                                                 lf.write("\n##### The obj %s of F60: Send Wrong." % obj)
                                                 #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
                                                 pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                                time.sleep(1.5)
                                                 #break
                                         elif time_res == 0:
                                             print '\n###### The obj %s of F60: 0\n' % obj 
@@ -1693,6 +1713,7 @@ def check_new():
                                 print '\n###### The obj %s of F30: 1\n' % obj
                                 send_beg_time, send_end_time = send_cmd(obj, unit_id='001')[:]
                                 if check_log_sent(obj, send_beg_time, send_end_time):
+                                    time.sleep(1.5)
                                     client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
                                     print '\n###### The obj %s of F30: Send ok.\n' % obj
                                     lf.write("\n##### The obj %s of F30: Send ok." % obj) 
@@ -1707,6 +1728,7 @@ def check_new():
                                     lf.write("\n##### The obj %s of F30: Send Wrong." % obj) 
                                     #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
                                     pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                    time.sleep(1.5)
                                     #break
                             elif time_res == 0:
                                 print '\n###### The obj %s of F30: 0\n' % obj 
@@ -1740,6 +1762,7 @@ def check_new():
                                         print '\n###### The obj %s of F30: 1\n' % obj
                                         send_beg_time, send_end_time = send_cmd(obj, unit_id='001')[:]
                                         if check_log_sent(obj, send_beg_time, send_end_time):
+                                            time.sleep(1.5)
                                             client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
                                             print '\n###### The obj %s of F30: Send ok.\n' % obj 
                                             lf.write("\n##### The obj %s of F30: Send ok." % obj) 
@@ -1754,6 +1777,7 @@ def check_new():
                                             lf.write("\n##### The obj %s of F30: Send Wrong." % obj) 
                                             #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
                                             pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                                            time.sleep(1.5)
                                             #break
                                     elif time_res == 0:
                                         print '\n###### The obj %s of F30: 0\n' % obj 
@@ -1805,12 +1829,13 @@ def check_new():
                         time.sleep(30)
                         xclient.Send("Hello World",['insert'])
                     else:### ther is pass mark
-                        pass
+                        #pass
+                        time.sleep(1.5)
             print '\n###### Ready to get news ######'
             no_mark = 0
             sent_mark = 0
             wait_mark = 0
-            time.sleep(1)
+            time.sleep(0.5)
 
 if __name__ == "__main__":
     print '\nInit...'
