@@ -15,7 +15,7 @@ client = Client('plan_dispatch')
 xclient = Client('object_generator')
 pd_log_tab = 'pd_log_current'
 running_list_cur = 'object_running_list_current'
-gwac_init = ['002','004']
+gwac_init = []#['002','004']
 f60_init = ['001']
 f30_init = ['001']
 ###
@@ -94,6 +94,7 @@ def sql_get(sql, n=1):
             print "\nWARNING: Wrong with operating the db, %s " % str(e).strip()
             return False
         finally:
+            cur.close()
             db.close()
     else:
         print "\nWARNING: Connection to the db is Error."
@@ -371,13 +372,13 @@ def send_db_in_end(obj):
                 obj_comp_time = res_dic['complete'][1]
                 unit_id = res_dic['complete'][2]
             elif 'break' in res_dic.keys():
-                obs_stag = 'complete'
-                obj_comp_time = res_dic['complete'][1]
-                unit_id = res_dic['complete'][2]
+                obs_stag = 'break'
+                obj_comp_time = res_dic['break'][1]
+                unit_id = res_dic['break'][2]
             elif 'pass' in res_dic.keys():
-                obs_stag = 'complete'
-                obj_comp_time = res_dic['complete'][1]
-                unit_id = res_dic['complete'][2]
+                obs_stag = 'pass'
+                obj_comp_time = res_dic['pass'][1]
+                unit_id = res_dic['pass'][2]
             else:
                 pass
             #print obj_comp_time,unit_id
@@ -414,8 +415,9 @@ def check_log_sent(obj, send_beg_time, send_end_time):
         if res:
             break
         else:
-            #print "\nWARNING:There is no sent record."
-            pass
+            print "\nWARNING:There is no sent record in check_log_sent of %s." % obj
+            time.sleep(1)
+            #pass
     infs = get_obj_inf(obj)
     group_id, obj_name = at(infs,'group_id','obj_name')
     if group_id == 'XL001':
@@ -517,8 +519,9 @@ def check_log_dist(obj,obj_infs):
             print '\nGoing at %s.' % log_sent_time
             break
         else:
-            #print "\nWARNING:There is no sent record."
-            pass
+            print "\nWARNING:There is no sent record in check_log_dist of %s." % obj
+            time.sleep(1)
+            #pass
     group_id = obj_infs["group_id"]
     if group_id == 'XL001':
         log_dist_id, log_dist_time = [log_sent_id, log_sent_time][:]
@@ -644,8 +647,10 @@ def check_cam_log(obj,obj_infs):
             break
         else:
             #print "\nWARNING:There is no dist record."
+            print "\nWARNING:There is no dist record in check_cam_log of %s." % obj
+            time.sleep(1)
             #log_dist_id, log_dist_time = ['',''][:2]
-            pass
+            #pass
     group_id = obj_infs['group_id']
     if group_id == 'XL001':
         if check_ser(group_id):
@@ -921,19 +926,21 @@ def check_obj_stat(obj): ### after check sent
     global k_in, lf
     obj_infs = get_obj_inf(obj)
     check_mark = 0
-    i = 0
-    while True:
-        res = pg_db(pd_log_tab,'select',[['obj_sent_time','obj_sent_id'],{'obj_id':obj,'obs_stag':'sent'}])
-        if res:
-            log_sent_time, log_sent_id = res[0][:]
-            break
-        else:
-            if i == 9:
-                check_mark = 1
-                print "\nWARNING:There is no sent record."
-                break
-            i += 1
-            time.sleep(1)
+    #i = 0
+    #while True:
+    res = pg_db(pd_log_tab,'select',[['obj_sent_time','obj_sent_id'],{'obj_id':obj,'obs_stag':'sent'}])
+    if res:
+        log_sent_time, log_sent_id = res[0][:]
+        break
+    else:
+        # if i == 9:
+        #     check_mark = 1
+        #     print "\nWARNING:There is no sent record in check_obj_stat of %s." % obj
+        #     break
+        # i += 1
+        print "\nWARNING:There is no sent record in check_obj_stat of %s." % obj
+        time.sleep(1)
+        return 1
     if check_mark == 1:
         check_obj_stat_from_data(obj)
     else:
@@ -974,6 +981,7 @@ def check_obj_stat(obj): ### after check sent
                     lf.write("\n#%s %s %s %s %s_%s %s\n" %(obj_name, objrank, log_dist_time_wt, log_com_time_wt, group_id, log_dist_id,log_com_id))
                     print "\nThe record has been written."
                     ###
+                    time.sleep(3)
                     return 1
                 else:
                     time.sleep(1.5)
@@ -983,6 +991,7 @@ def check_obj_stat(obj): ### after check sent
                         pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'pass'},{'obj_id':obj,'obs_stag':'sent'}])
                         send_db_in_end(obj)
                         client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                        time.sleep(3)
                         return 1
                     if log_dist_time < time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()-3600)):### wait for 1 hours
                         print "\nWARNING: The obj %s has waited for 60 mins after dist. Please check the system, break current object or not (y/n):" % obj
@@ -997,6 +1006,7 @@ def check_obj_stat(obj): ### after check sent
                             pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
                             send_db_in_end(obj)
                             client.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
+                            time.sleep(3)
                             return 1
             else:
                 time.sleep(1.5)
@@ -1006,6 +1016,7 @@ def check_obj_stat(obj): ### after check sent
                     pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'pass'},{'obj_id':obj,'obs_stag':'sent'}])
                     send_db_in_end(obj)
                     client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                    time.sleep(3)
                     return 1
                 if log_sent_time < time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()-1800)):### wait for 30 mins
                     print "\nWARNING: The obj %s has waited for 30 mins after sent. Please check the system, break current object or not (y/n):" % obj
@@ -1020,6 +1031,7 @@ def check_obj_stat(obj): ### after check sent
                         pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
                         send_db_in_end(obj)
                         client.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
+                        time.sleep(3)
                         return 1
         else:
             # if group_id == 'XL001':
@@ -1527,7 +1539,7 @@ def check_new():
                     else:
                         print "\n###### X3"
                         lf.write('\n##### X3')
-                        pass
+                        #pass
             else:
                 no_mark += 1
             
@@ -1670,7 +1682,7 @@ def check_new():
                     else:
                         print "\n###### Y3"
                         lf.write('\n##### Y3')
-                        pass
+                        #pass
             else:
                 no_mark += 1
             
@@ -1801,7 +1813,7 @@ def check_new():
                     else:
                         print "\n###### Z3"
                         lf.write('\n##### Z3')
-                        pass
+                        #pass
             else:
                 no_mark += 1
             
@@ -1830,7 +1842,7 @@ def check_new():
                         xclient.Send("Hello World",['insert'])
                     else:### ther is pass mark
                         #pass
-                        time.sleep(1.5)
+                        time.sleep(30)
             print '\n###### Ready to get news ######'
             no_mark = 0
             sent_mark = 0
