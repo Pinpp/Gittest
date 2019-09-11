@@ -207,13 +207,13 @@ def insert_to_ba_db(objsour,op_sn,group_id,unit_id,filter,grid_id,field_id,ra,de
         func_top_obs_plan_inset_db(db,ID_observation_plan,trigger_name,Telescope_ID_planned,Instrument_ID_planned,ID_filter_planned,Grid_ID_planned,Field_ID_planned,RA_planned,dec_planned,obs_strategy_planned,Tstart_planned,Tend_planned,exposure_planned,observation_plan_type,command_obs_status)
     CMM_DBClose(db)
 
-def update_to_ba_db(obj_id, objsour, obs_stag, end_time):
+def update_to_ba_db(objsour, obj_id, grid_id, field_id, obs_stag, end_time):
     location = 'xinglong'
     objsour_word = objsour.split('_')
     if objsour_word[0] == 'GW':
         db = CMM_DBConnect(location)
-        tab = "observation_plan"
-        query = "UPDATE " + tab + " SET observation_plan_command_obs_status='" + obs_stag + "', T_end='"+ end_time +"' WHERE ID_obsplan_GWAC_system='" + obj_id + "' AND observation_plan_command_obs_status='received'"
+        tab = "observation_plan" ## "ID_grid" "ID_field"
+        query = "UPDATE " + tab + " SET observation_plan_command_obs_status='" + obs_stag + "', T_end='"+ end_time +"' WHERE ID_obsplan_GWAC_system='" + obj_id + "' AND ID_grid='" + grid_id + "' AND ID_field='" + field_id + "' AND observation_plan_command_obs_status='received'"
         try:
             cursor = db.cursor()
             cursor.execute(query)
