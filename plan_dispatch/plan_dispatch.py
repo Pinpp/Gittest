@@ -15,7 +15,7 @@ client = Client('plan_dispatch')
 xclient = Client('object_generator')
 pd_log_tab = 'pd_log_current'
 running_list_cur = 'object_running_list_current'
-gwac_init = []#['002','004']
+gwac_init = ['002','004']
 f60_init = ['001']
 f30_init = ['001']
 ###
@@ -357,7 +357,7 @@ def send_db_in_beg(obj):
             pass
         else:
             if trigger_type == 'GW':
-                sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
+                sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                 res = sql_get(sql)
                 if res:
                     if len(res) == 1:
@@ -507,7 +507,7 @@ def send_db_in_end(obj):
                 pass
             else:
                 if trigger_type == 'GW':
-                    sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
+                    sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                     res = sql_get(sql)
                     if res:
                         if len(res) == 1:
