@@ -1034,7 +1034,7 @@ def input():
 
 def check_time_window(obj):
     begin_time, end_time = at(get_obj_inf(obj),'begin_time', 'end_time')
-    time_now = datetime.datetime.utcnow().strftime("%Y/%m/%d %H:%M:%S")
+    time_now = (datetime.datetime.utcnow() + datetime.timedelta(minutes= 25)).strftime("%Y/%m/%d %H:%M:%S")
     if time_now < end_time:
         if time_now > begin_time:
             return 1
