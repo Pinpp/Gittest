@@ -947,6 +947,7 @@ def check_cam_log(obj,obj_infs):
                 if logs:
                     logs.reverse()
                     cam_mark = 0
+                    bk_mark = 0
                     for log in logs:
                         log = log.strip()
                         cmd = "cat " + log + " | grep 'Image is saved as " + obj_name + ".*_" + filter + "_" + date_now+ "_.*.fit$'"
