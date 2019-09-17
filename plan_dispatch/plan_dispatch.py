@@ -700,6 +700,7 @@ def check_log_dist(obj,obj_infs):
         pg_db(pd_log_tab,'update',[{'obj_dist_id':log_dist_id,'obj_dist_time':log_dist_time,'unit_id':log_dist_id},{'obj_id':obj,'obs_stag':'sent'}])
         return [log_dist_id, log_dist_time]
     if group_id == 'XL002':
+        time_limit = datetime.datetime.now() + datetime.timedelta(hours= -12)
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
             cmd = 'ls /tmp/gftservice*.log'
@@ -707,6 +708,7 @@ def check_log_dist(obj,obj_infs):
             if logs:
                 logs.reverse()
                 dist_mark = 0
+                bk_mark = 0
                 for log in logs:
                     log = log.strip()
                     cmd = "cat " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
@@ -723,7 +725,12 @@ def check_log_dist(obj,obj_infs):
                                 break
                             else:
                                 dist_mark = 0
+                                if log_dist_time <= time_limit:
+                                    bk_mark = 1
+                                    break
                         if dist_mark == 1:
+                            break
+                        if bk_mark == 1:
                             break
                 if dist_mark == 1:
                     # if log_dist_id == '1' or log_dist_id == '3':
@@ -748,6 +755,7 @@ def check_log_dist(obj,obj_infs):
             #print "\nWARNING: The gftservice of %s is Error." % group_id
             return 0
     if group_id == 'XL003':
+        time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
             cmd = 'ls /tmp/gftservice*.log'
@@ -755,6 +763,7 @@ def check_log_dist(obj,obj_infs):
             if logs:
                 logs.reverse()
                 dist_mark = 0
+                bk_mark = 0
                 for log in logs:
                     log = log.strip()
                     cmd = "cat " + log #+ " | grep 'get observation plan <id = " + log_sent_id + ">'"
@@ -766,6 +775,9 @@ def check_log_dist(obj,obj_infs):
                             ii += 1
                             item = item.strip()
                             re_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item)
+                            if re_time <= time_limit:
+                                bk_mark = 1
+                                break
                             if re_time and re_time.group(0) == log_sent_time:
                                 mark_i = ii
                             re_null = re.search(r"take NULL object", item)
@@ -787,6 +799,8 @@ def check_log_dist(obj,obj_infs):
                                 else:
                                     dist_mark = 0
                         if dist_mark in [1, 2]:
+                            break
+                        if bk_mark == 1:
                             break
                 if dist_mark == 2:
                     #######
@@ -920,6 +934,7 @@ def check_cam_log(obj,obj_infs):
             #print "\nWARNING: The gtoaes of %s is Error." % group_id
             return 0
     if group_id == 'XL002':
+        time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         if check_ser(group_id):
             obj_name, filter, frmcnt = at(obj_infs, 'obj_name', 'filter', 'frmcnt')
             date_now = datetime.datetime.utcnow().strftime("%y%m%d")
@@ -963,7 +978,13 @@ def check_cam_log(obj,obj_infs):
                                         print '\n' + item
                                         cam_mark = 2
                                         break
+                                    else:
+                                        if item_time <= time_limit:
+                                            bk_mark = 1
+                                            break
                             if cam_mark == 2:
+                                break
+                            if bk_mark == 1:
                                 break
                     if cam_mark == 2:
                         print "\nWARNING: Filter Error. Please check the system !"
