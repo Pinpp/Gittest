@@ -348,6 +348,12 @@ def send_db_in_beg(obj):
         #unit_id = '001'
         e_time = "0000-00-00T00:00:00"
         ##
+        cmd_n = 'append_object'
+        pg_db(running_list_cur,'insert',[{'cmd':cmd_n,'op_time':op_time,'op_type':'obs','obj_id':obj,'obj_name':obj_name,'observer':observer,\
+            'objra':objra,'objdec':objdec,'objepoch':objepoch,'objerror':objerror,'group_id':group_id,'unit_id':unit_id,'obstype':obs_type,\
+                'obs_stra':obs_stra,'ra':objra,'dec':objdec,'imgtype':imgtype,'filter':filter,'expdur':expdur,'delay':delay,\
+                    'frmcnt':frmcnt,'priority':priority,'begin_time':b_time,'end_time':e_time,'run_name':run_name,'pair_id':'0','mode':'observation','note':''}])
+        ###
         try:
             objsour_word = objsource.split('_')
             trigger_type = objsour_word[0]
@@ -357,15 +363,36 @@ def send_db_in_beg(obj):
             pass
         else:
             if trigger_type == 'GW':
+                if 'G0' in obj_name:
+                    try:
+                        strs = obj_name.split('_')
+                    except:
+                        grid_id = 'G0000'
+                        field_id = obj_name
+                    else:
+                        grid_id = strs[0]
+                        field_id = strs[1]
+                else:
+                    grid_id = 'G0000'
+                    field_id = obj_name
+                ###
+                beginTime = b_time.replace('T',' ')
+                endTime = e_time.replace('T',' ')
+                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
+                ###
                 sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                 res = sql_get(sql)
                 if res:
-                    if len(res) == 1:
+                    objs = []
+                    for i in res:
+                        objs.append(i[0])
+                    objs = list(set(objs))
+                    if len(objs) == 1:
                         try:
-                            obj_nms = res[0].split('|')
+                            obj_nms = objs[0].split('|')
                         except:
                             obj_nm = res[0]
-                            if 'G' in obj_nm:
+                            if 'G0' in obj_nm:
                                 try:
                                     strs = obj_nm.split('_')
                                 except:
@@ -377,6 +404,10 @@ def send_db_in_beg(obj):
                             else:
                                 grid_id = 'G0000'
                                 field_id = obj_nm
+                            sql = 'select objra, objdec from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                            res = sql_get(sql)
+                            if res:
+                                objra, objdec = res[0][:]
                             ###
                             beginTime = b_time.replace('T',' ')
                             endTime = e_time.replace('T',' ')
@@ -384,7 +415,7 @@ def send_db_in_beg(obj):
                             ###
                         else:
                             for obj_nm in obj_nms:
-                                if 'G' in obj_nm:
+                                if 'G0' in obj_nm:
                                     try:
                                         strs = obj_nm.split('_')
                                     except:
@@ -396,39 +427,17 @@ def send_db_in_beg(obj):
                                 else:
                                     grid_id = 'G0000'
                                     field_id = obj_nm
+                                sql = 'select objra, objdec from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                                res = sql_get(sql)
+                                if res:
+                                    objra, objdec = res[0][:]
                                 ###
                                 beginTime = b_time.replace('T',' ')
                                 endTime = e_time.replace('T',' ')
                                 insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
                                 ###
-
                     else:
                         print '\nWrong: Got too many res when send_db_in_beg'
-                else:
-                    if 'G' in obj_name:
-                        try:
-                            strs = obj_name.split('_')
-                        except:
-                            grid_id = 'G0000'
-                            field_id = obj_name
-                        else:
-                            grid_id = strs[0]
-                            field_id = strs[1]
-                    else:
-                        grid_id = 'G0000'
-                        field_id = obj_name
-                    ###
-                    beginTime = b_time.replace('T',' ')
-                    endTime = e_time.replace('T',' ')
-                    insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
-                    ###
-
-        ###
-        cmd_n = 'append_object'
-        pg_db(running_list_cur,'insert',[{'cmd':cmd_n,'op_time':op_time,'op_type':'obs','obj_id':obj,'obj_name':obj_name,'observer':observer,\
-            'objra':objra,'objdec':objdec,'objepoch':objepoch,'objerror':objerror,'group_id':group_id,'unit_id':unit_id,'obstype':obs_type,\
-                'obs_stra':obs_stra,'ra':objra,'dec':objdec,'imgtype':imgtype,'filter':filter,'expdur':expdur,'delay':delay,\
-                    'frmcnt':frmcnt,'priority':priority,'begin_time':b_time,'end_time':e_time,'run_name':run_name,'pair_id':'0','mode':'observation','note':''}])
     return
 
 def send_db_in_end(obj):
@@ -497,7 +506,9 @@ def send_db_in_end(obj):
             update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
             #####
         if group_id in ['XL002','XL003']:
-            # if obs_stag == 'complete':
+            #####
+            pg_db(running_list_cur,'update', [{'end_time':e_time,'unit_id':unit_id},{'obj_id':obj}])
+            #####
             try:
                 objsour_word = objsource.split('_')
                 trigger_type = objsour_word[0]
@@ -507,15 +518,34 @@ def send_db_in_end(obj):
                 pass
             else:
                 if trigger_type == 'GW':
+                    if 'G0' in obj_name:
+                        try:
+                            strs = obj_name.split('_')
+                        except:
+                            grid_id = 'G0000'
+                            field_id = obj_name
+                        else:
+                            grid_id = strs[0]
+                            field_id = strs[1]
+                    else:
+                        grid_id = 'G0000'
+                        field_id = obj_name
+                    ###
+                    update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
+                    ###
                     sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                     res = sql_get(sql)
                     if res:
-                        if len(res) == 1:
+                        objs = []
+                        for i in res:
+                            objs.append(i[0])
+                        objs = list(set(objs))
+                        if len(objs) == 1:
                             try:
-                                obj_nms = res[0].split('|')
+                                obj_nms = objs[0].split('|')
                             except:
                                 obj_nm = res[0]
-                                if 'G' in obj_nm:
+                                if 'G0' in obj_nm:
                                     try:
                                         strs = obj_nm.split('_')
                                     except:
@@ -532,7 +562,7 @@ def send_db_in_end(obj):
                                 ###
                             else:
                                 for obj_nm in obj_nms:
-                                    if 'G' in obj_nm:
+                                    if 'G0' in obj_nm:
                                         try:
                                             strs = obj_nm.split('_')
                                         except:
@@ -547,28 +577,8 @@ def send_db_in_end(obj):
                                     ###
                                     update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
                                     ###
-
                         else:
                             print '\nWrong: Got too many res when send_db_in_beg.'
-                    else:
-                        if 'G' in obj_name:
-                            try:
-                                strs = obj_name.split('_')
-                            except:
-                                grid_id = 'G0000'
-                                field_id = obj_name
-                            else:
-                                grid_id = strs[0]
-                                field_id = strs[1]
-                        else:
-                            grid_id = 'G0000'
-                            field_id = obj_name
-                        ###
-                        update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
-                        ###
-        #####
-        pg_db(running_list_cur,'update', [{'end_time':e_time,'unit_id':unit_id},{'obj_id':obj}])
-        #####
     return
 
 def check_log_sent(obj, send_beg_time, send_end_time):
