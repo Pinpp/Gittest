@@ -87,11 +87,11 @@ if __name__ == "__main__":
                         else:
                             strmark = 'CURRENT'
                     lt3.append((fo_name,strmark))
-                    print '%s, \033[0;36m%s\033[0m, \033[0;36m%s\033[0m, \033[0;32m%s\033[0m, %s, %s, \033[0;33m%s\033[0m, %s\n' % (fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark)
+                    print '%s, \033[0;36m%s\033[0m, \033[0;36m%s\033[0m, \033[0;32m%s\033[0m, %s, %s, \033[0;33m%s\033[0m, %s' % (fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark)
                     lf.write('%s, %s, %s, %s, %s, %s, %s, %s\n' % (fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark))
                 else:
                     print 'No recoder: %s \n' % fo_name
-        print "PASS_number:",bad_mak1,'',"WAIT_number:",bad_mak2,'',"TOTAL:",bad_mak1+bad_mak2
+        print "\nPASS_number:",bad_mak1,'',"WAIT_number:",bad_mak2,'',"TOTAL:",bad_mak1+bad_mak2
         lf.write("\n#PASS_number: %s , WAIT_number: %s , TOTAL: %s " % (bad_mak1,bad_mak2,bad_mak1+bad_mak2))
         #print lt3
         lt4 = []
@@ -123,6 +123,7 @@ if __name__ == "__main__":
             else:
                 print i, run_n[i][0], run_n[i][1]
                 lf.write('%s %s %s\n' % (i, str(run_n[i][0]), run_n[i][1]))
+        print '\n\n' 
         lf.write('\n\n')
         fo_date_b = date_in.replace('/','-') + ' 12:00:00.000'
         #print fo_date_b
