@@ -112,25 +112,40 @@ def pg_act(table,action,args=[]):
             return res
 
 def pd_socket_client(host,port,cmd):
+    beg_mak,end_mak = load_params('./pd_params.json')['socket_mark'][:]
     if cmd:
         try:
             s = socket.socket()
             s.connect((host, int(port)))
             s.send(cmd.encode('utf-8'))
-            len_date = s.recv(10)
+            len_date = s.recv(beg_mak)
             #print len_date,len(len_date)
-            if int(len_date) == 0:
+            if int(len_date) == len(end_mak):
                 s.close()
                 return ''
-            time.sleep(0.5)
-            data = s.recv(int(len_date))
+            #time.sleep(0.5)
+            #data = s.recv(int(len_date))
+            count = 1024
+            while True:
+                a = int(len_date) % count
+                if a:
+                    break
+                count += 1
+            data = ''
+            while True:
+                data_cont = s.recv(count)
+                #print data_cont
+                data += data_cont
+                if (len(data_cont) < count) and (end_mak in data_cont.decode('utf-8')):
+                    data = data[:-len(end_mak)]
+                    break
             s.close()
             return ((data.decode('utf-8')).strip()).split('\n')
         except Exception as e:
             print '\n\nWARNING: [SOCKET] %s\n\n' %e
             return 0
     else:
-        print '\n\nWARNING: [SOCKET] The cmd is null.\n\n' %e
+        print '\n\nWARNING: [SOCKET] The cmd is null.\n\n'
         return 0
 
 def con_ssh(ip, username, passwd, cmd, mode=1):
@@ -192,6 +207,7 @@ def get_ips_from_confs():
     return ip_confs_sort_dic
 
 def check_ser_socket(ip,mode=1,init=1):
+    retr = 0
     ip_confs_dic = get_ips_from_confs()
     ssh_socket_confs = load_params('./pd_params.json')['ssh_socket']
     if ip in ip_confs_dic.keys():
@@ -229,7 +245,7 @@ def check_ser_socket(ip,mode=1,init=1):
         #print cmd
         res = con_ssh(sip, sun, spw, cmd)
         #print res
-        f1 = 'pd_socket_params.json'
+        f1 = 'pd_socket_server_params.json'
         f2 = 'boot_server.sh'
         cmd = 'put %s %s/%s' % (script, socket_ser_path, script)
         #print cmd
@@ -243,7 +259,7 @@ def check_ser_socket(ip,mode=1,init=1):
         #print cmd
         res = con_ssh(sip, sun, spw, cmd, mode=2)
         #print res
-        cmd = 'cd %s && nohup sh %s %s > /dev/null 2>&1 ' % (socket_ser_path, f2, script)
+        cmd = 'cd %s && nohup bash %s %s > /dev/null 2>&1' % (socket_ser_path, f2, script)
         #print cmd
         res = con_ssh(sip, sun, spw, cmd)
         #print res
@@ -258,12 +274,18 @@ def check_ser_socket(ip,mode=1,init=1):
     else:
         return retr
 
-def check_ser_socket_background():
+def check_ser_socket_background(init=1):
     while True:
         ip_confs_dic = get_ips_from_confs()
         for ip in ip_confs_dic.keys():
-            check_ser_socket(ip)
-        time.sleep(10)
+            #print ip
+            if init == 0:
+                check_ser_socket(ip,0,0)
+            else:
+                check_ser_socket(ip)
+        if init == 0:
+            return
+        time.sleep(30)
 
 def get_ser_config(group_id):
     if group_id == 'XL001':
@@ -289,14 +311,10 @@ def get_cam_config(cam_id):
     cam_conf_list = [cam_ip, cam_port]
     return cam_conf_list
 
-
 if __name__ == "__main__":
     #check_ser_socket()
     #print get_ips_from_confs()
-    ip = '190.168.1.203'
-    # xx = check_ser_socket(ip,0)
-    # print xx
-    cmd = 'ls /tmp *.log | sort'
-    port = '33369'
-    # res = pd_socket_client(ip,port,cmd)
-    # print res
+    ip = '172.28.1.11'
+    xx = check_ser_socket(ip,mode=0)
+    print xx
+    #check_ser_socket_background(init=0)

@@ -6,15 +6,14 @@ import re
 import datetime 
 import threading
 from pydash import at
-from pd_func_tools import * #warn_bs, load_params, sql_act, pg_act ***
-from communication_client import Client
+from pd_func_tools import * #warn_bs, load_params, sql_act, pg_act ***#
+#from communication_client import Client
 from ObservationPlanUpload import ObservationPlanUpload
 from ToP_obs_plan_insert_DB import insert_to_ba_db,update_to_ba_db,update_pointing_lalalert
-from pd_followup import pd_followup
 
 ###
-client = Client('plan_dispatch')
-client_og = Client('object_generator')
+#client = #client('plan_dispatch')
+#client_og = #client('object_generator')
 ##
 warn_obs = {}
 send_objs = []
@@ -73,34 +72,18 @@ def check_ser(ser_type):
     ser_ip, ser_port = get_ser_config(ser_type)[:]
     res = pd_socket_client(ser_ip, ser_port, cmd)
     if res:
-        return 1
+        return True
     else:
-        if res == 0:
-            res = check_ser_socket(ser_ip,mode=0)
-            print '\nRestart the socket server of %s : %s' % ser_ip, str(res)
-            if res:
-                return 1
-            else:
-                return 0
-        else:
-            return 0
+        return False
 
 def check_cam(cam_id):
     cam_ip, cam_port = get_cam_config(cam_id)[:]
     cmd = 'ps -ef | grep camagent | grep -v grep'
     res = pd_socket_client(cam_ip, cam_port, cmd)
     if res:
-        return 1
+        return True
     else:
-        if res == 0:
-            res = check_ser_socket(cam_ip,mode=0)
-            print '\nRestart the socket server of %s : %s' % cam_ip, str(res)
-            if res:
-                return 1
-            else:
-                return 0
-        else:
-            return 0
+        return False
 
 def get_obj_infs(obj):
     global warn_obs
@@ -579,7 +562,7 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                         for item in res:
                             item = item.strip()
                             print "\n######"+item
-                            log_sent_time = re.search(r"\d\d:\d\d:\d\d", item).group(0)
+                            log_sent_time = re.search(r"^\d\d:\d\d:\d\d", item).group(0)
                             log_sent_time = "%s %s" % (log_date, log_sent_time)
                             if send_beg_time <= log_sent_time <= send_end_time:
                                 log_sent_id = re.search(r'goes running on <001:(.*?)>', item).group(1)
@@ -591,10 +574,10 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                             break
                 if sent_mark == 1:
                     #######
-                    pg_act('pd_log_current','update', [{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id},{'id':pd_log_id}])
-                    while True:
-                        if check_sent_update(pd_log_id,{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id}):
-                            break
+                    # pg_act('pd_log_current','update', [{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id},{'id':pd_log_id}])
+                    # while True:
+                    #     if check_sent_update(pd_log_id,{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id}):
+                    #         break
                     #######
                     return 1
                 else:
@@ -643,10 +626,10 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                                 break
                 if sent_mark == 1:
                     #######
-                    pg_act('pd_log_current','update', [{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id},{'id':pd_log_id}])
-                    while True:
-                        if check_sent_update(pd_log_id,{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id}):
-                            break
+                    # pg_act('pd_log_current','update', [{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id},{'id':pd_log_id}])
+                    # while True:
+                    #     if check_sent_update(pd_log_id,{'ser_log':log,'obj_sent_time':log_sent_time,'obj_sent_id':log_sent_id}):
+                    #         break
                     #######
                     return 1
                 else:
@@ -669,16 +652,17 @@ def check_log_dist(obj, pd_log_id):
         return 'Wrong'
     if group_id == 'XL001':
         log_dist_id, log_dist_time = [log_sent_id, log_sent_time][:]
-        pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
-        while True:
-            if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
-                break
+        # pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
+        # while True:
+        #     if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
+        #         break
         return 1
     if group_id == 'XL002':
         if check_ser(group_id):
             ser_ip, ser_port = get_ser_config(group_id)[:]
             dist_mark = 0
             time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
+            print time_limit
             ###
             if ser_log:
                 log = ser_log
@@ -724,6 +708,7 @@ def check_log_dist(obj, pd_log_id):
                     for log in logs:
                         log = log.strip()###
                         cmd = "tac " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
+                        print cmd
                         res = pd_socket_client(ser_ip, ser_port, cmd)
                         if res:
                             for item in res:
@@ -740,21 +725,25 @@ def check_log_dist(obj, pd_log_id):
                                 break
                         if dist_mark == 0:
                             cmd = "tail " + log + ' | grep "20[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*" | sort -r'
+                            print cmd
                             res = pd_socket_client(ser_ip, ser_port, cmd)
+                            #print res
                             if res:
                                 res = res[0].strip()
+                                print res
                                 re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", res)
                                 if re_time and re_time.group(0) <= time_limit:
+                                    print re_time.group(0),'OK'
                                     break
             ###
             if dist_mark == 2:
                 return 2
             elif dist_mark == 1:
-                #######
-                pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
-                while True:
-                    if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
-                        break
+                # #######
+                # pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
+                # while True:
+                #     if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
+                #         break
                 ######
                 return 1
             else:
@@ -863,11 +852,11 @@ def check_log_dist(obj, pd_log_id):
             if dist_mark == 2:
                 return 2
             elif dist_mark == 1:
-                #######
-                pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
-                while True:
-                    if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
-                        break
+                # #######
+                # pg_act('pd_log_current','update',[{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id},{'id':pd_log_id}])
+                # while True:
+                #     if check_sent_update(pd_log_id,{'obj_dist_time':log_dist_time,'obj_dist_id':log_dist_id}):
+                #         break
                 #######
                 return 1
             else:
@@ -902,16 +891,23 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                     log_date = time.strftime("%Y-%m-%d",time.strptime(log_date, "%Y%m%d"))
                     #print log_date
                     cmd = "tac %s | grep -a '.*plan<%s> on .* is over'" % (log, obj)
+                    print cmd
                     res = pd_socket_client(ser_ip, ser_port, cmd)
                     if res:
+                        print res
                         for item in res:
                             item = item.strip()
-                            log_com_time = re.search(r"\d\d:\d\d:\d\d", item).group(0)
-                            log_com_time = "%s %s" % (log_date, log_com_time)
-                            if log_com_time > log_dist_time:
-                                print "\n"+item
-                                com_mark = 1
-                                break
+                            print item
+                            log_com_time_re = re.search(r"^\d\d:\d\d:\d\d", item)#.group(0)
+                            if log_com_time_re:
+                                log_com_time = log_com_time_re.group(0)
+                                log_com_time = "%s %s" % (log_date, log_com_time)
+                                if log_com_time > log_dist_time:
+                                    print "\n"+item
+                                    com_mark = 1
+                                    break
+                                else:
+                                    com_mark = 0
                             else:
                                 com_mark = 0
                         if com_mark == 1:
@@ -921,7 +917,7 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                     if res:
                         for item in res:
                             item = item.strip()
-                            log_com_time = re.search(r"\d\d:\d\d:\d\d", item).group(0)
+                            log_com_time = re.search(r"^\d\d:\d\d:\d\d", item).group(0)
                             log_com_time = "%s %s" % (log_date, log_com_time)
                             #print log_com_time
                             if log_com_time > log_dist_time:
@@ -1052,15 +1048,6 @@ def check_time_window(obj):
 
 def check_obj_status(obj,obj_infs,pd_log_id):
     global warn_obs
-    group_id, obj_name, objra, objdec, filter, expdur, frmcnt, priority = at(obj_infs, 'group_id', 'obj_name', 'objra', 'objdec', 'filter', 'expdur', 'frmcnt', 'priority')
-    if group_id == 'XL001':
-        ### check the gwac,gtoaes_log
-        print "\nCurrent obj : %s %s %s %s %s %s %s %s." % (obj, obj_name, objra, objdec, str(int(float(expdur))), frmcnt, priority)
-        print "\nChecking it in log ..."
-    if group_id in ['XL002','XL003']:
-        ### check the gft,log_dist and cam_log
-        print "\nCurrent obj : %s %s %s %s %s %s %s %s." % (obj, obj_name, objra, objdec, filter, str(int(float(expdur))), frmcnt, priority)
-        print "\nChecking it in log ..."
     check_log_dist_res = check_log_dist(obj,pd_log_id)
     if check_log_dist_res:
         if type(check_log_dist_res) == type(''):
@@ -1075,9 +1062,9 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                 if check_sent_update(pd_log_id,{'obj_comp_time':time_now,'obs_stag':'break'}):
                     break
             ######
-            update_to_db_in_end(obj,obj_infs,pd_log_id)
+            #update_to_db_in_end(obj,obj_infs,pd_log_id)
             ######
-            client.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
+            #client.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
             return
         if check_log_dist_res == 1:
             stage = 'Observing'
@@ -1095,9 +1082,9 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                         if check_sent_update(pd_log_id,{'obj_comp_time':log_com_time,'obs_stag':'pass'}):
                             break
                     #######
-                    update_to_db_in_end(obj,obj_infs,pd_log_id)
+                    #update_to_db_in_end(obj,obj_infs,pd_log_id)
                     #######
-                    client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                    #client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
                     return
                 sent_delay = time.time() - time.mktime(time.strptime(log_sent_time, "%Y-%m-%d %H:%M:%S"))
                 if  sent_delay > 1800: ### wait for 30 mins
@@ -1136,9 +1123,9 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                         if check_sent_update(pd_log_id,{'obj_comp_time':log_com_time,'obs_stag':stage}):
                             break
                     ######
-                    update_to_db_in_end(obj,obj_infs,pd_log_id)
+                    #update_to_db_in_end(obj,obj_infs,pd_log_id)
                     ######
-                    client.Send({"obj_id":obj,"obs_stag":stage},['update','object_list_current','obs_stag'])
+                    #client.Send({"obj_id":obj,"obs_stag":stage},['update','object_list_current','obs_stag'])
                     return
         else: 
             res = pg_act('pd_log_current','select',[['obj_dist_time','obs_stag'],{'id':pd_log_id}])
@@ -1149,13 +1136,16 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                         print "%s WARNING: The observation time is over about !" % obj
                         log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                         #######
+                        #client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                        while True:
+                            if check_list_update(obj,'pass'):
+                                break
                         pg_act('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'pass'},{'id':pd_log_id,'obj_id':obj}])
                         while True:
                             if check_sent_update(pd_log_id,{'obj_comp_time':log_com_time,'obs_stag':'pass'}):
                                 break
-                        update_to_db_in_end(obj,obj_infs,pd_log_id)
-                        client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
                         #######
+                        #update_to_db_in_end(obj,obj_infs,pd_log_id)
                         return
                     dist_delay = time.time() - time.mktime(time.strptime(log_dist_time, "%Y-%m-%d %H:%M:%S"))
                     if dist_delay > 3600:### wait for 60 mins
@@ -1173,6 +1163,7 @@ def get_pd_log_id(obj):
         if len(res) == 1:
             pd_log_id = str(res[0][0])
         else:
+            return 'Wrong'
             for i in range(len(res)-1):
                 pg_act('pd_log_current','update',[{'obs_stag':'wrong'},{'id':str(res[i][0])}])
                 while True:
@@ -1336,7 +1327,7 @@ def check_new_main(group_id):
                             if check_log_sent_res == 1:
                                 log_file.write("\n##### The obj %s of %s: Send ok." % (obj,type_tel[group_id]))
                                 print "\n##### The obj %s of %s: Send ok." % (obj,type_tel[group_id])
-                                client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
+                                #client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
                                 insert_to_db_in_beg(obj,obj_infs,pd_log_id)
                                 time.sleep(5)
                             else:
@@ -1344,7 +1335,7 @@ def check_new_main(group_id):
                                 log_file.write("\n##### The obj %s of %s: Send Wrong." % (obj, type_tel[group_id]))
                                 pg_act('pd_log_current','update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
                         elif time_res == 0:
-                            client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                            #client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
                             print "\n##### The obj %s of %s: Pass Ok." % (obj, type_tel[group_id])
                             log_file.write("\n##### The obj %s of %s: Pass Ok." % (obj, type_tel[group_id]))
                             send_objs.remove(obj)
@@ -1405,36 +1396,45 @@ def check_new():
                 k = check_new_main(group_id)
                 mark_wait += k
             if mark_wait:
-                time.sleep(30)
+                time.sleep(45)
                 client_og.Send("Hello World",['insert'])
             print '\n###### Ready to get news.'
             log_file.write('\n###### Ready to get news ######')
             time.sleep(1)
 
 if __name__ == "__main__":
-    print '\nInit DB ...'
-    db_init()
-    time.sleep(1)
-    print '\nInit Daemon ...'
-    t_init = threading.Thread(target=pd_init)
-    t_init.setDaemon(True)
-    t_init.start()
-    time.sleep(1)
-    thread_inif30 = threading.Thread(target=check_F30_sync)
-    thread_inif30.setDaemon(True)
-    thread_inif30.start()
-    time.sleep(1)
-    thread_floup = threading.Thread(target=pd_followup)
-    thread_floup.setDaemon(True)
-    thread_floup.start()
-    time.sleep(1)
-    thread_floup = threading.Thread(target=check_ser_socket_background)
-    thread_floup.setDaemon(True)
-    thread_floup.start()
-    time.sleep(1)
-    print '\nGoing...'
-    thread_main = threading.Thread(target=check_sent)
-    thread_main.setDaemon(True)
-    thread_main.start()
-    time.sleep(1)
-    check_new()
+    # print '\nInit DB ...'
+    # db_init()
+    # time.sleep(1)
+    # print '\nInit Daemon ...'
+    # t_init = threading.Thread(target=pd_init)
+    # t_init.setDaemon(True)
+    # t_init.start()
+    # time.sleep(1)
+    # thread_inif30 = threading.Thread(target=check_F30_sync)
+    # thread_inif30.setDaemon(True)
+    # thread_inif30.start()
+    # time.sleep(1)
+    # print '\nGoing...'
+    # thread_main = threading.Thread(target=check_sent)
+    # thread_main.setDaemon(True)
+    # thread_main.start()
+    # time.sleep(1)
+    # check_new()
+
+    # k = pg_act('pd_log_current','select',[['id'],{'obs_stag':'sent'},'ORDER BY id'])
+    # print k
+    # for i in range(len(k)-1):
+    #     print str(k[i][0])
+    # print ''
+    # print str(k[len(k)-1][0])
+    
+    obj = '99143'
+    obj_infs = get_obj_infs(obj)
+    #pd_log_id = get_pd_log_id(obj)
+    #print pd_log_id
+    pd_log_id = '14308'
+    #x = check_log_dist(obj, pd_log_id)
+    x = check_cam_log(obj,obj_infs,pd_log_id)
+    print x
+    
