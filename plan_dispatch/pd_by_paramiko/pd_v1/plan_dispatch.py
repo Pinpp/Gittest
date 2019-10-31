@@ -289,9 +289,9 @@ def send_cmd(obj,unit_id):
         object_ra = Ra_to_h(objra)
         if objsource == 'GWAC_followup':
             run_name = infs['run_name']
-            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s -1 -1 %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority, run_name)
+            cmd = "append_plan %s %s && append_object %s %s %s %s 4 %s %s %s %s -1 -1 %s && append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority, run_name)
         else:
-            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
+            cmd = "append_plan %s %s && append_object %s %s %s %s 4 %s %s %s %s && append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
         con_ssh(ser_ip, ser_un, ser_pw, cmd)
         #####
         pg_db(pd_log_tab,'insert', [{'obj_id':obj,'obj_name':obj_name,'priority':priority,'group_id':group_id,'unit_id':unit_id,'date_cur':date_cur,'obs_stag':'sent'}])
@@ -314,7 +314,7 @@ def send_cmd(obj,unit_id):
                 objra = float(objra) + float(ra_shift)
                 objdec = float(objdec) + float(dec_shift)
                 object_ra = Ra_to_h(str(objra))
-                cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, str(objdec), objepoch, expdur, '1', filter, priority)
+                cmd = "append_plan %s %s && append_object %s %s %s %s 4 %s %s %s %s && append_plan gwac default " % (observer, obs_type, obj_name, object_ra, str(objdec), objepoch, expdur, '1', filter, priority)
                 con_ssh(ser_ip, ser_un, ser_pw, cmd)
                 if i == 0:
                     #print cmd
@@ -323,7 +323,7 @@ def send_cmd(obj,unit_id):
                     time.sleep(1.5)
         else:
             object_ra = Ra_to_h(objra)
-            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
+            cmd = "append_plan %s %s && append_object %s %s %s %s 4 %s %s %s %s && append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
             con_ssh(ser_ip, ser_un, ser_pw, cmd)
             time.sleep(3)
             send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
