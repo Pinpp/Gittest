@@ -3,6 +3,8 @@
 
 from __future__ import unicode_literals
 import re, os, sys, time, datetime, threading, psycopg2
+from communication_client import Client
+
 
 def con_db():
     host = '172.28.8.28'#'10.0.10.236'
@@ -84,6 +86,7 @@ def Ra_to_hms(i):
         print '\nWARNING: Wrong RA, please input hms or degree'
 
 def get_obj_infs(obj):            ### Get the infomation.
+    infs = {}
     sql = "SELECT group_id, unit_id, obj_name, objra, objdec, filter, expdur, frmcnt, priority, objsour FROM object_list_all WHERE obj_id='" + obj + "'"
     infs = list(sql_get(sql)[0])
     infs[-3] = str(int(infs[-3]))
@@ -112,14 +115,17 @@ def get_sent_indb(type):
     else:
         return []
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
+    
+    s = Client('object_generator')
+    
     gwac_sent = get_sent_indb('XL001')
     f60_sent = get_sent_indb('XL002')
     f30_sent = get_sent_indb('XL003')
     #print gwac_sent,f60_sent,f30_sent
     n = 0
     k = {}
-    print '\nAbout: Obj_ID Unit_ID Obj_Name Ra Dec Filter Expdur Frmcnt Priority Source'
+    print '\nAbout: Obj_ID Unit_ID Obj_Name Ra Dec Filter Expdur Frmcnt Priority'
     print "\nGWAC：" 
     if gwac_sent:
         for i in gwac_sent:
@@ -177,9 +183,10 @@ if __name__ == "__main__":
                 exit('\nNothing done.\n')
             else:
                 print '\nWARNING: Input wrong. Please input once again.'
-        #log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        #pg_db('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':k[inpt],'obs_stag':'sent'}])
-        pg_db('pd_log_current','update',[{'obs_stag':'break'},{'obj_id':k[inpt],'obs_stag':'sent'}])
+        log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        pg_db('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':k[inpt],'obs_stag':'sent'}])
+        s.Send({"obj_id":k[inpt],"obs_stag":'break'},['update','object_list_current','obs_stag'])
+        #s.Send("Hello World",['insert'])
     else:
         print '\nThere is no sent objs in db.'
     print '\nDone.\n'

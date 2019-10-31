@@ -46,7 +46,6 @@ def Yunwei_DBClose(db):
     "Close the connection to the DB"
     db.close()
 
-#__________________________________
 def Retrieve_trigger_id(db,external_trigger_name):
     "Find the ID of the trigger type"
     cursor = db.cursor()
@@ -67,7 +66,6 @@ def Retrieve_trigger_id(db,external_trigger_name):
         # d['alert_message_type'] = results[-1][48]
         # result_qry_json = json.dumps(d, ensure_ascii=False)
     cursor.close()
-
     return ID_external_trigger
 
 #__________________________________
@@ -108,17 +106,14 @@ def Retrieve_filter_ID(db,band,filter_system):
     return ID_filter
 
 #__________________________________
-def func_top_obs_plan_inset_db(db,ID_observation_plan,trigger_name,Telescope_ID_planned,Instrument_ID_planned,ID_filter_planned,Grid_ID_planned,Field_ID_planned,RA_planned,dec_planned,obs_strategy_planned,Tstart_planned,Tend_planned,exposure_planned,observation_plan_type,command_obs_status):
+def func_top_obs_plan_inset_db(db,ID_observation_plan,ID_external_trigger,Telescope_ID_planned,Instrument_ID_planned,ID_filter_planned,Grid_ID_planned,Field_ID_planned,RA_planned,dec_planned,obs_strategy_planned,Tstart_planned,Tend_planned,exposure_planned,observation_plan_type,command_obs_status):
     object_list = "observation_plan"
     contact_name_planned = ''
     contact_mail_planned = ''
-    command_schedule_status = ''
-    ID_external_trigger = Retrieve_trigger_id(db,trigger_name) 
     Observatory_ID, ID_svom_telescope, ID_svom_instrument = Retrieve_svom_observatory_telescope_instrument_ID(db,Telescope_ID_planned)
+    #print Observatory_ID,ID_svom_telescope,ID_svom_instrument
     filter_system = "Johnson"
     ID_filter = Retrieve_filter_ID(db,ID_filter_planned,filter_system)
-    #Tstart_planned = Tstart_planned.replace("T", " ")
-    #Tend_planned = Tend_planned.replace("T", " ")
     query = "INSERT INTO "  + object_list + \
     "( ID_observation_plan, " + \
     "ID_obsplan_GWAC_system, " + \
@@ -177,7 +172,13 @@ def insert_to_ba_db(objsour,op_sn,group_id,unit_id,filter,grid_id,field_id,ra,de
     objsour_word = objsour.split('_')
     if objsour_word[0] == 'GW':
         ID_observation_plan = op_sn
-        trigger_name = objsour_word[2]
+        trigger_id = objsour_word[2]
+        try:
+            trigger_id = int(trigger_id)
+        except:
+            trigger_id = Retrieve_trigger_id(db,trigger_id)
+        else:
+           trigger_id = str(trigger_id)
         if group_id == 'XL001' and unit_id == '001':
             Telescope_ID_planned = 'GWAC_unit1'
         elif group_id == 'XL001' and unit_id == '002':
@@ -204,16 +205,16 @@ def insert_to_ba_db(objsour,op_sn,group_id,unit_id,filter,grid_id,field_id,ra,de
         exposure_planned = expdur
         observation_plan_type = mode
         command_obs_status = obs_stag
-        func_top_obs_plan_inset_db(db,ID_observation_plan,trigger_name,Telescope_ID_planned,Instrument_ID_planned,ID_filter_planned,Grid_ID_planned,Field_ID_planned,RA_planned,dec_planned,obs_strategy_planned,Tstart_planned,Tend_planned,exposure_planned,observation_plan_type,command_obs_status)
+        func_top_obs_plan_inset_db(db,ID_observation_plan,trigger_id,Telescope_ID_planned,Instrument_ID_planned,ID_filter_planned,Grid_ID_planned,Field_ID_planned,RA_planned,dec_planned,obs_strategy_planned,Tstart_planned,Tend_planned,exposure_planned,observation_plan_type,command_obs_status)
     CMM_DBClose(db)
 
-def update_to_ba_db(objsour, obj_id, grid_id, field_id, obs_stag, end_time):
+def update_to_ba_db(objsour, obj_id, obs_stag, end_time):
     location = 'xinglong'
     objsour_word = objsour.split('_')
     if objsour_word[0] == 'GW':
         db = CMM_DBConnect(location)
         tab = "observation_plan" ## "ID_grid" "ID_field"
-        query = "UPDATE " + tab + " SET observation_plan_command_obs_status='" + obs_stag + "', T_end='"+ end_time +"' WHERE ID_obsplan_GWAC_system='" + obj_id + "' AND ID_grid='" + grid_id + "' AND ID_field='" + field_id + "' AND observation_plan_command_obs_status='received'"
+        query = "UPDATE " + tab + " SET observation_plan_command_obs_status='" + obs_stag + "', T_end='"+ end_time +"' WHERE ID_obsplan_GWAC_system='" + obj_id + "' AND observation_plan_command_obs_status='received'"
         try:
             cursor = db.cursor()
             cursor.execute(query)
@@ -223,6 +224,21 @@ def update_to_ba_db(objsour, obj_id, grid_id, field_id, obs_stag, end_time):
             print 'Error %s' % e
         finally:
             CMM_DBClose(db)
+
+def update_pointing_lalalert(trigger_id,name_telescope,grid_id,field_id,grade,status):
+    location = 'xinglong'
+    db = CMM_DBConnect(location)
+    db_table = "pointing_lalalert"
+    query = "UPDATE " + db_table + " SET pointing_status='" + status + "' WHERE ID_external_trigger='" + trigger_id + "' AND name_telescope='" + name_telescope + "' AND ID_grid='" + grid_id + "' AND ID_field='" + field_id + "' AND grade_pointing='"+ grade + "'"
+    try:
+        cursor = db.cursor()
+        cursor.execute(query)
+        db.commit()
+        cursor.close()
+    except Exception as e:
+        print 'Error %s' % e
+    finally:
+        CMM_DBClose(db)
 
 
 #if __name__ == "__main__":

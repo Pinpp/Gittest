@@ -101,12 +101,12 @@ def con_ssh(ip, username, passwd, cmd):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
     try:
-        ssh.connect(hostname=ip, port=22, username=username, password=passwd, timeout=30)
+        ssh.connect(hostname=ip, port=22, username=username, password=passwd, timeout=60)
     except:
         #print "\nWARNING: Connection of ssh is wrong!"
         warn_bs['ssh'] = 'WARNING: Connection to %s by ssh is wrong!' % ip
     else:
-        stdin, stdout, stderr = ssh.exec_command(cmd)
+        stdin, stdout, stderr = ssh.exec_command(cmd,get_pty=True)
         out = stdout.readlines()
         ssh.close()
         return out

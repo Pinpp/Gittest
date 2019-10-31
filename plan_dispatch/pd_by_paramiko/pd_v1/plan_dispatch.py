@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-import re, os, sys, time, datetime, threading
+import re, os, sys, time, datetime, threading, operator
 import paramiko, psycopg2
 from pydash import at
-from communication_client import *
+from communication_client import Client
 from ObservationPlanUpload import ObservationPlanUpload
-from ToP_obs_plan_insert_DB import insert_to_ba_db,update_to_ba_db
+from ToP_obs_plan_insert_DB import insert_to_ba_db,update_to_ba_db,update_pointing_lalalert
+from pd_followup import pd_followup
 
 
 ###
@@ -18,6 +19,7 @@ running_list_cur = 'object_running_list_current'
 gwac_init = ['002','004']
 f60_init = ['001']
 f30_init = ['001']
+send_objs = []
 ###
 
 def get_ser_config(type):
@@ -60,7 +62,7 @@ def con_ssh(ip, username, passwd, cmd):
     except:
         print "\nWARNING: Connection of ssh is wrong!"
     else:
-        stdin, stdout, stderr = ssh.exec_command(cmd)
+        stdin, stdout, stderr = ssh.exec_command(cmd, get_pty=True)
         out = stdout.readlines()
         ssh.close()
         return out
@@ -179,27 +181,49 @@ def check_cam(cam_id):
 
 def get_obj_inf(obj):            ### Get the infomation.
     infs = {}
-    sql = "SELECT group_id, unit_id, obj_name, obs_type, obs_stra, objtype, objsour, observer, objra, objdec, objepoch, objerror, imgtype, filter, expdur, delay, frmcnt, priority, run_name, objrank, mode FROM object_list_all WHERE obj_id='" + obj + "'"
-    infs_list = sql_get(sql)[0]
-    group_id, unit_id, obj_name, obs_type, obs_stra, objtype, objsour, observer, objra, objdec, objepoch, objerror, imgtype, filter, expdur, delay, frmcnt, priority, run_name, objrank, mode = infs_list[:]#[:20]
-    if filter == "clear":
-        if group_id  == "XL002":
-            filter = "Lum"
-        if group_id  == "XL003":
-            filter = "R"
-            print "\nWARNING: The filter of %s input Error, using filter R." % obj
-    if len(obj_name) > 20:
-        if group_id in ['XL002', 'XL003']:
-            #print "\nWARNING: The name of %s is too long, attention please!" % obj
-            obj_name = obj_name[:20]
+    sql = "select column_name from information_schema.columns where table_schema='public' and table_name='object_list_all'"
+    cols = sql_get(sql)
+    #print cols
+    sql = "SELECT * FROM object_list_all WHERE obj_id='" + obj + "'"
+    infs_list = sql_get(sql)
+    #print infs_list
+    if cols and infs_list:
+        for i in range(1,len(cols)):
+            infs[cols[i][0]] = str(infs_list[0][i])
+        if infs['filter'] == 'clear':
+            if infs['group_id']  == "XL002":
+                infs['filter'] = "Lum"
+            if infs['group_id']  == "XL003":
+                infs['filter'] = "R"
+                #print "\nWARNING: The filter of %s input Error, using filter R." % obj
+                print "%s WARNING: Filter Error when get_obj_infs, using filter R." % obj
+        if len(infs['obj_name']) > 20:
+            if infs['group_id'] in ['XL002', 'XL003']:
+                #print "\nWARNING: The name of %s is too long, attention please!" % obj
+                infs['obj_name'] = infs['obj_name'][:20]
+    # infs = {}
+    # sql = "SELECT group_id, unit_id, obj_name, obs_type, obs_stra, objtype, objsour, observer, objra, objdec, objepoch, objerror, imgtype, filter, expdur, delay, frmcnt, priority, run_name, objrank, mode, ra_shift, dec_shift FROM object_list_all WHERE obj_id='" + obj + "'"
+    # infs_list = sql_get(sql)[0]
+    # group_id, unit_id, obj_name, obs_type, obs_stra, objtype, objsour, observer, objra, objdec, objepoch, objerror, imgtype, filter, expdur, delay, frmcnt, priority, run_name, objrank, mode, ra_shift, dec_shift = infs_list[:]#[:20]
+    # if filter == "clear":
+    #     if group_id  == "XL002":
+    #         filter = "Lum"
+    #     if group_id  == "XL003":
+    #         filter = "R"
+    #         print "\nWARNING: The filter of %s input Error, using filter R." % obj
+    # if len(obj_name) > 20:
+    #     if group_id in ['XL002', 'XL003']:
+    #         #print "\nWARNING: The name of %s is too long, attention please!" % obj
+    #         obj_name = obj_name[:20]
     while True:
         sql = "SELECT tw_begin, tw_end FROM object_list_current WHERE obj_id='" + obj + "'"
         res = sql_get(sql)
         if res and len(res[0]) == 2:
             begin_time, end_time = res[0][0:2]
             if begin_time and end_time:
+                infs.update(begin_time=begin_time, end_time=end_time)
                 break
-    infs.update(group_id=group_id, unit_id=unit_id, obj_name=obj_name, obs_type=obs_type, obs_stra=obs_stra, objtype=objtype, objsour=objsour, observer=observer, objra=str(objra), objdec=str(objdec), objepoch=str(objepoch), objerror=objerror, imgtype=imgtype, filter=filter, expdur=str(expdur), delay=str(delay), frmcnt=str(frmcnt), priority=str(priority), run_name=str(run_name), objrank=objrank, mode=mode, begin_time=begin_time, end_time=end_time)
+    #infs.update(group_id=group_id, unit_id=unit_id, obj_name=obj_name, obs_type=obs_type, obs_stra=obs_stra, objtype=objtype, objsour=objsour, observer=observer, objra=str(objra), objdec=str(objdec), objepoch=str(objepoch), objerror=objerror, imgtype=imgtype, filter=filter, expdur=str(expdur), delay=str(delay), frmcnt=str(frmcnt), priority=str(priority), run_name=str(run_name), objrank=objrank, mode=mode, ra_shift=str(ra_shift), dec_shift=str(dec_shift), begin_time=begin_time, end_time=end_time)
     return infs
 
 def Ra_to_h(ra):
@@ -255,23 +279,57 @@ def send_cmd(obj,unit_id):
         pg_db(pd_log_tab,'insert', [{'obj_id':obj,'obj_name':obj_name,'priority':priority,'group_id':group_id,'unit_id':unit_id,'date_cur':date_cur,'obs_stag':'sent'}])
         #######
         time.sleep(5)
-    if group_id in ['XL002','XL003']:
+        send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        #print send_end_time
+    if group_id == 'XL002':
         #unit_id = '001'
+        objsource = infs['objsour']
         op_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
         ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-        cmd = "append_plan %s %s" % (observer, obs_type)
-        con_ssh(ser_ip, ser_un, ser_pw, cmd)
         object_ra = Ra_to_h(objra)
-        cmd = "append_object %s %s %s %s 4 %s %s %s %s" % (obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
-        con_ssh(ser_ip, ser_un, ser_pw, cmd)
-        cmd = "append_plan gwac default"
+        if objsource == 'GWAC_followup':
+            run_name = infs['run_name']
+            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s -1 -1 %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority, run_name)
+        else:
+            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
         con_ssh(ser_ip, ser_un, ser_pw, cmd)
         #####
         pg_db(pd_log_tab,'insert', [{'obj_id':obj,'obj_name':obj_name,'priority':priority,'group_id':group_id,'unit_id':unit_id,'date_cur':date_cur,'obs_stag':'sent'}])
         #####
         time.sleep(3)
-    send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-    #print send_end_time
+        send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+    if group_id == 'XL003':
+        #unit_id = '001'
+        op_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
+        ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
+        obs_stra = infs['obs_stra']
+        if obs_stra == 'dithering':
+            ra_shift = infs['ra_shift']
+            dec_shift = infs['dec_shift']
+            if ra_shift == 'None':
+                ra_shift = 0
+            if dec_shift == 'None':
+                dec_shift = 0
+            for i in range(int(frmcnt)):
+                objra = float(objra) + float(ra_shift)
+                objdec = float(objdec) + float(dec_shift)
+                object_ra = Ra_to_h(str(objra))
+                cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, str(objdec), objepoch, expdur, '1', filter, priority)
+                con_ssh(ser_ip, ser_un, ser_pw, cmd)
+                if i == 0:
+                    #print cmd
+                    time.sleep(1.5)
+                    send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+                    time.sleep(1.5)
+        else:
+            object_ra = Ra_to_h(objra)
+            cmd = "append_plan %s %s ; append_object %s %s %s %s 4 %s %s %s %s ; append_plan gwac default " % (observer, obs_type, obj_name, object_ra, objdec, objepoch, expdur, frmcnt, filter, priority)
+            con_ssh(ser_ip, ser_un, ser_pw, cmd)
+            time.sleep(3)
+            send_end_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        #####
+        pg_db(pd_log_tab,'insert', [{'obj_id':obj,'obj_name':obj_name,'priority':priority,'group_id':group_id,'unit_id':unit_id,'date_cur':date_cur,'obs_stag':'sent'}])
+        #####
     return [send_beg_time, send_end_time]
 
 def send_db_in_beg(obj):
@@ -404,14 +462,16 @@ def send_db_in_beg(obj):
                             else:
                                 grid_id = 'G0000'
                                 field_id = obj_nm
-                            sql = 'select objra, objdec from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                            sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
                             res = sql_get(sql)
                             if res:
-                                objra, objdec = res[0][:]
+                                objrank = res[0][0]
                             ###
-                            beginTime = b_time.replace('T',' ')
-                            endTime = e_time.replace('T',' ')
-                            insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
+                            if group_id == 'XL002':
+                                name_telescope = 'F60'
+                            if group_id == 'XL003':
+                                name_telescope = 'F30'
+                            update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'Received @ GWAC')
                             ###
                         else:
                             for obj_nm in obj_nms:
@@ -427,14 +487,16 @@ def send_db_in_beg(obj):
                                 else:
                                     grid_id = 'G0000'
                                     field_id = obj_nm
-                                sql = 'select objra, objdec from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
                                 res = sql_get(sql)
                                 if res:
-                                    objra, objdec = res[0][:]
+                                    objrank = res[0][0]
                                 ###
-                                beginTime = b_time.replace('T',' ')
-                                endTime = e_time.replace('T',' ')
-                                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
+                                if group_id == 'XL002':
+                                    name_telescope = 'F60'
+                                if group_id == 'XL003':
+                                    name_telescope = 'F30'
+                                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'Received @ GWAC')
                                 ###
                     else:
                         print '\nWrong: Got too many res when send_db_in_beg'
@@ -489,6 +551,8 @@ def send_db_in_end(obj):
             #obj_comp_time = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(time.time()))
             #pass
     if obs_stag in ['complete','break','pass']:
+        if not obj_comp_time:
+            obj_comp_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
         e_time = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(obj_comp_time, "%Y-%m-%d %H:%M:%S"))).strftime("%Y-%m-%dT%H:%M:%S")
         endTime = e_time.replace('T',' ')
         if group_id == 'XL001':
@@ -503,7 +567,7 @@ def send_db_in_end(obj):
             #####
             pg_db(running_list_cur,'update', [{'end_time':e_time},{'obj_id':obj}])
             #####
-            update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
+            update_to_ba_db(objsource, obj, obs_stag, endTime)
             #####
         if group_id in ['XL002','XL003']:
             #####
@@ -518,20 +582,8 @@ def send_db_in_end(obj):
                 pass
             else:
                 if trigger_type == 'GW':
-                    if 'G0' in obj_name:
-                        try:
-                            strs = obj_name.split('_')
-                        except:
-                            grid_id = 'G0000'
-                            field_id = obj_name
-                        else:
-                            grid_id = strs[0]
-                            field_id = strs[1]
-                    else:
-                        grid_id = 'G0000'
-                        field_id = obj_name
                     ###
-                    update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
+                    update_to_ba_db(objsource, obj, obs_stag, endTime)
                     ###
                     sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                     res = sql_get(sql)
@@ -557,8 +609,17 @@ def send_db_in_end(obj):
                                 else:
                                     grid_id = 'G0000'
                                     field_id = obj_nm
+                                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                                res = sql_get(sql)
+                                if res:
+                                    objrank = res[0][0]
                                 ###
-                                update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
+                                if group_id == 'XL002':
+                                    name_telescope = 'F60'
+                                if group_id == 'XL003':
+                                    name_telescope = 'F30'
+                                status = obs_stag + ' @ GWAC'
+                                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,status)
                                 ###
                             else:
                                 for obj_nm in obj_nms:
@@ -574,14 +635,24 @@ def send_db_in_end(obj):
                                     else:
                                         grid_id = 'G0000'
                                         field_id = obj_nm
+                                    sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                                    res = sql_get(sql)
+                                    if res:
+                                        objrank = res[0][0]
                                     ###
-                                    update_to_ba_db(objsource, obj, grid_id, field_id, obs_stag, endTime)
+                                    if group_id == 'XL002':
+                                        name_telescope = 'F60'
+                                    if group_id == 'XL003':
+                                        name_telescope = 'F30'
+                                    status = obs_stag + ' @ GWAC'
+                                    update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,status)
                                     ###
                         else:
-                            print '\nWrong: Got too many res when send_db_in_beg.'
+                            print '\nWrong: Got too many res when send_db_in_end'
     return
 
 def check_log_sent(obj, send_beg_time, send_end_time):
+    #print send_beg_time, send_end_time
     while True:
         res = pg_db(pd_log_tab,'select',[['obs_stag'],{'obj_id':obj,'obs_stag':'sent'}])
         if res:
@@ -596,7 +667,7 @@ def check_log_sent(obj, send_beg_time, send_end_time):
         time.sleep(5)
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-            cmd = 'ls /var/log/gtoaes/gtoaes*.log'
+            cmd = 'ls /var/log/gtoaes/gtoaes*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
@@ -607,7 +678,9 @@ def check_log_sent(obj, send_beg_time, send_end_time):
                     if date_mark == 3:
                         break
                     log = log.strip()
+                    #print log
                     log_date = re.search(r"20\d\d\d\d\d\d", log).group(0)
+                    #print log_date
                     log_date = time.strftime("%Y-%m-%d",time.strptime(log_date, "%Y%m%d"))
                     #print log_date
                     cmd = "tac %s | grep -a '.*plan<%s> goes running on .*'" % (log, obj)
@@ -644,7 +717,7 @@ def check_log_sent(obj, send_beg_time, send_end_time):
     if group_id in ['XL002','XL003']:
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-            cmd = 'ls /tmp/gftservice*.log'
+            cmd = 'ls /tmp/gftservice*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
@@ -657,9 +730,9 @@ def check_log_sent(obj, send_beg_time, send_end_time):
                         for item in res:
                             item = item.strip()
                             print "\n######"+item
-                            log_sent_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                            log_sent_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
                             #print log_sent_time
-                            if send_beg_time <= log_sent_time <= send_end_time:
+                            if send_beg_time <= log_sent_time < send_end_time:
                                 log_sent_id = re.search(r'<id = (.*?)>', item).group(1)
                                 sent_mark = 1
                                 break
@@ -700,10 +773,10 @@ def check_log_dist(obj,obj_infs):
         pg_db(pd_log_tab,'update',[{'obj_dist_id':log_dist_id,'obj_dist_time':log_dist_time,'unit_id':log_dist_id},{'obj_id':obj,'obs_stag':'sent'}])
         return [log_dist_id, log_dist_time]
     if group_id == 'XL002':
-        time_limit = datetime.datetime.now() + datetime.timedelta(hours= -12)
+        time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-            cmd = 'ls /tmp/gftservice*.log'
+            cmd = 'ls /tmp/gftservice*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
@@ -717,7 +790,7 @@ def check_log_dist(obj,obj_infs):
                         for item in res:
                             item = item.strip()
                             print "\n"+item
-                            log_dist_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                            log_dist_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
                             #print log_sent_time
                             if log_dist_time >= log_sent_time:
                                 log_dist_id = re.search(r'<system id = (.*?)>', item).group(1)
@@ -758,7 +831,7 @@ def check_log_dist(obj,obj_infs):
         time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-            cmd = 'ls /tmp/gftservice*.log'
+            cmd = 'ls /tmp/gftservice*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
@@ -774,10 +847,7 @@ def check_log_dist(obj,obj_infs):
                         for item in res:
                             ii += 1
                             item = item.strip()
-                            re_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item)
-                            if re_time <= time_limit:
-                                bk_mark = 1
-                                break
+                            re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item)
                             if re_time and re_time.group(0) == log_sent_time:
                                 mark_i = ii
                             re_null = re.search(r"take NULL object", item)
@@ -790,7 +860,7 @@ def check_log_dist(obj,obj_infs):
                             if res_re:
                                 it = res_re.group(0)
                                 print '\n' + it
-                                log_dist_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", it).group(0)
+                                log_dist_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", it).group(0)
                                 #print log_sent_time
                                 if log_dist_time >= log_sent_time:
                                     log_dist_id = re.search(r'<system id = (.*?)>', it).group(1)
@@ -798,6 +868,9 @@ def check_log_dist(obj,obj_infs):
                                     break
                                 else:
                                     dist_mark = 0
+                                    if re_time <= time_limit:
+                                        bk_mark = 1
+                                        break
                         if dist_mark in [1, 2]:
                             break
                         if bk_mark == 1:
@@ -806,6 +879,8 @@ def check_log_dist(obj,obj_infs):
                     #######
                     time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     pg_db(pd_log_tab,'update',[{'obj_dist_time':time_now,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
+                    time.sleep(1.5)
+		    send_db_in_end(obj)
                     client.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
                     #######
                     return 0
@@ -841,7 +916,7 @@ def check_cam_log(obj,obj_infs):
     if group_id == 'XL001':
         if check_ser(group_id):
             ser_ip, ser_un, ser_pw = get_ser_config(group_id)[0:3]
-            cmd = 'ls /var/log/gtoaes/gtoaes*.log'
+            cmd = 'ls /var/log/gtoaes/gtoaes*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
@@ -933,7 +1008,7 @@ def check_cam_log(obj,obj_infs):
         else:
             #print "\nWARNING: The gtoaes of %s is Error." % group_id
             return 0
-    if group_id == 'XL002':
+    if group_id in ['XL002','XL003']:
         time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         if check_ser(group_id):
             obj_name, filter, frmcnt = at(obj_infs, 'obj_name', 'filter', 'frmcnt')
@@ -942,7 +1017,7 @@ def check_cam_log(obj,obj_infs):
             cmd = 'ps -ef | grep camagent | grep -v grep'
             res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
             if res:
-                cmd = 'ls /tmp/camagent*.log'
+                cmd = 'ls /tmp/camagent*.log | sort'
                 logs = con_ssh(cam_ip, cam_un, cam_pw, cmd)
                 if logs:
                     logs.reverse()
@@ -956,93 +1031,69 @@ def check_cam_log(obj,obj_infs):
                             count = 0
                             for item in res:
                                 item = item.strip()
-                                item_com_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                                item_com_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
                                 if item_com_time > log_dist_time:
                                     print '\n'+item
                                     count += 1
+                                else:
+                                    if item_com_time <= time_limit:
+                                        bk_mark = 1
+                                        break
                                 if count == int(frmcnt):
-                                    log_com_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                                    log_com_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
                                     cam_mark = 1
                                     break
-                        if cam_mark == 1:
-                            break
-                    if cam_mark == 0:
-                        for log in logs:
-                            log = log.strip()
-                            cmd = "cat " + log + " | grep 'ERROR: Filter input error'"
-                            res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
-                            if res:
-                                for item in res:
-                                    item = item.strip()
-                                    item_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
-                                    if item_time > log_dist_time:
-                                        print '\n' + item
-                                        cam_mark = 2
-                                        break
-                                    else:
-                                        if item_time <= time_limit:
-                                            bk_mark = 1
-                                            break
-                            if cam_mark == 2:
+                            if cam_mark == 1:
                                 break
                             if bk_mark == 1:
                                 break
+                        if cam_mark == 0:
+                                cmd = "tac " + log + ' | grep "20[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*" | head -1'
+                                res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+                                if res:
+                                    res = res[0].strip()
+                                    re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", res)
+                                    if re_time and re_time.group(0) <= time_limit:
+                                        break
+                                cmd = "cat " + log + " | grep 'ERROR: Filter input error'"
+                                res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+                                if res:
+                                    for item in res:
+                                        item = item.strip()
+                                        item_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                                        if item_time > log_dist_time:
+                                            #print '\n' + item
+                                            cam_mark = 2
+                                            break
+                                    if cam_mark == 2:
+                                        break
+                    # if cam_mark == 0:
+                    #     for log in logs:
+                    #         log = log.strip()
+                    #         cmd = "cat " + log + " | grep 'ERROR: Filter input error'"
+                    #         res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+                    #         if res:
+                    #             for item in res:
+                    #                 item = item.strip()
+                    #                 item_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
+                    #                 if item_time > log_dist_time:
+                    #                     print '\n' + item
+                    #                     cam_mark = 2
+                    #                     break
+                    #                 else:
+                    #                     if item_time <= time_limit:
+                    #                         bk_mark = 1
+                    #                         break
+                    #         if cam_mark == 2:
+                    #             break
+                    #         if bk_mark == 1:
+                    #             break
                     if cam_mark == 2:
                         print "\nWARNING: Filter Error. Please check the system !"
                         log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                         #pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
                         return 0#[2, log_com_time]
                     elif cam_mark == 1:
-                        #######
-                        pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'complete'},{'obj_id':obj,'obs_stag':'sent'}])
-                        #######
-                        return [1,log_com_time]
-                    else:
-                        print "\nThere is no obs complete inf about %s in camagent log of %s for now!" % (obj_name, log_dist_id)
-                        return 0
-                else:
-                    print "\nWARNING: There is no camagent log of %s!" % log_dist_id
-                    return 0
-            else:
-                print "\nWARNING: The camagent of %s is Error." % log_dist_id
-                return 0
-        else:
-            #print "\nWARNING: The gftservice of %s is Error." % group_id
-            return 0
-    if group_id == 'XL003':
-        if check_ser(group_id):
-            obj_name, filter, frmcnt = at(obj_infs, 'obj_name', 'filter', 'frmcnt')
-            date_now = datetime.datetime.utcnow().strftime("%y%m%d")
-            cam_ip, cam_un, cam_pw = get_cam_config(log_dist_id)[0:3]
-            cmd = 'ps -ef | grep camagent | grep -v grep'
-            res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
-            if res:
-                cmd = 'ls /tmp/camagent*.log'
-                logs = con_ssh(cam_ip, cam_un, cam_pw, cmd)
-                if logs:
-                    logs.reverse()
-                    cam_mark = 0
-                    for log in logs:
-                        log = log.strip()
-                        cmd = "cat " + log + " | grep 'Image is saved as " + obj_name + ".*_" + filter + "_" + date_now+ "_.*.fit$'"
-                        res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
-                        if res:
-                            count = 0
-                            for item in res:
-                                item = item.strip()
-                                item_com_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
-                                if item_com_time > log_dist_time:
-                                    print '\n'+item
-                                    count += 1
-                                if count == int(frmcnt):
-                                    log_com_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
-                                    cam_mark = 1
-                                    break
-                                else:
-                                    cam_mark = 0
-                        if cam_mark == 1:
-                            break
-                    if cam_mark == 1:
                         #######
                         pg_db(pd_log_tab,'update',[{'obj_comp_time':log_com_time,'obs_stag':'complete'},{'obj_id':obj,'obs_stag':'sent'}])
                         #######
@@ -1066,7 +1117,7 @@ def input():
 
 def check_time_window(obj):
     begin_time, end_time = at(get_obj_inf(obj),'begin_time', 'end_time')
-    time_now = (datetime.datetime.utcnow() + datetime.timedelta(minutes= 25)).strftime("%Y/%m/%d %H:%M:%S")
+    time_now = (datetime.datetime.utcnow() + datetime.timedelta(minutes= 0)).strftime("%Y/%m/%d %H:%M:%S")
     if time_now < end_time:
         if time_now > begin_time:
             return 1
@@ -1214,6 +1265,10 @@ def check_obj_stat(obj): ### after check sent
                     return 1
                 if log_sent_time < time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()-1800)):### wait for 30 mins
                     print "\nWARNING: The obj %s has waited for 30 mins after sent. Please check the system, break current object or not (y/n):" % obj
+                    if group_id == 'XL003':
+                        cam_ip, cam_un, cam_pw = get_cam_config('3')[0:3]
+                        cmd = 'autostop ; autostart '
+                        con_ssh(cam_ip,cam_un,cam_pw,cmd)
                     k_in = ''
                     t = threading.Thread(target=input)
                     t.setDaemon(True)
@@ -1255,85 +1310,132 @@ def get_pri(obj):
     res = sql_get(sql)
     if res:
         return res[0][0]
-
-def get_sent_indb():
-    gwac_sent_objs = []
-    f60_sent_objs = []
-    f30_sent_objs = []
-    sql = "SELECT obj_id FROM object_list_current WHERE obs_stag='sent' ORDER BY id"
+######
+def get_sent_indb(group_id):
+    objs = []
+    sql = "SELECT object_list_current.obj_id FROM object_list_current, object_list_all WHERE object_list_current.obj_id=object_list_all.obj_id AND object_list_current.obs_stag='sent' and object_list_all.group_id='"+ group_id +"' AND object_list_current.mode='observation' ORDER BY object_list_current.id"
     res = sql_get(sql)
     if res:
         for i in res:
-            group_id = get_grp_id(i[0])
-            if group_id == "XL001":
-                gwac_sent_objs.append(i[0])
-            if group_id == "XL002":
-                f60_sent_objs.append(i[0])
-            if group_id == "XL003":
-                f30_sent_objs.append(i[0])
-    return [gwac_sent_objs,f60_sent_objs,f30_sent_objs]
+            objs.append(i[0])
+    return objs
 
-def get_new_indb():
-    gwac_new_objs = []
-    f60_new_objs = []
-    f30_new_objs = []
-    sql = "SELECT obj_id FROM object_list_current WHERE obs_stag='scheduled' AND mode='observation' ORDER BY id"
+def get_new_indb(group_id):
+    objs = []
+    sql = "SELECT object_list_current.obj_id FROM object_list_current, object_list_all WHERE object_list_current.obj_id=object_list_all.obj_id AND object_list_current.obs_stag='scheduled' and object_list_all.group_id='"+ group_id +"' AND object_list_current.mode='observation' ORDER BY object_list_current.id"
     res = sql_get(sql)
     if res:
         for i in res:
-            group_id = get_grp_id(i[0])
-            if group_id == "XL001":
-                gwac_new_objs.append(i[0])
-            if group_id == "XL002":
-                f60_new_objs.append(i[0])
-            if group_id == "XL003":
-                f30_new_objs.append(i[0])
-    return [gwac_new_objs,f60_new_objs,f30_new_objs]
+            objs.append(i[0])
+    return objs
 
-def get_com_indb():
-    gwac_com_objs = []
-    f60_com_objs = []
-    f30_com_objs = []
-    sql = "SELECT obj_id FROM object_list_current WHERE obs_stag in ('complete', 'pass', 'break') AND mode='observation'"
+def get_com_indb(group_id):
+    objs = []
+    sql = "SELECT object_list_current.obj_id FROM object_list_current, object_list_all WHERE object_list_current.obj_id=object_list_all.obj_id AND object_list_current.obs_stag in ('complete','break','pass') and object_list_all.group_id='"+ group_id +"' AND object_list_current.mode='observation' ORDER BY object_list_current.id"
     res = sql_get(sql)
     if res:
         for i in res:
-            group_id = get_grp_id(i[0])
-            if group_id == "XL001":
-                gwac_com_objs.append(i[0])
-            if group_id == "XL002":
-                f60_com_objs.append(i[0])
-            if group_id == "XL003":
-                f30_com_objs.append(i[0])
-    return [gwac_com_objs,f60_com_objs,f30_com_objs]
+            objs.append(i[0])
+    return objs
+#####
+
+# def get_sent_indb():
+#     gwac_sent_objs = []
+#     f60_sent_objs = []
+#     f30_sent_objs = []
+#     sql = "SELECT obj_id FROM object_list_current WHERE obs_stag='sent' ORDER BY id"
+#     res = sql_get(sql)
+#     if res:
+#         for i in res:
+#             group_id = get_grp_id(i[0])
+#             if group_id == "XL001":
+#                 gwac_sent_objs.append(i[0])
+#             if group_id == "XL002":
+#                 f60_sent_objs.append(i[0])
+#             if group_id == "XL003":
+#                 f30_sent_objs.append(i[0])
+#     return [gwac_sent_objs,f60_sent_objs,f30_sent_objs]
+
+# def get_new_indb():
+#     gwac_new_objs = []
+#     f60_new_objs = []
+#     f30_new_objs = []
+#     sql = "SELECT obj_id FROM object_list_current WHERE obs_stag='scheduled' AND mode='observation' ORDER BY id"
+#     res = sql_get(sql)
+#     if res:
+#         for i in res:
+#             group_id = get_grp_id(i[0])
+#             if group_id == "XL001":
+#                 gwac_new_objs.append(i[0])
+#             if group_id == "XL002":
+#                 f60_new_objs.append(i[0])
+#             if group_id == "XL003":
+#                 f30_new_objs.append(i[0])
+#     return [gwac_new_objs,f60_new_objs,f30_new_objs]
+
+# def get_com_indb():
+#     gwac_com_objs = []
+#     f60_com_objs = []
+#     f30_com_objs = []
+#     sql = "SELECT obj_id FROM object_list_current WHERE obs_stag in ('complete', 'pass', 'break') AND mode='observation'"
+#     res = sql_get(sql)
+#     if res:
+#         for i in res:
+#             group_id = get_grp_id(i[0])
+#             if group_id == "XL001":
+#                 gwac_com_objs.append(i[0])
+#             if group_id == "XL002":
+#                 f60_com_objs.append(i[0])
+#             if group_id == "XL003":
+#                 f30_com_objs.append(i[0])
+#     return [gwac_com_objs,f60_com_objs,f30_com_objs]
+
+def init_f30():
+    cam_ip, cam_un, cam_pw = get_cam_config('3')[0:3]
+    img_types = ['flat','bias','dark']
+    cur_date = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+    last_date = (datetime.datetime.utcnow() + datetime.timedelta(days= -1)).strftime("%Y-%m-%d")
+    cmd = 'ls /home/data_proc/Y2019/%s' % cur_date
+    res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+    if not res:
+        cmd = 'mkdir -p /home/data_proc/Y2019/%s' % cur_date
+        con_ssh(cam_ip, cam_un, cam_pw, cmd)
+    #cmd = 'cp -r /home/ccduser/data/Y2019/%s/* /home/data_proc/Y2019/%s' % (cur_date, cur_date)
+    #con_ssh(cam_ip, cam_un, cam_pw, cmd)
+    for it in img_types:
+        img_path_last = "/home/ccduser/data/Y2019/%s/%s" % (last_date, it)
+        img_to_path_last = '/home/data_proc/Y2019/%s' % last_date
+        cmd = 'cp -r %s %s' % (img_path_last, img_to_path_last)
+        con_ssh(cam_ip, cam_un, cam_pw, cmd)
+        img_path_cur = "/home/ccduser/data/Y2019/%s/%s" % (cur_date, it)
+        img_to_path_cur = '/home/data_proc/Y2019/%s' % cur_date
+        cmd = 'cp -r %s %s' % (img_path_cur, img_to_path_cur)
+        con_ssh(cam_ip, cam_un, cam_pw, cmd)
+    return
+
+def check_F30_sync():
+    cam_ip, cam_un, cam_pw = get_cam_config('3')[0:3]
+    while True:
+        cmd = 'ps -ef | grep sync_remote | grep -v grep '
+        res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+        if not res:
+            print '\n\n\033[0;31m########## Please restart the sync_remote_by_inotify.sh of F30 in /home/ccduser/sync !\033[0m\n\n'
+        time.sleep(30)
+
 
 def inits():
     date_c = datetime.datetime.utcnow().strftime("%Y-%m-%d")
     #pd_log_tab, running_list_cur
-    sql = 'select date_cur from '+pd_log_tab
-    res = sql_get(sql)
-    if res:
-        for i in list(set(res)):
-            #print i[0]
-            if i[0] < date_c:
-                #print 1
-                sql = 'insert into '+pd_log_tab.replace('current','history')+' (obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority) SELECT obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority FROM '+pd_log_tab+' WHERE date_cur='+"'"+i[0]+"'"
-                #print sql
-                sql_get(sql,0)
-                sql = 'delete from '+pd_log_tab+' WHERE date_cur='+"'"+i[0]+"'"
-                sql_get(sql,0)
-    sql = 'select op_time from '+running_list_cur
-    res = sql_get(sql)
-    if res:
-        for i in list(set(res)):
-            #print i[0]
-            if i[0] < date_c:
-                #print 1
-                sql = 'insert into '+running_list_cur.replace('current','history')+' (cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode) SELECT cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode FROM '+running_list_cur+' WHERE op_time='+"'"+i[0]+"'"
-                #print sql
-                sql_get(sql,0)
-                sql = 'delete from '+running_list_cur+' WHERE op_time='+"'"+i[0]+"'"
-                sql_get(sql,0)
+    sql = 'insert into '+pd_log_tab.replace('current','history')+' (obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority) SELECT obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority FROM '+pd_log_tab+' WHERE date_cur<'+"'"+ date_c +"'"
+    sql_get(sql,0)
+    sql = 'delete from '+pd_log_tab+' WHERE date_cur<'+"'"+ date_c +"'"
+    sql_get(sql,0)
+    ##
+    sql = 'insert into '+running_list_cur.replace('current','history')+' (cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode) SELECT cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode FROM '+running_list_cur+' WHERE op_time<'+"'"+ date_c +"'"
+    sql_get(sql,0)
+    sql = 'delete from '+running_list_cur+' WHERE op_time<'+"'"+ date_c +"'"
+    sql_get(sql,0)
+    return
 
 def check_sent():
     global lf
@@ -1347,15 +1449,20 @@ def check_sent():
         ###
         cur_date = datetime.datetime.utcnow().strftime("%Y-%m-%d")
         time_h = time.strftime("%H:%M", time.localtime(time.time()))
-        if time_h == '16:00':
+        if time_h == '7:30':
+            #init_f30()
             inits()
+            time.sleep(65)
+        if time_h == '8:05':
             lf.close()
             lf = open("obslogs/log_%s.txt" % cur_date, "a+")
             lf.write("# obj_name objrank begin_time end_time group_id\n")
             time.sleep(65)
         ###
-        sent_objs = get_sent_indb()
-        gwac_sent_objs,  f60_sent_objs, f30_sent_objs = sent_objs[:3]
+        #sent_objs = get_sent_indb()
+        gwac_sent_objs = get_sent_indb('XL001')
+        f60_sent_objs = get_sent_indb('XL002')
+        f30_sent_objs = get_sent_indb('XL003')
         if gwac_sent_objs:
             print "\n\n\nCurrent objs of GWAC: " + ','.join(gwac_sent_objs)
             for obj in gwac_sent_objs:
@@ -1373,7 +1480,7 @@ def check_sent():
                 print '\n'
 
 def get_free_teles_from_log(type):
-    #gwac_init = ['002','004']
+    gwac_init = ['002','003','004']
     gwac_frees = []
     f60_frees = []
     f30_frees = []
@@ -1382,36 +1489,49 @@ def get_free_teles_from_log(type):
     if type == 'XL001':
         if check_ser(type):
             ser_ip, ser_un, ser_pw = get_ser_config(type)[0:3]
-            cmd = 'ls /var/log/gtoaes/gtoaes*.log'
+            cmd = 'ls /var/log/gtoaes/gtoaes*.log | sort'
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
-                auto_mark1 = 0
+                auto_mark = 0
                 for id in gwac_init:
+                    date_mark = 0
+                    auto_mark1 = 0
                     auto_mark2 = 0
                     for log in logs:
+                        date_mark += 1
+                        if date_mark == 3:
+                            break
                         log = log.strip()
-                        log_date = re.search(r"20\d\d\d\d\d\d", log).group(0)
+                        #print(log)
+                        log_date = re.search(r"20\d\d\d\d\d\d", log)
+                        if log_date:
+                            log_date = log_date.group(0)
+                        #print log_date
                         log_date = time.strftime("%Y-%m-%d",time.strptime(log_date, "%Y%m%d"))
-                        cmd = "tac %s | grep 'Mount<001:%s> is .*line' | head -1" % (log, id)
+                        cmd = "tac %s | grep -a 'Mount<001:%s> is .*line' | head -1" % (log, id)
                         res = con_ssh(ser_ip, ser_un, ser_pw, cmd)
                         if res:
+                            #print res
                             res = ''.join(res).strip()
-                            res_time = re.search(r"^\d\d:\d\d:\d\d", res).group(0)
-                            res_time = "%s %s" % (log_date, res_time)
-                            res_time_utc = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(res_time, "%Y-%m-%d %H:%M:%S"))).strftime("%Y-%m-%d")
-                            if res_time_utc == cur_date:
-                                res_stat = re.search(r"is (.*?)-line", res).group(1)
-                                if res_stat == 'on':
-                                    gwac_frees.append(id)
-                                    auto_mark1 += 1
-                                else:
-                                    auto_mark2 = -1
-                            else:
-                                auto_mark2 = -1
-                        if auto_mark2 != 0:
+                            res_time = re.search(r"^\d\d:\d\d:\d\d", res)
+                            if res_time:
+                                res_time = res_time.group(0)
+                                res_time = "%s %s" % (log_date, res_time)
+                                #print res_time
+                                res_time_utc = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(res_time, "%Y-%m-%d %H:%M:%S"))).strftime("%Y-%m-%d")
+                                if res_time_utc == cur_date:
+                                    res_stat = re.search(r"is (.*?)-line", res).group(1)
+                                    if res_stat == 'on':
+                                        gwac_frees.append(id)
+                                        auto_mark1 += 1
+                                        auto_mark += 1
+                                    else:
+                                        auto_mark2 = -1
+                        #print auto_mark1,auto_mark2
+                        if auto_mark1 != 0 or auto_mark2 != 0:
                             break
-                if auto_mark1 >= 1:
+                if auto_mark >= 1:
                     return gwac_frees
                 else:
                     return 0
@@ -1419,6 +1539,7 @@ def get_free_teles_from_log(type):
                 return 0
         else:
             return 0
+
     ###group=XL002
     if type == 'XL002':
         if check_ser(type):
@@ -1427,12 +1548,15 @@ def get_free_teles_from_log(type):
             logs = con_ssh(ser_ip, ser_un, ser_pw, cmd)
             if logs:
                 logs.reverse()
+                #print(logs)
                 auto_mark = 0
                 for log in logs:
                     log = log.strip()
                     for uid in ['1','2']:
                         cmd = "tac " + log + " | grep '<system id = %s> .* automatic .*' | head -1" % uid
+                        #print(cmd)
                         res = con_ssh(ser_ip, ser_un, ser_pw, cmd)
+                        #print(res)
                         if res:
                             res = ''.join(res).strip()
                             res_time = re.search(r"^20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", res).group(0)
@@ -1489,7 +1613,7 @@ def get_free_teles_from_log(type):
                                     auto_mark = -1
                             else:
                                 if check_cam('3'):
-                                    print '\nWARNING: The system of XL003 is in idle mode now.'
+                                    print('\nWARNING: The system of XL003 is in idle mode now.')
                                 auto_mark = -1
                         else:
                             auto_mark = -1
@@ -1504,551 +1628,248 @@ def get_free_teles_from_log(type):
         else:
             return 0
 
-def get_uesd_teles_from_db(type):
-    gwac_used = []
-    f60_used = []
-    f30_used = []
-    gwac_pris = []
-    f60_pris = []
-    f30_pris = []
+# def get_uesd_teles_from_db(type):
+#     gwac_used = []
+#     f60_used = []
+#     f30_used = []
+#     gwac_pris = []
+#     f60_pris = []
+#     f30_pris = []
+#     date_cur = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+#     if type == 'XL001':
+#         res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
+#         if res:
+#             for it in res:
+#                 gwac_used.append(it[0])
+#                 gwac_pris.append(it[1])
+#             return [gwac_used,gwac_pris]
+#         else:
+#             return 0
+#     if type == 'XL002':
+#         res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
+#         if res:
+#             for it in res:
+#                 f60_used.append(it[0])
+#                 f60_pris.append(it[1])
+#             return  [f60_used,f60_pris]
+#         else:
+#             return 0
+#     if type == 'XL003':
+#         res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
+#         if res:
+#             for it in res:
+#                 f30_used.append(it[0])
+#                 f30_pris.append(it[1])
+#             return  [f30_used,f30_pris]
+#         else:
+#             return 0
+
+# def sync():
+#     sql = "SELECT obj_id FROM object_list_current WHERE obs_stag in ('complete', 'pass', 'break') AND mode='observation'"
+#     res = sql_get(sql)
+#     if res:
+#         objs1 = res
+#         #print objs1
+#         sql = "SELECT obj_id FROM "+pd_log_tab+" WHERE obs_stag='sent'"
+#         res = sql_get(sql)
+#         if res:
+#             objs2 = res
+#             #print objs2
+#             for obj in objs2:
+#                 if obj in objs1:
+#                     obj = obj[0]
+#                     sql = "SELECT obs_stag FROM object_list_current WHERE obj_id='"+obj+"'"
+#                     res = sql_get(sql)
+#                     if res:
+#                         obs_stag = res[0][0]
+#                         #print obs_stag
+#                         sql = "UPDATE "+pd_log_tab+" SET obs_stag='"+obs_stag+"' WHERE obj_id='"+obj+"'"
+#                         sql_get(sql,0)
+
+def get_uesd_teles_from_db(group_id):
+    used_units = []
+    unit_pris = []
     date_cur = datetime.datetime.utcnow().strftime("%Y-%m-%d")
-    if type == 'XL001':
-        res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
-        if res:
-            for it in res:
-                gwac_used.append(it[0])
-                gwac_pris.append(it[1])
-            return [gwac_used,gwac_pris]
+    res = pg_db('pd_log_current','select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':group_id}])
+    if res:
+        res.sort(key=operator.itemgetter(1))
+        res_dic_set_lis = sorted(dict(res).items(), key=operator.itemgetter(1))
+        for k, v in res_dic_set_lis:
+            used_units.append(k)
+            unit_pris.append(v)
+        return [unit_pris,used_units]
+    else:
+        return 0
+
+def pre_units(group_id,obj_infs):
+    used_sts = get_uesd_teles_from_db(group_id)
+    #print used_sts
+    if used_sts:
+         pri_list, used_units= used_sts[:]
+    else:
+        pri_list = ['0']
+        used_units = []
+    if group_id == 'XL001':
+        if 'GW' in str(obj_infs['objsour']):
+            initunits = gwac_init #+ ['003']
         else:
-            return 0
-    if type == 'XL002':
-        res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
-        if res:
-            for it in res:
-                f60_used.append(it[0])
-                f60_pris.append(it[1])
-            return  [f60_used,f60_pris]
-        else:
-            return 0
-    if type == 'XL003':
-        res = pg_db(pd_log_tab,'select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':type}])
-        if res:
-            for it in res:
-                f30_used.append(it[0])
-                f30_pris.append(it[1])
-            return  [f30_used,f30_pris]
-        else:
-            return 0
+            initunits = gwac_init #['002','004']
+    if group_id == 'XL002':
+        initunits = f60_init
+    if group_id == 'XL003':
+        initunits = f30_init
+    if not used_units:
+        unused_units = initunits[:]
+    else:
+        unused_units = list(set(initunits) - set(used_units))
+    for_new_units = unused_units + used_units
+    return [initunits, unused_units, for_new_units, pri_list]
+
+def check_new_main(group_id):
+    global send_objs
+    mark_wait = 0
+    type_tel = {'XL001':'GWAC', 'XL002':'F60', 'XL003':'F30'}
+
+    new_objs = get_new_indb(group_id)
+    com_objs = get_com_indb(group_id)
+
+    lf.write('\n##### %s_new_objs(%s): ' % (type_tel[group_id] ,str(len(new_objs))) + ','.join(new_objs))
+    print '\n##### %s_new_objs: %s ' % (type_tel[group_id] ,str(len(new_objs)))# + ','.join(new_objs)
+    lf.write('\n##### %s_com_objs(%s): ' % (type_tel[group_id] ,str(len(com_objs))) + ','.join(com_objs))
+    print '\n##### %s_com_objs: %s ' % (type_tel[group_id] ,str(len(com_objs)))# + ','.join(com_objs)
+    if new_objs:
+        lf.write('\n##### %s : Case 1' % type_tel[group_id])
+        for obj in new_objs:
+            if obj not in send_objs:
+                send_objs.append(obj)
+                obj_infs = get_obj_inf(obj)
+                initunits, unused_units, for_new_units, pri_list = pre_units(group_id,obj_infs)[:]
+                print '\n'
+                print pre_units(group_id,obj_infs)
+                obj_pri = obj_infs['priority']
+                if int(obj_pri) > int(pri_list[0]):
+                    units = for_new_units
+                    if pri_list[0] == '0':
+                        print '\n##### Common, %s ' % obj_pri
+                    else:
+                        print '\n##### Higher Priority, %s ' % obj_pri
+                else:
+                    units = unused_units
+                    print '\n##### Common, %s ' % obj_pri
+                if units:
+                    #print units
+                    unit_id = obj_infs['unit_id']
+                    if len(unit_id) > 3:
+                        unit_id = units[0]
+                    if unit_id in units:
+                        time_res = check_time_window(obj)
+                        if time_res == 1:
+                            lf.write('\n###### The obj %s of %s: Sending.' % (obj,type_tel[group_id]))
+                            print '\n###### The obj %s of %s: Sending.' % (obj,type_tel[group_id])
+                            send_beg_time, send_end_time = send_cmd(obj, unit_id)[:]
+                            for it in range(5):
+                                if check_log_sent(obj, send_beg_time, send_end_time):
+                                    check_log_sent_res = 1
+                                    break
+                                else:
+                                    check_log_sent_res = 0
+                                    time.sleep(it)
+                            if check_log_sent_res == 1:
+                                lf.write("\n##### The obj %s of %s: Send ok." % (obj,type_tel[group_id]))
+                                print "\n##### The obj %s of %s: Send ok." % (obj,type_tel[group_id])
+                                client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
+                                send_db_in_beg(obj)
+                                time.sleep(5)
+                            else:
+                                print "\n##### %s WARNING: The obj of %s: Send Wrong." % (obj, type_tel[group_id])
+                                lf.write("\n##### The obj %s of %s: Send Wrong." % (obj, type_tel[group_id]))
+                                pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
+                        elif time_res == 0:
+                            client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
+                            print "\n##### The obj %s of %s: Pass Ok." % (obj, type_tel[group_id])
+                            lf.write("\n##### The obj %s of %s: Pass Ok." % (obj, type_tel[group_id]))
+                            send_objs.remove(obj)
+                            break
+                        else:
+                            print "\n##### %s WARNING: The obj of %s: Need wait." % (obj, type_tel[group_id])
+                            lf.write("\n##### The obj %s of %s: Need Wait." % (obj, type_tel[group_id]))
+                            mark_wait = 1
+                            send_objs.remove(obj)
+                            break
+                else:
+                    print "\n##### %s WARNING: There is no free units of %s, don't need to send." % (type_tel[group_id],obj)
+                    lf.write("\n##### There is no free units of %s when send %s, don't need to send." % (type_tel[group_id],obj))
+                    send_objs.remove(obj)
+                    break
+                send_objs.remove(obj)
+            else:
+                print '\n##### %s : Case Wrong. ' % type_tel[group_id]
+                break
+    else:
+        lf.write('\n##### %s : Case 2' % type_tel[group_id])
+    return mark_wait
 
 def sync():
-    sql = "SELECT obj_id FROM object_list_current WHERE obs_stag in ('complete', 'pass', 'break') AND mode='observation'"
-    res = sql_get(sql)
-    if res:
-        objs1 = res
-        #print objs1
-        sql = "SELECT obj_id FROM "+pd_log_tab+" WHERE obs_stag='sent'"
+    while True:
+        time.sleep(0.5)
+        mark = 0
+        objs1 = []
+        objs2 = []
+        pd_log_tab = 'pd_log_current'
+        sql = "SELECT obj_id FROM object_list_current WHERE obs_stag in ('sent') AND mode='observation'"
+        res = sql_get(sql)
+        if res:
+            objs1 = res
+            #print objs1
+        sql = "SELECT obj_id FROM "+pd_log_tab+" WHERE obs_stag in ('complete', 'pass', 'break')"
         res = sql_get(sql)
         if res:
             objs2 = res
             #print objs2
-            for obj in objs2:
-                if obj in objs1:
-                    obj = obj[0]
-                    sql = "SELECT obs_stag FROM object_list_current WHERE obj_id='"+obj+"'"
-                    res = sql_get(sql)
-                    if res:
-                        obs_stag = res[0][0]
-                        #print obs_stag
-                        sql = "UPDATE "+pd_log_tab+" SET obs_stag='"+obs_stag+"' WHERE obj_id='"+obj+"'"
-                        sql_get(sql,0)
+        for obj in objs2:
+            if obj in objs1:
+                mark = 1
+        if mark == 0:
+            break
+    return
 
 def check_new():
-    obj_numb1 = 0
-    obj_numb2 = 0
-    obj_numb3 = 0
-    com_numb1 = 0
-    com_numb2 = 0
-    com_numb3 = 0
-    no_mark = 0
-    sent_mark = 0
-    wait_mark = 0
     while True:
         msg = get_msg()
         if msg:
-            t_n = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-            print "\n\n\n"
-            print "\n###### Get news (%s) ######" % t_n
-
-            lf.write('\n\n\n##### Time_now: %s' % t_n)
-            lf.write('\n##### Mark-beg: %s %s %s %s %s %s' % (obj_numb1,obj_numb2,obj_numb3,com_numb1,com_numb2,com_numb3))
+            time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            print '\n###### Get news (%s)' % time_now
+            lf.write("\n###### Get news (%s) ######" % time_now)
+            #sync()
+            mark_wait = 0
+            for group_id in ['XL001','XL002','XL003']:
+                print '\n\n\n'
+                k = check_new_main(group_id)
+                mark_wait += k
+            if mark_wait:
+                time.sleep(45)
+                xclient.Send("Hello World",['insert'])
+            print '\n###### Ready to get news.'
+            lf.write('\n###### Ready to get news ######')
             time.sleep(1)
-            sync()
-            new_objs = get_new_indb()
-            com_objs = get_com_indb()
-            gwac_new_objs, f60_new_objs, f30_new_objs = new_objs[:]
-            gwac_com_objs, f60_com_objs, f30_com_objs = com_objs[:]
+    return
 
-            #gwac_new_objs = new_objs[0]
-            lf.write('\n##### gwac_news: '+','.join(gwac_new_objs))
-            lf.write('\n##### len_gwac_new: '+str(len(gwac_new_objs)))
-            if gwac_new_objs:
-                len_gwac_news = len(gwac_new_objs)
-                res = get_uesd_teles_from_db('XL001')
-                if res:
-                    gwac_used_units = list(set(res[0]))
-                    if None in list(set(res[0])):
-                        gwac_used_units = list(set(res[0])).remove(None)
-                    pri_list1 = list(set(res[1]))
-                    if None in list(set(res[1])):
-                        pri_list1 = list(set(res[1])).remove(None)
-                else:
-                    gwac_used_units = []
-                    pri_list1 = ['0']
-                if 'GW' in str(get_obj_inf(gwac_new_objs[0])['objsour']):
-                    gwac_units = gwac_init #+ ['003']
-                else:
-                    gwac_units = gwac_init #['002','004']
-                if not gwac_used_units:
-                    gwac_unused_units = gwac_units[:]
-                else:
-                    gwac_unused_units = list(set(gwac_units) - set(gwac_used_units))
-                gwac_for_new_units = gwac_unused_units + gwac_used_units
-                print '\n###### ',pri_list1, gwac_unused_units, gwac_for_new_units
-                lf.write('\n##### gwac_ready: '+' '.join(pri_list1)+','+' '.join(gwac_unused_units)+','+' '.join(gwac_for_new_units))
-                #gwac_com_objs = com_objs[0]#get_com_indb("XL001")
-                lf.write('\n##### gwac_coms: '+','.join(gwac_new_objs))
-                lf.write('\n##### len_gwac_com: '+str(len(gwac_com_objs)))
-                if gwac_com_objs and len(gwac_com_objs) > com_numb1:
-                    print '\n###### X1'
-                    lf.write('\n##### X1')
-                    print '\n###### Nember of GWAC objs: %s ' % str(len(gwac_new_objs))
-                    #print "\nObjs of GWAC: " + ','.join(gwac_new_objs) + '\n'
-                    if len(gwac_unused_units) > 0:
-                        for obj in gwac_new_objs:
-                            unit_id = get_obj_inf(obj)["unit_id"]
-                            if len(unit_id) > 3:
-                                unit_id = gwac_unused_units[0]
-                            if unit_id in gwac_unused_units:
-                                time_res = check_time_window(obj)
-                                if time_res == 1:
-                                    print '\n###### The obj %s of GWAC: 1\n' % obj 
-                                    send_beg_time, send_end_time = send_cmd(obj, unit_id)[0:2]
-                                    if check_log_sent(obj, send_beg_time, send_end_time):
-                                        time.sleep(1.5)
-                                        client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                        #time.sleep(0.5)
-                                        print "\n###### The obj %s of GWAC: Send ok.\n" % obj 
-                                        lf.write("\n##### The obj %s of GWAC: Send ok." % obj)
-                                        send_db_in_beg(obj)
-                                        len_gwac_news -= 1
-                                        obj_numb1 = len_gwac_news
-                                        #com_numb1 = len(gwac_com_objs)
-                                        gwac_unused_units.remove(unit_id)
-                                        if len(gwac_unused_units) == 0:
-                                            sent_mark += 1
-                                            break
-                                    else:
-                                        print "\n###### The obj %s of GWAC: Send Wrong.\n" % obj 
-                                        lf.write("\n##### The obj %s of GWAC: Send Wrong." % obj)
-                                        #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])
-                                        pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                        time.sleep(1.5)
-                                        #break
-                                elif time_res == 0:
-                                    print '\n###### The obj %s of GWAC: 0\n' % obj 
-                                    client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                    print "\n###### The obj %s of GWAC: Pass ok.\n" % obj 
-                                    lf.write("\n##### The obj %s of GWAC: Pass ok." % obj )
-                                    len_gwac_news -= 1
-                                    obj_numb1 = len_gwac_news
-                                    #com_numb1 = len(gwac_com_objs)
-                                    break
-                                else:
-                                    print '\n###### The obj %s of GWAC: %s\n' % (obj, time_res)
-                                    print '\n###### The obj %s of GWAC: Need wait.\n' % obj
-                                    lf.write("\n##### The obj %s of GWAC: Need wait." % obj)
-                                    wait_mark += 1
-                                    break
-                    else:
-                        print '\n###### There is no more free units for GWAC.'
-                        sent_mark += 1
-                else:
-                    if len(gwac_new_objs) > obj_numb1:
-                        print "\n###### X2"
-                        lf.write('\n##### X2')
-                        print '\n###### Nember of GWAC objs: %s ' % str(len(gwac_new_objs))
-                        #print "\nObjs of GWAC: " + ','.join(gwac_new_objs) + '\n'
-                        if len(gwac_for_new_units) > 0:
-                            for obj in gwac_new_objs:
-                                #pri = get_pri(obj)
-                                if int(get_pri(obj)) > int(max(pri_list1)):
-                                    unit_id = get_obj_inf(obj)["unit_id"]
-                                    if len(unit_id) > 3:
-                                        unit_id = gwac_for_new_units[0]
-                                    if unit_id in gwac_for_new_units:
-                                        time_res = check_time_window(obj)
-                                        if time_res == 1:
-                                            print '\n###### The obj %s of GWAC: 1\n' % obj
-                                            send_beg_time, send_end_time = send_cmd(obj, unit_id)[0:2]
-                                            if check_log_sent(obj, send_beg_time, send_end_time):
-                                                time.sleep(1.5)
-                                                client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                                #time.sleep(0.5)
-                                                print '\n###### The obj %s of GWAC: Send ok.\n' % obj
-                                                lf.write("\n##### The obj %s of GWAC: Send ok." % obj) 
-                                                send_db_in_beg(obj)
-                                                len_gwac_news -= 1
-                                                obj_numb1 = len_gwac_news
-                                                #com_numb1 = len(gwac_com_objs)
-                                                gwac_for_new_units.remove(unit_id)
-                                                if len(gwac_for_new_units) == 0:
-                                                    sent_mark += 1
-                                                    break
-                                            else:
-                                                print '\n###### The obj %s of GWAC: Send Wrong.\n'
-                                                lf.write("\n##### The obj %s of GWAC: Send Wrong." % obj) 
-                                                #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                     
-                                                pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                                time.sleep(1.5)
-                                                #break
-                                        elif time_res == 0:
-                                            print '\n###### The obj %s of GWAC: 0\n' % obj 
-                                            client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                            print '\n###### The obj %s of GWAC: Pass ok.\n' % obj
-                                            lf.write("\n##### The obj %s of GWAC: Pass ok." % obj)
-                                            len_gwac_news -= 1
-                                            obj_numb1 = len_gwac_news
-                                            #com_numb1 = len(gwac_com_objs)
-                                            break
-                                        else:
-                                            print '\n###### The obj %s of GWAC: %s\n' % (obj, time_res)
-                                            print '\n###### The obj %s of GWAC: Need wait.\n' % obj
-                                            lf.write("\n##### The obj %s of GWAC: Need wait." % obj)
-                                            wait_mark += 1
-                                            break
-                                else:
-                                    print "\n###### Don't need to send the new obj of GWAC for now.\n"
-                                    sent_mark += 1
-                                    break
-                    else:
-                        print "\n###### X3"
-                        lf.write('\n##### X3')
-                        #pass
-            else:
-                no_mark += 1
-            
-            #f60_new_objs = new_objs[1]
-            lf.write('\n##### f60_news: '+','.join(f60_new_objs))
-            lf.write('\n##### len_f60_new: '+str(len(f60_new_objs)))
-            if f60_new_objs:
-                len_f60_news = len(f60_new_objs)
-                res = get_uesd_teles_from_db('XL002')
-                if res:
-                    f60_used_units = list(set(res[0]))
-                    if None in list(set(res[0])):
-                        f60_used_units = list(set(res[0])).remove(None)
-                    pri_list2 = list(set(res[1]))
-                    if None in list(set(res[1])):
-                        pri_list2 = list(set(res[1])).remove(None)
-                else:
-                    f60_used_units = []
-                    pri_list2 = ['0']
-                f60_units = f60_init#['001']
-                if not f60_used_units:
-                    f60_unused_units = f60_units[:]
-                else:
-                    f60_unused_units = list(set(f60_units) - set(f60_used_units))
-                f60_for_new_units = f60_unused_units + f60_used_units
-                print '\n###### ',pri_list2, f60_unused_units, f60_for_new_units
-                lf.write('\n##### f60_ready: '+' '.join(pri_list2)+','+' '.join(f60_unused_units)+','+' '.join(f60_for_new_units))
-                #f60_com_objs = com_objs[1]#get_com_indb("XL002")
-                lf.write('\n##### f60_coms: '+','.join(f60_com_objs))
-                lf.write('\n##### len_f60_com: '+str(len(f60_com_objs)))
-                if f60_com_objs and len(f60_com_objs) > com_numb2:
-                    print "\n###### Y1"
-                    lf.write('\n##### Y1')
-                    print '\n###### Nember of F60 objs: %s ' % str(len(f60_new_objs))    
-                    #print "\nObjs of F60: " + ','.join(f60_new_objs) + '\n'
-                    if len(f60_unused_units) > 0:
-                        for obj in f60_new_objs:
-                            unit_id = get_obj_inf(obj)["unit_id"]
-                            if len(unit_id) > 3:
-                                unit_id = f60_unused_units[0]
-                            if unit_id in f60_unused_units:
-                                time_res = check_time_window(obj)
-                                if time_res == 1:
-                                    print '\n###### The obj %s of F60: 1\n' % obj
-                                    send_beg_time, send_end_time = send_cmd(obj, unit_id)[:]
-                                    if check_log_sent(obj, send_beg_time, send_end_time):
-                                        time.sleep(1.5)
-                                        client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                        print '\n###### The obj %s of F60: Send ok.\n' % obj 
-                                        lf.write("\n##### The obj %s of F60: Send ok." % obj)
-                                        send_db_in_beg(obj)
-                                        len_f60_news -= 1
-                                        obj_numb2 = len_f60_news
-                                        #com_numb2 = len(f60_com_objs)
-                                        f60_unused_units.remove(unit_id)
-                                        if len(f60_unused_units) == 0:
-                                            sent_mark += 1
-                                            break
-                                    else:
-                                        print '\n###### The obj %s of F60: Send Wrong.\n' % obj 
-                                        lf.write("\n##### The obj %s of F60: Send Wrong." % obj)
-                                        #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
-                                        pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                        time.sleep(1.5)
-                                        #break
-                                elif time_res == 0:
-                                    print '\n###### The obj %s of F60: 0\n' % obj
-                                    client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                    print '\n###### The obj %s of F60: Pass ok.\n' % obj
-                                    lf.write("\n##### The obj %s of F60: Pass ok." % obj)
-                                    len_f60_news -= 1
-                                    obj_numb2 = len_f60_news
-                                    #com_numb2 = len(f60_com_objs)
-                                    break
-                                else:
-                                    print '\n###### The obj %s of F60: %s\n' % (obj, time_res)
-                                    print '\n###### The obj %s of F60: Need wait.\n' % obj
-                                    lf.write("\n##### The obj %s of F60: Need wait." % obj)
-                                    wait_mark += 1
-                                    break
-                    else:
-                        print '\n###### There is no more free units for F60.'
-                        sent_mark += 1
-                else:
-                    if len(f60_new_objs) > obj_numb2:
-                        print '\n###### Y2'
-                        lf.write('\n##### Y2')
-                        print '\n###### Nember of F60 objs: %s ' % str(len(f60_new_objs)) 
-                        #print "\nObjs of F60: " + ','.join(f60_new_objs) + '\n'
-                        if len(f60_for_new_units) > 0:
-                            for obj in f60_new_objs:
-                                if int(get_pri(obj)) > int(max(pri_list2)):
-                                    unit_id = get_obj_inf(obj)["unit_id"]
-                                    if len(unit_id) > 3:
-                                        unit_id = f60_for_new_units[0]
-                                    if unit_id in f60_for_new_units:
-                                        time_res = check_time_window(obj)
-                                        if time_res == 1:
-                                            print '\n###### The obj %s of F60: 1\n' % obj
-                                            send_beg_time, send_end_time = send_cmd(obj, unit_id)[:]
-                                            if check_log_sent(obj, send_beg_time, send_end_time):
-                                                time.sleep(1.5)
-                                                client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                                print '\n###### The obj %s of F60: Send ok.\n' % obj 
-                                                lf.write("\n##### The obj %s of F60: Send ok." % obj)
-                                                send_db_in_beg(obj)
-                                                len_f60_news -= 1
-                                                obj_numb2 = len_f60_news
-                                                #com_numb2 = len(f60_com_objs)
-                                                f60_for_new_units.remove(unit_id)
-                                                if len(f60_for_new_units) == 0:
-                                                    sent_mark += 1
-                                                    break
-                                            else:
-                                                print '\n###### The obj %s of F60: Send Wrong.\n' % obj 
-                                                lf.write("\n##### The obj %s of F60: Send Wrong." % obj)
-                                                #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
-                                                pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                                time.sleep(1.5)
-                                                #break
-                                        elif time_res == 0:
-                                            print '\n###### The obj %s of F60: 0\n' % obj 
-                                            client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                            print '\n###### The obj %s of F60: Pass ok.\n' % obj 
-                                            lf.write("\n##### The obj %s of F60: Pass ok." % obj)
-                                            len_f60_news -= 1
-                                            obj_numb2 = len_f60_news
-                                            #com_numb2 = len(f60_com_objs)
-                                            break
-                                        else:
-                                            print '\n###### The obj %s of F60: %s\n' % (obj, time_res)
-                                            print '\n###### The obj %s of F60: Need wait.\n' % obj
-                                            lf.write("\n##### The obj %s of F60: Need wait." % obj)
-                                            wait_mark += 1
-                                            break
-                                else:
-                                    print "\n###### Don't need to send the new obj of F60 for now.\n"
-                                    sent_mark += 1
-                                    break
-                    else:
-                        print "\n###### Y3"
-                        lf.write('\n##### Y3')
-                        #pass
-            else:
-                no_mark += 1
-            
-            #f30_new_objs = new_objs[2]
-            lf.write('\n##### f30_news: '+','.join(f30_new_objs))
-            lf.write('\n##### len_f30_new: '+str(len(f30_new_objs)))
-            if f30_new_objs:
-                len_f30_news = len(f30_new_objs)
-                res = get_uesd_teles_from_db('XL003')
-                if res:
-                    f30_used_units = list(set(res[0]))
-                    if None in list(set(res[0])):
-                        f30_used_units = list(set(res[0])).remove(None)
-                    pri_list3 = list(set(res[1]))
-                    if None in list(set(res[1])):
-                        pri_list3 = list(set(res[1])).remove(None)
-                else:
-                    f30_used_units = []
-                    pri_list3 = ['0']
-                f30_units = f30_init #['001']
-                if not f30_used_units:
-                    f30_unused_units = f30_units[:]
-                else:
-                    f30_unused_units = list(set(f30_units) - set(f30_used_units))
-                f30_for_new_units = f30_unused_units + f30_used_units
-                print '\n###### ',pri_list3, f30_unused_units, f30_for_new_units
-                lf.write('\n##### f30_ready: '+' '.join(pri_list3)+','+' '.join(f30_unused_units)+','+' '.join(f30_for_new_units))
-                #f30_com_objs = com_objs[2]#get_com_indb("XL003")
-                lf.write('\n##### f30_coms: '+','.join(f30_com_objs))
-                lf.write('\n##### len_f30_com: '+str(len(f30_com_objs)))
-                if f30_com_objs and len(f30_com_objs) > com_numb3:
-                    print "\n###### Z1"
-                    lf.write('\n##### Z1')
-                    print '\n###### Nember of F30 objs: %s ' % str(len(f30_new_objs)) 
-                    #print "\nObjs of F30: " + ','.join(f30_new_objs) + '\n'
-                    if len(f30_unused_units) > 0:
-                        for obj in f30_new_objs:
-                            time_res = check_time_window(obj)
-                            if time_res == 1:
-                                print '\n###### The obj %s of F30: 1\n' % obj
-                                send_beg_time, send_end_time = send_cmd(obj, unit_id='001')[:]
-                                if check_log_sent(obj, send_beg_time, send_end_time):
-                                    time.sleep(1.5)
-                                    client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                    print '\n###### The obj %s of F30: Send ok.\n' % obj
-                                    lf.write("\n##### The obj %s of F30: Send ok." % obj) 
-                                    send_db_in_beg(obj)
-                                    len_f30_news -= 1
-                                    obj_numb3 = len_f30_news
-                                    #com_numb3 = len(f30_com_objs)
-                                    sent_mark += 1
-                                    break
-                                else:
-                                    print '\n###### The obj %s of F30: Send Wrong.\n' % obj 
-                                    lf.write("\n##### The obj %s of F30: Send Wrong." % obj) 
-                                    #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
-                                    pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                    time.sleep(1.5)
-                                    #break
-                            elif time_res == 0:
-                                print '\n###### The obj %s of F30: 0\n' % obj 
-                                client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                print '\n###### The obj %s of F30: Pass ok.\n' % obj 
-                                lf.write("\n##### The obj %s of F30: Pass ok." % obj)
-                                len_f30_news -= 1
-                                obj_numb3 = len_f30_news
-                                #com_numb3 = len(f30_com_objs)
-                                break
-                            else:
-                                print '\n###### The obj %s of F30: %s\n' % (obj, time_res)
-                                print '\n###### The obj %s of F30: Need wait.\n' % obj
-                                lf.write("\n##### The obj %s of F30: Need wait." % obj)
-                                wait_mark += 1
-                                break
-                    else:
-                        print '\n###### There is no more free units for F30.'
-                        sent_mark += 1
-                else:
-                    if len(f30_new_objs) > obj_numb3:
-                        print "\n###### Z2"
-                        lf.write('\n##### Z2')
-                        print '\n###### Nember of F30 objs: %s ' % str(len(f30_new_objs)) 
-                        #print "\nObjs of F30: " + ','.join(f30_new_objs) + '\n'
-                        if len(f30_for_new_units) > 0:
-                            for obj in f30_new_objs:
-                                if int(get_pri(obj)) > int(max(pri_list3)):
-                                    time_res = check_time_window(obj)
-                                    if time_res == 1:
-                                        print '\n###### The obj %s of F30: 1\n' % obj
-                                        send_beg_time, send_end_time = send_cmd(obj, unit_id='001')[:]
-                                        if check_log_sent(obj, send_beg_time, send_end_time):
-                                            time.sleep(1.5)
-                                            client.Send({"obj_id":obj,"obs_stag":'sent'},['update','object_list_current','obs_stag'])
-                                            print '\n###### The obj %s of F30: Send ok.\n' % obj 
-                                            lf.write("\n##### The obj %s of F30: Send ok." % obj) 
-                                            send_db_in_beg(obj)
-                                            len_f30_news -= 1
-                                            obj_numb3 = len_f30_news
-                                            #com_numb3 = len(f30_com_objs)
-                                            sent_mark += 1
-                                            break
-                                        else:
-                                            print '\n###### The obj %s of F30: Send Wrong.\n' % obj 
-                                            lf.write("\n##### The obj %s of F30: Send Wrong." % obj) 
-                                            #pg_db(pd_log_tab,'delete',[{'obj_id':obj}])                                         
-                                            pg_db(pd_log_tab,'update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
-                                            time.sleep(1.5)
-                                            #break
-                                    elif time_res == 0:
-                                        print '\n###### The obj %s of F30: 0\n' % obj 
-                                        client.Send({"obj_id":obj,"obs_stag":'pass'},['update','object_list_current','obs_stag'])
-                                        print '\n###### The obj %s of F30: Pass ok.\n' % obj 
-                                        lf.write("\n##### The obj %s of F30: Pass ok." % obj)
-                                        len_f30_news -= 1
-                                        obj_numb3 = len_f30_news
-                                        #com_numb3 = len(f30_com_objs)
-                                        break
-                                    else:
-                                        print '\n###### The obj %s of F30: %s\n' % (obj, time_res)
-                                        print '\n###### The obj %s of F30: Need wait.\n' % obj
-                                        lf.write("\n##### The obj %s of F30: Need wait." % obj)
-                                        wait_mark += 1
-                                        break
-                                else:
-                                    print "\n###### Don't need to send the new obj of F30 for now.\n"
-                                    sent_mark += 1
-                                    break
-                    else:
-                        print "\n###### Z3"
-                        lf.write('\n##### Z3')
-                        #pass
-            else:
-                no_mark += 1
-            
-            if gwac_com_objs:
-                com_numb1 = len(gwac_com_objs)
-            if f60_com_objs:
-                com_numb2 = len(f60_com_objs)
-            if f30_com_objs:
-                com_numb3 = len(f30_com_objs)
-            #print '\n###### com-numb: ',com_numb1,com_numb2,com_numb3
-            lf.write('\n##### %s %s %s' % (str(com_numb1),str(com_numb2),str(com_numb3)))
-            #print '\n###### ',no_mark,sent_mark,wait_mark
-            lf.write('\n##### %s %s %s' % (no_mark,sent_mark,wait_mark))
-            lf.write('\n##### Mark-end: %s %s %s %s %s %s' % (obj_numb1,obj_numb2,obj_numb3,com_numb1,com_numb2,com_numb3))
-            if no_mark == 3:
-                print '\n###### There is no obj to be observing.\n'
-            else:
-                if wait_mark:
-                    if (wait_mark + no_mark) == 3:
-                        print '\n###### It will wait for 3 mins.'
-                        time.sleep(180)
-                        xclient.Send("Hello World",['insert'])
-                    elif (wait_mark + no_mark + sent_mark) == 3:
-                        print '\n###### It will wait for 30 secs.'
-                        time.sleep(30)
-                        xclient.Send("Hello World",['insert'])
-                    else:### ther is pass mark
-                        #pass
-                        time.sleep(30)
-            print '\n###### Ready to get news ######'
-            no_mark = 0
-            sent_mark = 0
-            wait_mark = 0
-            time.sleep(0.5)
 
 if __name__ == "__main__":
-    print '\nInit...'
+    print '\nInit DB...'
     inits()
+    time.sleep(1)
     print "\nBegin..."
+    thread_floup = threading.Thread(target=pd_followup)
+    thread_floup.setDaemon(True)
+    thread_floup.start()
+    time.sleep(1)
+    thread_inif30 = threading.Thread(target=check_F30_sync)
+    thread_inif30.setDaemon(True)
+    thread_inif30.start()
+    time.sleep(1)
     thread_main = threading.Thread(target=check_sent)
     thread_main.setDaemon(True)
     thread_main.start()
-    time.sleep(1.5)
+    time.sleep(1)
     check_new()

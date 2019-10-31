@@ -1,0 +1,16 @@
+{
+    "gwac_db": {
+        "host": "172.28.8.28",
+        "port": "5432",
+        "database": "gwac2",
+        "user": "gwac",
+        "password": "gdb%980"
+    },
+    "yunwei_db": {
+        "host": "172.28.8.28",
+        "port": "5432",
+        "database": "gwacyw",
+        "user": "yunwei",
+        "password": "gwac1234"
+    }
+}
