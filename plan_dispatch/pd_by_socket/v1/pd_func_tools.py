@@ -2,16 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
-import os
 import json
 import time
-import socket
 import operator
 import psycopg2
 import paramiko
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 ###
 warn_bs = {}
@@ -50,11 +45,11 @@ def sql_act(sql,n=1):
                 db.close()
                 return rows
         except psycopg2.Error as e:
-            print "\nWARNING: Wrong with operating the db, %s " % str(e).strip()
+            print "\n\033[0;31mWARNING:\033[0m Wrong with operating the db, %s " % str(e).strip()
             #warn_bs['db'] = "WARNING: Wrong with operating the db, " + str(e).strip()
             return False
     else:
-        print "\nWARNING: Connection to the db is Error."
+        print "\n\033[0;31mWARNING:\033[0m Connection to the db is Error."
         #warn_bs['db'] = "WARNING: Connection to the db is Error."
         return 0
 
@@ -111,43 +106,6 @@ def pg_act(table,action,args=[]):
             res = sql_act(sql)
             return res
 
-def pd_socket_client(host,port,cmd):
-    beg_mak,end_mak = load_params('./pd_params.json')['socket_mark'][:]
-    if cmd:
-        try:
-            s = socket.socket()
-            s.connect((host, int(port)))
-            s.send(cmd.encode('utf-8'))
-            len_date = s.recv(beg_mak)
-            #print len_date,len(len_date)
-            if int(len_date) == len(end_mak):
-                s.close()
-                return ''
-            #time.sleep(0.5)
-            #data = s.recv(int(len_date))
-            count = 1024
-            while True:
-                a = int(len_date) % count
-                if a:
-                    break
-                count += 1
-            data = ''
-            while True:
-                data_cont = s.recv(count)
-                #print data_cont
-                data += data_cont
-                if (len(data_cont) < count) and (end_mak in data_cont.decode('utf-8')):
-                    data = data[:-len(end_mak)]
-                    break
-            s.close()
-            return ((data.decode('utf-8')).strip()).split('\n')
-        except Exception as e:
-            print '\n\nWARNING: [SOCKET] %s\n\n' %e
-            return 0
-    else:
-        print '\n\nWARNING: [SOCKET] The cmd is null.\n\n'
-        return 0
-
 def con_ssh(ip, username, passwd, cmd, mode=1):
     global warn_bs
     if mode == 1:
@@ -156,7 +114,7 @@ def con_ssh(ip, username, passwd, cmd, mode=1):
         try:
             ssh.connect(hostname=ip, port=22, username=username, password=passwd, timeout=60)
         except Exception as e:
-            print "\nWARNING: Connection of ssh is wrong, %s " % e
+            print "\n\033[0;31mWARNING:\033[0m Connection of ssh is wrong, %s " % e
             #warn_bs['ssh'] = 'WARNING: Connection to %s by ssh is wrong!' % ip
             return 0
         else:
@@ -195,13 +153,12 @@ def con_ssh(ip, username, passwd, cmd, mode=1):
             t.close()
             return 1
         except Exception as e:
-            print '\nWARNING: The sftp is wrong, %s ' % e
+            print '\n\033[0;31mWARNING:\033[0m The sftp is wrong, %s ' % e
             return 0
 
 def get_ips_from_confs():
     ssh_socket_confs = load_params('./pd_params.json')['ssh_socket']
     ip_confs = [(ssh_socket_confs[i][0],i) for i in ssh_socket_confs.keys()]
-    #print ip_confs
     ip_confs.sort(key=operator.itemgetter(0))
     ip_confs_sort_dic = dict(ip_confs)
     return ip_confs_sort_dic
@@ -226,14 +183,16 @@ def check_ser_socket(ip,mode=1,init=1):
     else:
         return 0
     if mode == 0:
+        print '\nRestart the socket server of %s.' % sip 
         if retr == 1:
             for item in res[1]:
                 pid = item.split()[1]
                 #print pid
                 cmd = 'kill %s' % pid
-                #print cmd
+                print cmd
                 res = con_ssh(sip, sun, spw, cmd)
                 #print res
+                time.sleep(10)
         if init == 0:
             port = ssh_socket_confs[key][3]
             cmd = 'iptables -I INPUT -p tcp --dport %s -j ACCEPT && service iptables save' % port
@@ -259,17 +218,18 @@ def check_ser_socket(ip,mode=1,init=1):
         #print cmd
         res = con_ssh(sip, sun, spw, cmd, mode=2)
         #print res
-        cmd = 'cd %s && nohup bash %s %s > /dev/null 2>&1' % (socket_ser_path, f2, script)
+        cmd = 'cd %s/ && nohup bash %s %s > /dev/null 2>&1 ' % (socket_ser_path, f2, script)
         #print cmd
         res = con_ssh(sip, sun, spw, cmd)
         #print res
         cmd = 'ps -ef | grep %s | grep -v grep' % script
         sip, sun, spw = ssh_socket_confs[key][:3]
         res = con_ssh(sip, sun, spw, cmd)
+        #print res
         if res and res[0] == 1:
             return 1
         else:
-            print '\nWARNING:The socket server of %s is not on-line' % ip
+            print '\n\033[0;31mWARNING:\033[0mThe socket server of %s is not on-line' % ip
             return 0
     else:
         return retr
@@ -286,6 +246,61 @@ def check_ser_socket_background(init=1):
         if init == 0:
             return
         time.sleep(30)
+
+def check_F30_sync(mode=1):
+    global warn_bs
+    cam_ip, cam_un, cam_pw = load_params('./pd_params.json')['ssh_socket']['30_cam'][:3]
+    scr1 = 'sync_re_sh.sh'
+    scr2 = 'sync_remote_by_inotify.sh'
+    scr3 = 'boot_rsync.sh'
+    if mode == 0:
+        bk = 1
+    else:
+        bk = 0
+    while True:
+        retr = 0
+        cmd = 'ps -ef | grep %s | grep -v grep' % scr2
+        res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+        if res and res[0] == 1:
+            retr = 1
+        else:
+            mode = 0
+        if mode == 0:
+            print '\n\033[0;31m########## Restart the sync_remote_by_inotify.sh of F30 in /home/ccduser/sync !\033[0m\n'
+            #warn_bs['ssh'] = '\nPlease restart the sync_remote_by_inotify.sh of F30 in /home/ccduser/sync !'
+            if retr == 1:
+                for item in res[1]:
+                    pid = item.split()[1]
+                    cmd = 'kill %s' % pid
+                    print cmd, scr2
+                    con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            cmd = 'ps -ef | grep "inotifywait.*/home/ccduser/data/" | grep -v grep'
+            res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            if res:
+                for item in res[1]:
+                    pid = item.split()[1]
+                    cmd = 'kill %s' % pid
+                    print cmd, 'inotifywait'
+                    con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            path = '/home/ccduser/sync'
+            cmd = 'mkdir %s' % path
+            con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            cmd = 'put %s %s/%s' % (scr1, path, scr1)
+            con_ssh(cam_ip, cam_un, cam_pw, cmd, mode=2)
+            cmd = 'put %s %s/%s' % (scr2, path, scr2)
+            con_ssh(cam_ip, cam_un, cam_pw, cmd, mode=2)
+            cmd = 'put %s %s/%s' % (scr3, path, scr3)
+            con_ssh(cam_ip, cam_un, cam_pw, cmd, mode=2)
+            cmd = 'cd %s/ && nohup bash %s %s > /dev/null 2>&1' % (path, scr3, scr2)
+            #print cmd
+            con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            cmd = 'ps -ef | grep %s | grep -v grep' % scr2
+            res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
+            if not res:
+                print '\n\n\033[0;31m########## Please restart it by hand !\033[0m\n\n'
+            if bk == 1:
+                break
+        time.sleep(300)
 
 def get_ser_config(group_id):
     if group_id == 'XL001':
@@ -314,7 +329,9 @@ def get_cam_config(cam_id):
 if __name__ == "__main__":
     #check_ser_socket()
     #print get_ips_from_confs()
-    ip = '172.28.1.11'
-    xx = check_ser_socket(ip,mode=0)
-    print xx
+    # ip = '172.28.1.11'
+    # xx = check_ser_socket(ip,mode=0)
+    # print xx
     #check_ser_socket_background(init=0)
+    #check_ser_socket_background()
+    check_F30_sync(mode=1)

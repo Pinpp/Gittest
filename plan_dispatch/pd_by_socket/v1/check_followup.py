@@ -111,7 +111,7 @@ if __name__ == "__main__":
                 if run_n[obj_name][2] and strmark != run_n[obj_name][2][-1][1]:
                     run_n[obj_name][2].append((fo_name,strmark))
         print "Objects_number:",len(lt4),'\n'
-        lf.write("\n#Objects_number: %s \n" % str(len(lt4)))
+        lf.write("\n#Objects_number: %s \n\n" % str(len(lt4)))
         for i in lt4:
             if run_n[obj_name][2]:
                 print i, run_n[i][0], run_n[i][1], run_n[obj_name][2]
@@ -142,5 +142,6 @@ if __name__ == "__main__":
                 lf.write('%s F\n'% i)
         lf.close()
         print '\n\n###########################\n\n\n'
-        os.system('rm obslogs/check_followup_%s*.txt'% date_in.replace('/','-'))
         time.sleep(10)
+        os.system('rm obslogs/check_followup_%s*.txt'% date_in.replace('/','-'))
+        

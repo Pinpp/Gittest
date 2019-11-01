@@ -4,4 +4,4 @@
 script=$1
 
 #cd $path
-python $script > /dev/null 2>&1 &
+nohup python $script > /dev/null 2>&1 &

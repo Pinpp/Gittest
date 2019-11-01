@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 import json
 import socket
 import subprocess
-import threading
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -40,22 +39,22 @@ def get_ser_conf(conf_file):
         return (ip,int(port))
     else:
         return 0
-
-def pd_socket_server():
+if __name__ == "__main__":
     conf_file = './pd_socket_server_params.json'#'./pd_socket_params.json' 
     beg_mak,end_mak = load_params(conf_file)['socket_mark'][:]
     socket_conf = get_ser_conf(conf_file)
-    #socket_conf = (get_host_ip(),33369)
+    socket_conf = (get_host_ip(),33369)
     if socket_conf:
         print 'THIS: ', socket_conf
         s = socket.socket()
         s.bind(socket_conf)
-        s.listen(10)
+        s.listen(100)
         while True:
-            c, addr = s.accept()
-            print 'Address: ', addr
-            while True:
-                try:
+            c = None
+            try:
+                c, addr = s.accept()
+                print 'Address: ', addr
+                while True:
                     msg = c.recv(1024)
                     print msg
                     if not msg:
@@ -67,20 +66,12 @@ def pd_socket_server():
                     length = format(lens,'%dd'%beg_mak)
                     print length,len(length)
                     c.sendall(length + cmdout.encode('utf-8') + cmderr.encode('utf-8') + end_mak.encode('utf-8'))
-                except Exception as e:
-                    print 'Wrong: %s ' % e
-                    break
-                else:
-                    print 'End session.'
-            c.close()
+            except KeyboardInterrupt:
+                if c:
+                    c.close()
+                break
+            except Exception as e:
+                print 'Wrong: %s ' % e
+                if c:
+                    c.close()
         s.close()
-
-if __name__ == "__main__":
-    # t_pd_ser = threading.Thread(target=pd_socket_server)
-    # t_pd_ser.setDaemon(True)
-    # t_pd_ser.start()
-    # while True:
-    #     k_in = raw_input()
-    #     if k_in == 'Q':
-    #         break
-    pd_socket_server()

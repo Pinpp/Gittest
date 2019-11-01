@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+import os
 import re
 import datetime 
 import threading
@@ -11,6 +11,7 @@ from communication_client import Client
 from ObservationPlanUpload import ObservationPlanUpload
 from ToP_obs_plan_insert_DB import insert_to_ba_db,update_to_ba_db,update_pointing_lalalert
 from pd_followup import pd_followup
+from pd_socket_client import pd_socket_client
 
 ###
 client = Client('plan_dispatch')
@@ -35,17 +36,6 @@ def db_init():
     sql_act(sql,0)
     sql = 'delete from '+running_list_cur+' WHERE op_time<'+"'"+ date_c +"'"
     sql_act(sql,0)
-
-def check_F30_sync():
-    global warn_obs
-    cam_ip, cam_un, cam_pw = load_params('./pd_params.json')['ssh_socket']['30_cam'][:3]
-    while True:
-        cmd = 'ps -ef | grep sync_remote | grep -v grep'
-        res = con_ssh(cam_ip, cam_un, cam_pw, cmd)
-        if not res:
-            print '\n\n\033[0;31m########## Please restart the sync_remote_by_inotify.sh of F30 in /home/ccduser/sync !\033[0m\n\n'
-            #warn_obs['ssh'] = '\nPlease restart the sync_remote_by_inotify.sh of F30 in /home/ccduser/sync !'
-        time.sleep(300)
 
 def pd_init():
     global log_file, warn_bs, warn_obs
@@ -77,7 +67,6 @@ def check_ser(ser_type):
     else:
         if res == 0:
             res = check_ser_socket(ser_ip,mode=0)
-            print '\nRestart the socket server of %s : %s' % ser_ip, str(res)
             if res:
                 return 1
             else:
@@ -94,7 +83,6 @@ def check_cam(cam_id):
     else:
         if res == 0:
             res = check_ser_socket(cam_ip,mode=0)
-            print '\nRestart the socket server of %s : %s' % cam_ip, str(res)
             if res:
                 return 1
             else:
@@ -121,11 +109,11 @@ def get_obj_infs(obj):
                 infs['filter'] = "Lum"
             if infs['group_id']  == "XL003":
                 infs['filter'] = "R"
-                print "\nWARNING: The filter of %s input Error, using filter R." % obj
-                #warn_obs[obj]= "%s WARNING: Filter Error when get_obj_infs, using filter R." % obj
+                print "\n\033[0;31mWARNING:\033[0m The filter of %s input Error, using filter R." % obj
+                #warn_obs[obj]= "%s \033[0;31mWARNING:\033[0m Filter Error when get_obj_infs, using filter R." % obj
         if len(infs['obj_name']) > 20:
             if infs['group_id'] in ['XL002', 'XL003']:
-                #print "\nWARNING: The name of %s is too long, attention please!" % obj
+                #print "\n\033[0;31mWARNING:\033[0m The name of %s is too long, attention please!" % obj
                 infs['obj_name'] = infs['obj_name'][:20]
         return infs
 
@@ -171,7 +159,7 @@ def Ra_to_h(ra):
         a = float(ra)/15
         return str(a)
     else:
-        exit('\nWARNING: Wrong RA.')
+        exit('\n\033[0;31mWARNING:\033[0m Wrong RA.')
 
 def send_obj(obj,obj_infs,group_id,unit_id):
     infs = obj_infs
@@ -552,8 +540,8 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
     if res:
         obj_name, group_id = res[0][:]
     else:
-        #warn_obs[obj] = '%s WARNING: WRONG in check_log_sent !' % obj
-        print '%s WARNING: WRONG in check_log_sent !' % obj
+        #warn_obs[obj] = '%s \033[0;31mWARNING:\033[0m WRONG in check_log_sent !' % obj
+        print '%s \033[0;31mWARNING:\033[0m WRONG in check_log_sent !' % obj
         return ''
     if group_id == 'XL001':
         time.sleep(5)
@@ -575,7 +563,6 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                     cmd = "tac %s | grep -a '.*plan<%s> goes running on .*'" % (log, obj)
                     res = pd_socket_client(ser_ip, ser_port, cmd)
                     if res:
-                        res = res.strip().split('\n')
                         for item in res:
                             item = item.strip()
                             print "\n######"+item
@@ -598,15 +585,15 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                     #######
                     return 1
                 else:
-                    #warn_obs[obj] = "\nWARNING: There is no sent inf of %s in gtoaes !" % obj
+                    #warn_obs[obj] = "\n\033[0;31mWARNING:\033[0m There is no sent inf of %s in gtoaes !" % obj
                     return 0
             else:
-                #warn_obs[obj] = "%s WARNING: There is no gtoaes log of %s when check_sent !" % (obj, group_id)
-                print "%s WARNING: There is no gtoaes log of %s when check_sent !" % (obj, group_id)
+                #warn_obs[obj] = "%s \033[0;31mWARNING:\033[0m There is no gtoaes log of %s when check_sent !" % (obj, group_id)
+                print "\n%s \033[0;31mWARNING:\033[0m There is no gtoaes log of %s when check_sent !" % (obj, group_id)
                 return 0
         else:
-            warn_obs[obj] = "%s WARNING: The gtoaes of %s is Error when check_sent !" % (obj, group_id)
-            print "%s WARNING: The gtoaes of %s is Error when check_sent !" % (obj, group_id)
+            warn_obs[obj] = "%s \033[0;31mWARNING:\033[0m The gtoaes of %s is Error when check_sent !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gtoaes of %s is Error when check_sent !" % (obj, group_id)
             return 0
     if group_id in ['XL002','XL003']:
         time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
@@ -650,13 +637,13 @@ def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after chec
                     #######
                     return 1
                 else:
-                    #warn_obs[obj] = "\nWARNING: There is no sent inf of %s in gftservice !" % obj
+                    #warn_obs[obj] = "\n\033[0;31mWARNING:\033[0m There is no sent inf of %s in gftservice !" % obj
                     return 0
             else:
-                print "%s WARNING: There is no gftservice log of %s when check_sent !" % (obj, group_id)
+                print "\n%s \033[0;31mWARNING:\033[0m There is no gftservice log of %s when check_sent !" % (obj, group_id)
                 return 0
         else:
-            print "%s WARNING: The gftservice of %s is Error when check_sent !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gftservice of %s is Error when check_sent !" % (obj, group_id)
             return 0
 
 def check_log_dist(obj, pd_log_id):
@@ -665,7 +652,7 @@ def check_log_dist(obj, pd_log_id):
     if res:
         group_id, ser_log, log_sent_id, log_sent_time = res[0][:]
     else:
-        print '%s WARNING: WRONG in check_log_dist !' % obj
+        print '%s \033[0;31mWARNING:\033[0m WRONG in check_log_dist !' % obj
         return 'Wrong'
     if group_id == 'XL001':
         log_dist_id, log_dist_time = [log_sent_id, log_sent_time][:]
@@ -708,15 +695,15 @@ def check_log_dist(obj, pd_log_id):
                                 res = pd_socket_client(ser_ip, ser_port, cmd)
                                 if not res:
                                     dist_mark = 2
-                                    print "%s WARNING: Break it for rebooting the gftservice !" % obj
+                                    print "\n%s \033[0;31mWARNING:\033[0m Break it for rebooting the gftservice !" % obj
                             else:
                                 break
                         # log = logs[0].strip()
                         # if log > ser_log:
                         #     #dist_mark = 2
-                        #     warn_obs[obj] = "%s WARNING: Please check the gtfservice log, then break it or not !" % obj
+                        #     warn_obs[obj] = "%s \033[0;31mWARNING:\033[0m Please check the gtfservice log, then break it or not !" % obj
                     else:
-                        print "%s WARNING: There is no gftservice log of %s when check_dist !" % (obj, group_id)
+                        print "\n%s \033[0;31mWARNING:\033[0m There is no gftservice log of %s when check_dist !" % (obj, group_id)
             else:
                 cmd = 'ls /tmp/gftservice*.log | sort -r'
                 logs = pd_socket_client(ser_ip, ser_port, cmd)
@@ -743,6 +730,7 @@ def check_log_dist(obj, pd_log_id):
                             res = pd_socket_client(ser_ip, ser_port, cmd)
                             if res:
                                 res = res[0].strip()
+                                #print res,time_limit
                                 re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", res)
                                 if re_time and re_time.group(0) <= time_limit:
                                     break
@@ -760,7 +748,7 @@ def check_log_dist(obj, pd_log_id):
             else:
                 return 0
         else:
-            print "%s WARNING: The gftservice of %s is Error when check_dist !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gftservice of %s is Error when check_dist !" % (obj, group_id)
             return 0
     if group_id == 'XL003':
         if check_ser(group_id):
@@ -784,7 +772,7 @@ def check_log_dist(obj, pd_log_id):
                         re_null = re.search(r"take NULL object", item)
                         if re_null:
                             if mark_i != 0 and ii > mark_i:
-                                print '%s WARNING: It occured "take NULL object", break it !' % obj
+                                print '%s \033[0;31mWARNING:\033[0m It occured "take NULL object", break it !' % obj
                                 dist_mark = 2
                                 break
                         res_re = re.search(r"^.*?get observation plan <id = %s>" % log_sent_id, item)
@@ -810,11 +798,11 @@ def check_log_dist(obj, pd_log_id):
                                 res = pd_socket_client(ser_ip, ser_port, cmd)
                                 if not res:
                                     dist_mark = 2
-                                    print "%s WARNING: Break it for rebooting the gftservice !" % obj
+                                    print "\n%s \033[0;31mWARNING:\033[0m Break it for rebooting the gftservice !" % obj
                             else:
                                 break
                     else:
-                        print "%s WARNING: There is no gftservice log of %s when check_dist !" % (obj, group_id)
+                        print "\n%s \033[0;31mWARNING:\033[0m There is no gftservice log of %s when check_dist !" % (obj, group_id)
             else:
                 cmd = 'ls /tmp/gftservice*.log | sort -r'
                 logs = pd_socket_client(ser_ip, ser_port, cmd)
@@ -843,7 +831,7 @@ def check_log_dist(obj, pd_log_id):
                                 re_null = re.search(r"take NULL object", item)
                                 if re_null:
                                     if mark_i != 0 and ii > mark_i:
-                                        print'%s WARNING: It occured "take NULL object", break it !' % obj
+                                        print'%s \033[0;31mWARNING:\033[0m It occured "take NULL object", break it !' % obj
                                         dist_mark = 2
                                         break
                                 res_re = re.search(r"^.*?get observation plan <id = %s>" % log_sent_id, item)
@@ -873,7 +861,7 @@ def check_log_dist(obj, pd_log_id):
             else:
                 return 0
         else:
-            print "%s WARNING: The gftservice of %s is Error when check_dist !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gftservice of %s is Error when check_dist !" % (obj, group_id)
             return 0
 
 def check_cam_log(obj,obj_infs,pd_log_id):
@@ -883,7 +871,7 @@ def check_cam_log(obj,obj_infs,pd_log_id):
     if res:
         group_id, log_dist_id, log_dist_time = res[0][:]
     else:
-        print '%s WARNING: WRONG in check_cam_log !' % obj
+        print '%s \033[0;31mWARNING:\033[0m WRONG in check_cam_log !' % obj
         return 'Wrong'
     if group_id == 'XL001':
         if check_ser(group_id):
@@ -947,7 +935,7 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                     #     return 1
                 elif com_mark == 2:
                     #######
-                    print "%s WARNING: The obj is broken for position error !" % obj
+                    print "\n%s \033[0;31mWARNING:\033[0m The obj is broken for position error !" % obj
                     return [2, log_com_time]
                 else:
                     #warn_obs[obj] = "\nThere is no complete inf of %s in gtoaes !" % obj
@@ -961,15 +949,16 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                         proc = '%.0f%%' % (((now_t-beg_t)/((m1+m2)*n+360))*100)
                     return [0, proc]
             else:
-                print "%s WARNING: There is no gtoaes log of %s when check_com !"% (obj, group_id)
+                print "\n%s \033[0;31mWARNING:\033[0m There is no gtoaes log of %s when check_com !"% (obj, group_id)
                 return 0
         else:
-            print "%s WARNING: The gtoaes of %s is Error when check_com !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gtoaes of %s is Error when check_com !" % (obj, group_id)
             return 0
     if group_id in ['XL002','XL003']:
         time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
         obj_name, filter, frmcnt = at(obj_infs, 'obj_name','filter', 'frmcnt')
         date_now = datetime.datetime.utcnow().strftime("%y%m%d")
+        count = 0
         if check_ser(group_id):
             if check_cam(log_dist_id):
                 cmd = 'ls /tmp/camagent*.log | sort -r'
@@ -982,7 +971,6 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                         cmd = "cat " + log + " | grep 'Image is saved as " + obj_name + ".*_" + filter + "_" + date_now+ "_.*.fit$'"
                         res = pd_socket_client(cam_ip, cam_port, cmd)
                         if res:
-                            count = 0
                             for item in res:
                                 item = item.strip()
                                 item_com_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item).group(0)
@@ -1016,7 +1004,7 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                                 if cam_mark == 2:
                                     break
                     if cam_mark == 2:
-                        print "%s WARNING: Filter Error. Please check the system !" % obj
+                        print "\n%s \033[0;31mWARNING:\033[0m Filter Error. Please check the system !" % obj
                         return 0#[2, log_com_time]
                     elif cam_mark == 1:
                         return [1, log_com_time]
@@ -1025,13 +1013,13 @@ def check_cam_log(obj,obj_infs,pd_log_id):
                         proc = '%.0f%%' % ((count/float(frmcnt))*100)
                         return [0, proc]
                 else:
-                    print "%s WARNING: There is no camagent log of %s when check_com !" % (obj, log_dist_id)
+                    print "\n%s \033[0;31mWARNING:\033[0m There is no camagent log of %s when check_com !" % (obj, log_dist_id)
                     return 0
             else:
-                print "%s WARNING: The camagent of %s is Error when check_com !" % (obj, log_dist_id)
+                print "\n%s \033[0;31mWARNING:\033[0m The camagent of %s is Error when check_com !" % (obj, log_dist_id)
                 return 0
         else:
-            print "%s WARNING: The gftservice of %s is Error when check_com !" % (obj, group_id)
+            print "\n%s \033[0;31mWARNING:\033[0m The gftservice of %s is Error when check_com !" % (obj, group_id)
             return 0
 
 def check_time_window(obj):
@@ -1052,22 +1040,33 @@ def check_time_window(obj):
 
 def check_obj_status(obj,obj_infs,pd_log_id):
     global warn_obs
+    stage = 'sent'
+    res = pg_act('pd_log_current','select',[['group_id','unit_id','obj_dist_id'],{'id':pd_log_id}])
+    if res:
+        group_id, unit_id, log_dist_id = res[0][:]
+        if group_id in ['XL002','XL003']:
+            if log_dist_id == '1':
+                unit_id = '001'
+            if log_dist_id == '2':
+                unit_id = '002'
+            if log_dist_id == '3':
+                unit_id = '001'
     group_id, obj_name, objra, objdec, filter, expdur, frmcnt, priority = at(obj_infs, 'group_id', 'obj_name', 'objra', 'objdec', 'filter', 'expdur', 'frmcnt', 'priority')
     if group_id == 'XL001':
         ### check the gwac,gtoaes_log
-        print "\nCurrent obj : %s %s %s %s %s %s %s %s." % (obj, obj_name, objra, objdec, str(int(float(expdur))), frmcnt, priority)
+        print "\nCurrent obj : %s %s %s %s %s %s %s %s." % (obj, unit_id, obj_name, objra, objdec, str(int(float(expdur))), frmcnt, priority)
         print "\nChecking it in log ..."
     if group_id in ['XL002','XL003']:
         ### check the gft,log_dist and cam_log
-        print "\nCurrent obj : %s %s %s %s %s %s %s %s." % (obj, obj_name, objra, objdec, filter, str(int(float(expdur))), frmcnt, priority)
+        print "\nCurrent obj : %s %s %s %s %s %s %s %s %s." % (obj, unit_id, obj_name, objra, objdec, filter, str(int(float(expdur))), frmcnt, priority)
         print "\nChecking it in log ..."
     check_log_dist_res = check_log_dist(obj,pd_log_id)
     if check_log_dist_res:
         if type(check_log_dist_res) == type(''):
-            print '\nWARNING: There is no send inf of %s when check_obj_dist.' % obj
+            print '\n\033[0;31mWARNING:\033[0m There is no send inf of %s when check_obj_dist.' % obj
             return
         if check_log_dist_res == 2:
-            print '\nWARNING: The obj %s is broken. ' % obj
+            print '\n\033[0;31mWARNING:\033[0m The obj %s is broken. ' % obj
             ######
             time_now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             pg_act('pd_log_current','update',[{'obj_comp_time':time_now,'obs_stag':'break'},{'id':pd_log_id}])
@@ -1087,7 +1086,7 @@ def check_obj_status(obj,obj_infs,pd_log_id):
             log_sent_time, obs_stag = res[0][:]
             if obs_stag == 'sent':
                 if check_time_window(obj) == 0:
-                    print '\nWARNING: The obj %s is pass. ' % obj
+                    print '\n\033[0;31mWARNING:\033[0m The obj %s is pass. ' % obj
                     #######
                     log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                     pg_act('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'pass'},{'id':pd_log_id}])
@@ -1106,27 +1105,27 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                         cmd = 'autostop && autostart'
                         pd_socket_client(cam_ip, cam_port, cmd)
                     sent_delay_min = str(int(sent_delay/60))
-                    print "%s WARNING: The obj has waited for %s mins after sent. Please check the system, then break current object or not." % (obj, sent_delay_min)
+                    print "\n%s \033[0;31mWARNING:\033[0m The obj has waited for %s mins after sent. Please check the system, then break current object or not." % (obj, sent_delay_min)
                     time.sleep(3)
             else:
-                print '\nWARNING: There is no send inf of %s when check_obj_dist.' % obj
+                print '\n\033[0;31mWARNING:\033[0m There is no send inf of %s when check_obj_dist.' % obj
                 return
     if stage == 'Observing':
         check_cam_log_res = check_cam_log(obj,obj_infs,pd_log_id)
         if check_cam_log_res:
             if type(check_cam_log_res) == type([]) and check_cam_log_res[0] == 0:
                 proc = check_cam_log_res[1] #'Observing/%s' % proc
-                print 'The obj %s is Observing: %s' % (obj,proc)
+                print '\nThe obj %s is Observing: %s' % (obj,proc)
             else:
                 if type(check_cam_log_res) == type(''):
-                    print '\nWARNING: There is no send inf of %s when check_obj_comp.' % obj
+                    print '\n\033[0;31mWARNING:\033[0m There is no send inf of %s when check_obj_comp.' % obj
                     return
                 if type(check_cam_log_res) == type([]) and check_cam_log_res[0] == 2:
                     stage = 'break'
-                    print '\nWARNING: The obj %s is broken. ' % obj
+                    print '\n\033[0;31mWARNING:\033[0m The obj %s is broken. ' % obj
                 if type(check_cam_log_res) == type([]) and check_cam_log_res[0] == 1:
                     stage = 'complete'
-                    print '\nWARNING: The obj %s is complete. ' % obj
+                    print '\nThe obj %s is complete. ' % obj
                     log_com_time = check_cam_log_res[1]
                 if stage == 'break':
                     log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
@@ -1146,7 +1145,7 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                 log_dist_time, obs_stag = res[0][:]
                 if obs_stag == 'sent':
                     if check_time_window(obj) == 0:
-                        print "%s WARNING: The observation time is over about !" % obj
+                        print "\n%s \033[0;31mWARNING:\033[0m The observation time is over about !" % obj
                         log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
                         #######
                         pg_act('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'pass'},{'id':pd_log_id,'obj_id':obj}])
@@ -1160,12 +1159,13 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                     dist_delay = time.time() - time.mktime(time.strptime(log_dist_time, "%Y-%m-%d %H:%M:%S"))
                     if dist_delay > 3600:### wait for 60 mins
                         dist_delay_min = str(int(dist_delay/60))
-                        print "%s WARNING: The obj has waited for %s mins after dist. Please check the system, then break current object or not." % (obj, dist_delay_min)
+                        print "\n%s \033[0;31mWARNING:\033[0m The obj has waited for %s mins after dist. Please check the system, then break current object or not." % (obj, dist_delay_min)
                         time.sleep(3)
                 else:
-                    print '\nWARNING: There is no send inf of %s when check_obj_comp.' % obj
+                    print '\n\033[0;31mWARNING:\033[0m There is no send inf of %s when check_obj_comp.' % obj
                     return
-
+    else:
+        print '\nThe obj %s is sent, not distributed.' % obj
 def get_pd_log_id(obj):
     #res = pg_act('pd_log_current','select',[['id'],{'obj_id':obj,'obs_stag':'sent'},'ORDER BY id DESC LIMIT 1'])
     res = pg_act('pd_log_current','select',[['id'],{'obj_id':obj,'obs_stag':'sent'},'ORDER BY id'])
@@ -1340,7 +1340,7 @@ def check_new_main(group_id):
                                 insert_to_db_in_beg(obj,obj_infs,pd_log_id)
                                 time.sleep(5)
                             else:
-                                print "\n##### %s WARNING: The obj of %s: Send Wrong." % (obj, type_tel[group_id])
+                                print "\n##### %s \033[0;31mWARNING:\033[0m The obj of %s: Send Wrong." % (obj, type_tel[group_id])
                                 log_file.write("\n##### The obj %s of %s: Send Wrong." % (obj, type_tel[group_id]))
                                 pg_act('pd_log_current','update',[{'obs_stag':'resend'},{'obj_id':obj,'obs_stag':'sent'}])
                         elif time_res == 0:
@@ -1350,13 +1350,13 @@ def check_new_main(group_id):
                             send_objs.remove(obj)
                             break
                         else:
-                            print "\n##### %s WARNING: The obj of %s: Need wait." % (obj, type_tel[group_id])
+                            print "\n##### %s \033[0;31mWARNING:\033[0m The obj of %s: Need wait." % (obj, type_tel[group_id])
                             log_file.write("\n##### The obj %s of %s: Need Wait." % (obj, type_tel[group_id]))
                             mark_wait = 1
                             send_objs.remove(obj)
                             break
                 else:
-                    print "\n##### %s WARNING: There is no free units of %s, don't need to send." % (type_tel[group_id],obj)
+                    print "\n##### %s \033[0;31mWARNING:\033[0m There is no free units of %s, don't need to send." % (type_tel[group_id],obj)
                     log_file.write("\n##### There is no free units of %s when send %s, don't need to send." % (type_tel[group_id],obj))
                     send_objs.remove(obj)
                     break
@@ -1420,13 +1420,13 @@ if __name__ == "__main__":
     t_init.setDaemon(True)
     t_init.start()
     time.sleep(1)
-    thread_inif30 = threading.Thread(target=check_F30_sync)
-    thread_inif30.setDaemon(True)
-    thread_inif30.start()
-    time.sleep(1)
     thread_floup = threading.Thread(target=pd_followup)
     thread_floup.setDaemon(True)
     thread_floup.start()
+    time.sleep(1)
+    thread_inif30 = threading.Thread(target=check_F30_sync)
+    thread_inif30.setDaemon(True)
+    thread_inif30.start()
     time.sleep(1)
     thread_floup = threading.Thread(target=check_ser_socket_background)
     thread_floup.setDaemon(True)
