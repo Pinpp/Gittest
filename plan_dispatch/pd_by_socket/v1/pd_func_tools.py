@@ -45,7 +45,7 @@ def sql_act(sql,n=1):
                 db.close()
                 return rows
         except psycopg2.Error as e:
-            print "\n\033[0;31mWARNING:\033[0m Wrong with operating the db, %s " % str(e).strip()
+            #print "\n\033[0;31mWARNING:\033[0m Wrong with operating the db, %s " % str(e).strip()
             #warn_bs['db'] = "WARNING: Wrong with operating the db, " + str(e).strip()
             return False
     else:

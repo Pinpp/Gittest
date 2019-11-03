@@ -4,22 +4,19 @@
 from __future__ import unicode_literals
 import os, sys, json, psycopg2, time, datetime, codecs
 
-
-def load_params():
-    json_file = './pd_params.json'
+def load_params(json_file):
     with open(json_file) as read_file:
         pd_params = json.load(read_file)
     return pd_params
 
 def con_db(db_name):
-    pd_params = load_params()
+    pd_params = load_params('./pd_params.json')
     try:
         db = psycopg2.connect(**pd_params[db_name])
-    except psycopg2.Error as e:
-        print(e)
-        return False
-    else:
         return db
+    except psycopg2.Error as e:
+        print e
+        return False
 
 def sql_act(db_name,sql,n=1):
     db = con_db(db_name)
@@ -123,7 +120,7 @@ if __name__ == "__main__":
             else:
                 print i, run_n[i][0], run_n[i][1]
                 lf.write('%s %s %s\n' % (i, str(run_n[i][0]), run_n[i][1]))
-        print '\n\n' 
+        print '\n' 
         lf.write('\n\n')
         fo_date_b = date_in.replace('/','-') + ' 12:00:00.000'
         #print fo_date_b
@@ -141,7 +138,7 @@ if __name__ == "__main__":
                 print i, 'F'
                 lf.write('%s F\n'% i)
         lf.close()
-        print '\n\n###########################\n\n\n'
+        print '\n###########################\n\n'
         time.sleep(10)
         os.system('rm obslogs/check_followup_%s*.txt'% date_in.replace('/','-'))
         

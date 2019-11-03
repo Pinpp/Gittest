@@ -309,20 +309,32 @@ if __name__ == "__main__":
     if (gwac_sent+f60_sent+f30_sent):
         #print k
         print '\n\nPlease choose the order number which you want to break'
-        print '    Example: 1'
+        print '    Example: 1  << Type "0" to abandon them all; Type "Enter" to quit >>'
         while True:
             inpt = raw_input(':')
             inpt = inpt.strip()
             if inpt in k.keys():
                 break
+            elif inpt == '0':
+                print '\nAbandon them all.'
+                break
             elif not inpt:
                 exit('\nNothing done.\n')
             else:
                 print '\nWARNING: Input wrong. Please input once again.'
-        log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-        pg_db('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':k[inpt],'obs_stag':'sent'}])
-        send_db_in_end(k[inpt])
-        s.Send({"obj_id":k[inpt],"obs_stag":'break'},['update','object_list_current','obs_stag'])
+        for i in range(len(k.keys())):
+            if inpt != '0':
+                obj = k[inpt]
+            else:
+                obj = k[i+1]
+            log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            pg_db('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
+            send_db_in_end(obj)
+            s.Send({"obj_id":obj,"obs_stag":'break'},['update','object_list_current','obs_stag'])
+            if inpt != '0':
+                break
+            else:
+                time.sleep(3)
         #s.Send("Hello World",['insert'])
     else:
         print '\nThere is no sent objs in db.'
