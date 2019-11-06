@@ -326,7 +326,7 @@ if __name__ == "__main__":
             if inpt != '0':
                 obj = k[inpt]
             else:
-                obj = k[i+1]
+                obj = k[str(i+1)]
             log_com_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             pg_db('pd_log_current','update',[{'obj_comp_time':log_com_time,'obs_stag':'break'},{'obj_id':obj,'obs_stag':'sent'}])
             send_db_in_end(obj)
@@ -334,7 +334,7 @@ if __name__ == "__main__":
             if inpt != '0':
                 break
             else:
-                time.sleep(3)
+                time.sleep(1.5)
         #s.Send("Hello World",['insert'])
     else:
         print '\nThere is no sent objs in db.'
