@@ -241,9 +241,11 @@ def check_ser_socket_background(init=1):
             #print ip
             if init == 0:
                 check_ser_socket(ip,0,0)
+            elif init == -1:
+                check_ser_socket(ip,0)
             else:
                 check_ser_socket(ip)
-        if init == 0:
+        if init in [0,-1]:
             return
         time.sleep(30)
 
@@ -333,5 +335,5 @@ if __name__ == "__main__":
     # xx = check_ser_socket(ip,mode=0)
     # print xx
     #check_ser_socket_background(init=0)
-    #check_ser_socket_background()
-    check_F30_sync(mode=1)
+    check_ser_socket_background(-1)
+    #check_F30_sync(mode=1)

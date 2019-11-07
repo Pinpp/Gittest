@@ -21,7 +21,7 @@ def CMM_DBConnect(location):
     elif location == 'xinglong':
         CMM_user = data["CMM_user_xl"]
     try:
-        db = pymysql.connect(data["CMM_host"],CMM_user,data["CMM_password"],data["CMM_db"] )
+        db = pymysql.connect(data["CMM_host"],CMM_user,data["CMM_password"],data["CMM_db"])
     except pymysql.Error as e:
         print e
         return False

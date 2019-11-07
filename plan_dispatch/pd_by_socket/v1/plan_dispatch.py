@@ -3,7 +3,8 @@
 
 import os
 import re
-import datetime 
+import datetime
+import operator
 import threading
 from pydash import at
 from pd_func_tools import * #warn_bs, load_params, sql_act, pg_act ***
@@ -1136,13 +1137,13 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                         return
                     sent_delay = time.time() - time.mktime(time.strptime(log_sent_time, "%Y-%m-%d %H:%M:%S"))
                     if  sent_delay > 1800: ### wait for 30 mins
-                        # if group_id == 'XL003':
-                        #     cam_ip, cam_port = get_cam_config('3')[:]
-                        #     cmd = 'autostop && autostart'
-                        #     pd_socket_client(cam_ip, cam_port, cmd)
-                        # sent_delay_min = str(int(sent_delay/60))
+                        if group_id == 'XL003':
+                            cam_ip, cam_port = get_cam_config('3')[:]
+                            cmd = 'autostop && autostart'
+                            pd_socket_client(cam_ip, cam_port, cmd)
+                        sent_delay_min = str(int(sent_delay/60))
                         print "\n%s \033[0;31mWARNING:\033[0m The obj has waited for %s mins after sent. Please check the system, then break current object or not." % (obj, sent_delay_min)
-                        time.sleep(3)
+                        #time.sleep(3)
                 else:
                     print '\n\033[0;31mWARNING:\033[0m There is no send inf about %s of %s when check_obj_dist.' % (obj, type_tel[group_id])
                     return
@@ -1191,7 +1192,7 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                                 #     pd_socket_client(cam_ip, cam_port, cmd)
                                 dist_delay_min = str(int(dist_delay/60))
                                 print "\n%s \033[0;31mWARNING:\033[0m The obj has waited for %s mins after dist. Please check the system, then break current object or not." % (obj, dist_delay_min)
-                                time.sleep(3)
+                                #time.sleep(3)
                     else:
                         print '\n\033[0;31mWARNING:\033[0m There is no send inf about %s of %s when check_obj_comp.' % (obj, type_tel[group_id])
                         return
@@ -1207,6 +1208,7 @@ def check_obj_status(obj,obj_infs,pd_log_id):
                 return
     else:
         print '\nThe obj %s of %s is sent, not distributed.' % (obj, type_tel[group_id])
+
 def get_pd_log_id(obj):
     #res = pg_act('pd_log_current','select',[['id'],{'obj_id':obj,'obs_stag':'sent'},'ORDER BY id DESC LIMIT 1'])
     res = pg_act('pd_log_current','select',[['id'],{'obj_id':obj,'obs_stag':'sent'},'ORDER BY id'])
