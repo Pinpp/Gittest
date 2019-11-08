@@ -4,7 +4,7 @@
 import time, json, socket, threading
 
 def load_params(json_file):
-    with open(json_file) as read_file:
+    with open(json_file,'r') as read_file:
         params = json.load(read_file)
     return params
 
