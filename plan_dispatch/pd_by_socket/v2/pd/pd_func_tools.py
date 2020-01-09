@@ -12,13 +12,13 @@ import paramiko
 warn_bs = {}
 ###
 
-def load_params(json_file='./pd_params.json'):
+def load_params(json_file):
     with open(json_file,'r') as read_file:
         pd_params = json.load(read_file)
     return pd_params
 
 def con_db(db_name):
-    pd_params = load_params()
+    pd_params = load_params('./pd_params.json')
     try:
         db = psycopg2.connect(**pd_params[db_name])
     except psycopg2.Error :#as e:
@@ -157,7 +157,7 @@ def con_ssh(ip, username, passwd, cmd, mode=1):
             return 0
 
 def get_ips_from_confs():
-    ssh_socket_confs = load_params()['ssh_socket']
+    ssh_socket_confs = load_params('./pd_params.json')['ssh_socket']
     ip_confs = [(ssh_socket_confs[i][0],i) for i in ssh_socket_confs.keys()]
     ip_confs.sort(key=operator.itemgetter(0))
     ip_confs_sort_dic = dict(ip_confs)
@@ -166,7 +166,7 @@ def get_ips_from_confs():
 def check_ser_socket(ip,mode=1,init=1):
     retr = 0
     ip_confs_dic = get_ips_from_confs()
-    ssh_socket_confs = load_params()['ssh_socket']
+    ssh_socket_confs = load_params('./pd_params.json')['ssh_socket']
     if ip in ip_confs_dic.keys():
         key = ip_confs_dic[ip]
         #print key
@@ -251,7 +251,7 @@ def check_ser_socket_background(init=1):
 
 def check_F30_sync(mode=1):
     global warn_bs
-    cam_ip, cam_un, cam_pw = load_params()['ssh_socket']['30_cam'][:3]
+    cam_ip, cam_un, cam_pw = load_params('./pd_params.json')['ssh_socket']['30_cam'][:3]
     scr1 = 'sync_re_sh.sh'
     scr2 = 'sync_remote_by_inotify.sh'
     scr3 = 'boot_rsync.sh'
@@ -311,8 +311,8 @@ def get_ser_config(group_id):
         conf_key = 'F60_ser'
     if group_id == 'XL003':
         conf_key = 'F30_ser'
-    ser_ip = load_params()['ssh_socket'][conf_key][0]
-    ser_port = load_params()['ssh_socket'][conf_key][3]
+    ser_ip = load_params('./pd_params.json')['ssh_socket'][conf_key][0]
+    ser_port = load_params('./pd_params.json')['ssh_socket'][conf_key][3]
     ser_conf_list = [ser_ip, ser_port]
     return ser_conf_list
 
@@ -323,8 +323,8 @@ def get_cam_config(cam_id):
         conf_key = 'e60_cam'
     if cam_id == '3':
         conf_key = '30_cam'
-    cam_ip = load_params()['ssh_socket'][conf_key][0]
-    cam_port = load_params()['ssh_socket'][conf_key][3]
+    cam_ip = load_params('./pd_params.json')['ssh_socket'][conf_key][0]
+    cam_port = load_params('./pd_params.json')['ssh_socket'][conf_key][3]
     cam_conf_list = [cam_ip, cam_port]
     return cam_conf_list
 

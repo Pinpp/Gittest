@@ -73,7 +73,7 @@ if __name__ == "__main__":
         lt_t = []
         bad_mak1 = 0
         bad_mak2 = 0
-        sql = "select a.obj_id, a.run_name, a.priority, b.tw_begin, b.tw_end, b.obs_stag, b.mode from object_list_all as a, %s  as b where a.obj_id=b.obj_id and a.date_beg='%s' and a.objsour='GWAC_followup' and a.mode='observation' order by a.id" % (
+        sql = "select a.obj_id, a.run_name, a.priority, a.expdur, a.frmcnt, b.tw_begin, b.tw_end, b.obs_stag, b.mode from object_list_all as a, %s  as b where a.obj_id=b.obj_id and a.date_beg='%s' and a.objsour='GWAC_followup' and a.mode='observation' order by a.id" % (
             list_in, date_in)
         res = sql_act('yunwei_db', sql)
         if res:
@@ -81,9 +81,9 @@ if __name__ == "__main__":
             print 'ALL records:', all_rec, '\n'
             lf.write('#ALL records: %s\n' % str(all_rec))
             lf.write(
-                '\n#followup_name, tw_beg, tw_end, obs_stag, objra, objdec, trigger_time, time_check, priority, op_time, dely_time \n')
+                '\n#followup_name, tw_beg, tw_end, obs_stag, objra, objdec, trigger_time, time_check, priority, expdur, frmcnt, op_time, dely_time\n')
             for i in res:
-                obj_id, fo_name, priority, tw_beg, tw_end, obstag, mode = i[:]
+                obj_id, fo_name, priority, expdur, frmcnt, tw_beg, tw_end, obstag, mode = i[:]
                 lt1.append(fo_name)
                 sql = "select ra, dec, trigger_time from follow_up_observation where fo_name='"+fo_name+"'"
                 res = sql_act('gwac_db', sql)
@@ -132,10 +132,10 @@ if __name__ == "__main__":
                     else:
                         op_time = 'None'
                         dely_time = 'None'
-                    print '%s,    \033[0;36m%s\033[0m,    \033[0;36m%s\033[0m,    \033[0;32m%s\033[0m,    %s,    %s,    \033[0;33m%s\033[0m,    %s,    %s,    \033[0;35m%s\033[0m,    \033[0;34m%s\033[0m' % (
-                        fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark, priority, op_time, dely_time)
-                    lf.write('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s\n' % (
-                        fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark, priority, op_time, dely_time))
+                    print '%s,    \033[0;36m%s\033[0m,    \033[0;36m%s\033[0m,    \033[0;32m%s\033[0m,    %s,    %s,    \033[0;33m%s\033[0m,    %s,    %s,    %s,    %s,    \033[0;35m%s\033[0m,    \033[0;34m%s\033[0m' % (
+                        fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark, priority, expdur, frmcnt, op_time, dely_time)
+                    lf.write('%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s\n' % (
+                        fo_name, tw_beg, tw_end, obstag, objra, objdec, trigger_t, strmark, priority, expdur, frmcnt, op_time, dely_time))
                 else:
                     print 'No recoder: %s \n' % fo_name
             print '\n'+' , '.join(lt_t)
@@ -148,9 +148,10 @@ if __name__ == "__main__":
             if lt_tm:
                 print lt_tm
                 lt_tm_mean = round(np.mean(lt_tm), 2)
+                lt_tm_median = round(np.median(lt_tm), 2)
                 lt_tm_min = round(np.min(lt_tm), 2)
-                print '\n'+str(lt_tm_mean)+' , '+str(lt_tm_min)+' , '+str(len(lt_tm))+'/'+str(len(lt_t))+'/'+str(len(lt_all))
-                lf.write('\n'+str(lt_tm_mean)+','+str(lt_tm_min)+','+str(len(lt_tm))+'/'+str(len(lt_t))+'/'+str(len(lt_all))+'\n')
+                print '\n'+str(lt_tm_mean)+' , '+str(lt_tm_median)+' , '+str(lt_tm_min)+' , '+str(len(lt_tm))+'/'+str(len(lt_t))+'/'+str(len(lt_all))
+                lf.write('\n'+str(lt_tm_mean)+','+str(lt_tm_median)+','+str(lt_tm_min)+','+str(len(lt_tm))+'/'+str(len(lt_t))+'/'+str(len(lt_all))+'\n')
             print "\nPASS_number:", bad_mak1, '', "WAIT_number:", bad_mak2, '', "TOTAL:", bad_mak1+bad_mak2
             lf.write("\n#PASS_number: %s , WAIT_number: %s , TOTAL: %s " %
                     (bad_mak1, bad_mak2, bad_mak1+bad_mak2))

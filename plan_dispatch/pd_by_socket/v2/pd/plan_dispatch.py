@@ -4,6 +4,7 @@
 import os
 import re
 import imp
+import time
 import datetime
 import operator
 import threading
@@ -30,14 +31,14 @@ def db_init():
     date_c = datetime.datetime.utcnow().strftime("%Y-%m-%d")
     ## pd_log_tab
     sql = 'insert into '+pd_log_tab.replace('current','history')+' (obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority,ser_log) SELECT obj_id, obj_name, obj_sent_time, obj_dist_time, obj_comp_time, group_id,unit_id,obj_sent_id,obj_dist_id,obs_stag,date_cur,priority,ser_log FROM '+pd_log_tab+' WHERE date_cur<'+"'"+ date_c +"'"
-    sql_act(sql,n=0)
+    sql_act(sql,0)
     sql = 'delete from '+pd_log_tab+' WHERE date_cur<'+"'"+ date_c +"'"
-    sql_act(sql,n=0)
+    sql_act(sql,0)
     ## running_list_cur
     sql = 'insert into '+running_list_cur.replace('current','history')+' (cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode) SELECT cmd,op_sn,op_time,op_type,obj_id,obj_name,observer,objra,objdec,objepoch,objerror,group_id,unit_id,obstype,obs_stra,grid_id,field_id,ra,dec,epoch,imgtype,filter,expdur,delay,frmcnt,priority,begin_time,end_time,run_name,pair_id,note,mode FROM '+running_list_cur+' WHERE op_time<'+"'"+ date_c +"'"
-    sql_act(sql,n=0)
+    sql_act(sql,0)
     sql = 'delete from '+running_list_cur+' WHERE op_time<'+"'"+ date_c +"'"
-    sql_act(sql,n=0)
+    sql_act(sql,0)
 
 def pd_init():
     global log_file, warn_bs, warn_obs
@@ -327,12 +328,22 @@ def insert_to_db_in_beg(obj,obj_infs,pd_log_id):
                     'frmcnt':frmcnt,'priority':priority,'begin_time':b_time,'end_time':e_time,'run_name':run_name,'pair_id':'0','mode':'observation','note':''}])
         ###
         try:
-            objsour_word = objsour.split('_')
+            objsour_word = objsource.split('_')
         except:
             pass
         else:
             if objsour_word[0] == 'GW':
-                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
+                trigger = objsour_word[2]
+                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,'tiling',beginTime,endTime,expdur,'observation','scheduled')
+                ###
+                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_name + "'" + 'and objsour=' + "'" + objsource + "'"
+                res = sql_act(sql)
+                if res:
+                    objrank = res[0][0]
+                else:
+                    objrank = '0'
+                update_pointing_lalalert(trigger,'GWAC',grid_id,field_id,objrank,'scheduled')
+                ###
         ###
     if group_id in ['XL002','XL003']:
         ##
@@ -366,11 +377,25 @@ def insert_to_db_in_beg(obj,obj_infs,pd_log_id):
                 else:
                     grid_id = 'G0000'
                     field_id = obj_name
-                ###
                 beginTime = b_time.replace('T',' ')
                 endTime = e_time.replace('T',' ')
-                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,obs_stra,beginTime,endTime,expdur,'observation','received')
+                if group_id == 'XL002':
+                    up_stra = 'pointing'
+                else:
+                    up_stra = 'tiling'
+                insert_to_ba_db(objsource,obj,group_id,unit_id,filter,grid_id,field_id,objra,objdec,up_stra,beginTime,endTime,expdur,'observation','scheduled')
                 ###
+                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_name + "'" + 'and objsour=' + "'" + objsource + "'"
+                res = sql_act(sql)
+                if res:
+                    objrank = res[0][0]
+                else:
+                    objrank = '0'
+                if group_id == 'XL002':
+                    name_telescope = 'F60'
+                elif group_id == 'XL003':
+                    name_telescope = 'F30'
+                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'scheduled')
                 ###
                 sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
                 res = sql_act(sql)
@@ -383,7 +408,8 @@ def insert_to_db_in_beg(obj,obj_infs,pd_log_id):
                         try:
                             obj_nms = objs[0].split('|')
                         except:
-                            obj_nm = res[0]
+                            obj_nms = objs
+                        for obj_nm in obj_nms:
                             if 'G0' in obj_nm:
                                 try:
                                     strs = obj_nm.split('_')
@@ -396,48 +422,26 @@ def insert_to_db_in_beg(obj,obj_infs,pd_log_id):
                             else:
                                 grid_id = 'G0000'
                                 field_id = obj_nm
+                            ###
                             sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
                             res = sql_act(sql)
                             if res:
                                 objrank = res[0][0]
-                            ###
+                            else:
+                                objrank = '0'
                             if group_id == 'XL002':
                                 name_telescope = 'F60'
-                            if group_id == 'XL003':
+                            elif group_id == 'XL003':
                                 name_telescope = 'F30'
-                            update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'Received @ GWAC')
+                            else:
+                                pass
+                            update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'scheduled')
                             ###
-                        else:
-                            for obj_nm in obj_nms:
-                                if 'G0' in obj_nm:
-                                    try:
-                                        strs = obj_nm.split('_')
-                                    except:
-                                        grid_id = 'G0000'
-                                        field_id = obj_nm
-                                    else:
-                                        grid_id = strs[0]
-                                        field_id = strs[1]
-                                else:
-                                    grid_id = 'G0000'
-                                    field_id = obj_nm
-                                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
-                                res = sql_act(sql)
-                                if res:
-                                    objrank = res[0][0]
-                                ###
-                                if group_id == 'XL002':
-                                    name_telescope = 'F60'
-                                if group_id == 'XL003':
-                                    name_telescope = 'F30'
-                                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,'Received @ GWAC')
-                                ###
                     else:
                         print '\nWrong: Got too many res when send_db_in_beg'
 
 def update_to_db_in_end(obj,obj_infs,pd_log_id):
     infs = obj_infs
-    obj_comp_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
     res = pg_act('pd_log_current','select',[['group_id','unit_id','obj_dist_id','obj_comp_time','obs_stag'],{'id':pd_log_id}])
     if res:
         group_id, unit_id, log_dist_id, obj_comp_time,obs_stag = res[0][:]
@@ -450,96 +454,144 @@ def update_to_db_in_end(obj,obj_infs,pd_log_id):
                 unit_id = '001'
     else:
         return
-    if obs_stag in ['complete','break','pass','sent']:
-        if obs_stag == 'sent':
-            pg_act('pd_log_current','update', [{'obj_comp_time':obj_comp_time,'obs_stag':'break'},{'id':pd_log_id,'obj_id':obj}])
-        e_time = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(obj_comp_time, "%Y-%m-%d %H:%M:%S"))).strftime("%Y-%m-%dT%H:%M:%S")
-        endTime = e_time.replace('T',' ')
-        objsource = infs['objsour']
+    ##
+    if not obj_comp_time:
+        obj_comp_time = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
+    if obs_stag == 'complete':
+        up_stag = obs_stag
+    elif obs_stag == 'break':
+        up_stag = 'broken'
+    elif obs_stag == 'pass':
+        up_stag = 'pass obs time window'
+    elif obs_stag == 'sent':
+        pg_act('pd_log_current','update', [{'obj_comp_time':obj_comp_time,'obs_stag':'break'},{'id':pd_log_id}])
+        obs_stag = 'break'
+        up_stag = 'broken'
+    else:
+        obs_stag = 'break'
+        up_stag = 'broken'
+    ##
+    e_time = datetime.datetime.utcfromtimestamp(time.mktime(time.strptime(obj_comp_time, "%Y-%m-%d %H:%M:%S"))).strftime("%Y-%m-%dT%H:%M:%S")
+    endTime = e_time.replace('T',' ')
+    objsource = infs['objsour']
+    obj_name = infs['obj_name']
+    #####
+    pg_act('object_running_list_current','update', [{'end_time':e_time,'unit_id':unit_id},{'obj_id':obj}])
+    #####
+    if group_id == 'XL001':
         #####
-        pg_act('object_running_list_current','update', [{'end_time':e_time,'unit_id':unit_id},{'obj_id':obj}])
+        update_to_ba_db(objsource, obj, up_stag, endTime)
+        ###
+        try:
+            objsour_word = objsource.split('_')
+            trigger_type = objsour_word[0]
+            trigger = objsour_word[2]
+        except:
+            pass
+        else:
+            if trigger_type == 'GW':
+                grid_id = 'G0014'
+                if 'G0' in obj_name:
+                    try:
+                        strs = obj_name.split('_')
+                    except:
+                        field_id = obj_name
+                        print 'The obj_name of %s is Wrong.' % obj
+                    else:
+                        grid_id = strs[0]
+                        field_id = strs[1]
+                else:
+                    #grid_id = 0
+                    field_id = obj_name
+                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_name + "'" + 'and objsour=' + "'" + objsource + "'"
+                res = sql_act(sql)
+                if res:
+                    objrank = res[0][0]
+                else:
+                    objrank = '0'
+                update_pointing_lalalert(trigger,'GWAC',grid_id,field_id,objrank,up_stag)
         #####
-        if group_id == 'XL001':
-            #####
-            update_to_ba_db(objsource, obj, obs_stag, endTime)
-            #####
-        if group_id in ['XL002','XL003']:
-            try:
-                objsour_word = objsource.split('_')
-                trigger_type = objsour_word[0]
-                version = objsour_word[1]
-                trigger = objsour_word[2]
-            except:
-                pass
-            else:
-                if trigger_type == 'GW':
-                    #####
-                    update_to_ba_db(objsource, obj, obs_stag, endTime)
-                    #####
-                    sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + infs['obj_name'] + "'"
-                    res = sql_act(sql)
-                    if res:
-                        objs = []
-                        for i in res:
-                            objs.append(i[0])
-                        objs = list(set(objs))
-                        if len(objs) == 1:
-                            try:
-                                obj_nms = objs[0].split('|')
-                            except:
-                                obj_nm = res[0]
-                                if 'G0' in obj_nm:
-                                    try:
-                                        strs = obj_nm.split('_')
-                                    except:
-                                        grid_id = 'G0000'
-                                        field_id = obj_nm
-                                    else:
-                                        grid_id = strs[0]
-                                        field_id = strs[1]
-                                else:
+    if group_id in ['XL002','XL003']:
+        try:
+            objsour_word = objsource.split('_')
+            trigger_type = objsour_word[0]
+            version = objsour_word[1]
+            trigger = objsour_word[2]
+        except:
+            pass
+        else:
+            if trigger_type == 'GW':
+                if 'G0' in obj_name:
+                    try:
+                        strs = obj_name.split('_')
+                    except:
+                        grid_id = 'G0000'
+                        field_id = obj_name
+                    else:
+                        grid_id = strs[0]
+                        field_id = strs[1]
+                else:
+                    grid_id = 'G0000'
+                    field_id = obj_name
+                #####
+                update_to_ba_db(objsource, obj, up_stag, endTime)
+                #####
+                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_name + "'" + 'and objsour=' + "'" + objsource + "'"
+                res = sql_act(sql)
+                if res:
+                    objrank = res[0][0]
+                else:
+                    objrank = '0'
+                if group_id == 'XL002':
+                    name_telescope = 'F60'
+                elif group_id == 'XL003':
+                    name_telescope = 'F30'
+                else:
+                    pass
+                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,up_stag)
+                ###
+                sql = 'select "Op_Obj_ID" from trigger_obj_field_op_sn where "Trigger_ID"=' + "'" + trigger + "'" + ' and "Serial_num"=' + "'" + version + "'" + ' and "Obj_ID"=' + "'" + obj_name + "'"
+                res = sql_act(sql)
+                if res:
+                    objs = []
+                    for i in res:
+                        objs.append(i[0])
+                    objs = list(set(objs))
+                    if len(objs) == 1:
+                        try:
+                            obj_nms = objs[0].split('|')
+                        except:
+                            obj_nms = objs
+                        for obj_nm in obj_nms:
+                            if 'G0' in obj_nm:
+                                try:
+                                    strs = obj_nm.split('_')
+                                except:
                                     grid_id = 'G0000'
                                     field_id = obj_nm
-                                sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
-                                res = sql_act(sql)
-                                if res:
-                                    objrank = res[0][0]
-                                ###
-                                if group_id == 'XL002':
-                                    name_telescope = 'F60'
-                                if group_id == 'XL003':
-                                    name_telescope = 'F30'
-                                status = obs_stag + ' @ GWAC'
-                                update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,status)
-                                ###
+                                else:
+                                    grid_id = strs[0]
+                                    field_id = strs[1]
                             else:
-                                for obj_nm in obj_nms:
-                                    if 'G0' in obj_nm:
-                                        try:
-                                            strs = obj_nm.split('_')
-                                        except:
-                                            grid_id = 'G0000'
-                                            field_id = obj_nm
-                                        else:
-                                            grid_id = strs[0]
-                                            field_id = strs[1]
-                                    else:
-                                        grid_id = 'G0000'
-                                        field_id = obj_nm
-                                    sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
-                                    res = sql_act(sql)
-                                    if res:
-                                        objrank = res[0][0]
-                                    ###
-                                    if group_id == 'XL002':
-                                        name_telescope = 'F60'
-                                    if group_id == 'XL003':
-                                        name_telescope = 'F30'
-                                    status = obs_stag + ' @ GWAC'
-                                    update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,status)
-                                    ###
-                        else:
-                            print '\nWrong: Got too many res when send_db_in_end'
+                                grid_id = 'G0000'
+                                field_id = obj_nm
+                            ###
+                            sql = 'select objrank from object_list_all where obj_name=' + "'" + obj_nm + "'" + 'and objsour=' + "'" + objsource + "'"
+                            res = sql_act(sql)
+                            if res:
+                                objrank = res[0][0]
+                            else:
+                                objrank = '0'
+                            if group_id == 'XL002':
+                                name_telescope = 'F60'
+                            elif group_id == 'XL003':
+                                name_telescope = 'F30'
+                            else:
+                                pass
+                            update_pointing_lalalert(trigger,name_telescope,grid_id,field_id,objrank,up_stag)
+                            ###
+                    else:
+                        print '\nWrong: Got too many res when send_db_in_end'
     log_file.write('#\n%s The obj of %s is complete.#' % (obj_comp_time, obj))
 
 def check_log_sent(obj, send_beg_time, send_end_time, pd_log_id): ### after check_sent_insert
@@ -677,7 +729,7 @@ def check_log_dist(obj, pd_log_id):
             ###
             if ser_log:
                 log = ser_log
-                cmd = "tac " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
+                cmd = "cat " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
                 res = pd_socket_client(ser_ip, ser_port, cmd)
                 if res:
                     for item in res:
@@ -719,7 +771,7 @@ def check_log_dist(obj, pd_log_id):
                 if logs:
                     for log in logs:
                         log = log.strip()###
-                        cmd = "tac " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
+                        cmd = "cat " + log + " | grep 'get observation plan <id = " + log_sent_id + ">'"
                         res = pd_socket_client(ser_ip, ser_port, cmd)
                         if res:
                             for item in res:
@@ -765,32 +817,37 @@ def check_log_dist(obj, pd_log_id):
             dist_mark = 0
             time_limit = (datetime.datetime.now() + datetime.timedelta(hours= -12)).strftime('%Y-%m-%d %H:%M:%S')
             ###
+            #print ser_log
             if ser_log:
-                log = ser_log
-                cmd = "cat " + log
+                log = ser_log.strip()
+                cmd = "cat %s | grep -v '^<system 3>'" % log
                 res = pd_socket_client(ser_ip, ser_port, cmd)
                 if res:
+                    #print len(res)
                     ii = 0
                     mark_i = 0
                     for item in res:
                         ii += 1
                         item = item.strip()
-                        re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item)
-                        if re_time and re_time.group(0) == log_sent_time:
+                        re_time = re.search(r"(20\d\d-\d\d-\d\d \d\d:\d\d:\d\d).*?append object<id = %s>" % log_sent_id, item)
+                        if mark_i == 0 and re_time and re_time.group(1) == log_sent_time:
+                            #print item
+                            #print ii
                             mark_i = ii
                         re_null = re.search(r"take NULL object", item)
                         if re_null:
                             if mark_i != 0 and ii > mark_i:
-                                print '%s WARNING: It occured "take NULL object", break it !' % obj
+                                #print ii
+                                print '%s \033[0;31mWARNING:\033[0m It occured "take NULL object", break it !' % obj
                                 dist_mark = 2
                                 break
-                        res_re = re.search(r".*?get observation plan <id = %s>" % log_sent_id, item)
+                        res_re = re.search(r"(20\d\d-\d\d-\d\d \d\d:\d\d:\d\d).*?<system id = (.*?)>.*?get observation plan <id = %s>" % log_sent_id, item)
                         if res_re:
                             it = res_re.group(0)
                             print '\n' + it
-                            log_dist_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", it).group(0)
-                            if log_dist_time >= log_sent_time:
-                                log_dist_id = re.search(r'<system id = (.*?)>', it).group(1)
+                            log_dist_time = res_re.group(1)
+                            if log_dist_time > log_sent_time or log_dist_time == log_sent_time:
+                                log_dist_id = res_re.group(2)
                                 dist_mark = 1
                                 break
                             else:
@@ -817,7 +874,6 @@ def check_log_dist(obj, pd_log_id):
                 cmd = 'ls /tmp/gftservice*.log | sort -r'
                 logs = pd_socket_client(ser_ip, ser_port, cmd)
                 if logs:
-                    #logs.reverse()
                     for log in logs:
                         log = log.strip()
                         cmd = "tail " + log + ' | grep "20[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*" | sort -r'
@@ -827,7 +883,7 @@ def check_log_dist(obj, pd_log_id):
                             re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", res)
                             if re_time and re_time.group(0) <= time_limit:
                                 break
-                        cmd = "cat " + log
+                        cmd = "cat %s | grep -v '^<system 3>'" % log
                         res = pd_socket_client(ser_ip, ser_port, cmd)
                         if res:
                             ii = 0
@@ -835,8 +891,8 @@ def check_log_dist(obj, pd_log_id):
                             for item in res:
                                 ii += 1
                                 item = item.strip()
-                                re_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", item)
-                                if re_time and re_time.group(0) == log_sent_time:
+                                re_time = re.search(r"(20\d\d-\d\d-\d\d \d\d:\d\d:\d\d).*?append object<id = %s>" % log_sent_id, item)
+                                if mark_i == 0 and re_time and re_time.group(1) == log_sent_time:
                                     mark_i = ii
                                 re_null = re.search(r"take NULL object", item)
                                 if re_null:
@@ -844,13 +900,13 @@ def check_log_dist(obj, pd_log_id):
                                         print'%s \033[0;31mWARNING:\033[0m It occured "take NULL object", break it !' % obj
                                         dist_mark = 2
                                         break
-                                res_re = re.search(r".*?get observation plan <id = %s>" % log_sent_id, item)
+                                res_re = re.search(r"(20\d\d-\d\d-\d\d \d\d:\d\d:\d\d).*?<system id = (.*?)>.*?get observation plan <id = %s>" % log_sent_id, item)
                                 if res_re:
                                     it = res_re.group(0)
                                     print '\n' + it
-                                    log_dist_time = re.search(r"20\d\d-\d\d-\d\d \d\d:\d\d:\d\d", it).group(0)
+                                    log_dist_time = res_re.group(1)
                                     if log_dist_time >= log_sent_time:
-                                        log_dist_id = re.search(r'<system id = (.*?)>', it).group(1)
+                                        log_dist_id = res_re.group(2)
                                         dist_mark = 1
                                         break
                                     else:
@@ -1268,10 +1324,10 @@ def check_sent_new():
         t1 = threading.Thread(target=check_sent_main,args=('XL001',))
         t1.setDaemon(True)
         t1.start()
-        t2 = threading.Thread(target=check_sent_main,args=('XL001',))
+        t2 = threading.Thread(target=check_sent_main,args=('XL002',))
         t2.setDaemon(True)
         t2.start()
-        t3 = threading.Thread(target=check_sent_main,args=('XL001',))
+        t3 = threading.Thread(target=check_sent_main,args=('XL003',))
         t3.setDaemon(True)
         t3.start()
         time.sleep(1)
@@ -1280,9 +1336,11 @@ def check_sent_new():
         t3.join()
 
 def check_sent_main_new(obj):
+    #imp.acquire_lock()
     obj_infs = get_obj_infs(obj)
     pd_log_id = str(get_pd_log_id(obj))
     check_obj_status(obj,obj_infs,pd_log_id)
+    #imp.release_lock()
 
 def check_sent_new_new():
     while True:
@@ -1300,12 +1358,11 @@ def check_sent_new_new():
         if sent_objs:
             t_pool = []
             for obj in sent_objs:
-                imp.acquire_lock()
                 t_cn = threading.Thread(target=check_sent_main_new, args=(obj,))
-                t_cn.setDaemon(True)
-                t_cn.start()
-                imp.release_lock()
                 t_pool.append(t_cn)
+            for t in t_pool:    
+                t.setDaemon(True)
+                t.start()
             for t in t_pool:
                 t.join()
             print '\n\n\n'
@@ -1349,16 +1406,17 @@ def get_com_indb(group_id):
 
 def get_uesd_teles_from_db(group_id):
     used_units = []
-    unit_pris = []
+    pri_list = []
     date_cur = datetime.datetime.utcnow().strftime("%Y-%m-%d")
     res = pg_act('pd_log_current','select',[['unit_id','priority'],{'obs_stag':'sent','date_cur':date_cur,'group_id':group_id}])
     if res:
         res.sort(key=operator.itemgetter(1))
+        unit_pri = res
         res_dic_set_lis = sorted(dict(res).items(), key=operator.itemgetter(1))
         for k, v in res_dic_set_lis:
             used_units.append(k)
-            unit_pris.append(v)
-        return [unit_pris,used_units]
+            pri_list.append(v)
+        return [unit_pri,pri_list,used_units]
     else:
         return 0
 
@@ -1366,25 +1424,26 @@ def pre_units(group_id,obj_infs):
     used_sts = get_uesd_teles_from_db(group_id)
     #print used_sts
     if used_sts:
-         pri_list, used_units= used_sts[:]
+        unit_pri, pri_list, used_units= used_sts[:]
     else:
+        unit_pri = []
         pri_list = ['0']
         used_units = []
     if group_id == 'XL001':
         if 'GW' in str(obj_infs['objsour']):
-            initunits = load_params()['obs']['GWAC_init_for_GW']
+            initunits = load_params('./pd_params.json')['obs']['GWAC_init_for_GW']
         else:
-            initunits = load_params()['obs']['GWAC_init']
+            initunits = load_params('./pd_params.json')['obs']['GWAC_init']
     if group_id == 'XL002':
-        initunits = load_params()['obs']['F60_init']
+        initunits = load_params('./pd_params.json')['obs']['F60_init']
     if group_id == 'XL003':
-        initunits = load_params()['obs']['F30_init']
+        initunits = load_params('./pd_params.json')['obs']['F30_init']
     if not used_units:
         unused_units = initunits[:]
     else:
         unused_units = list(set(initunits) - set(used_units))
     for_new_units = unused_units + used_units
-    return [initunits, unused_units, for_new_units, pri_list]
+    return [initunits, unit_pri, unused_units, for_new_units, pri_list]
 
 def check_new_main(group_id):
     global send_objs
@@ -1404,10 +1463,9 @@ def check_new_main(group_id):
             if obj not in send_objs:
                 send_objs.append(obj)
                 obj_infs = get_obj_infs(obj)
-                initunits, unused_units, for_new_units, pri_list = pre_units(group_id,obj_infs)[:]
-                #print '\n'
-                #print pre_units(group_id,obj_infs)[1],pre_units(group_id,obj_infs)[3]
+                initunits, unit_pri, unused_units, for_new_units, pri_list = pre_units(group_id,obj_infs)[:]
                 obj_pri = obj_infs['priority']
+                #print pri_list
                 if int(obj_pri) > int(pri_list[0]):
                     units = for_new_units
                     if pri_list[0] == '0':
@@ -1415,7 +1473,13 @@ def check_new_main(group_id):
                     else:
                         print '\n##### %s Higher Priority, %s ' % (type_tel[group_id], obj_pri)
                 else:
-                    units = unused_units
+                    if group_id in ['XL002','XL003']:
+                        if len(unit_pri) < len(initunits) + 1:
+                            units = unused_units + [for_new_units[0]]
+                        else:
+                            units = unused_units
+                    else:
+                        units = unused_units
                     print '\n##### %s Common, %s ' % (type_tel[group_id], obj_pri)
                 if units:
                     #print units
@@ -1545,6 +1609,7 @@ def check_new():
             time.sleep(1)
 
 if __name__ == "__main__":
+    import _strptime
     print '\nInit DB ...'
     db_init()
     time.sleep(1)
