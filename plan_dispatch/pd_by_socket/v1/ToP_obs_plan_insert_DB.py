@@ -198,11 +198,11 @@ def insert_to_ba_db(objsour,op_sn,group_id,unit_id,filter,grid_id,field_id,ra,de
             elif group_id == 'XL001' and unit_id == '004':
                 Telescope_ID_planned = 'GWAC_unit4'
             elif group_id == 'XL002' and unit_id == '001':
-                Telescope_ID_planned = 'GWAC/F60_A'
+                Telescope_ID_planned = 'GWAC_F60_A'
             elif group_id == 'XL002' and unit_id == '002':
-                Telescope_ID_planned = 'GWAC/F60_B'
+                Telescope_ID_planned = 'GWAC_F60_B'
             elif group_id == 'XL003' and unit_id == '001':
-                Telescope_ID_planned = 'GWAC/F30'
+                Telescope_ID_planned = 'GWAC_F30'
             Instrument_ID_planned = unit_id
             ID_filter_planned = filter
             Grid_ID_planned = grid_id
