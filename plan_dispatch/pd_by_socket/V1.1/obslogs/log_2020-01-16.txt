@@ -1,0 +1,146 @@
+
+###### Get news (2020-01-16 19:48:17) ######
+##### F30 : Case 1
+###### The obj 173838 of F30: Sending.##
+173838,
+append_plan SVOMMM toa ; append_object G0015_4330025 2.893 2.55 2000 4 70 1 R 60 ; append_plan gwac default ,
+send_beg_time:2020-01-16 19:48:22,
+send_end_time:2020-01-16 19:48:26
+##
+##### The obj 173838 of F30: Send ok.
+###### Ready to get news ######
+###### Get news (2020-01-16 19:50:03) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 19:50:11,
+send_end_time:2020-01-16 19:50:16
+##
+###### Ready to get news #######
+2020-01-16 19:55:12 The obj of 173838 is complete.#
+###### Get news (2020-01-16 20:07:04) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:07:09,
+send_end_time:2020-01-16 20:07:15
+##
+##### The obj 174180 of F30: Send Wrong.
+###### The obj 173839 of F30: Sending.##
+173839,
+append_plan SVOMMM toa ; append_object G0015_4330008 2.89166666667 0.85 2000 4 70 1 R 60 ; append_plan gwac default ,
+send_beg_time:2020-01-16 20:08:14,
+send_end_time:2020-01-16 20:08:17
+##
+##### The obj 173839 of F30: Send ok.
+###### Ready to get news #######
+2020-01-16 20:14:45 The obj of 173839 is complete.#
+###### Get news (2020-01-16 20:39:24) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:39:30,
+send_end_time:2020-01-16 20:39:35
+##
+##### The obj 174180 of F30: Send Wrong.
+###### The obj 173840 of F30: Sending.##
+173840,
+append_plan SVOMMM toa ; append_object G0015_4510042 3.01033333333 4.25 2000 4 70 1 R 60 ; append_plan gwac default ,
+send_beg_time:2020-01-16 20:40:35,
+send_end_time:2020-01-16 20:40:36
+##
+##### The obj 173840 of F30: Send ok.
+###### Get news (2020-01-16 20:41:58) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:42:05,
+send_end_time:2020-01-16 20:42:10
+##
+###### Ready to get news ######
+###### Get news (2020-01-16 20:45:33) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:45:40,
+send_end_time:2020-01-16 20:45:46
+##
+##### The obj 174180 of F30: Send Wrong.
+##### There is no free units of F30 when send 173841, don't need to send.
+###### Ready to get news #######
+2020-01-16 20:47:01 The obj of 173840 is complete.#
+###### Get news (2020-01-16 20:47:14) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:47:19,
+send_end_time:2020-01-16 20:47:24
+##
+##### The obj 174180 of F30: Send Wrong.
+###### The obj 173841 of F30: Sending.##
+173841,
+append_plan SVOMMM toa ; append_object G0015_4520059 3.017 5.95 2000 4 70 1 R 60 ; append_plan gwac default ,
+send_beg_time:2020-01-16 20:47:30,
+send_end_time:2020-01-16 20:47:34
+##
+##### The obj 173841 of F30: Send ok.
+###### Ready to get news ######
+###### Get news (2020-01-16 20:52:46) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:52:55,
+send_end_time:2020-01-16 20:53:01
+##
+##### The obj 174180 of F30: Send Wrong.
+##### There is no free units of F30 when send 173842, don't need to send.
+###### Ready to get news #######
+2020-01-16 20:53:57 The obj of 173841 is complete.#
+###### Get news (2020-01-16 20:54:23) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:54:28,
+send_end_time:2020-01-16 20:55:03
+##
+##### The obj 174180 of F30: Send Wrong.
+###### The obj 173842 of F30: Sending.##
+173842,
+append_plan SVOMMM toa ; append_object G0015_4161025 2.77966666667 -2.55 2000 4 70 1 R 60 ; append_plan gwac default ,
+send_beg_time:2020-01-16 20:55:09,
+send_end_time:2020-01-16 20:55:12
+##
+##### The obj 173842 of F30: Send ok.
+###### Get news (2020-01-16 20:58:05) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 20:58:15,
+send_end_time:2020-01-16 20:58:49
+##
+##### The obj 174180 of F30: Send Wrong.
+##### There is no free units of F30 when send 173843, don't need to send.
+###### Get news (2020-01-16 21:00:42) ######
+##### F30 : Case 1
+###### The obj 174180 of F30: Sending.##
+174180,
+cd /home/ccduser/pd-socket/ && nohup bash check_obs_start.sh 174180 > /dev/null 2>&1,
+send_beg_time:2020-01-16 21:00:49,
+send_end_time:2020-01-16 21:01:23
+##
+##### The obj 174180 of F30: Send ok.
+###### Ready to get news #######
+2020-01-16 21:05:20 The obj of 173842 is complete.#
+###### Get news (2020-01-16 22:40:19) ######
+##### F30 : Case 1
+##### There is no free units of F30 when send 173844, don't need to send.
+###### Ready to get news ######

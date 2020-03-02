@@ -1,0 +1,31 @@
+
+
+
+Restart at: 2019-11-01 04:41:10.726753
+
+
+Restart at: 2019-11-01 04:49:20.450733
+
+
+Restart at: 2019-11-01 05:13:34.172770
+
+
+Restart at: 2019-11-01 05:19:53.626745
+
+
+Restart at: 2019-11-01 05:22:52.951802
+
+Run times：1 
+Last id : 29697 
+obj_name=G191031_C24714 objsour=GWAC_followup observer=GWAC objra=193.299 objdec=13.3529 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/10/31 date_end=2019/10/31 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191031_C24714_001   note=29698 mode=observation
+2019-11-01 05:22:50.602000
+
+
+
+Restart at: 2019-11-01 05:25:20.624795
+
+
+Restart at: 2019-11-01 05:27:07.930729
+
+
+Restart at: 2019-11-01 05:38:36.037728

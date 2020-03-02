@@ -1,0 +1,2147 @@
+#
+2019-12-28 18:03:42 The obj of 160986 is complete.#
+###### Get news (2019-12-28 18:04:15) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160687, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160667, don't need to send.
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:04:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### GWAC : Case 1
+###### The obj 160988 of F60: Sending.
+##### There is no free units of GWAC when send 160721, don't need to send.##
+160988,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 R 81 -1 -1 G191228_C00020_003 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:04:53,
+send_end_time:2019-12-28 18:04:59
+##
+##### The obj 160988 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160667, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:05:45 The obj of 160988 is complete.#
+###### Get news (2019-12-28 18:05:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### GWAC : Case 1
+###### The obj 160987 of F60: Sending.
+##### There is no free units of GWAC when send 160721, don't need to send.##
+160987,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 B 81 -1 -1 G191228_C00020_002 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:05:59,
+send_end_time:2019-12-28 18:06:04
+##
+##### The obj 160987 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160667, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:06:05 The obj of 160987 is complete.#
+###### Get news (2019-12-28 18:07:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160687, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 160667, don't need to send.
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:08:23) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### GWAC : Case 1
+###### The obj 160990 of F60: Sending.
+##### There is no free units of GWAC when send 160721, don't need to send.##
+160990,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 R 80 -1 -1 G191228_C00020_005 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:08:29,
+send_end_time:2019-12-28 18:08:33
+##
+##### The obj 160990 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160667, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:12:58 The obj of 160665 is complete.#
+###### Get news (2019-12-28 18:13:17) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160989, don't need to send.
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### The obj 160667 of F60: Sending.##
+160667,
+append_plan guangxi oba && append_object SN2019tua 21.9667333333 24.2659 2000 4 150.0 5 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:13:28,
+send_end_time:2019-12-28 18:13:35
+##
+##### The obj 160667 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 18:18:46 The obj of 160685 is complete.#
+###### Get news (2019-12-28 18:19:18) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160989, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160624, don't need to send.
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:25:06) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160991, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160511, don't need to send.
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:25:36 The obj of 160666 is complete.#
+###### Get news (2019-12-28 18:26:06) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160991, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### The obj 160511 of F60: Sending.##
+160511,
+append_plan hanxuhui oba && append_object 10600-0990722-007434 6.60482 74.344 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:26:14,
+send_end_time:2019-12-28 18:26:19
+##
+##### The obj 160511 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:29:02) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160991, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+##### There is no free units of F60 when send 160448, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:32:31 The obj of 160990 is complete.#
+###### Get news (2019-12-28 18:32:56) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.
+###### The obj 160991 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160721, don't need to send.##
+160991,
+append_plan GWAC goa && append_object G191228_C00317 2.05668 14.5017 2000 4 30.0 2 R 80 -1 -1 G191228_C00317_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:33:02,
+send_end_time:2019-12-28 18:33:08
+##
+##### The obj 160991 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:33:07 The obj of 160706 is complete.#
+###### Get news (2019-12-28 18:33:31) #######
+2019-12-28 18:33:11 The obj of 160705 is complete.#
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160721 of GWAC: Sending.
+##### There is no free units of F60 when send 160989, don't need to send.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.##
+160721,
+tryclient 'append_gwac Op_sn=160721, Op_time=2019-12-28T10:33:36, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=35100085, Obj_ID=moniotr,RA=351.0, DEC=8.5, Epoch=2000, ObjRA=351.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T10:33:36, end_time=2019-12-28T11:03:36 Pair_ID=0',
+send_beg_time:2019-12-28 18:33:35,
+send_end_time:2019-12-28 18:33:44
+##
+##### The obj 160721 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 160736 of GWAC: Sending.##
+160736,
+tryclient 'append_gwac Op_sn=160736, Op_time=2019-12-28T10:34:00, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=35101085, Obj_ID=moniotr,RA=351.0, DEC=-8.5, Epoch=2000, ObjRA=351.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T10:34:00, end_time=2019-12-28T11:04:00 Pair_ID=0',
+send_beg_time:2019-12-28 18:33:59,
+send_end_time:2019-12-28 18:34:08
+##
+##### The obj 160736 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:34:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160989, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:34:25 The obj of 160991 is complete.#
+###### Get news (2019-12-28 18:34:56) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+###### The obj 160989 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160989,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 B 80 -1 -1 G191228_C00020_004 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:35:02,
+send_end_time:2019-12-28 18:35:07
+##
+##### The obj 160989 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:35:56 The obj of 160989 is complete.#
+###### Get news (2019-12-28 18:36:08) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+###### The obj 160992 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160992,
+append_plan GWAC goa && append_object G191228_C00354 0.9191 0.721832 2000 4 30.0 2 R 80 -1 -1 G191228_C00354_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:36:13,
+send_end_time:2019-12-28 18:36:19
+##
+##### The obj 160992 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:36:32) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160993, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:36:46) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160994, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:37:35 The obj of 160992 is complete.#
+###### Get news (2019-12-28 18:38:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160994 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160994,
+append_plan GWAC goa && append_object G191228_C00558 22.6208666667 -14.4199 2000 4 30.0 2 R 80 -1 -1 G191228_C00558_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:38:08,
+send_end_time:2019-12-28 18:38:14
+##
+##### The obj 160994 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160448, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:38:28) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160995, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160448 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.#
+2019-12-28 18:38:14 The obj of 160667 is complete.###
+160448,
+append_plan hanxuhui oba && append_object 3062-0990511-0082969 6.60341333333 82.9691 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:38:36,
+send_end_time:2019-12-28 18:38:42
+##
+##### The obj 160448 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:38:52) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160995, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160450, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:39:29 The obj of 160994 is complete.##
+2019-12-28 18:39:40 The obj of 160511 is complete.#
+###### Get news (2019-12-28 18:40:03) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160995 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160995,
+append_plan GWAC goa && append_object G191228_C00692 22.9032 22.6674 2000 4 30.0 2 R 80 -1 -1 G191228_C00692_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:40:07,
+send_end_time:2019-12-28 18:40:13
+##
+##### The obj 160995 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 160464 of F60: Sending.##
+160464,
+append_plan hanxuhui oba && append_object 4722-1012647-0040414 6.751 40.4142 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:40:26,
+send_end_time:2019-12-28 18:40:32
+##
+##### The obj 160464 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:40:42) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160687, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160578, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:40:52 The obj of 160448 is complete.#
+###### Get news (2019-12-28 18:41:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160687, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160578 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160578,
+append_plan hanxuhui oba && append_object 21145-1012639-004548 6.75093333333 45.4854 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:41:31,
+send_end_time:2019-12-28 18:41:36
+##
+##### The obj 160578 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 18:41:25 The obj of 160995 is complete.#
+###### Get news (2019-12-28 18:42:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### The obj 160687 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160687,
+append_plan guangxi oba && append_object SN2019tua 21.9667333333 24.2659 2000 4 150.0 5 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:42:08,
+send_end_time:2019-12-28 18:42:15
+##
+##### The obj 160687 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:42:34) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### The obj 160997 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160997,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 R 81 -1 -1 G191228_C00692_003 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:42:38,
+send_end_time:2019-12-28 18:42:43
+##
+##### The obj 160997 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:43:23 The obj of 160997 is complete.#
+###### Get news (2019-12-28 18:43:57) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### The obj 160996 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160996,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 B 81 -1 -1 G191228_C00692_002 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:44:03,
+send_end_time:2019-12-28 18:44:09
+##
+##### The obj 160996 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:44:53 The obj of 160996 is complete.#
+###### Get news (2019-12-28 18:45:09) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160688, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:46:01) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160998 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160998,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 B 80 -1 -1 G191228_C00692_004 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:46:08,
+send_end_time:2019-12-28 18:46:14
+##
+##### The obj 160998 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:46:26) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160999, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:46:58 The obj of 160998 is complete.#
+###### Get news (2019-12-28 18:47:13) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+###### The obj 160999 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160999,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 R 80 -1 -1 G191228_C00692_005 && append_plan gwac default ,
+send_beg_time:2019-12-28 18:47:20,
+send_end_time:2019-12-28 18:47:27
+##
+##### The obj 160999 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news #######
+2019-12-28 18:48:05 The obj of 160999 is complete.#
+###### Get news (2019-12-28 18:48:28) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160688, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160538, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:50:49) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160688, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 18:50:59) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160688, don't need to send.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:01:03 The obj of 160686 is complete.#
+###### Get news (2019-12-28 19:01:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160688 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+160688,
+append_plan guangxi oba && append_object SN2019tua 21.9667333333 24.2659 2000 4 150.0 5 I 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:01:41,
+send_end_time:2019-12-28 19:01:48
+##
+##### The obj 160688 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:02:08) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### The obj 161000 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.##
+161000,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 B 80 -1 -1 G191228_C00692_006 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:02:14,
+send_end_time:2019-12-28 19:02:20
+##
+##### The obj 161000 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:02:31) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 161001, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:03:02 The obj of 161000 is complete.#
+###### Get news (2019-12-28 19:03:16) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### GWAC : Case 1
+###### The obj 161001 of F60: Sending.
+##### There is no free units of GWAC when send 160754, don't need to send.##
+161001,
+append_plan GWAC goa && append_object G191228_C00692 22.9033333333 22.6596 2000 4 30.0 1 R 80 -1 -1 G191228_C00692_007 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:03:21,
+send_end_time:2019-12-28 19:03:26
+##
+##### The obj 161001 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 19:04:04 The obj of 161001 is complete.#
+###### Get news (2019-12-28 19:04:21) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+##### There is no free units of F60 when send 160689, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160754, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:06:24 The obj of 160721 is complete.#
+###### Get news (2019-12-28 19:06:53) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+###### The obj 160754 of GWAC: Sending.
+##### There is no free units of F60 when send 160689, don't need to send.##
+160754,
+tryclient 'append_gwac Op_sn=160754, Op_time=2019-12-28T11:06:57, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=34820255, Obj_ID=moniotr,RA=348.22, DEC=25.5, Epoch=2000, ObjRA=348.22, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T11:06:57, end_time=2019-12-28T11:36:57 Pair_ID=0',
+send_beg_time:2019-12-28 19:06:56,
+send_end_time:2019-12-28 19:07:05
+##
+##### The obj 160754 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160770, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:06:50 The obj of 160736 is complete.#
+###### Get news (2019-12-28 19:07:29) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160689, don't need to send.
+##### There is no free units of GWAC when send 160770, don't need to send.
+##### GWAC : Case 1
+###### The obj 160770 of GWAC: Sending.##
+160770,
+tryclient 'append_gwac Op_sn=160770, Op_time=2019-12-28T11:07:39, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=33650425, Obj_ID=moniotr,RA=336.53, DEC=42.5, Epoch=2000, ObjRA=336.53, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T11:07:39, end_time=2019-12-28T11:37:39 Pair_ID=0',
+send_beg_time:2019-12-28 19:07:38,
+send_end_time:2019-12-28 19:07:45
+##
+##### The obj 160770 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:12:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+###### The obj 161003 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.##
+161003,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 R 80 -1 -1 G191228_C00020_007 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:12:19,
+send_end_time:2019-12-28 19:12:24
+##
+##### The obj 161003 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 19:13:07 The obj of 161003 is complete.#
+###### Get news (2019-12-28 19:13:45) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+##### GWAC : Case 1
+###### The obj 161002 of F60: Sending.
+##### There is no free units of GWAC when send 160720, don't need to send.##
+161002,
+append_plan GWAC goa && append_object G191228_C00020 1.38290666667 12.8677 2000 4 30.0 1 B 80 -1 -1 G191228_C00020_006 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:13:51,
+send_end_time:2019-12-28 19:13:57
+##
+##### The obj 161002 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 19:14:45 The obj of 161002 is complete.#
+###### Get news (2019-12-28 19:15:26) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+##### There is no free units of F60 when send 160689, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:20:07 The obj of 160687 is complete.#
+###### Get news (2019-12-28 19:20:25) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+###### The obj 160689 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.##
+160689,
+append_plan guangxi oba && append_object SN2019vxm 19.9746 62.1377 2000 4 150.0 2 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:20:31,
+send_end_time:2019-12-28 19:20:36
+##
+##### The obj 160689 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:25:15) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161004 of F60: Sending.
+##### There is no free units of GWAC when send 160720, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.##
+161004,
+append_plan GWAC goa && append_object G191228_C01690 22.0262666667 40.0204 2000 4 30.0 2 R 80 -1 -1 G191228_C01690_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:25:19,
+send_end_time:2019-12-28 19:25:24
+##
+##### The obj 161004 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 19:26:41 The obj of 161004 is complete.#
+###### Get news (2019-12-28 19:27:09) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+##### There is no free units of F60 when send 160690, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.
+###### Ready to get news #######
+2019-12-28 19:34:30 The obj of 160688 is complete.#
+###### Get news (2019-12-28 19:36:42) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160720, don't need to send.
+###### The obj 160690 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160720, don't need to send.##
+160690,
+append_plan guangxi oba && append_object SN2019vxm 19.9746 62.1377 2000 4 150.0 2 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:36:47,
+send_end_time:2019-12-28 19:36:53
+##
+##### The obj 160690 of F60: Send ok.
+###### Ready to get news #######
+2019-12-28 19:39:59 The obj of 160690 is complete.#
+###### Get news (2019-12-28 19:40:03) ######
+##### F30 : Case 2
+##### F60 : Case 1#
+2019-12-28 19:39:37 The obj of 160754 is complete.#
+##### GWAC : Case 1
+###### The obj 160473 of F60: Sending.
+###### The obj 160720 of GWAC: Sending.##
+160473,
+append_plan hanxuhui oba && append_object 5398-1013580-0034486 6.7572 34.4862 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:40:09,
+send_end_time:2019-12-28 19:40:16
+####
+160720,
+tryclient 'append_gwac Op_sn=160720, Op_time=2019-12-28T11:40:10, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=33300085, Obj_ID=moniotr,RA=333.0, DEC=8.5, Epoch=2000, ObjRA=333.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T11:40:10, end_time=2019-12-28T12:10:10 Pair_ID=0',
+send_beg_time:2019-12-28 19:40:09,
+send_end_time:2019-12-28 19:40:18
+##
+##### The obj 160473 of F60: Send ok.
+##### The obj 160720 of GWAC: Send ok.#
+2019-12-28 19:40:24 The obj of 160689 is complete.#
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160753, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:40:31) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160753, don't need to send.
+###### The obj 160538 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160753, don't need to send.##
+160538,
+append_plan hanxuhui oba && append_object 13941-1010876-007444 6.7392 74.4434 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:40:36,
+send_end_time:2019-12-28 19:40:42
+###
+2019-12-28 19:40:33 The obj of 160770 is complete.#
+##### The obj 160538 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:40:54) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160504, don't need to send.
+##### There is no free units of GWAC when send 160753, don't need to send.
+##### GWAC : Case 1
+###### The obj 160753 of GWAC: Sending.##
+160753,
+tryclient 'append_gwac Op_sn=160753, Op_time=2019-12-28T11:41:06, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=32930255, Obj_ID=moniotr,RA=329.39, DEC=25.5, Epoch=2000, ObjRA=329.39, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T11:41:06, end_time=2019-12-28T12:11:06 Pair_ID=0',
+send_beg_time:2019-12-28 19:41:05,
+send_end_time:2019-12-28 19:41:14
+##
+##### The obj 160753 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:41:26) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160504, don't need to send.
+##### There is no free units of GWAC when send 160782, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160782, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-28 19:42:36) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161006 of F60: Sending.
+##### There is no free units of GWAC when send 160782, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160782, don't need to send.##
+161006,
+append_plan GWAC goa && append_object G191228_C02349 22.428 30.4797 2000 4 30.0 2 R 80 -1 -1 G191228_C02349_001 && append_plan gwac default ,
+send_beg_time:2019-12-28 19:42:38,
+send_end_time:2019-12-28 19:42:41
+##
+##### The obj 161006 of F60: Send ok.
+###### Get news (2019-12-28 20:30:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160701 of F60: Sending.
+###### The obj 160742 of GWAC: Sending.##
+160701,
+append_plan guangxi oba && append_object AT2019xuk 7.37946666667 28.7062 2000 4 150.0 3 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 20:30:47,
+send_end_time:2019-12-28 20:30:54
+##
+##### The obj 160701 of F60: Send ok.
+###### The obj 160702 of F60: Sending.##
+160742,
+tryclient 'append_gwac Op_sn=160742, Op_time=2019-12-28T12:30:50, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=10350255, Obj_ID=moniotr,RA=103.52, DEC=25.5, Epoch=2000, ObjRA=103.52, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T12:30:50, end_time=2019-12-28T13:00:50 Pair_ID=0',
+send_beg_time:2019-12-28 20:30:48,
+send_end_time:2019-12-28 20:30:55
+####
+160702,
+append_plan guangxi oba && append_object AT2019xuk 7.37946666667 28.7062 2000 4 150.0 3 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-28 20:30:55,
+send_end_time:2019-12-28 20:30:57
+##
+##### The obj 160742 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 160774 of GWAC: Sending.
+##### The obj 160702 of F60: Send ok.#
+2019-12-28 20:32:01 The obj of 160742 is complete.#
+###### Get news (2019-12-29 01:24:18) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+###### The obj 160693 of F60: Sending.
+###### The obj 160777 of GWAC: Sending.##
+160693,
+append_plan guangxi oba && append_object AT2019ybw 10.8305333333 32.9834 2000 4 150.0 2 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 01:24:23,
+send_end_time:2019-12-29 01:24:28
+####
+160777,
+tryclient 'append_gwac Op_sn=160777, Op_time=2019-12-28T17:24:24, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=18590595, Obj_ID=moniotr,RA=185.91, DEC=59.5, Epoch=2000, ObjRA=185.91, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T17:24:24, end_time=2019-12-28T17:54:24 Pair_ID=0',
+send_beg_time:2019-12-29 01:24:24,
+send_end_time:2019-12-29 01:24:31
+##
+##### The obj 160693 of F60: Send ok.
+##### The obj 160777 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160763, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 01:24:45) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160763, don't need to send.
+##### There is no free units of F60 when send 160694, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160763, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 01:26:03) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160763, don't need to send.
+##### There is no free units of F60 when send 160694, don't need to send.
+##### GWAC : Case 1
+###### The obj 160763 of GWAC: Sending.##
+160763,
+tryclient 'append_gwac Op_sn=160763, Op_time=2019-12-28T17:26:11, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18450425, Obj_ID=moniotr,RA=184.55, DEC=42.5, Epoch=2000, ObjRA=184.55, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T17:26:11, end_time=2019-12-28T17:56:11 Pair_ID=0',
+send_beg_time:2019-12-29 01:26:11,
+send_end_time:2019-12-29 01:26:17
+##
+##### The obj 160763 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-29 01:39:02 The obj of 160702 is complete.#
+###### Get news (2019-12-29 01:39:36) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.
+###### The obj 160694 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.##
+160694,
+append_plan guangxi oba && append_object AT2019ybw 10.8305333333 32.9834 2000 4 150.0 2 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 01:39:40,
+send_end_time:2019-12-29 01:39:46
+##
+##### The obj 160694 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 01:44:28 The obj of 160693 is complete.#
+###### Get news (2019-12-29 01:44:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160695 of F60: Sending.
+##### There is no free units of GWAC when send 160746, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.##
+160695,
+append_plan guangxi oba && append_object AT2019ybw 10.8305333333 32.9834 2000 4 150.0 2 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 01:44:43,
+send_end_time:2019-12-29 01:44:48
+##
+##### The obj 160695 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 01:49:34 The obj of 160694 is complete.#
+###### Get news (2019-12-29 01:50:01) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.
+###### The obj 160696 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.##
+160696,
+append_plan guangxi oba && append_object AT2019ybw 10.8305333333 32.9834 2000 4 150.0 2 I 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 01:50:05,
+send_end_time:2019-12-29 01:50:11
+##
+##### The obj 160696 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 01:54:41 The obj of 160695 is complete.#
+###### Get news (2019-12-29 01:55:04) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160703 of F60: Sending.
+##### There is no free units of GWAC when send 160746, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160746, don't need to send.##
+160703,
+append_plan guangxi oba && append_object AT2019xuk 7.37946666667 28.7062 2000 4 150.0 3 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 01:55:07,
+send_end_time:2019-12-29 01:55:13
+##
+##### The obj 160703 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 01:57:12 The obj of 160777 is complete.#
+###### Get news (2019-12-29 01:57:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160704, don't need to send.
+###### The obj 160746 of GWAC: Sending.##
+160746,
+tryclient 'append_gwac Op_sn=160746, Op_time=2019-12-28T17:57:53, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17880255, Obj_ID=moniotr,RA=178.81, DEC=25.5, Epoch=2000, ObjRA=178.81, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T17:57:53, end_time=2019-12-28T18:27:53 Pair_ID=0',
+send_beg_time:2019-12-29 01:57:53,
+send_end_time:2019-12-29 01:58:00
+##
+##### The obj 160746 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160714, don't need to send.
+###### Ready to get news #######
+2019-12-29 01:59:28 The obj of 160763 is complete.#
+###### Get news (2019-12-29 01:59:39) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160714, don't need to send.
+##### There is no free units of F60 when send 160704, don't need to send.
+##### GWAC : Case 1
+###### The obj 160714 of GWAC: Sending.##
+160714,
+tryclient 'append_gwac Op_sn=160714, Op_time=2019-12-28T17:59:48, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=17100085, Obj_ID=moniotr,RA=171.0, DEC=8.5, Epoch=2000, ObjRA=171.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T17:59:48, end_time=2019-12-28T18:29:48 Pair_ID=0',
+send_beg_time:2019-12-29 01:59:47,
+send_end_time:2019-12-29 01:59:54
+##
+##### The obj 160714 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-29 01:59:47 The obj of 160696 is complete.#
+###### Get news (2019-12-29 02:00:10) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+###### The obj 160697 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.##
+160697,
+append_plan guangxi oba && append_object AT2019ycb 12.3135333333 5.73762 2000 4 150.0 2 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:00:14,
+send_end_time:2019-12-29 02:00:19
+##
+##### The obj 160697 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:02:01) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160698, don't need to send.
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:07:30) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160698, don't need to send.
+##### There is no free units of GWAC when send 160747, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:07:44 The obj of 160703 is complete.#
+###### Get news (2019-12-29 02:08:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+###### The obj 160698 of F60: Sending.
+##### There is no free units of GWAC when send 160747, don't need to send.##
+160698,
+append_plan guangxi oba && append_object AT2019ycb 12.3135333333 5.73762 2000 4 150.0 2 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:08:05,
+send_end_time:2019-12-29 02:08:09
+##
+##### The obj 160698 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:13:11 The obj of 160697 is complete.#
+###### Get news (2019-12-29 02:13:19) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160699 of F60: Sending.
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.##
+160699,
+append_plan guangxi oba && append_object AT2019ycb 12.3135333333 5.73762 2000 4 150.0 2 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:13:23,
+send_end_time:2019-12-29 02:13:28
+##
+##### The obj 160699 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:18:20 The obj of 160698 is complete.#
+###### Get news (2019-12-29 02:18:29) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+###### The obj 160700 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.##
+160700,
+append_plan guangxi oba && append_object AT2019ycb 12.3135333333 5.73762 2000 4 150.0 2 I 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:18:34,
+send_end_time:2019-12-29 02:18:38
+##
+##### The obj 160700 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:23:26 The obj of 160699 is complete.#
+###### Get news (2019-12-29 02:23:51) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+###### The obj 161030 of F60: Sending.
+##### There is no free units of GWAC when send 160747, don't need to send.##
+161030,
+append_plan GWAC goa && append_object G191228_C04413 11.9465333333 -3.44586 2000 4 30.0 2 R 80 -1 -1 G191228_C04413_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:23:54,
+send_end_time:2019-12-29 02:23:59
+##
+##### The obj 161030 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:25:15 The obj of 161030 is complete.#
+###### Get news (2019-12-29 02:25:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161031 of F60: Sending.
+##### There is no free units of GWAC when send 160747, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.##
+161031,
+append_plan GWAC goa && append_object G191228_C04862 11.9007333333 -3.06187 2000 4 30.0 2 R 80 -1 -1 G191228_C04862_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:25:52,
+send_end_time:2019-12-29 02:25:57
+##
+##### The obj 161031 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:27:13 The obj of 161031 is complete.#
+###### Get news (2019-12-29 02:27:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.
+###### The obj 160704 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160747, don't need to send.##
+160704,
+append_plan guangxi oba && append_object AT2019xuk 7.37946666667 28.7062 2000 4 150.0 3 I 21 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:27:52,
+send_end_time:2019-12-29 02:27:58
+##
+##### The obj 160704 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:30:39 The obj of 160746 is complete.#
+###### Get news (2019-12-29 02:30:55) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 160504, don't need to send.
+###### The obj 160747 of GWAC: Sending.##
+160747,
+tryclient 'append_gwac Op_sn=160747, Op_time=2019-12-28T18:31:00, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=19760255, Obj_ID=moniotr,RA=197.64, DEC=25.5, Epoch=2000, ObjRA=197.64, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T18:31:00, end_time=2019-12-28T19:01:00 Pair_ID=0',
+send_beg_time:2019-12-29 02:30:59,
+send_end_time:2019-12-29 02:31:06
+##
+##### The obj 160747 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160715, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:32:25 The obj of 160714 is complete.#
+###### Get news (2019-12-29 02:32:48) #######
+2019-12-29 02:32:28 The obj of 160700 is complete.#
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160715, don't need to send.
+###### The obj 160504 of F60: Sending.
+##### GWAC : Case 1
+###### The obj 160715 of GWAC: Sending.##
+160504,
+append_plan hanxuhui oba && append_object 9034-1010508-0066100 6.73673333333 66.1009 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:32:54,
+send_end_time:2019-12-29 02:32:59
+####
+160715,
+tryclient 'append_gwac Op_sn=160715, Op_time=2019-12-28T18:32:58, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18900085, Obj_ID=moniotr,RA=189.0, DEC=8.5, Epoch=2000, ObjRA=189.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T18:32:58, end_time=2019-12-28T19:02:58 Pair_ID=0',
+send_beg_time:2019-12-29 02:32:58,
+send_end_time:2019-12-29 02:33:04
+##
+##### The obj 160504 of F60: Send ok.
+##### The obj 160715 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:33:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160518, don't need to send.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:34:09) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161032 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+161032,
+append_plan GWAC goa && append_object G191228_C05317 11.8234666667 9.10871 2000 4 30.0 2 R 80 -1 -1 G191228_C05317_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:34:14,
+send_end_time:2019-12-29 02:34:19
+##
+##### The obj 161032 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:34:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161033, don't need to send.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:35:43 The obj of 161032 is complete.#
+###### Get news (2019-12-29 02:35:52) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### The obj 161033 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+161033,
+append_plan GWAC goa && append_object G191228_C05315 12.9775333333 23.1483 2000 4 30.0 2 R 80 -1 -1 G191228_C05315_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:35:57,
+send_end_time:2019-12-29 02:36:02
+##
+##### The obj 161033 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:37:21 The obj of 161033 is complete.#
+###### Get news (2019-12-29 02:37:56) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### There is no free units of F60 when send 160518, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:38:30) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### The obj 161035 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+161035,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 R 81 -1 -1 G191228_C05315_003 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:38:35,
+send_end_time:2019-12-29 02:38:39
+##
+##### The obj 161035 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:39:33 The obj of 161035 is complete.#
+###### Get news (2019-12-29 02:39:49) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+###### The obj 161034 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.##
+161034,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 B 81 -1 -1 G191228_C05315_002 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:39:54,
+send_end_time:2019-12-29 02:39:59
+##
+##### The obj 161034 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:40:49 The obj of 161034 is complete.#
+###### Get news (2019-12-29 02:41:18) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160518, don't need to send.
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:42:16) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161037 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.##
+161037,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 R 80 -1 -1 G191228_C05315_005 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:42:20,
+send_end_time:2019-12-29 02:42:26
+##
+##### The obj 161037 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:43:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161036, don't need to send.
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:43:19 The obj of 161037 is complete.#
+###### Get news (2019-12-29 02:43:40) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### The obj 161036 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.##
+161036,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 B 80 -1 -1 G191228_C05315_004 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:43:44,
+send_end_time:2019-12-29 02:43:51
+##
+##### The obj 161036 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:44:41 The obj of 161036 is complete.#
+###### Get news (2019-12-29 02:45:09) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 161038 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.##
+161038,
+append_plan GWAC goa && append_object G191228_C05734 11.8004666667 10.5443 2000 4 30.0 2 R 80 -1 -1 G191228_C05734_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:45:14,
+send_end_time:2019-12-29 02:45:18
+##
+##### The obj 161038 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:46:42 The obj of 161038 is complete.#
+###### Get news (2019-12-29 02:47:10) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160518, don't need to send.
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:54:36 The obj of 160704 is complete.#
+###### Get news (2019-12-29 02:54:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### The obj 160518 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.##
+160518,
+append_plan hanxuhui oba && append_object 11371-1009270-002845 6.72846666667 28.4546 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:54:54,
+send_end_time:2019-12-29 02:55:00
+##
+##### The obj 160518 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 02:56:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 161040 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.##
+161040,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 R 80 -1 -1 G191228_C05315_007 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:56:04,
+send_end_time:2019-12-29 02:56:09
+##
+##### The obj 161040 of F60: Send ok.#
+2019-12-29 02:55:57 The obj of 160504 is complete.#
+###### Ready to get news ######
+###### Get news (2019-12-29 02:56:17) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 161039, don't need to send.
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### Ready to get news #######
+2019-12-29 02:57:05 The obj of 161040 is complete.#
+###### Get news (2019-12-29 02:57:17) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 161039 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.##
+161039,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 B 80 -1 -1 G191228_C05315_006 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:57:22,
+send_end_time:2019-12-29 02:57:28
+##
+##### The obj 161039 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:58:20 The obj of 161039 is complete.#
+###### Get news (2019-12-29 02:58:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 160442 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.##
+160442,
+append_plan hanxuhui oba && append_object 2718-1009242-0065206 6.72826666667 65.2063 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 02:58:54,
+send_end_time:2019-12-29 02:59:00
+##
+##### The obj 160442 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 02:59:53 The obj of 160518 is complete.#
+###### Get news (2019-12-29 03:00:11) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160778, don't need to send.
+##### GWAC : Case 1
+###### The obj 160626 of F60: Sending.
+##### There is no free units of GWAC when send 160778, don't need to send.##
+160626,
+append_plan hanxuhui oba && append_object 30897-1008997-005762 6.72666666667 57.62 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:00:16,
+send_end_time:2019-12-29 03:00:22
+##
+##### The obj 160626 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 03:01:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161041 of F60: Sending.
+##### There is no free units of GWAC when send 160778, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160778, don't need to send.##
+161041,
+append_plan GWAC goa && append_object G191228_C06242 11.7557333333 17.6059 2000 4 30.0 2 R 80 -1 -1 G191228_C06242_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:01:29,
+send_end_time:2019-12-29 03:01:33
+##
+##### The obj 161041 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:01:11 The obj of 160442 is complete.#
+###### Get news (2019-12-29 03:01:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160550, don't need to send.
+##### There is no free units of GWAC when send 160778, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160778, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:02:57 The obj of 161041 is complete.#
+###### Get news (2019-12-29 03:03:22) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160778, don't need to send.
+###### The obj 160550 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160778, don't need to send.##
+160550,
+append_plan hanxuhui oba && append_object 16101-1008113-006567 6.72073333333 65.6775 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:03:26,
+send_end_time:2019-12-29 03:03:31
+##
+##### The obj 160550 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:03:36 The obj of 160747 is complete.#
+###### Get news (2019-12-29 03:03:53) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 160597, don't need to send.
+###### The obj 160778 of GWAC: Sending.##
+160778,
+tryclient 'append_gwac Op_sn=160778, Op_time=2019-12-28T19:03:59, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=21450595, Obj_ID=moniotr,RA=214.52, DEC=59.5, Epoch=2000, ObjRA=214.52, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T19:03:59, end_time=2019-12-28T19:33:59 Pair_ID=0',
+send_beg_time:2019-12-29 03:03:58,
+send_end_time:2019-12-29 03:04:05
+##
+##### The obj 160778 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:04:25 The obj of 160626 is complete.#
+###### Get news (2019-12-29 03:04:48) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 160597 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.##
+160597,
+append_plan hanxuhui oba && append_object 25630-1006301-004607 6.70866666667 46.0764 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:04:52,
+send_end_time:2019-12-29 03:04:58
+##
+##### The obj 160597 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:05:22 The obj of 160715 is complete.#
+###### Get news (2019-12-29 03:05:47) #######
+2019-12-29 03:05:40 The obj of 160550 is complete.#
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160528 of F60: Sending.
+##### There is no free units of GWAC when send 160764, don't need to send.
+##### GWAC : Case 1
+###### The obj 160764 of GWAC: Sending.##
+160528,
+append_plan hanxuhui oba && append_object 12400-1005631-003443 6.7042 34.4331 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:05:51,
+send_end_time:2019-12-29 03:05:55
+##
+##### The obj 160528 of F60: Send ok.##
+160764,
+tryclient 'append_gwac Op_sn=160764, Op_time=2019-12-28T19:05:55, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=20620425, Obj_ID=moniotr,RA=206.26, DEC=42.5, Epoch=2000, ObjRA=206.26, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T19:05:55, end_time=2019-12-28T19:35:55 Pair_ID=0',
+send_beg_time:2019-12-29 03:05:55,
+send_end_time:2019-12-29 03:06:02
+##
+##### The obj 160764 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 03:06:13) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### There is no free units of F60 when send 160664, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:06:57 The obj of 160597 is complete.#
+###### Get news (2019-12-29 03:07:01) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### The obj 160664 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160664,
+append_plan hanxuhui oba && append_object 40537-1005240-003445 6.7016 34.4578 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:07:05,
+send_end_time:2019-12-29 03:07:11
+##
+##### The obj 160664 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:08:13 The obj of 160528 is complete.#
+###### Get news (2019-12-29 03:08:41) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### The obj 160540 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160540,
+append_plan hanxuhui oba && append_object 14241-1003945-005025 6.693 50.2598 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:08:46,
+send_end_time:2019-12-29 03:08:50
+##
+##### The obj 160540 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:09:23 The obj of 160664 is complete.#
+###### Get news (2019-12-29 03:09:44) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+###### The obj 160593 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160593,
+append_plan hanxuhui oba && append_object 24489-1003850-004016 6.69233333333 40.1697 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:09:50,
+send_end_time:2019-12-29 03:09:55
+##
+##### The obj 160593 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:10:39 The obj of 160540 is complete.#
+###### Get news (2019-12-29 03:11:07) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160465 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160465,
+append_plan hanxuhui oba && append_object 4836-1003771-0032832 6.6918 32.8323 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:11:12,
+send_end_time:2019-12-29 03:11:17
+##
+##### The obj 160465 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:11:55 The obj of 160593 is complete.#
+###### Get news (2019-12-29 03:12:07) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160517 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160517,
+append_plan hanxuhui oba && append_object 11211-1003460-003292 6.68973333333 32.9273 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:12:12,
+send_end_time:2019-12-29 03:12:18
+##
+##### The obj 160517 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:13:10 The obj of 160465 is complete.#
+###### Get news (2019-12-29 03:13:32) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+###### The obj 160522 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160522,
+append_plan hanxuhui oba && append_object 12012-1002723-005015 6.6848 50.1552 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:13:39,
+send_end_time:2019-12-29 03:13:45
+##
+##### The obj 160522 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:14:22 The obj of 160517 is complete.#
+###### Get news (2019-12-29 03:14:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+###### The obj 160653 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160653,
+append_plan hanxuhui oba && append_object 37807-1002100-008290 6.68066666667 82.9027 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:14:34,
+send_end_time:2019-12-29 03:14:39
+##
+##### The obj 160653 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:15:38 The obj of 160522 is complete.#
+###### Get news (2019-12-29 03:16:09) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.
+###### The obj 160559 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160559,
+append_plan hanxuhui oba && append_object 17752-1001988-003359 6.67993333333 33.5985 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:16:13,
+send_end_time:2019-12-29 03:16:19
+##
+##### The obj 160559 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:16:56 The obj of 160653 is complete.#
+###### Get news (2019-12-29 03:17:06) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160438 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160438,
+append_plan hanxuhui oba && append_object 2502-1001356-0050105 6.67573333333 50.1055 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:17:10,
+send_end_time:2019-12-29 03:17:14
+##
+##### The obj 160438 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:18:17 The obj of 160559 is complete.#
+###### Get news (2019-12-29 03:18:32) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160601 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160601,
+append_plan hanxuhui oba && append_object 25958-1001040-003634 6.6736 36.3487 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:18:36,
+send_end_time:2019-12-29 03:18:40
+##
+##### The obj 160601 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:19:33 The obj of 160438 is complete.#
+###### Get news (2019-12-29 03:19:55) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160555 of F60: Sending.
+##### There is no free units of GWAC when send 160731, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160731, don't need to send.##
+160555,
+append_plan hanxuhui oba && append_object 17181-1000940-003634 6.67293333333 36.3438 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:20:00,
+send_end_time:2019-12-29 03:20:05
+##
+##### The obj 160555 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:20:49 The obj of 160601 is complete.#
+###### Get news (2019-12-29 03:21:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160541 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160541,
+append_plan hanxuhui oba && append_object 14352-1000293-006008 6.6686 60.0807 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:21:25,
+send_end_time:2019-12-29 03:21:29
+##
+##### The obj 160541 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:21:58 The obj of 160555 is complete.#
+###### Get news (2019-12-29 03:22:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160526 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160526,
+append_plan hanxuhui oba && append_object 12256-0999556-007433 6.66371333333 74.3333 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:22:18,
+send_end_time:2019-12-29 03:22:24
+##
+##### The obj 160526 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:23:16 The obj of 160541 is complete.#
+###### Get news (2019-12-29 03:23:39) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160530 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160530,
+append_plan hanxuhui oba && append_object 13158-0999501-006545 6.66334666667 65.4531 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:23:44,
+send_end_time:2019-12-29 03:23:49
+##
+##### The obj 160530 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:24:32 The obj of 160526 is complete.#
+###### Get news (2019-12-29 03:25:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160647 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160647,
+append_plan hanxuhui oba && append_object 36486-0999031-004337 6.66021333333 43.3713 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:25:05,
+send_end_time:2019-12-29 03:25:10
+##
+##### The obj 160647 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:25:48 The obj of 160530 is complete.#
+###### Get news (2019-12-29 03:25:56) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160658 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160658,
+append_plan hanxuhui oba && append_object 39600-0998664-003356 6.65776666667 33.5668 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:26:00,
+send_end_time:2019-12-29 03:26:05
+##
+##### The obj 160658 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:27:05 The obj of 160647 is complete.#
+###### Get news (2019-12-29 03:27:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160649 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160649,
+append_plan hanxuhui oba && append_object 37308-0994038-007241 6.62692666667 72.4185 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:27:27,
+send_end_time:2019-12-29 03:27:31
+##
+##### The obj 160649 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:28:20 The obj of 160658 is complete.#
+###### Get news (2019-12-29 03:28:48) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160498 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160498,
+append_plan hanxuhui oba && append_object 8667-0993386-0067859 6.62257333333 67.8598 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:28:53,
+send_end_time:2019-12-29 03:28:57
+##
+##### The obj 160498 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:29:39 The obj of 160649 is complete.#
+###### Get news (2019-12-29 03:30:07) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160663 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160663,
+append_plan hanxuhui oba && append_object 40535-0993192-004985 6.62128 49.8501 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:30:12,
+send_end_time:2019-12-29 03:30:17
+##
+##### The obj 160663 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:30:53 The obj of 160498 is complete.#
+###### Get news (2019-12-29 03:31:05) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160512 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160512,
+append_plan hanxuhui oba && append_object 10601-0992471-007428 6.61648 74.2826 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:31:10,
+send_end_time:2019-12-29 03:31:15
+##
+##### The obj 160512 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:32:10 The obj of 160663 is complete.#
+###### Get news (2019-12-29 03:32:27) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160510 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160510,
+append_plan hanxuhui oba && append_object 10267-0992155-003757 6.61437333333 37.5705 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:32:32,
+send_end_time:2019-12-29 03:32:37
+##
+##### The obj 160510 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:33:27 The obj of 160512 is complete.#
+###### Get news (2019-12-29 03:33:58) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+###### The obj 160549 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160549,
+append_plan hanxuhui oba && append_object 15809-0990341-003941 6.60228 39.4145 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:34:02,
+send_end_time:2019-12-29 03:34:06
+##
+##### The obj 160549 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:34:46 The obj of 160510 is complete.#
+###### Get news (2019-12-29 03:34:53) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160588 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160588,
+append_plan hanxuhui oba && append_object 23641-0990102-003611 6.60068 36.1103 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:34:58,
+send_end_time:2019-12-29 03:35:04
+##
+##### The obj 160588 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:36:00 The obj of 160549 is complete.#
+###### Get news (2019-12-29 03:36:05) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+###### The obj 160450 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.##
+160450,
+append_plan hanxuhui oba && append_object 3407-0988620-0048844 6.5908 48.8441 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:36:11,
+send_end_time:2019-12-29 03:36:16
+##
+##### The obj 160450 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 03:36:43) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161043 of F60: Sending.
+##### There is no free units of GWAC when send 160748, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160748, don't need to send.##
+161043,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 R 80 -1 -1 G191228_C05315_009 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:36:50,
+send_end_time:2019-12-29 03:36:55
+##
+##### The obj 161043 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:37:04 The obj of 160778 is complete.#
+###### Get news (2019-12-29 03:37:17) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161042, don't need to send.
+###### The obj 160748 of GWAC: Sending.##
+160748,
+tryclient 'append_gwac Op_sn=160748, Op_time=2019-12-28T19:37:23, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=21640255, Obj_ID=moniotr,RA=216.46, DEC=25.5, Epoch=2000, ObjRA=216.46, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T19:37:23, end_time=2019-12-28T20:07:23 Pair_ID=0',
+send_beg_time:2019-12-29 03:37:23,
+send_end_time:2019-12-29 03:37:29
+##
+##### The obj 160748 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160787, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:37:49 The obj of 161043 is complete.#
+###### Get news (2019-12-29 03:38:24) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161042 of F60: Sending.
+##### There is no free units of GWAC when send 160787, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160787, don't need to send.##
+161042,
+append_plan GWAC goa && append_object G191228_C05315 12.9774666667 23.1392 2000 4 30.0 1 B 80 -1 -1 G191228_C05315_008 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:38:27,
+send_end_time:2019-12-29 03:38:32
+##
+##### The obj 161042 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:38:50 The obj of 160764 is complete.#
+###### Get news (2019-12-29 03:39:23) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 160787, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160501, don't need to send.
+###### The obj 160787 of GWAC: Sending.##
+160787,
+tryclient 'append_gwac Op_sn=160787, Op_time=2019-12-28T19:39:32, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=21620765, Obj_ID=moniotr,RA=216.23, DEC=76.5, Epoch=2000, ObjRA=216.23, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-28T19:39:32, end_time=2019-12-28T20:09:32 Pair_ID=0',
+send_beg_time:2019-12-29 03:39:32,
+send_end_time:2019-12-29 03:39:38
+##
+##### The obj 160787 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-29 03:39:22 The obj of 161042 is complete.#
+###### Get news (2019-12-29 03:39:55) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160501, don't need to send.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:40:34 The obj of 160588 is complete.#
+###### Get news (2019-12-29 03:40:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160501 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160501,
+append_plan hanxuhui oba && append_object 8804-0985403-0038237 6.56935333333 38.2379 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:40:55,
+send_end_time:2019-12-29 03:41:01
+##
+##### The obj 160501 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-29 03:41:08) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+###### The obj 161044 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.##
+161044,
+append_plan GWAC goa && append_object G191228_C07281 12.9694666667 81.2992 2000 4 30.0 2 R 80 -1 -1 G191228_C07281_001 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:41:13,
+send_end_time:2019-12-29 03:41:19
+##
+##### The obj 161044 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:42:44 The obj of 161044 is complete.#
+###### Get news (2019-12-29 03:42:52) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 160569, don't need to send.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### Ready to get news #######
+2019-12-29 03:43:52 The obj of 160450 is complete.#
+###### Get news (2019-12-29 03:44:13) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+###### The obj 160569 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160569,
+append_plan hanxuhui oba && append_object 18996-0985396-003889 6.56930666667 38.8957 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:44:17,
+send_end_time:2019-12-29 03:44:22
+##
+##### The obj 160569 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:45:08 The obj of 160501 is complete.#
+###### Get news (2019-12-29 03:45:36) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160562 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160562,
+append_plan hanxuhui oba && append_object 17962-0985090-005886 6.56727333333 58.8614 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:45:42,
+send_end_time:2019-12-29 03:45:48
+##
+##### The obj 160562 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:46:20 The obj of 160569 is complete.#
+###### Get news (2019-12-29 03:46:29) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160625 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160625,
+append_plan hanxuhui oba && append_object 30803-0984164-004066 6.56109333333 40.6669 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:46:33,
+send_end_time:2019-12-29 03:46:37
+##
+##### The obj 160625 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:47:37 The obj of 160562 is complete.#
+###### Get news (2019-12-29 03:48:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160611 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160611,
+append_plan hanxuhui oba && append_object 28510-0984156-004068 6.56104666667 40.6877 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:48:16,
+send_end_time:2019-12-29 03:48:22
+##
+##### The obj 160611 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:48:53 The obj of 160625 is complete.#
+###### Get news (2019-12-29 03:49:05) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160477 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160477,
+append_plan hanxuhui oba && append_object 6308-0982596-0075867 6.55064666667 75.8676 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:49:08,
+send_end_time:2019-12-29 03:49:14
+##
+##### The obj 160477 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:50:05 The obj of 160611 is complete.#
+###### Get news (2019-12-29 03:50:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160577 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160577,
+append_plan hanxuhui oba && append_object 21111-0982481-004037 6.54988 40.3761 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:50:34,
+send_end_time:2019-12-29 03:50:38
+##
+##### The obj 160577 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:51:24 The obj of 160477 is complete.#
+###### Get news (2019-12-29 03:51:48) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 160446 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160446,
+append_plan hanxuhui oba && append_object 3028-0981965-0063673 6.54643333333 63.6736 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:51:51,
+send_end_time:2019-12-29 03:51:56
+##
+##### The obj 160446 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:52:43 The obj of 160577 is complete.#
+###### Get news (2019-12-29 03:52:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160470 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160470,
+append_plan hanxuhui oba && append_object 5372-0981567-0071560 6.54378 71.561 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:52:52,
+send_end_time:2019-12-29 03:52:58
+##
+##### The obj 160470 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:54:00 The obj of 160446 is complete.#
+###### Get news (2019-12-29 03:54:27) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+###### The obj 160656 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160656,
+append_plan hanxuhui oba && append_object 39118-0981446-004020 6.54298 40.2079 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:54:32,
+send_end_time:2019-12-29 03:54:35
+##
+##### The obj 160656 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:55:15 The obj of 160470 is complete.#
+###### Get news (2019-12-29 03:55:22) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 160565 of F60: Sending.
+##### There is no free units of GWAC when send 160716, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160565,
+append_plan hanxuhui oba && append_object 18390-0980978-003518 6.53985333333 35.1899 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:55:26,
+send_end_time:2019-12-29 03:55:31
+##
+##### The obj 160565 of F60: Send ok.
+###### Ready to get news #######
+2019-12-29 03:56:33 The obj of 160656 is complete.#
+###### Get news (2019-12-29 03:57:07) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.
+###### The obj 160527 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 160716, don't need to send.##
+160527,
+append_plan hanxuhui oba && append_object 12271-0980087-003311 6.53392 33.1105 2000 4 20.0 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2019-12-29 03:57:12,
+send_end_time:2019-12-29 03:57:18
+##
+##### The obj 160527 of F60: Send ok.
+###### Ready to get news ######

@@ -1,0 +1,1490 @@
+
+###### Get news (2019-12-14 18:04:48) ######
+##### GWAC_com_objs(0): 
+##### F60_com_objs(0): 
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+###### The obj 146893 of GWAC: Sending.
+###### The obj 147422 of F60: Sending.##
+147422,
+append_plan SVOMMM toa && append_object G0000_NGC0891 2.37598 42.3471 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:04:55,
+send_end_time:2019-12-14 18:05:00
+####
+146893,
+tryclient 'append_gwac Op_sn=146893, Op_time=2019-12-14T10:04:55, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=31050255, Obj_ID=GW_initial_7729_observation,RA=310.57, DEC=25.5, Epoch=2000, ObjRA=310.57, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:04:55, end_time=2019-12-14T10:28:15 Pair_ID=0',
+send_beg_time:2019-12-14 18:04:54,
+send_end_time:2019-12-14 18:05:01
+##
+##### The obj 147422 of F60: Send ok.
+##### The obj 146893 of GWAC: Send ok.
+###### The obj 147562 of F60: Sending.
+###### The obj 146900 of GWAC: Sending.##
+147562,
+append_plan guangxi ObA && append_object TCP_J 0.986033333333 34.6432 2000 4 70.0 80 R 22 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:05:24,
+send_end_time:2019-12-14 18:05:30
+####
+146900,
+tryclient 'append_gwac Op_sn=146900, Op_time=2019-12-14T10:05:26, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=29310425, Obj_ID=GW_initial_7729_observation,RA=293.11, DEC=42.5, Epoch=2000, ObjRA=293.11, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:05:26, end_time=2019-12-14T10:28:46 Pair_ID=0',
+send_beg_time:2019-12-14 18:05:25,
+send_end_time:2019-12-14 18:05:33
+##
+##### The obj 147562 of F60: Send ok.
+##### There is no free units of F60 when send 147564, don't need to send.
+##### The obj 146900 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146901, don't need to send.
+###### Ready to get news #######
+2019-12-14 18:14:07 The obj of 147422 is complete.#
+###### Get news (2019-12-14 18:14:44) ######
+##### GWAC_com_objs(0): 
+##### GWAC : Case 1
+##### F60_com_objs(1): 147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 146901, don't need to send.
+###### The obj 147564 of F60: Sending.##
+147564,
+append_plan guangxi ObA && append_object SN2019tua 21.9667333333 24.2659 2000 4 150.0 5 B 19 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:14:50,
+send_end_time:2019-12-14 18:14:56
+##
+##### The obj 147564 of F60: Send Wrong.
+###### The obj 147565 of F60: Sending.##
+147565,
+append_plan guangxi ObA && append_object SN2019tua 21.9667333333 24.2659 2000 4 150.0 3 V 19 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:18:14,
+send_end_time:2019-12-14 18:18:21
+##
+##### The obj 147565 of F60: Send ok.
+##### There is no free units of F60 when send 147566, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:31:30) ######
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(1): 147422
+##### F60 : Case 1
+##### GWAC_com_objs(0): 
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 146901, don't need to send.
+###### The obj 147572 of F60: Sending.##
+147572,
+append_plan GWAC goa && append_object G191214_C00457 18.6113333333 35.669 2000 4 30.0 2 R 40 -1 -1 G191214_C00457_001 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:31:38,
+send_end_time:2019-12-14 18:31:44
+##
+##### The obj 147572 of F60: Send ok.
+##### There is no free units of F60 when send 147564, don't need to send.
+###### Ready to get news #######
+2019-12-14 18:35:36 The obj of 146893 is complete.#
+###### Get news (2019-12-14 18:36:17) ######
+##### GWAC_com_objs(1): 146893
+##### GWAC : Case 1
+##### F60_com_objs(1): 147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 146901 of GWAC: Sending.
+##### There is no free units of F60 when send 147564, don't need to send.##
+146901,
+tryclient 'append_gwac Op_sn=146901, Op_time=2019-12-14T10:36:24, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=29700085, Obj_ID=GW_initial_7729_observation,RA=297.0, DEC=8.5, Epoch=2000, ObjRA=297.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:36:24, end_time=2019-12-14T10:59:44 Pair_ID=0',
+send_beg_time:2019-12-14 18:36:24,
+send_end_time:2019-12-14 18:36:31
+##
+##### The obj 146901 of GWAC: Send ok.#
+2019-12-14 18:36:09 The obj of 146900 is complete.#
+###### The obj 146904 of GWAC: Sending.##
+146904,
+tryclient 'append_gwac Op_sn=146904, Op_time=2019-12-14T10:36:57, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=901085, Obj_ID=GW_initial_7729_observation,RA=9.0, DEC=-8.5, Epoch=2000, ObjRA=9.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:36:57, end_time=2019-12-14T11:00:17 Pair_ID=0',
+send_beg_time:2019-12-14 18:36:57,
+send_end_time:2019-12-14 18:37:04
+##
+##### The obj 146904 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146905, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:37:31) ######
+##### GWAC_com_objs(2): 146900,146893
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(1): 147422
+##### F60 : Case 1
+##### There is no free units of GWAC when send 146905, don't need to send.
+##### There is no free units of F60 when send 147564, don't need to send.
+###### Ready to get news #######
+2019-12-14 18:40:20 The obj of 147572 is complete.#
+###### Get news (2019-12-14 18:40:26) ######
+##### F60_com_objs(2): 147572,147422
+##### F60 : Case 1
+##### GWAC_com_objs(4): 146900,146893,147496,147512
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147564, don't need to send.
+###### The obj 146905 of GWAC: Sending.#
+2019-12-14 18:40:26 The obj of 146901 is complete.###
+146905,
+tryclient 'append_gwac Op_sn=146905, Op_time=2019-12-14T10:40:32, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=2701085, Obj_ID=GW_initial_7729_observation,RA=27.0, DEC=-8.5, Epoch=2000, ObjRA=27.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:40:32, end_time=2019-12-14T11:03:52 Pair_ID=0',
+send_beg_time:2019-12-14 18:40:32,
+send_end_time:2019-12-14 18:40:38
+##
+##### The obj 146905 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146910, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:41:05) ######
+##### GWAC_com_objs(5): 147496,147512,146900,146901,146893
+##### GWAC : Case 1
+##### F60_com_objs(2): 147572,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 146910, don't need to send.
+##### There is no free units of F60 when send 147564, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:46:54) ######
+##### GWAC_com_objs(5): 147496,147512,146900,146901,146893
+##### F60_com_objs(2): 147572,147422
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 146910, don't need to send.
+###### The obj 147573 of F60: Sending.##
+147573,
+append_plan GWAC goa && append_object G191214_C00679 0.68032 -15.3787 2000 4 30.0 2 R 40 -1 -1 G191214_C00679_001 && append_plan gwac default ,
+send_beg_time:2019-12-14 18:47:01,
+send_end_time:2019-12-14 18:47:07
+##
+##### The obj 147573 of F60: Send ok.
+##### There is no free units of F60 when send 147564, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:47:42) ######
+##### F60_com_objs(2): 147572,147422
+##### F30_com_objs(0): 
+##### GWAC_com_objs(5): 147496,147512,146900,146901,146893
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 146910, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news #######
+2019-12-14 18:53:14 The obj of 146904 is complete.#
+###### Get news (2019-12-14 18:53:46) ######
+##### GWAC_com_objs(6): 147496,147512,146900,146901,146904,146893
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F60_com_objs(2): 147572,147422
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146910 of GWAC: Sending.##
+146910,
+tryclient 'append_gwac Op_sn=146910, Op_time=2019-12-14T10:53:53, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=31500085, Obj_ID=GW_initial_7729_observation,RA=315.0, DEC=8.5, Epoch=2000, ObjRA=315.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T10:53:53, end_time=2019-12-14T11:17:13 Pair_ID=0',
+send_beg_time:2019-12-14 18:53:52,
+send_end_time:2019-12-14 18:54:00
+##
+##### The obj 146910 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146911, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:54:29) ######
+##### GWAC_com_objs(6): 147496,147512,146900,146901,146904,146893
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F60_com_objs(2): 147572,147422
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 146911, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:55:59) ######
+##### GWAC_com_objs(6): 147496,147512,146900,146901,146904,146893
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(3): 147572,147422,147576
+##### F60 : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+##### There is no free units of GWAC when send 146911, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:57:46) ######
+##### GWAC_com_objs(6): 147496,147512,146900,146901,146904,146893
+##### F60_com_objs(3): 147572,147576,147422
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+##### There is no free units of GWAC when send 146911, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 18:58:16) ######
+##### GWAC_com_objs(6): 147496,147512,146900,146901,146904,146893
+##### GWAC : Case 1
+##### F60_com_objs(3): 147572,147576,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 146911, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news #######
+2019-12-14 19:12:13 The obj of 146905 is complete.#
+###### Get news (2019-12-14 19:12:30) ######
+##### GWAC_com_objs(9): 147496,147512,146900,146901,146904,146905,146893,147526,147540
+##### GWAC : Case 1
+##### F60_com_objs(3): 147572,147576,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 146911 of GWAC: Sending.
+##### There is no free units of F60 when send 147574, don't need to send.##
+146911,
+tryclient 'append_gwac Op_sn=146911, Op_time=2019-12-14T11:12:36, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=31480425, Obj_ID=GW_initial_7729_observation,RA=314.82, DEC=42.5, Epoch=2000, ObjRA=314.82, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T11:12:36, end_time=2019-12-14T11:35:56 Pair_ID=0',
+send_beg_time:2019-12-14 19:12:36,
+send_end_time:2019-12-14 19:12:44
+##
+##### The obj 146911 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146976, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 19:23:03) ######
+##### F60_com_objs(5): 147572,147576,147422,147578,147579
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC_com_objs(10): 147496,147512,147526,147540,146900,146901,146904,146905,146893,147553
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+##### There is no free units of GWAC when send 146976, don't need to send.
+###### Ready to get news #######
+2019-12-14 19:24:39 The obj of 146910 is complete.#
+###### Get news (2019-12-14 19:25:06) ######
+##### GWAC_com_objs(11): 147496,147512,147526,147540,147553,146900,146901,146904,146905,146910,146893
+##### GWAC : Case 1
+##### F60_com_objs(5): 147572,147576,147578,147579,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146976 of GWAC: Sending.##
+146976,
+tryclient 'append_gwac Op_sn=146976, Op_time=2019-12-14T11:25:14, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=3250425, Obj_ID=GW_update_7754_observation,RA=32.57, DEC=42.5, Epoch=2000, ObjRA=32.57, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T11:25:14, end_time=2019-12-14T11:48:34 Pair_ID=0',
+send_beg_time:2019-12-14 19:25:13,
+send_end_time:2019-12-14 19:25:20
+##
+##### The obj 146976 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146980, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 19:36:09) ######
+##### GWAC_com_objs(11): 147496,147512,147526,147540,147553,146900,146901,146904,146905,146910,146893
+##### GWAC : Case 1
+##### F60_com_objs(5): 147572,147576,147578,147579,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 146980, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news #######
+2019-12-14 19:43:55 The obj of 146911 is complete.#
+###### Get news (2019-12-14 19:44:31) ######
+##### GWAC_com_objs(14): 147496,147512,147526,147540,147553,146900,146901,146904,146905,146910,146911,146893,147497,147513
+##### F60_com_objs(5): 147572,147576,147578,147579,147422
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146980 of GWAC: Sending.##
+146980,
+tryclient 'append_gwac Op_sn=146980, Op_time=2019-12-14T11:44:38, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=5420425, Obj_ID=GW_update_7754_observation,RA=54.28, DEC=42.5, Epoch=2000, ObjRA=54.28, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T11:44:38, end_time=2019-12-14T12:07:58 Pair_ID=0',
+send_beg_time:2019-12-14 19:44:38,
+send_end_time:2019-12-14 19:44:45
+##
+##### The obj 146980 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146982, don't need to send.
+###### Ready to get news #######
+2019-12-14 19:56:19 The obj of 146976 is complete.#
+###### Get news (2019-12-14 19:56:34) ######
+##### F60_com_objs(5): 147572,147576,147578,147579,147422
+##### F60 : Case 1
+##### GWAC_com_objs(15): 147496,147497,147512,147513,147526,147540,147553,146900,146901,146904,146905,146910,146911,146893,146976
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146982 of GWAC: Sending.##
+146982,
+tryclient 'append_gwac Op_sn=146982, Op_time=2019-12-14T11:56:41, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=2820255, Obj_ID=GW_update_7754_observation,RA=28.23, DEC=25.5, Epoch=2000, ObjRA=28.23, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T11:56:41, end_time=2019-12-14T12:20:01 Pair_ID=0',
+send_beg_time:2019-12-14 19:56:41,
+send_end_time:2019-12-14 19:56:46
+##
+##### The obj 146982 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146983, don't need to send.
+###### Ready to get news #######
+2019-12-14 20:16:24 The obj of 146980 is complete.#
+###### Get news (2019-12-14 20:16:45) ######
+##### GWAC_com_objs(16): 147496,147497,147512,147513,147526,147540,147553,146900,146901,146904,146905,146910,146911,146893,146976,146980
+##### GWAC : Case 1
+##### F60_com_objs(6): 147572,147576,147578,147579,147422,147577
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146889 of GWAC: Sending.##
+146889,
+tryclient 'append_gwac Op_sn=146889, Op_time=2019-12-14T12:16:52, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=8100085, Obj_ID=GW_initial_7729_observation,RA=81.0, DEC=8.5, Epoch=2000, ObjRA=81.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=62, begin_time=2019-12-14T12:16:52, end_time=2019-12-14T12:40:12 Pair_ID=0',
+send_beg_time:2019-12-14 20:16:52,
+send_end_time:2019-12-14 20:17:00
+##
+##### The obj 146889 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146983, don't need to send.
+###### Ready to get news #######
+2019-12-14 20:21:34 The obj of 146889 is complete.#
+###### Get news (2019-12-14 20:22:09) ######
+##### F60_com_objs(10): 147572,147576,147577,147578,147579,147422,147568,147569,147570,147571
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### GWAC_com_objs(20): 147496,147497,147512,147513,147526,147540,147553,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,147527,147541,147561
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146983 of GWAC: Sending.##
+146983,
+tryclient 'append_gwac Op_sn=146983, Op_time=2019-12-14T12:22:18, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=4290595, Obj_ID=GW_update_7754_observation,RA=42.9, DEC=59.5, Epoch=2000, ObjRA=42.9, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T12:22:18, end_time=2019-12-14T12:45:38 Pair_ID=0',
+send_beg_time:2019-12-14 20:22:17,
+send_end_time:2019-12-14 20:22:24
+##
+##### The obj 146983 of GWAC: Send ok.
+##### There is no free units of GWAC when send 146985, don't need to send.
+###### Ready to get news #######
+2019-12-14 20:26:59 The obj of 146982 is complete.#
+###### Get news (2019-12-14 20:27:23) ######
+##### F60_com_objs(10): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC_com_objs(21): 147496,147497,147512,147513,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 146985 of GWAC: Sending.##
+146985,
+tryclient 'append_gwac Op_sn=146985, Op_time=2019-12-14T12:27:30, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=toa, Grid_ID=G0014, Field_ID=8100085, Obj_ID=GW_update_7754_observation,RA=81.0, DEC=8.5, Epoch=2000, ObjRA=81.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T12:27:30, end_time=2019-12-14T12:50:50 Pair_ID=0',
+send_beg_time:2019-12-14 20:27:30,
+send_end_time:2019-12-14 20:27:36
+##
+##### The obj 146985 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147499, don't need to send.
+###### Ready to get news #######
+2019-12-14 20:34:13 The obj of 146985 is complete.#
+###### Get news (2019-12-14 20:34:41) ######
+##### GWAC_com_objs(22): 147496,147497,147512,147513,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146985
+##### GWAC : Case 1
+##### F60_com_objs(10): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 147499 of GWAC: Sending.##
+147499,
+tryclient 'append_gwac Op_sn=147499, Op_time=2019-12-14T12:34:48, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=35100085, Obj_ID=moniotr,RA=351.0, DEC=8.5, Epoch=2000, ObjRA=351.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T12:34:48, end_time=2019-12-14T13:04:48 Pair_ID=0',
+send_beg_time:2019-12-14 20:34:48,
+send_end_time:2019-12-14 20:34:55
+##
+##### The obj 147499 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147514, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 20:37:51) ######
+##### F60_com_objs(10): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147422
+##### GWAC_com_objs(22): 147496,147497,147512,147513,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+##### There is no free units of GWAC when send 147514, don't need to send.
+###### Ready to get news #######
+2019-12-14 20:53:15 The obj of 146983 is complete.#
+###### Get news (2019-12-14 20:53:45) ######
+##### GWAC_com_objs(23): 147496,147497,147512,147513,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(10): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 147514 of GWAC: Sending.
+##### There is no free units of F60 when send 147574, don't need to send.##
+147514,
+tryclient 'append_gwac Op_sn=147514, Op_time=2019-12-14T12:53:50, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=35101085, Obj_ID=moniotr,RA=351.0, DEC=-8.5, Epoch=2000, ObjRA=351.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T12:53:50, end_time=2019-12-14T13:23:50 Pair_ID=0',
+send_beg_time:2019-12-14 20:53:50,
+send_end_time:2019-12-14 20:53:56
+##
+##### The obj 147514 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147529, don't need to send.
+###### Ready to get news #######
+2019-12-14 21:00:46 The obj of 147514 is complete.#
+###### Get news (2019-12-14 21:00:54) ######
+##### GWAC_com_objs(25): 147496,147497,147512,147513,147514,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146983,146985,147498
+##### GWAC : Case 1
+##### F60_com_objs(11): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147422,147581
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 146974 of GWAC: Sending.
+###### The obj 147385 of F60: Sending.##
+146974,
+tryclient 'append_gwac Op_sn=146974, Op_time=2019-12-14T13:01:00, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=8101085, Obj_ID=GW_update_7754_observation,RA=81.0, DEC=-8.5, Epoch=2000, ObjRA=81.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T13:01:00, end_time=2019-12-14T13:24:20 Pair_ID=0',
+send_beg_time:2019-12-14 21:01:00,
+send_end_time:2019-12-14 21:01:07
+####
+147385,
+append_plan SVOMMM toa && append_object G0000_05472467-04321 5.79018666667 -4.53642 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-14 21:01:01,
+send_end_time:2019-12-14 21:01:08
+##
+##### The obj 146974 of GWAC: Send ok.
+##### The obj 147385 of F60: Send ok.
+##### There is no free units of GWAC when send 147529, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news #######
+2019-12-14 21:08:14 The obj of 147499 is complete.#
+###### Get news (2019-12-14 21:08:50) ######
+##### F60_com_objs(11): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147581,147422
+##### GWAC_com_objs(26): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+###### The obj 147529 of GWAC: Sending.##
+147529,
+tryclient 'append_gwac Op_sn=147529, Op_time=2019-12-14T13:08:56, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=34820255, Obj_ID=moniotr,RA=348.22, DEC=25.5, Epoch=2000, ObjRA=348.22, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T13:08:56, end_time=2019-12-14T13:38:56 Pair_ID=0',
+send_beg_time:2019-12-14 21:08:55,
+send_end_time:2019-12-14 21:09:02
+##
+##### The obj 147529 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147542, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 21:10:21) ######
+##### GWAC_com_objs(26): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(11): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147581,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147542, don't need to send.
+##### There is no free units of F60 when send 147574, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 21:11:04) ######
+##### F60_com_objs(11): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147581,147422
+##### F60 : Case 1
+##### GWAC_com_objs(26): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147574, don't need to send.
+##### There is no free units of GWAC when send 147542, don't need to send.
+###### Ready to get news #######
+2019-12-14 21:32:36 The obj of 146974 is complete.#
+###### Get news (2019-12-14 21:33:18) ######
+##### F30_com_objs(0): 
+##### GWAC_com_objs(29): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147540,147541,147553,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985,147528,147554
+##### GWAC : Case 1
+##### F60_com_objs(11): 147568,147569,147570,147571,147572,147576,147577,147578,147579,147581,147422
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147542 of GWAC: Sending.##
+147542,
+tryclient 'append_gwac Op_sn=147542, Op_time=2019-12-14T13:33:26, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=33650425, Obj_ID=moniotr,RA=336.53, DEC=42.5, Epoch=2000, ObjRA=336.53, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T13:33:26, end_time=2019-12-14T14:03:26 Pair_ID=0',
+send_beg_time:2019-12-14 21:33:24,
+send_end_time:2019-12-14 21:33:32
+##
+##### The obj 147542 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147546, don't need to send.
+###### Ready to get news #######
+2019-12-14 21:40:29 The obj of 147565 is complete.##
+2019-12-14 21:40:29 The obj of 147573 is complete.#
+###### Get news (2019-12-14 21:40:36) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC_com_objs(29): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147528,147540,147541,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147034, don't need to send.
+##### There is no free units of GWAC when send 147557, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 21:40:43) ######
+##### GWAC_com_objs(29): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147528,147540,147541,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147557, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news #######
+2019-12-14 21:41:26 The obj of 147529 is complete.#
+###### Get news (2019-12-14 21:42:05) ######
+##### GWAC_com_objs(30): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147528,147529,147540,147541,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147557 of GWAC: Sending.##
+147557,
+tryclient 'append_gwac Op_sn=147557, Op_time=2019-12-14T13:42:13, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=12010765, Obj_ID=moniotr,RA=120.13, DEC=76.5, Epoch=2000, ObjRA=120.13, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T13:42:13, end_time=2019-12-14T14:12:13 Pair_ID=0',
+send_beg_time:2019-12-14 21:42:12,
+send_end_time:2019-12-14 21:42:18
+##
+##### The obj 147557 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147546, don't need to send.
+###### Ready to get news #######
+2019-12-14 22:00:31 The obj of 147542 is complete.#
+###### Get news (2019-12-14 22:00:36) ######
+##### GWAC_com_objs(32): 147496,147497,147498,147499,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985,147500
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147546 of GWAC: Sending.##
+147546,
+tryclient 'append_gwac Op_sn=147546, Op_time=2019-12-14T14:00:41, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=10010595, Obj_ID=moniotr,RA=100.11, DEC=59.5, Epoch=2000, ObjRA=100.11, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T14:00:41, end_time=2019-12-14T14:30:41 Pair_ID=0',
+send_beg_time:2019-12-14 22:00:41,
+send_end_time:2019-12-14 22:00:48
+##
+##### The obj 147546 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147490, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:05:24) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC_com_objs(32): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+##### There is no free units of GWAC when send 147490, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:10:38) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC_com_objs(32): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147553,147554,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+##### There is no free units of GWAC when send 147490, don't need to send.
+###### Ready to get news #######
+2019-12-14 22:16:28 The obj of 147557 is complete.#
+###### Get news (2019-12-14 22:17:15) ######
+##### F30_com_objs(0): 
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC_com_objs(33): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147490 of GWAC: Sending.##
+147490,
+tryclient 'append_gwac Op_sn=147490, Op_time=2019-12-14T14:17:24, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=08100085, Obj_ID=moniotr,RA=81.0, DEC=8.5, Epoch=2000, ObjRA=81.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T14:17:24, end_time=2019-12-14T14:47:24 Pair_ID=0',
+send_beg_time:2019-12-14 22:17:23,
+send_end_time:2019-12-14 22:17:30
+##
+##### The obj 147490 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147504, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:20:09) ######
+##### GWAC_com_objs(33): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 146972 of GWAC: Sending.
+##### There is no free units of F60 when send 147034, don't need to send.##
+146972,
+tryclient 'append_gwac Op_sn=146972, Op_time=2019-12-14T14:20:13, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=toa, Grid_ID=G0014, Field_ID=9901085, Obj_ID=GW_update_7754_observation,RA=99.0, DEC=-8.5, Epoch=2000, ObjRA=99.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=20.0, delay=0.0, frmcnt=70, priority=60, begin_time=2019-12-14T14:20:13, end_time=2019-12-14T14:43:33 Pair_ID=0',
+send_beg_time:2019-12-14 22:20:13,
+send_end_time:2019-12-14 22:20:22
+###
+2019-12-14 22:20:20 The obj of 147546 is complete.#
+##### The obj 146972 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147547, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:20:45) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:20:54) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:21:05) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:22:24) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:24:56) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:29:37) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+##### There is no free units of GWAC when send 147547, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:31:23) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:33:51) ######
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:36:52) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(18): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:40:20) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147576,147577,147578,147579,147581,147582,147583,147422,147575
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147002, don't need to send.
+##### There is no free units of GWAC when send 147547, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:46:15) ######
+##### GWAC_com_objs(34): 147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147547, don't need to send.
+##### There is no free units of F60 when send 147002, don't need to send.
+###### Ready to get news #######
+2019-12-14 22:50:25 The obj of 147490 is complete.#
+###### Get news (2019-12-14 22:50:58) ######
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC_com_objs(35): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146974,146976,146980,146982,146983,146985
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of F60 when send 147002, don't need to send.
+###### The obj 147547 of GWAC: Sending.##
+147547,
+tryclient 'append_gwac Op_sn=147547, Op_time=2019-12-14T14:51:04, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=12870595, Obj_ID=moniotr,RA=128.71, DEC=59.5, Epoch=2000, ObjRA=128.71, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T14:51:04, end_time=2019-12-14T15:21:04 Pair_ID=0',
+send_beg_time:2019-12-14 22:51:04,
+send_end_time:2019-12-14 22:51:09
+##
+##### The obj 147547 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147505, don't need to send.
+###### Ready to get news #######
+2019-12-14 22:51:33 The obj of 146972 is complete.#
+###### Get news (2019-12-14 22:52:26) ######
+##### GWAC_com_objs(36): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 147505 of GWAC: Sending.
+##### There is no free units of F60 when send 147002, don't need to send.##
+147505,
+tryclient 'append_gwac Op_sn=147505, Op_time=2019-12-14T14:52:33, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=09901085, Obj_ID=moniotr,RA=99.0, DEC=-8.5, Epoch=2000, ObjRA=99.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T14:52:33, end_time=2019-12-14T15:22:33 Pair_ID=0',
+send_beg_time:2019-12-14 22:52:33,
+send_end_time:2019-12-14 22:52:41
+##
+##### The obj 147505 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147504, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:53:48) ######
+##### F30_com_objs(0): 
+##### GWAC_com_objs(36): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### There is no free units of F60 when send 147002, don't need to send.
+##### There is no free units of GWAC when send 147504, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 22:55:58) ######
+##### GWAC_com_objs(36): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(19): 147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147504, don't need to send.
+##### There is no free units of F60 when send 147002, don't need to send.
+###### Ready to get news #######
+2019-12-14 23:18:42 The obj of 147562 is complete.#
+###### Get news (2019-12-14 23:19:29) ######
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147575,147576,147577,147578,147579,147581,147582,147583,147422,147574
+##### F60 : Case 1
+##### GWAC_com_objs(36): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 147504, don't need to send.
+###### The obj 147002 of F60: Sending.##
+147002,
+append_plan SVOMMM toa && append_object G0000_07011704-07113 7.0214 -7.19256 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-14 23:19:35,
+send_end_time:2019-12-14 23:19:44
+##
+##### The obj 147002 of F60: Send ok.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 23:20:10) ######
+##### GWAC_com_objs(38): 147490,147496,147497,147498,147499,147500,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147486,147501
+##### GWAC : Case 1
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147506, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news #######
+2019-12-14 23:24:08 The obj of 147547 is complete.#
+###### Get news (2019-12-14 23:24:35) ######
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC_com_objs(39): 147486,147490,147496,147497,147498,147499,147500,147501,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147506 of GWAC: Sending.##
+147506,
+tryclient 'append_gwac Op_sn=147506, Op_time=2019-12-14T15:24:41, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=11701085, Obj_ID=moniotr,RA=117.0, DEC=-8.5, Epoch=2000, ObjRA=117.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T15:24:41, end_time=2019-12-14T15:54:41 Pair_ID=0',
+send_beg_time:2019-12-14 23:24:41,
+send_end_time:2019-12-14 23:24:48
+##
+##### The obj 147506 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147504, don't need to send.
+###### Ready to get news #######
+2019-12-14 23:24:49 The obj of 147505 is complete.#
+###### Get news (2019-12-14 23:25:17) ######
+##### GWAC_com_objs(40): 147486,147490,147496,147497,147498,147499,147500,147501,147505,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147504 of GWAC: Sending.##
+147504,
+tryclient 'append_gwac Op_sn=147504, Op_time=2019-12-14T15:25:25, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=08101085, Obj_ID=moniotr,RA=81.0, DEC=-8.5, Epoch=2000, ObjRA=81.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T15:25:25, end_time=2019-12-14T15:55:25 Pair_ID=0',
+send_beg_time:2019-12-14 23:25:24,
+send_end_time:2019-12-14 23:25:31
+##
+##### The obj 147504 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147533, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 23:27:45) ######
+##### GWAC_com_objs(40): 147486,147490,147496,147497,147498,147499,147500,147501,147505,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147533, don't need to send.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news #######
+2019-12-14 23:57:51 The obj of 147506 is complete.#
+###### Get news (2019-12-14 23:58:09) ######
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### GWAC_com_objs(41): 147486,147490,147496,147497,147498,147499,147500,147501,147505,147506,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of F60 when send 147012, don't need to send.
+###### The obj 147533 of GWAC: Sending.##
+147533,
+tryclient 'append_gwac Op_sn=147533, Op_time=2019-12-14T15:58:18, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=07590425, Obj_ID=moniotr,RA=75.99, DEC=42.5, Epoch=2000, ObjRA=75.99, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T15:58:18, end_time=2019-12-14T16:28:18 Pair_ID=0',
+send_beg_time:2019-12-14 23:58:17,
+send_end_time:2019-12-14 23:58:25
+##
+##### The obj 147533 of GWAC: Send ok.#
+2019-12-14 23:58:02 The obj of 147504 is complete.#
+###### The obj 147556 of GWAC: Sending.##
+147556,
+tryclient 'append_gwac Op_sn=147556, Op_time=2019-12-14T15:58:39, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=07200765, Obj_ID=moniotr,RA=72.08, DEC=76.5, Epoch=2000, ObjRA=72.08, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T15:58:39, end_time=2019-12-14T16:28:39 Pair_ID=0',
+send_beg_time:2019-12-14 23:58:39,
+send_end_time:2019-12-14 23:58:46
+##
+##### The obj 147556 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147545, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-14 23:59:06) ######
+##### GWAC_com_objs(42): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147545, don't need to send.
+##### There is no free units of F60 when send 147012, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:16:42) ######
+##### GWAC_com_objs(43): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147515
+##### GWAC : Case 1
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147545, don't need to send.
+##### There is no free units of F60 when send 147012, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:20:30) ######
+##### F60_com_objs(21): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147422
+##### GWAC_com_objs(45): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147540,147541,147542,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147530,147543
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 146990, don't need to send.
+##### There is no free units of GWAC when send 147520, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:20:54) ######
+##### GWAC_com_objs(45): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147540,147541,147542,147543,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(22): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147002,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147520, don't need to send.
+###### The obj 146990 of F60: Sending.##
+146990,
+append_plan SVOMMM toa && append_object G0000_06440827-03554 6.7356 -3.92824 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 00:21:02,
+send_end_time:2019-12-15 00:21:06
+##
+##### The obj 146990 of F60: Send ok.
+###### The obj 147012 of F60: Sending.##
+147012,
+append_plan SVOMMM toa && append_object G0000_NGC2207 6.27280666667 -21.3727 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 00:21:26,
+send_end_time:2019-12-15 00:21:31
+##
+##### The obj 147012 of F60: Send ok.
+##### There is no free units of F60 when send 147034, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:21:53) ######
+##### F60_com_objs(23): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147002,147385,147422
+##### F60 : Case 1
+##### GWAC_com_objs(45): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147540,147541,147542,147543,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+##### There is no free units of GWAC when send 147520, don't need to send.
+###### Ready to get news #######
+2019-12-15 00:31:23 The obj of 147533 is complete.#
+###### Get news (2019-12-15 00:31:46) ######
+##### F60_com_objs(23): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147002,147385,147422
+##### GWAC_com_objs(46): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147520 of GWAC: Sending.##
+147520,
+tryclient 'append_gwac Op_sn=147520, Op_time=2019-12-14T16:31:55, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=15990255, Obj_ID=moniotr,RA=159.99, DEC=25.5, Epoch=2000, ObjRA=159.99, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T16:31:55, end_time=2019-12-14T17:01:55 Pair_ID=0',
+send_beg_time:2019-12-15 00:31:55,
+send_end_time:2019-12-15 00:32:03
+##
+##### The obj 147520 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147548, don't need to send.
+###### Ready to get news #######
+2019-12-15 00:32:31 The obj of 147556 is complete.#
+###### Get news (2019-12-15 00:32:59) ######
+##### GWAC_com_objs(47): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(23): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,147002,147385,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147034, don't need to send.
+###### The obj 147548 of GWAC: Sending.##
+147548,
+tryclient 'append_gwac Op_sn=147548, Op_time=2019-12-14T16:33:04, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=15730595, Obj_ID=moniotr,RA=157.31, DEC=59.5, Epoch=2000, ObjRA=157.31, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T16:33:04, end_time=2019-12-14T17:03:04 Pair_ID=0',
+send_beg_time:2019-12-15 00:33:04,
+send_end_time:2019-12-15 00:33:12
+##
+##### The obj 147548 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147545, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:34:14) ######
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC_com_objs(47): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(24): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147385,147422
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147545, don't need to send.
+###### The obj 147034 of F60: Sending.##
+147034,
+append_plan SVOMMM toa && append_object G0000_NGC2110 5.86983333333 -7.45617 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 00:34:20,
+send_end_time:2019-12-15 00:34:25
+##
+##### The obj 147034 of F60: Send ok.
+###### The obj 147070 of F60: Sending.##
+147070,
+append_plan SVOMMM toa && append_object G0000_IC0438 5.88335333333 -17.876 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 00:34:43,
+send_end_time:2019-12-15 00:34:48
+##
+##### The obj 147070 of F60: Send ok.
+##### There is no free units of F60 when send 147073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:35:16) ######
+##### F60_com_objs(25): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147012,147385,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC_com_objs(47): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### There is no free units of F60 when send 147073, don't need to send.
+##### There is no free units of GWAC when send 147545, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 00:40:58) ######
+##### GWAC_com_objs(49): 147486,147490,147496,147497,147498,147499,147500,147501,147504,147505,147506,147512,147513,147514,147515,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147487,147502
+##### GWAC : Case 1
+##### F60_com_objs(25): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147012,147385,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147073, don't need to send.
+##### There is no free units of GWAC when send 147534, don't need to send.
+###### Ready to get news #######
+2019-12-15 01:05:06 The obj of 147520 is complete.#
+###### Get news (2019-12-15 01:05:39) ######
+##### GWAC_com_objs(51): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147520,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147553,147554,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147555
+##### GWAC : Case 1
+##### F60_com_objs(26): 147562,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147012,147385,147422,147563
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 147558 of GWAC: Sending.
+##### There is no free units of F60 when send 147073, don't need to send.##
+147558,
+tryclient 'append_gwac Op_sn=147558, Op_time=2019-12-14T17:05:48, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=16810765, Obj_ID=moniotr,RA=168.18, DEC=76.5, Epoch=2000, ObjRA=168.18, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T17:05:48, end_time=2019-12-14T17:35:48 Pair_ID=0',
+send_beg_time:2019-12-15 01:05:46,
+send_end_time:2019-12-15 01:05:54
+##
+##### The obj 147558 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147534, don't need to send.
+###### Ready to get news #######
+2019-12-15 01:07:00 The obj of 147548 is complete.#
+###### Get news (2019-12-15 01:07:10) ######
+##### F60_com_objs(26): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147012,147385,147422
+##### GWAC_com_objs(52): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147520,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147073, don't need to send.
+###### The obj 147534 of GWAC: Sending.##
+147534,
+tryclient 'append_gwac Op_sn=147534, Op_time=2019-12-14T17:07:19, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=16280425, Obj_ID=moniotr,RA=162.84, DEC=42.5, Epoch=2000, ObjRA=162.84, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T17:07:19, end_time=2019-12-14T17:37:19 Pair_ID=0',
+send_beg_time:2019-12-15 01:07:19,
+send_end_time:2019-12-15 01:07:26
+##
+##### The obj 147534 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147491, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 01:21:37) ######
+##### GWAC_com_objs(53): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147520,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147516
+##### GWAC : Case 1
+##### F60_com_objs(28): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147581,147582,147583,146990,147002,147012,147385,147422,147580,147293
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147491, don't need to send.
+##### There is no free units of F60 when send 147073, don't need to send.
+###### Ready to get news #######
+2019-12-15 01:38:49 The obj of 147558 is complete.#
+###### Get news (2019-12-15 01:39:09) ######
+##### GWAC_com_objs(54): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147533,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(28): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147385,147422
+##### F30_com_objs(0): 
+##### F60 : Case 1
+##### F30 : Case 2
+###### The obj 147491 of GWAC: Sending.
+##### There is no free units of F60 when send 147073, don't need to send.##
+147491,
+tryclient 'append_gwac Op_sn=147491, Op_time=2019-12-14T17:39:16, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=15300085, Obj_ID=moniotr,RA=153.0, DEC=8.5, Epoch=2000, ObjRA=153.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T17:39:16, end_time=2019-12-14T18:09:16 Pair_ID=0',
+send_beg_time:2019-12-15 01:39:15,
+send_end_time:2019-12-15 01:39:23
+##
+##### The obj 147491 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147507, don't need to send.
+###### Ready to get news #######
+2019-12-15 01:39:43 The obj of 147534 is complete.#
+###### Get news (2019-12-15 01:39:58) ######
+##### GWAC_com_objs(55): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(28): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147385,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147073, don't need to send.
+###### The obj 147507 of GWAC: Sending.##
+147507,
+tryclient 'append_gwac Op_sn=147507, Op_time=2019-12-14T17:40:06, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=13501085, Obj_ID=moniotr,RA=135.0, DEC=-8.5, Epoch=2000, ObjRA=135.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T17:40:06, end_time=2019-12-14T18:10:06 Pair_ID=0',
+send_beg_time:2019-12-15 01:40:06,
+send_end_time:2019-12-15 01:40:13
+##
+##### The obj 147507 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147545, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 01:41:30) ######
+##### GWAC_com_objs(58): 147486,147487,147490,147496,147497,147498,147499,147500,147501,147502,147504,147505,147506,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147488,147503,147531
+##### GWAC : Case 1
+##### F60_com_objs(28): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147385,147422
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147521, don't need to send.
+##### There is no free units of F60 when send 147073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 01:43:46) ######
+##### GWAC_com_objs(58): 147486,147487,147488,147490,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(28): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147385,147422
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147521, don't need to send.
+##### There is no free units of F60 when send 147073, don't need to send.
+###### Ready to get news #######
+2019-12-15 02:12:17 The obj of 147491 is complete.#
+###### Get news (2019-12-15 02:12:31) ######
+##### GWAC_com_objs(59): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(30): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147385,147422,147073,147423
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 147535 of GWAC: Sending.
+##### There is no free units of F60 when send 147063, don't need to send.##
+147535,
+tryclient 'append_gwac Op_sn=147535, Op_time=2019-12-14T18:12:39, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18450425, Obj_ID=moniotr,RA=184.55, DEC=42.5, Epoch=2000, ObjRA=184.55, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T18:12:39, end_time=2019-12-14T18:42:39 Pair_ID=0',
+send_beg_time:2019-12-15 02:12:38,
+send_end_time:2019-12-15 02:12:46
+##
+##### The obj 147535 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147521, don't need to send.
+###### Ready to get news #######
+2019-12-15 02:13:11 The obj of 147507 is complete.#
+###### Get news (2019-12-15 02:13:35) ######
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### GWAC_com_objs(60): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(30): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147073,147385,147422,147423
+##### F60 : Case 1
+##### There is no free units of F60 when send 147063, don't need to send.
+###### The obj 147521 of GWAC: Sending.##
+147521,
+tryclient 'append_gwac Op_sn=147521, Op_time=2019-12-14T18:13:43, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17880255, Obj_ID=moniotr,RA=178.81, DEC=25.5, Epoch=2000, ObjRA=178.81, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T18:13:43, end_time=2019-12-14T18:43:43 Pair_ID=0',
+send_beg_time:2019-12-15 02:13:43,
+send_end_time:2019-12-15 02:13:49
+##
+##### The obj 147521 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147492, don't need to send.
+###### Ready to get news #######
+2019-12-15 02:20:10 The obj of 147070 is complete.#
+###### Get news (2019-12-15 02:20:20) ######
+##### GWAC_com_objs(61): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147544
+##### GWAC : Case 1
+##### F60_com_objs(34): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,146990,147002,147012,147293,147070,147073,147385,147422,147423,147724,147972,147156
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147549, don't need to send.
+###### The obj 147063 of F60: Sending.##
+147063,
+append_plan SVOMMM toa && append_object G0000_06473771-04010 6.7938 -4.01719 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 02:20:27,
+send_end_time:2019-12-15 02:20:32
+##
+##### The obj 147063 of F60: Send ok.
+##### There is no free units of F60 when send 147127, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 02:25:05) ######
+##### GWAC_com_objs(61): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(34): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147724,147972,146990,147002,147012,147293,147070,147073,147385,147422,147423,147156
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147549, don't need to send.
+##### There is no free units of F60 when send 147127, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 02:36:34) ######
+##### F60_com_objs(35): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147724,147972,146990,147002,147012,147293,147034,147070,147073,147385,147422,147423,147156
+##### F60 : Case 1
+##### GWAC_com_objs(61): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147549, don't need to send.
+###### The obj 147127 of F60: Sending.##
+147127,
+append_plan SVOMMM toa && append_object G0000_PGC085933 6.83626666667 -11.2536 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 02:36:42,
+send_end_time:2019-12-15 02:36:48
+##
+##### The obj 147127 of F60: Send ok.
+###### The obj 147144 of F60: Sending.##
+147144,
+append_plan SVOMMM toa && append_object G0000_06570073-05143 6.9502 -5.2438 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 02:37:10,
+send_end_time:2019-12-15 02:37:17
+##
+##### The obj 147144 of F60: Send ok.
+##### There is no free units of F60 when send 147149, don't need to send.
+###### Ready to get news #######
+2019-12-15 02:45:15 The obj of 147535 is complete.#
+###### Get news (2019-12-15 02:45:31) ######
+##### GWAC_com_objs(63): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147520,147526,147527,147528,147529,147530,147531,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985,147517
+##### GWAC : Case 1
+##### F60_com_objs(76): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147724,147972,146990,147002,147012,147293,147034,147070,147073,147385,147422,147423,147156,147606,147608,147610,147611,147612,147615,147630,147631,147661,147663,147667,147669,147679,147680,147691,147701,147711,147725,147733,147741,147742,147764,147789,147832,147840,147871,147874,147876,147907,147908,147912,147913,147916,147922,147925,147935,147949,147954,147964,147372,147203
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147149, don't need to send.
+###### The obj 147549 of GWAC: Sending.##
+147549,
+tryclient 'append_gwac Op_sn=147549, Op_time=2019-12-14T18:45:39, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18590595, Obj_ID=moniotr,RA=185.91, DEC=59.5, Epoch=2000, ObjRA=185.91, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T18:45:39, end_time=2019-12-14T19:15:39 Pair_ID=0',
+send_beg_time:2019-12-15 02:45:38,
+send_end_time:2019-12-15 02:45:45
+##
+##### The obj 147549 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147492, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 02:46:49) ######
+##### GWAC_com_objs(63): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147526,147527,147528,147529,147530,147531,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(76): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147606,147608,147610,147611,147612,147615,147630,147631,147661,147663,147667,147669,147679,147680,147691,147701,147711,147724,147725,147733,147741,147742,147764,147789,147832,147840,147871,147874,147876,147907,147908,147912,147913,147916,147922,147925,147935,147949,147954,147964,147972,146990,147002,147012,147293,147034,147070,147073,147372,147385,147422,147423,147156,147203
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147492, don't need to send.
+##### There is no free units of F60 when send 147149, don't need to send.
+###### Ready to get news #######
+2019-12-15 02:46:39 The obj of 147521 is complete.#
+###### Get news (2019-12-15 02:47:07) ######
+##### GWAC_com_objs(64): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(76): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147606,147608,147610,147611,147612,147615,147630,147631,147661,147663,147667,147669,147679,147680,147691,147701,147711,147724,147725,147733,147741,147742,147764,147789,147832,147840,147871,147874,147876,147907,147908,147912,147913,147916,147922,147925,147935,147949,147954,147964,147972,146990,147002,147012,147293,147034,147070,147073,147372,147385,147422,147423,147156,147203
+##### F60 : Case 1
+###### The obj 147492 of GWAC: Sending.
+##### There is no free units of F60 when send 147149, don't need to send.##
+147492,
+tryclient 'append_gwac Op_sn=147492, Op_time=2019-12-14T18:47:14, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17100085, Obj_ID=moniotr,RA=171.0, DEC=8.5, Epoch=2000, ObjRA=171.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T18:47:14, end_time=2019-12-14T19:17:14 Pair_ID=0',
+send_beg_time:2019-12-15 02:47:14,
+send_end_time:2019-12-15 02:47:21
+##
+##### The obj 147492 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147508, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 02:54:29) ######
+##### GWAC_com_objs(64): 147486,147487,147488,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(76): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147580,147581,147582,147583,147606,147608,147610,147611,147612,147615,147630,147631,147661,147663,147667,147669,147679,147680,147691,147701,147711,147724,147725,147733,147741,147742,147764,147789,147832,147840,147871,147874,147876,147907,147908,147912,147913,147916,147922,147925,147935,147949,147954,147964,147972,146990,147002,147012,147293,147034,147070,147073,147372,147385,147422,147423,147156,147203
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147508, don't need to send.
+##### There is no free units of F60 when send 147149, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:11:07 The obj of 147144 is complete.##
+2019-12-15 03:11:06 The obj of 147127 is complete.#
+###### Get news (2019-12-15 03:11:19) ######
+##### GWAC_com_objs(66): 147486,147487,147488,147489,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(135): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147588,147591,147606,147608,147609,147610,147611,147612,147613,147615,147617,147628,147630,147631,147637,147641,147648,147661,147663,147665,147667,147668,147669,147679,147680,147684,147691,147692,147701,147711,147718,147723,147724,147725,147733,147741,147742,147749,147753,147764,147768,147769,147773,147778,147789,147793,147804,147806,147809,147826,147832,147834,147835,147840,147871,147874,147876,147880,147891,147904,147907,147908,147912,147913,147916,147922,147925,147935,147937,147941,147949,147954,147955,147964,147972,147973,147974,147975,147976,147984,146990,147002,147277,147012,147286,147293,147034,147313,147320,147343,147070,147344,147345,147073,147349,147372,147384,147385,147400,147127,147410,147415,147144,147422,147149,147423,147156,147433,147448,147468,147475,147203
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147522, don't need to send.
+###### The obj 147173 of F60: Sending.##
+147173,
+append_plan SVOMMM toa && append_object G0000_PGC019343 6.63338 -15.0231 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:11:24,
+send_end_time:2019-12-15 03:11:30
+##
+##### The obj 147173 of F60: Send ok.
+###### The obj 147176 of F60: Sending.##
+147176,
+append_plan SVOMMM toa && append_object G0000_06580289-05204 6.96746666667 -5.34473 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:11:47,
+send_end_time:2019-12-15 03:11:52
+##
+##### The obj 147176 of F60: Send ok.
+##### There is no free units of F60 when send 147178, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-15 03:12:13) ######
+##### GWAC_com_objs(66): 147486,147487,147488,147489,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F60_com_objs(135): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147588,147591,147606,147608,147609,147610,147611,147612,147613,147615,147617,147628,147630,147631,147637,147641,147648,147661,147663,147665,147667,147668,147669,147679,147680,147684,147691,147692,147701,147711,147718,147723,147724,147725,147733,147741,147742,147749,147753,147764,147768,147769,147773,147778,147789,147793,147804,147806,147809,147826,147832,147834,147835,147840,147871,147874,147876,147880,147891,147904,147907,147908,147912,147913,147916,147922,147925,147935,147937,147941,147949,147954,147955,147964,147972,147973,147974,147975,147976,147984,146990,147002,147277,147012,147286,147293,147034,147313,147320,147343,147070,147344,147345,147073,147349,147372,147384,147385,147400,147127,147410,147415,147144,147422,147149,147423,147156,147433,147448,147468,147475,147203
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147522, don't need to send.
+##### There is no free units of F60 when send 147178, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:18:13 The obj of 147549 is complete.#
+###### Get news (2019-12-15 03:19:04) ######
+##### F60_com_objs(135): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147588,147591,147606,147608,147609,147610,147611,147612,147613,147615,147617,147628,147630,147631,147637,147641,147648,147661,147663,147665,147667,147668,147669,147679,147680,147684,147691,147692,147701,147711,147718,147723,147724,147725,147733,147741,147742,147749,147753,147764,147768,147769,147773,147778,147789,147793,147804,147806,147809,147826,147832,147834,147835,147840,147871,147874,147876,147880,147891,147904,147907,147908,147912,147913,147916,147922,147925,147935,147937,147941,147949,147954,147955,147964,147972,147973,147974,147975,147976,147984,146990,147002,147277,147012,147286,147293,147034,147313,147320,147343,147070,147344,147345,147073,147349,147372,147384,147385,147400,147127,147410,147415,147144,147422,147149,147423,147156,147433,147448,147468,147475,147203
+##### GWAC_com_objs(67): 147486,147487,147488,147489,147490,147491,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of F60 when send 147178, don't need to send.
+###### The obj 147522 of GWAC: Sending.##
+147522,
+tryclient 'append_gwac Op_sn=147522, Op_time=2019-12-14T19:19:10, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=19760255, Obj_ID=moniotr,RA=197.64, DEC=25.5, Epoch=2000, ObjRA=197.64, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T19:19:10, end_time=2019-12-14T19:49:10 Pair_ID=0',
+send_beg_time:2019-12-15 03:19:09,
+send_end_time:2019-12-15 03:19:16
+##
+##### The obj 147522 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147493, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:19:37 The obj of 147492 is complete.#
+###### Get news (2019-12-15 03:19:56) ######
+##### F60_com_objs(135): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147588,147591,147606,147608,147609,147610,147611,147612,147613,147615,147617,147628,147630,147631,147637,147641,147648,147661,147663,147665,147667,147668,147669,147679,147680,147684,147691,147692,147701,147711,147718,147723,147724,147725,147733,147741,147742,147749,147753,147764,147768,147769,147773,147778,147789,147793,147804,147806,147809,147826,147832,147834,147835,147840,147871,147874,147876,147880,147891,147904,147907,147908,147912,147913,147916,147922,147925,147935,147937,147941,147949,147954,147955,147964,147972,147973,147974,147975,147976,147984,146990,147002,147277,147012,147286,147293,147034,147313,147320,147343,147070,147344,147345,147073,147349,147372,147384,147385,147400,147127,147410,147415,147144,147422,147149,147423,147156,147433,147448,147468,147475,147203
+##### F60 : Case 1
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of F60 when send 147178, don't need to send.
+###### The obj 147493 of GWAC: Sending.##
+147493,
+tryclient 'append_gwac Op_sn=147493, Op_time=2019-12-14T19:20:04, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=18900085, Obj_ID=moniotr,RA=189.0, DEC=8.5, Epoch=2000, ObjRA=189.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T19:20:04, end_time=2019-12-14T19:50:04 Pair_ID=0',
+send_beg_time:2019-12-15 03:20:04,
+send_end_time:2019-12-15 03:20:11
+##
+##### The obj 147493 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147509, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:23:15 The obj of 147173 is complete.#
+###### Get news (2019-12-15 03:24:01) ######
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(215): 147562,147563,147564,147565,147566,147567,147568,147569,147570,147571,147572,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147588,147591,147606,147608,147609,147610,147611,147612,147613,147615,147617,147628,147630,147631,147637,147641,147648,147661,147663,147665,147667,147668,147669,147679,147680,147684,147691,147692,147701,147711,147718,147723,147724,147725,147733,147741,147742,147749,147753,147764,147768,147769,147773,147778,147789,147793,147804,147806,147809,147826,147832,147834,147835,147840,147871,147874,147876,147880,147891,147904,147907,147908,147912,147913,147916,147922,147925,147935,147937,147941,147949,147954,147955,147964,147972,147973,147974,147975,147976,147984,146990,147002,147277,147012,147286,147293,147034,147313,147320,147343,147070,147344,147345,147073,147349,147372,147384,147385,147400,147127,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147468,147475,147203,147228,147233,147241,147248,147250,147261,147262,147263,147266,147602,147603,147618,147621,147634,147636,147640,147643,147660,147681,147682,147687,147702,147722,147731,147734,147735,147755,147757,147772,147780,147782,147796,147817,147824,147833,147836,147841,147845,147846,147850,147851,147852,147865,147870,147872,147873,147892,147898,147902,147911,147938,147945,147951,147957,147977,147979,147980,147981,147982,147274,147278,147317,147321,147339,147360,147363,147371,147378,147380,147381,147407,147178,147180,147182,147183,147463,147473,147477,147209
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### There is no free units of GWAC when send 147509, don't need to send.
+###### The obj 147199 of F60: Sending.##
+147199,
+append_plan SVOMMM toa && append_object G0000_06523852-04270 6.87733333333 -4.45221 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:24:08,
+send_end_time:2019-12-15 03:24:14
+##
+##### The obj 147199 of F60: Send ok.
+##### There is no free units of F60 when send 147201, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:29:25 The obj of 147176 is complete.#
+###### Get news (2019-12-15 03:29:58) ######
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(216): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147588,147266,147591,147602,147603,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147660,147661,147663,147665,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147711,147718,147722,147723,147724,147725,147731,147733,147734,147735,147741,147742,147749,147753,147755,147757,147764,147768,147769,147772,147773,147778,147780,147782,147789,147793,147796,147804,147806,147809,147817,147824,147826,147832,147833,147834,147835,147836,147840,147841,147845,147846,147850,147851,147852,147865,147870,147871,147872,147873,147874,147876,147880,147891,147892,147898,147902,147904,147907,147908,147911,147912,147913,147916,147922,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147274,147002,147277,147278,147012,147286,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147371,147372,147378,147380,147381,147384,147385,147400,147127,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147473,147475,147203,147477,147209
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147509, don't need to send.
+###### The obj 147201 of F60: Sending.##
+147201,
+append_plan SVOMMM toa && append_object G0000_06504156-05261 6.84486666667 -5.43743 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:30:05,
+send_end_time:2019-12-15 03:30:11
+##
+##### The obj 147201 of F60: Send ok.
+##### There is no free units of F60 when send 147205, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:35:33 The obj of 147199 is complete.#
+###### Get news (2019-12-15 03:35:54) ######
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(217): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147588,147266,147591,147602,147603,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147660,147661,147663,147665,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147711,147718,147722,147723,147724,147725,147731,147733,147734,147735,147741,147742,147749,147753,147755,147757,147764,147768,147769,147772,147773,147778,147780,147782,147789,147793,147796,147804,147806,147809,147817,147824,147826,147832,147833,147834,147835,147836,147840,147841,147845,147846,147850,147851,147852,147865,147870,147871,147872,147873,147874,147876,147880,147891,147892,147898,147902,147904,147907,147908,147911,147912,147913,147916,147922,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147274,147002,147277,147278,147012,147286,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147371,147372,147378,147380,147381,147384,147385,147400,147127,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147475,147203,147477,147209
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147509, don't need to send.
+###### The obj 147205 of F60: Sending.##
+147205,
+append_plan SVOMMM toa && append_object G0000_06522256-04310 6.87293333333 -4.51788 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:36:04,
+send_end_time:2019-12-15 03:36:10
+##
+##### The obj 147205 of F60: Send ok.
+##### There is no free units of F60 when send 147207, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:41:40 The obj of 147201 is complete.#
+###### Get news (2019-12-15 03:42:32) ######
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F60_com_objs(251): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147588,147266,147591,147602,147603,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147660,147661,147663,147665,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147711,147718,147722,147723,147724,147725,147731,147733,147734,147735,147741,147742,147749,147753,147755,147757,147764,147768,147769,147772,147773,147778,147780,147782,147789,147793,147796,147804,147806,147809,147817,147824,147826,147832,147833,147834,147835,147836,147840,147841,147845,147846,147850,147851,147852,147865,147870,147871,147872,147873,147874,147876,147880,147891,147892,147898,147902,147904,147907,147908,147911,147912,147913,147916,147922,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147274,147002,147277,147278,147012,147286,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147371,147372,147378,147380,147381,147384,147385,147400,147127,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147201,147475,147203,147477,147209,147587,147592,147605,147619,147655,147659,147666,147703,147728,147730,147746,147750,147759,147762,147783,147812,147820,147839,147853,147875,147895,147896,147910,147923,147965,147966,147272,147284,147287,147288,147369,147396,147406
+##### F60 : Case 1
+##### F30_com_objs(0): 
+##### GWAC : Case 1
+##### F30 : Case 2
+###### The obj 147207 of F60: Sending.
+##### There is no free units of GWAC when send 147536, don't need to send.##
+147207,
+append_plan SVOMMM toa && append_object G0000_PGC018855 6.34881333333 -8.4956 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:42:39,
+send_end_time:2019-12-15 03:42:43
+##
+##### The obj 147207 of F60: Send ok.
+##### There is no free units of F60 when send 147226, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:47:47 The obj of 147205 is complete.#
+###### Get news (2019-12-15 03:48:27) ######
+##### F60_com_objs(252): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147587,147588,147266,147591,147592,147602,147603,147605,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147619,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147655,147659,147660,147661,147663,147665,147666,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147703,147711,147718,147722,147723,147724,147725,147728,147730,147731,147733,147734,147735,147741,147742,147746,147749,147750,147753,147755,147757,147759,147762,147764,147768,147769,147772,147773,147778,147780,147782,147783,147789,147793,147796,147804,147806,147809,147812,147817,147820,147824,147826,147832,147833,147834,147835,147836,147839,147840,147841,147845,147846,147850,147851,147852,147853,147865,147870,147871,147872,147873,147874,147875,147876,147880,147891,147892,147895,147896,147898,147902,147904,147907,147908,147910,147911,147912,147913,147916,147922,147923,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147965,147966,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147272,147274,147002,147277,147278,147284,147012,147286,147287,147288,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147369,147371,147372,147378,147380,147381,147384,147385,147396,147400,147127,147406,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147201,147475,147203,147477,147205,147209
+##### F60 : Case 1
+##### GWAC_com_objs(68): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+###### The obj 147226 of F60: Sending.
+##### There is no free units of GWAC when send 147536, don't need to send.##
+147226,
+append_plan SVOMMM toa && append_object G0000_06522236-04251 6.87286666667 -4.42037 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:48:32,
+send_end_time:2019-12-15 03:48:36
+##
+##### The obj 147226 of F60: Send ok.
+##### There is no free units of F60 when send 147267, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:51:41 The obj of 147522 is complete.#
+###### Get news (2019-12-15 03:51:53) ######
+##### GWAC_com_objs(69): 147486,147487,147488,147489,147490,147491,147492,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147522,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(252): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147587,147588,147266,147591,147592,147602,147603,147605,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147619,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147655,147659,147660,147661,147663,147665,147666,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147703,147711,147718,147722,147723,147724,147725,147728,147730,147731,147733,147734,147735,147741,147742,147746,147749,147750,147753,147755,147757,147759,147762,147764,147768,147769,147772,147773,147778,147780,147782,147783,147789,147793,147796,147804,147806,147809,147812,147817,147820,147824,147826,147832,147833,147834,147835,147836,147839,147840,147841,147845,147846,147850,147851,147852,147853,147865,147870,147871,147872,147873,147874,147875,147876,147880,147891,147892,147895,147896,147898,147902,147904,147907,147908,147910,147911,147912,147913,147916,147922,147923,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147965,147966,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147272,147274,147002,147277,147278,147284,147012,147286,147287,147288,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147369,147371,147372,147378,147380,147381,147384,147385,147396,147400,147127,147406,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147201,147475,147203,147477,147205,147209
+##### F60 : Case 1
+###### The obj 147536 of GWAC: Sending.
+##### There is no free units of F60 when send 147267, don't need to send.##
+147536,
+tryclient 'append_gwac Op_sn=147536, Op_time=2019-12-14T19:52:01, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=20620425, Obj_ID=moniotr,RA=206.26, DEC=42.5, Epoch=2000, ObjRA=206.26, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T19:52:01, end_time=2019-12-14T20:22:01 Pair_ID=0',
+send_beg_time:2019-12-15 03:52:01,
+send_end_time:2019-12-15 03:52:08
+##
+##### The obj 147536 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147509, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:52:35 The obj of 147493 is complete.#
+###### Get news (2019-12-15 03:53:26) ######
+##### GWAC_com_objs(70): 147486,147487,147488,147489,147490,147491,147492,147493,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147522,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### GWAC : Case 1
+##### F30_com_objs(0): 
+##### F30 : Case 2
+##### F60_com_objs(252): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147587,147588,147266,147591,147592,147602,147603,147605,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147619,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147655,147659,147660,147661,147663,147665,147666,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147703,147711,147718,147722,147723,147724,147725,147728,147730,147731,147733,147734,147735,147741,147742,147746,147749,147750,147753,147755,147757,147759,147762,147764,147768,147769,147772,147773,147778,147780,147782,147783,147789,147793,147796,147804,147806,147809,147812,147817,147820,147824,147826,147832,147833,147834,147835,147836,147839,147840,147841,147845,147846,147850,147851,147852,147853,147865,147870,147871,147872,147873,147874,147875,147876,147880,147891,147892,147895,147896,147898,147902,147904,147907,147908,147910,147911,147912,147913,147916,147922,147923,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147965,147966,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147272,147274,147002,147277,147278,147284,147012,147286,147287,147288,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147369,147371,147372,147378,147380,147381,147384,147385,147396,147400,147127,147406,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147201,147475,147203,147477,147205,147209
+##### F60 : Case 1
+###### The obj 147509 of GWAC: Sending.
+##### There is no free units of F60 when send 147267, don't need to send.##
+147509,
+tryclient 'append_gwac Op_sn=147509, Op_time=2019-12-14T19:53:31, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17101085, Obj_ID=moniotr,RA=171.0, DEC=-8.5, Epoch=2000, ObjRA=171.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-14T19:53:31, end_time=2019-12-14T20:23:31 Pair_ID=0',
+send_beg_time:2019-12-15 03:53:31,
+send_end_time:2019-12-15 03:53:37
+##
+##### The obj 147509 of GWAC: Send ok.
+##### There is no free units of GWAC when send 147508, don't need to send.
+###### Ready to get news #######
+2019-12-15 03:53:57 The obj of 147207 is complete.#
+###### Get news (2019-12-15 03:54:27) ######
+##### F30_com_objs(0): 
+##### GWAC_com_objs(70): 147486,147487,147488,147489,147490,147491,147492,147493,147496,147497,147498,147499,147500,147501,147502,147503,147504,147505,147506,147507,147512,147513,147514,147515,147516,147517,147520,147521,147522,147526,147527,147528,147529,147530,147531,147532,147533,147534,147535,147540,147541,147542,147543,147544,147546,147547,147548,147549,147553,147554,147555,147556,147557,147558,147561,146889,146900,146901,146904,146905,146910,146911,146893,146972,146974,146976,146980,146982,146983,146985
+##### F30 : Case 2
+##### F60_com_objs(253): 147228,147233,147562,147241,147563,147564,147565,147566,147567,147568,147569,147570,147248,147571,147572,147250,147573,147574,147575,147576,147577,147578,147579,147256,147580,147581,147582,147583,147261,147262,147263,147587,147588,147266,147591,147592,147602,147603,147605,147606,147608,147609,147610,147611,147612,147613,147615,147617,147618,147619,147621,147628,147630,147631,147634,147636,147637,147640,147641,147643,147648,147655,147659,147660,147661,147663,147665,147666,147667,147668,147669,147679,147680,147681,147682,147684,147687,147691,147692,147701,147702,147703,147711,147718,147722,147723,147724,147725,147728,147730,147731,147733,147734,147735,147741,147742,147746,147749,147750,147753,147755,147757,147759,147762,147764,147768,147769,147772,147773,147778,147780,147782,147783,147789,147793,147796,147804,147806,147809,147812,147817,147820,147824,147826,147832,147833,147834,147835,147836,147839,147840,147841,147845,147846,147850,147851,147852,147853,147865,147870,147871,147872,147873,147874,147875,147876,147880,147891,147892,147895,147896,147898,147902,147904,147907,147908,147910,147911,147912,147913,147916,147922,147923,147925,147935,147937,147938,147941,147945,147949,147951,147954,147955,147957,147964,147965,147966,147972,147973,147974,147975,147976,147977,147979,147980,147981,147982,147984,146990,147272,147274,147002,147277,147278,147284,147012,147286,147287,147288,147293,147034,147313,147317,147320,147321,147339,147343,147070,147344,147345,147073,147349,147360,147363,147369,147371,147372,147378,147380,147381,147384,147385,147396,147400,147127,147406,147407,147410,147415,147144,147422,147149,147423,147156,147433,147173,147448,147176,147178,147180,147182,147183,147463,147468,147199,147473,147201,147475,147203,147477,147205,147207,147209
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 147508, don't need to send.
+###### The obj 147267 of F60: Sending.##
+147267,
+append_plan SVOMMM toa && append_object G0000_06475495-05123 6.7986 -5.21061 2000 4 70.0 5 R 60 && append_plan gwac default ,
+send_beg_time:2019-12-15 03:54:34,
+send_end_time:2019-12-15 03:54:39
+##
+##### The obj 147267 of F60: Send ok.
+##### There is no free units of F60 when send 147275, don't need to send.
+###### Ready to get news ######

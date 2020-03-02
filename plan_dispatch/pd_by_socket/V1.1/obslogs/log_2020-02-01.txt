@@ -1,0 +1,771 @@
+
+###### Get news (2020-02-01 18:27:22) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 198014 of GWAC: Sending.
+##### The obj 198246 of F30: Need Wait.
+###### The obj 199097 of F60: Sending.##
+199097,
+append_plan hanxuhui oba && append_object NGC0090 0.36428 22.4 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:27:29,
+send_end_time:2020-02-01 18:27:35
+####
+198014,
+tryclient 'append_gwac Op_sn=198014, Op_time=2020-02-01T10:27:28, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=35100085, Obj_ID=moniotr,RA=351.0, DEC=8.5, Epoch=2000, ObjRA=351.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10, delay=5.0, frmcnt=120, priority=10, begin_time=2020-02-01T10:27:28, end_time=2020-02-01T10:57:28 Pair_ID=0',
+send_beg_time:2020-02-01 18:27:28,
+send_end_time:2020-02-01 18:27:36
+##
+##### The obj 199097 of F60: Send ok.
+##### The obj 198014 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 199096 of F60: Sending.
+###### The obj 198117 of GWAC: Sending.##
+199096,
+append_plan hanxuhui oba && append_object PGC001404 0.364198666667 -9.49226 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:28:01,
+send_end_time:2020-02-01 18:28:07
+####
+198117,
+tryclient 'append_gwac Op_sn=198117, Op_time=2020-02-01T10:28:03, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=34820255, Obj_ID=moniotr,RA=348.22, DEC=25.5, Epoch=2000, ObjRA=348.22, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10, delay=5.0, frmcnt=120, priority=10, begin_time=2020-02-01T10:28:03, end_time=2020-02-01T10:58:03 Pair_ID=0',
+send_beg_time:2020-02-01 18:28:03,
+send_end_time:2020-02-01 18:28:10
+##
+##### The obj 199096 of F60: Send ok.
+##### The obj 198117 of GWAC: Send ok.
+##### F60 : Case 1
+###### The obj 199095 of F60: Sending.##
+199095,
+append_plan hanxuhui oba && append_object PGC1662109 0.36328 22.0268 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:28:22,
+send_end_time:2020-02-01 18:28:29
+##
+##### The obj 199095 of F60: Send ok.
+##### There is no free units of F60 when send 199094, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:28:38) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199094, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199094, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:28:54 The obj of 199097 is complete.#
+###### Get news (2020-02-01 18:29:20) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 199094 of F60: Sending.
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199094,
+append_plan hanxuhui oba && append_object 00214769+2201351 0.363248666667 22.0264 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:29:24,
+send_end_time:2020-02-01 18:29:31
+##
+##### The obj 199094 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199093, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:29:42 The obj of 199095 is complete.#
+###### Get news (2020-02-01 18:29:56) ######
+##### F30 : Case 1
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of F60 when send 199093, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199093 of F60: Sending.##
+199093,
+append_plan hanxuhui oba && append_object 1889568 0.36295 30.0827 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:30:07,
+send_end_time:2020-02-01 18:30:14
+##
+##### The obj 199093 of F60: Send ok.
+##### There is no free units of F60 when send 199092, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:30:12 The obj of 199096 is complete.#
+###### Get news (2020-02-01 18:30:35) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199092 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199092,
+append_plan hanxuhui oba && append_object PGC1169146 0.362734666667 0.55765 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:30:41,
+send_end_time:2020-02-01 18:30:47
+##
+##### The obj 199092 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199091, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:31:20 The obj of 199093 is complete.##
+2020-02-01 18:31:31 The obj of 199094 is complete.#
+###### Get news (2020-02-01 18:31:38) ######
+##### F60 : Case 1
+##### F30 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199091 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199091,
+append_plan hanxuhui oba && append_object PGC1659513 0.362234 21.8995 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:31:44,
+send_end_time:2020-02-01 18:31:51
+##
+##### The obj 199091 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199090 of F60: Sending.##
+199090,
+append_plan hanxuhui oba && append_object PGC001396 0.36178 22.3109 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:32:04,
+send_end_time:2020-02-01 18:32:10
+##
+##### The obj 199090 of F60: Send ok.
+##### There is no free units of F60 when send 199089, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:32:23) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### There is no free units of F60 when send 199089, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199089, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:33:17) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+###### The obj 199089 of F60: Sending.
+##### There is no free units of GWAC when send 198169, don't need to send.#
+2020-02-01 18:32:48 The obj of 199092 is complete.#
+##### GWAC : Case 1#
+2020-02-01 18:33:17 The obj of 199090 is complete.#
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199089,
+append_plan hanxuhui oba && append_object PGC1020493 0.360904666667 -7.34754 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:33:21,
+send_end_time:2020-02-01 18:33:26
+##
+##### The obj 199089 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199088 of F60: Sending.##
+199088,
+append_plan hanxuhui oba && append_object 1393 0.360132 25.493 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:33:36,
+send_end_time:2020-02-01 18:33:43
+##
+##### The obj 199088 of F60: Send ok.
+##### There is no free units of F60 when send 199087, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:33:55) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of F60 when send 199087, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### There is no free units of F60 when send 199087, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:34:06) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199087, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### There is no free units of F60 when send 199087, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:34:05 The obj of 199091 is complete.#
+###### Get news (2020-02-01 18:34:41) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199087 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199087,
+append_plan hanxuhui oba && append_object PGC001380 0.359806 1.1657 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:34:46,
+send_end_time:2020-02-01 18:34:53
+##
+##### The obj 199087 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199086, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:34:48 The obj of 199088 is complete.#
+###### Get news (2020-02-01 18:35:20) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 1
+##### There is no free units of F60 when send 199086, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199086 of F60: Sending.##
+199086,
+append_plan hanxuhui oba && append_object PGC001384 0.359302 22.5919 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:35:28,
+send_end_time:2020-02-01 18:35:34
+##
+##### The obj 199086 of F60: Send ok.
+##### There is no free units of F60 when send 199085, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:35:23 The obj of 199089 is complete.#
+###### Get news (2020-02-01 18:35:56) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+###### The obj 199085 of F60: Sending.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199085,
+append_plan hanxuhui oba && append_object 1671888 0.359264666667 22.542 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:36:01,
+send_end_time:2020-02-01 18:36:06
+##
+##### The obj 199085 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199084, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:37:00) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+###### The obj 199084 of F60: Sending.
+##### There is no free units of GWAC when send 198169, don't need to send.#
+2020-02-01 18:36:38 The obj of 199087 is complete.#
+##### GWAC : Case 1#
+2020-02-01 18:36:40 The obj of 199086 is complete.#
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199084,
+append_plan hanxuhui oba && append_object 2296364 0.358741333333 47.3335 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:37:07,
+send_end_time:2020-02-01 18:37:14
+##
+##### The obj 199084 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199083 of F60: Sending.##
+199083,
+append_plan hanxuhui oba && append_object UGC00207 0.358645333333 29.6622 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:37:28,
+send_end_time:2020-02-01 18:37:35
+##
+##### The obj 199083 of F60: Send ok.
+##### There is no free units of F60 when send 199082, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:37:45) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199082, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199082, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:37:55) ######
+##### F60 : Case 1
+##### F30 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199082, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199082, don't need to send.
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:37:55 The obj of 199085 is complete.#
+###### Get news (2020-02-01 18:38:25) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+###### The obj 199082 of F60: Sending.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199082,
+append_plan hanxuhui oba && append_object NGC0085B 0.358064 22.5058 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:38:30,
+send_end_time:2020-02-01 18:38:38
+##
+##### The obj 199082 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199081, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:38:42 The obj of 199083 is complete.#
+###### Get news (2020-02-01 18:39:06) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199081, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### The obj 198246 of F30: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198169, don't need to send.
+###### The obj 199081 of F60: Sending.##
+199081,
+append_plan hanxuhui oba && append_object NGC0086 0.357940666667 22.5564 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:39:19,
+send_end_time:2020-02-01 18:39:23
+##
+##### The obj 199081 of F60: Send ok.
+##### There is no free units of F60 when send 199080, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:39:13 The obj of 199084 is complete.#
+###### Get news (2020-02-01 18:39:43) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 198246 of F30: Need Wait.
+##### There is no free units of GWAC when send 198169, don't need to send.
+##### GWAC : Case 1
+###### The obj 199080 of F60: Sending.
+##### There is no free units of GWAC when send 198169, don't need to send.##
+199080,
+append_plan hanxuhui oba && append_object NGC0085 0.357104666667 22.5117 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:39:51,
+send_end_time:2020-02-01 18:39:57
+##
+##### The obj 199080 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199079, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:40:51) ######
+##### F60 : Case 1
+##### F30 : Case 1#
+2020-02-01 18:40:31 The obj of 199082 is complete.#
+##### GWAC : Case 1#
+2020-02-01 18:40:31 The obj of 199081 is complete.#
+###### The obj 198123 of F30: Sending.
+###### The obj 199079 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199079,
+append_plan hanxuhui oba && append_object NGC0083 0.356222 22.4336 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:40:56,
+send_end_time:2020-02-01 18:41:03
+####
+198123,
+append_plan hanxuhui mon ; append_object G0015_13860569 9.247 56.95 2000 4 30 1 R 10 ; append_plan gwac default ,
+send_beg_time:2020-02-01 18:40:56,
+send_end_time:2020-02-01 18:40:59
+##
+##### The obj 199079 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199078 of F60: Sending.
+##### The obj 198123 of F30: Send ok.##
+199078,
+append_plan hanxuhui oba && append_object PGC1661236 0.355800666667 21.9834 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:41:13,
+send_end_time:2020-02-01 18:41:19
+##
+##### The obj 199078 of F60: Send ok.#
+2020-02-01 18:40:56 The obj of 199080 is complete.#
+##### There is no free units of F60 when send 199077, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:41:33) ######
+##### F60 : Case 1
+##### F30 : Case 1
+##### GWAC : Case 1
+###### The obj 199077 of F60: Sending.
+##### There is no free units of F30 when send 198095, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199077,
+append_plan hanxuhui oba && append_object IC1544 0.354856666667 23.0909 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:41:41,
+send_end_time:2020-02-01 18:41:47
+##
+##### The obj 199077 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199076, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:42:00) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199076, don't need to send.
+##### There is no free units of F30 when send 198095, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199076, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:42:11) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 1
+##### There is no free units of F30 when send 198095, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199076, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199076, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:42:22 The obj of 199078 is complete.#
+###### Get news (2020-02-01 18:42:38) ######
+##### F30 : Case 1
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F30 when send 198095, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199076, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### The obj 199076 of F60: Sending.##
+199076,
+append_plan hanxuhui oba && append_object PGC001359 0.354461333333 30.506 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:42:49,
+send_end_time:2020-02-01 18:42:57
+##
+##### The obj 199076 of F60: Send ok.
+##### There is no free units of F60 when send 199075, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:42:51 The obj of 199079 is complete.#
+###### Get news (2020-02-01 18:43:22) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198095, don't need to send.
+###### The obj 199075 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199075,
+append_plan hanxuhui oba && append_object PGC001353 0.353685333333 30.4744 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:43:26,
+send_end_time:2020-02-01 18:43:31
+##
+##### The obj 199075 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199074, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:44:02 The obj of 199077 is complete.##
+2020-02-01 18:44:06 The obj of 198123 is complete.#
+###### Get news (2020-02-01 18:44:36) #######
+2020-02-01 18:44:04 The obj of 199076 is complete.#
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 199074 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+###### The obj 198095 of F30: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199074,
+append_plan hanxuhui oba && append_object PGC1666503 0.35363 22.2557 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:44:41,
+send_end_time:2020-02-01 18:44:48
+##
+##### The obj 199074 of F60: Send ok.##
+198095,
+append_plan hanxuhui mon ; append_object G0015_13840841 9.22966666667 84.15 2000 4 30 1 R 10 ; append_plan gwac default ,
+send_beg_time:2020-02-01 18:44:44,
+send_end_time:2020-02-01 18:44:47
+##
+##### F60 : Case 1
+###### The obj 199073 of F60: Sending.
+##### The obj 198095 of F30: Send ok.##
+199073,
+append_plan hanxuhui oba && append_object 00211281+2215211 0.35356 22.2559 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:45:02,
+send_end_time:2020-02-01 18:45:07
+##
+##### The obj 199073 of F60: Send ok.
+##### There is no free units of F60 when send 199072, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:45:20) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199072, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F30 when send 198092, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199072, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:45:28) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199072, don't need to send.
+##### There is no free units of F30 when send 198092, don't need to send.
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199072, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:45:17 The obj of 199075 is complete.#
+###### Get news (2020-02-01 18:45:57) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 1
+##### There is no free units of F30 when send 198092, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### The obj 199072 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199072,
+append_plan hanxuhui oba && append_object PGC1657872 0.353466 21.8159 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:46:03,
+send_end_time:2020-02-01 18:46:09
+##
+##### The obj 199072 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199071, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:46:15 The obj of 199073 is complete.#
+###### Get news (2020-02-01 18:46:37) ######
+##### F60 : Case 1
+##### F30 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198092, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199071, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### The obj 199071 of F60: Sending.##
+199071,
+append_plan hanxuhui oba && append_object NGC0080 0.353018 22.3573 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:46:48,
+send_end_time:2020-02-01 18:46:54
+##
+##### The obj 199071 of F60: Send ok.
+##### There is no free units of F60 when send 199070, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:46:33 The obj of 199074 is complete.#
+###### Get news (2020-02-01 18:47:21) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198092, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+###### The obj 199070 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199070,
+append_plan hanxuhui oba && append_object PGC1667882 0.352798 22.3278 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:47:29,
+send_end_time:2020-02-01 18:47:35
+##
+##### The obj 199070 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199069, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:47:56 The obj of 198095 is complete.##
+2020-02-01 18:47:44 The obj of 199072 is complete.##
+2020-02-01 18:47:58 The obj of 199071 is complete.#
+###### Get news (2020-02-01 18:48:08) ######
+##### F30 : Case 1
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### The obj 198092 of F30: Sending.
+###### The obj 199069 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199069,
+append_plan hanxuhui oba && append_object PGC1668790 0.352296666667 22.3778 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:48:14,
+send_end_time:2020-02-01 18:48:21
+####
+198092,
+append_plan hanxuhui mon ; append_object G0015_13840688 9.229 68.85 2000 4 30 1 R 10 ; append_plan gwac default ,
+send_beg_time:2020-02-01 18:48:14,
+send_end_time:2020-02-01 18:48:18
+##
+##### The obj 199069 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199068 of F60: Sending.
+##### The obj 198092 of F30: Send ok.##
+199068,
+append_plan hanxuhui oba && append_object SDSSJ002107.77+00495 0.35216 0.83174 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:48:35,
+send_end_time:2020-02-01 18:48:43
+##
+##### The obj 199068 of F60: Send ok.
+##### There is no free units of F60 when send 199067, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:48:58) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198075, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199067, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199067, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:49:08) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199067, don't need to send.
+##### F60 : Case 1
+##### There is no free units of F30 when send 198075, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199067, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:48:55 The obj of 199070 is complete.#
+###### Get news (2020-02-01 18:49:28) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198075, don't need to send.
+###### The obj 199067 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199067,
+append_plan hanxuhui oba && append_object 00210672+1227551 0.351869333333 12.4653 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:49:35,
+send_end_time:2020-02-01 18:49:39
+##
+##### The obj 199067 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199066, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:49:52 The obj of 199068 is complete.#
+###### Get news (2020-02-01 18:50:05) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198075, don't need to send.
+##### There is no free units of F60 when send 199066, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 199066 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199066,
+append_plan hanxuhui oba && append_object PGC1176738 0.35081 0.83346 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:50:14,
+send_end_time:2020-02-01 18:50:20
+##
+##### The obj 199066 of F60: Send ok.
+##### There is no free units of F60 when send 199065, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:50:04 The obj of 199069 is complete.#
+###### Get news (2020-02-01 18:50:50) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F30 when send 198075, don't need to send.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+###### The obj 199065 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199065,
+append_plan hanxuhui oba && append_object NGC0079 0.350788 22.5664 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:50:55,
+send_end_time:2020-02-01 18:51:00
+##
+##### The obj 199065 of F60: Send ok.
+##### F60 : Case 1
+##### There is no free units of F60 when send 199064, don't need to send.
+###### Ready to get news #######
+2020-02-01 18:51:15 The obj of 198092 is complete.##
+2020-02-01 18:51:24 The obj of 199066 is complete.##
+2020-02-01 18:51:19 The obj of 199067 is complete.#
+###### Get news (2020-02-01 18:51:32) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+###### The obj 199064 of F60: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.##
+199064,
+append_plan hanxuhui oba && append_object PGC1181260 0.35046 0.9926 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:51:37,
+send_end_time:2020-02-01 18:51:42
+##
+##### The obj 199064 of F60: Send ok.
+##### F60 : Case 1
+###### The obj 199063 of F60: Sending.##
+199063,
+append_plan hanxuhui oba && append_object PGC001338 0.34994 -1.80073 2000 4 20 3 Lum 20 && append_plan gwac default ,
+send_beg_time:2020-02-01 18:51:55,
+send_end_time:2020-02-01 18:51:59
+##
+##### The obj 199063 of F60: Send ok.
+##### There is no free units of F60 when send 199062, don't need to send.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:52:07) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 198075 of F30: Sending.
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199062, don't need to send.
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 198084, don't need to send.
+##### There is no free units of F60 when send 199062, don't need to send.##
+198075,
+append_plan hanxuhui mon ; append_object G0015_13810416 9.209 41.65 2000 4 30 1 R 10 ; append_plan gwac default ,
+send_beg_time:2020-02-01 18:52:12,
+send_end_time:2020-02-01 18:52:15
+##
+##### The obj 198075 of F30: Send ok.
+###### Ready to get news ######
+###### Get news (2020-02-01 18:52:33) ######
+##### F30 : Case 1
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 199062, don't need to send.
+##### There is no free units of F30 when send 198068, don't need to send.
+##### There is no fr

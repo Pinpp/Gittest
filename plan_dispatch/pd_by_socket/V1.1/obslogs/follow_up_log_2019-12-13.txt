@@ -1,0 +1,855 @@
+
+
+
+Restart at: 2019-12-13 17:42:41.610841
+
+Run times：123 
+Last id : 33967 
+obj_name=G191213_C00013 objsour=GWAC_followup observer=GWAC objra=353.371 objdec=4.92715 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C00013_001   note=33968 mode=observation
+2019-12-13 17:44:39.739000
+
+
+Run times：203 
+Last id : 33968 
+obj_name=G191213_C00141 objsour=GWAC_followup observer=GWAC objra=339.318 objdec=-14.4414 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C00141_001   note=33969 mode=observation
+2019-12-13 17:46:04.167000
+
+
+Run times：1452 
+Last id : 33969 
+obj_name=G191213_C01337 objsour=GWAC_followup observer=GWAC objra=352.139 objdec=0.473074 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C01337_001   note=33970 mode=observation
+2019-12-13 18:06:54.940000
+
+
+Run times：2239 
+Last id : 33970 
+obj_name=G191213_C01602 objsour=GWAC_followup observer=GWAC objra=339.115 objdec=26.497 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C01602_001   note=33971 mode=observation
+2019-12-13 18:19:58.437000
+
+
+Run times：2387 
+Last id : 33971 
+obj_name=G191213_C01337 objsour=GWAC_followup observer=GWAC objra=352.141 objdec=0.471241 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=3 priority=50 run_name=G191213_C01337_002   note=33972 mode=observation
+2019-12-13 18:22:17.102000
+
+
+Run times：2415 
+Last id : 33972 
+obj_name=G191213_C01876 objsour=GWAC_followup observer=GWAC objra=323.626 objdec=33.0051 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C01876_001   note=33973 mode=observation
+2019-12-13 18:22:52.021000
+
+
+Run times：2480 
+Last id : 33973 
+obj_name=G191213_C01602 objsour=GWAC_followup observer=GWAC objra=339.115 objdec=26.497 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=80 delay=0 frmcnt=2 priority=50 run_name=G191213_C01602_002   note=33974 mode=observation
+2019-12-13 18:23:59.496000
+
+
+Run times：3980 
+Last id : 33974 
+obj_name=G191213_C02462 objsour=GWAC_followup observer=GWAC objra=339.772 objdec=33.5065 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C02462_001   note=33975 mode=observation
+2019-12-13 18:45:52.158000
+
+
+Run times：4418 
+Last id : 33975 
+obj_name=G191213_C02569 objsour=GWAC_followup observer=GWAC objra=321.321 objdec=-14.4278 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C02569_001   note=33976 mode=observation
+2019-12-13 18:53:08.228000
+
+
+Run times：4419 
+Last id : 33976 
+obj_name=G191213_C02578 objsour=GWAC_followup observer=GWAC objra=339.822 objdec=-18.3072 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C02578_001   note=33977 mode=observation
+2019-12-13 18:53:11.808000
+
+
+Run times：5037 
+Last id : 33977 
+obj_name=G191213_C02684 objsour=GWAC_followup observer=GWAC objra=329.5 objdec=19.1182 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C02684_001   note=33978 mode=observation
+2019-12-13 19:03:34.018000
+
+
+Run times：6558 
+Last id : 33978 
+obj_name=G191213_C03057 objsour=GWAC_followup observer=GWAC objra=326.148 objdec=33.5457 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C03057_001   note=33979 mode=observation
+2019-12-13 19:29:00.235000
+
+
+Run times：6692 
+Last id : 33979 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.278 objdec=48.2557 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C03040_001   note=33980 mode=observation
+2019-12-13 19:31:21.809000
+
+
+Run times：6725 
+Last id : 33980 
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.317 objdec=27.93 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C03375_001   note=33981 mode=observation
+2019-12-13 19:31:55.720000
+
+
+Run times：6847 
+Last id : 33981 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03040_002   note=33982 mode=observation
+2019-12-13 19:34:16.639000
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03040_003   note=33983 mode=observation
+2019-12-13 19:34:16.994000
+
+
+Run times：6885 
+Last id : 33983 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.161 objdec=71.5924 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C03664_001   note=33984 mode=observation
+2019-12-13 19:35:01.597000
+
+
+Run times：7034 
+Last id : 33984 
+obj_name=G191213_C03972 objsour=GWAC_followup observer=GWAC objra=329.504 objdec=56.7426 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C03972_001   note=33985 mode=observation
+2019-12-13 19:37:25.719000
+
+
+Run times：7044 
+Last id : 33985 
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.312 objdec=27.9229 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03375_002   note=33986 mode=observation
+2019-12-13 19:37:39.701000
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.312 objdec=27.9229 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03375_003   note=33987 mode=observation
+2019-12-13 19:37:40.028000
+
+
+Run times：7091 
+Last id : 33987 
+obj_name=G191213_C04092 objsour=GWAC_followup observer=GWAC objra=310.252 objdec=52.0061 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04092_001   note=33988 mode=observation
+2019-12-13 19:38:40.720000
+
+
+Run times：7149 
+Last id : 33988 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_004   note=33989 mode=observation
+2019-12-13 19:39:53.981000
+
+
+Run times：7150 
+Last id : 33989 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_005   note=33990 mode=observation
+2019-12-13 19:39:55.586000
+
+
+Run times：7197 
+Last id : 33990 
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.312 objdec=27.9229 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=64 delay=0 frmcnt=1 priority=41 run_name=G191213_C03375_004   note=33991 mode=observation
+2019-12-13 19:40:50.786000
+
+
+Run times：7198 
+Last id : 33991 
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.312 objdec=27.9229 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=64 delay=0 frmcnt=1 priority=41 run_name=G191213_C03375_005   note=33992 mode=observation
+2019-12-13 19:40:51.136000
+
+
+Run times：7446 
+Last id : 33992 
+obj_name=G191213_C03375 objsour=GWAC_followup observer=GWAC objra=325.312 objdec=27.9229 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=150 delay=0 frmcnt=1 priority=40 run_name=G191213_C03375_006   note=33993 mode=observation
+2019-12-13 19:45:00.508000
+
+
+Run times：7663 
+Last id : 33993 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03664_002   note=33994 mode=observation
+2019-12-13 19:48:39.381000
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03664_003   note=33995 mode=observation
+2019-12-13 19:48:39.706000
+
+
+Run times：7934 
+Last id : 33995 
+obj_name=G191213_C03972 objsour=GWAC_followup observer=GWAC objra=329.505 objdec=56.7471 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03972_002   note=33996 mode=observation
+2019-12-13 19:53:27.815000
+obj_name=G191213_C03972 objsour=GWAC_followup observer=GWAC objra=329.505 objdec=56.7471 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C03972_003   note=33997 mode=observation
+2019-12-13 19:53:28.163000
+
+
+Run times：7941 
+Last id : 33997 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_004   note=33998 mode=observation
+2019-12-13 19:53:40.405000
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_005   note=33999 mode=observation
+2019-12-13 19:53:40.763000
+
+
+Run times：8073 
+Last id : 33999 
+obj_name=G191213_C03972 objsour=GWAC_followup observer=GWAC objra=329.505 objdec=56.7471 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=150 delay=0 frmcnt=1 priority=41 run_name=G191213_C03972_004   note=34000 mode=observation
+2019-12-13 19:56:10.027000
+
+
+Run times：8260 
+Last id : 34000 
+obj_name=G191213_C04725 objsour=GWAC_followup observer=GWAC objra=282.255 objdec=67.9281 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04725_001   note=34001 mode=observation
+2019-12-13 19:59:27.263000
+
+
+Run times：10843 
+Last id : 34001 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_006   note=34002 mode=observation
+2019-12-13 20:42:40.081000
+
+
+Run times：10844 
+Last id : 34002 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_007   note=34003 mode=observation
+2019-12-13 20:42:40.728000
+
+
+Run times：11238 
+Last id : 34003 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_006   note=34004 mode=observation
+2019-12-13 20:49:15.252000
+
+
+Run times：11239 
+Last id : 34004 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_007   note=34005 mode=observation
+2019-12-13 20:49:15.828000
+
+
+Run times：11927 
+Last id : 34005 
+obj_name=G191213_C04753 objsour=GWAC_followup observer=GWAC objra=99.5199 objdec=72.9033 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04753_001   note=34006 mode=observation
+2019-12-13 20:56:41.571000
+
+
+Run times：12070 
+Last id : 34006 
+obj_name=G191213_C04766 objsour=GWAC_followup observer=GWAC objra=98.8308 objdec=72.5549 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04766_001   note=34007 mode=observation
+2019-12-13 20:59:05.866000
+
+
+Run times：12145 
+Last id : 34007 
+obj_name=G191213_C04771 objsour=GWAC_followup observer=GWAC objra=98.8364 objdec=72.5917 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04771_001   note=34008 mode=observation
+2019-12-13 21:00:25.678000
+
+
+Run times：12238 
+Last id : 34008 
+obj_name=G191213_C04779 objsour=GWAC_followup observer=GWAC objra=81.3538 objdec=51.931 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04779_001   note=34009 mode=observation
+2019-12-13 21:02:03.034000
+
+
+Run times：12329 
+Last id : 34009 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1645 objdec=50.2276 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04794_001   note=34010 mode=observation
+2019-12-13 21:03:37.564000
+
+
+Run times：12558 
+Last id : 34010 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C04794_002   note=34011 mode=observation
+2019-12-13 21:07:23.408000
+
+
+Run times：12559 
+Last id : 34011 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C04794_003   note=34012 mode=observation
+2019-12-13 21:07:23.781000
+
+
+Run times：12850 
+Last id : 34012 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_004   note=34013 mode=observation
+2019-12-13 21:12:12.118000
+
+
+Run times：12851 
+Last id : 34013 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_005   note=34014 mode=observation
+2019-12-13 21:12:12.734000
+
+
+Run times：12898 
+Last id : 34014 
+obj_name=G191213_C04878 objsour=GWAC_followup observer=GWAC objra=98.6761 objdec=72.5533 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04878_001   note=34015 mode=observation
+2019-12-13 21:13:12.179000
+
+
+Run times：13063 
+Last id : 34015 
+obj_name=G191213_C04888 objsour=GWAC_followup observer=GWAC objra=98.6325 objdec=72.5406 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04888_001   note=34016 mode=observation
+2019-12-13 21:15:52.832000
+
+
+Run times：13813 
+Last id : 34016 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_008   note=34017 mode=observation
+2019-12-13 21:26:06.455000
+
+
+Run times：13814 
+Last id : 34017 
+obj_name=G191213_C03040 objsour=GWAC_followup observer=GWAC objra=313.254 objdec=48.2599 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03040_009   note=34018 mode=observation
+2019-12-13 21:26:07.024000
+
+
+Run times：14038 
+Last id : 34018 
+obj_name=G191213_C04914 objsour=GWAC_followup observer=GWAC objra=51.206 objdec=22.8644 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04914_001   note=34019 mode=observation
+2019-12-13 21:30:11.211000
+
+
+Run times：14043 
+Last id : 34019 
+obj_name=G191213_C04927 objsour=GWAC_followup observer=GWAC objra=51.8918 objdec=35.4324 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04927_001   note=34020 mode=observation
+2019-12-13 21:30:21.855000
+
+
+Run times：14044 
+Last id : 34020 
+obj_name=G191213_C04926 objsour=GWAC_followup observer=GWAC objra=51.3579 objdec=24.6564 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04926_001   note=34021 mode=observation
+2019-12-13 21:30:25.722000
+obj_name=G191213_C04916 objsour=GWAC_followup observer=GWAC objra=53.725 objdec=18.9273 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04916_001   note=34022 mode=observation
+2019-12-13 21:30:25.722000
+
+
+Run times：14070 
+Last id : 34022 
+obj_name=G191213_C04948 objsour=GWAC_followup observer=GWAC objra=59.9381 objdec=31.3616 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04948_001   note=34023 mode=observation
+2019-12-13 21:31:00.733000
+
+
+Run times：14078 
+Last id : 34023 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_008   note=34024 mode=observation
+2019-12-13 21:31:13.394000
+obj_name=G191213_C04960 objsour=GWAC_followup observer=GWAC objra=53.9074 objdec=18.9265 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C04960_001   note=34025 mode=observation
+2019-12-13 21:31:13.872000
+
+
+Run times：14079 
+Last id : 34025 
+obj_name=G191213_C03664 objsour=GWAC_followup observer=GWAC objra=316.164 objdec=71.5907 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C03664_009   note=34026 mode=observation
+2019-12-13 21:31:14.009000
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_006   note=34027 mode=observation
+2019-12-13 21:31:15.459000
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_007   note=34028 mode=observation
+2019-12-13 21:31:15.784000
+
+
+Run times：14371 
+Last id : 34028 
+obj_name=G191213_C05033 objsour=GWAC_followup observer=GWAC objra=59.0513 objdec=22.2214 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05033_001   note=34029 mode=observation
+2019-12-13 21:36:35.283000
+
+
+Run times：14378 
+Last id : 34029 
+obj_name=G191213_C05035 objsour=GWAC_followup observer=GWAC objra=51.0083 objdec=32.5247 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05035_001   note=34030 mode=observation
+2019-12-13 21:36:47.668000
+
+
+Run times：14391 
+Last id : 34030 
+obj_name=G191213_C05036 objsour=GWAC_followup observer=GWAC objra=51.4181 objdec=22.8779 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05036_001   note=34031 mode=observation
+2019-12-13 21:37:04.891000
+
+
+Run times：15069 
+Last id : 34031 
+obj_name=G191213_C05114 objsour=GWAC_followup observer=GWAC objra=56.9415 objdec=25.2908 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05114_001   note=34032 mode=observation
+2019-12-13 21:48:18.823000
+
+
+Run times：15600 
+Last id : 34032 
+obj_name=G191213_C05150 objsour=GWAC_followup observer=GWAC objra=57.1769 objdec=34.0647 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05150_001   note=34033 mode=observation
+2019-12-13 21:57:03.659000
+
+
+Run times：17229 
+Last id : 34033 
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_008   note=34034 mode=observation
+2019-12-13 22:24:13.090000
+obj_name=G191213_C04794 objsour=GWAC_followup observer=GWAC objra=79.1711 objdec=50.2257 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C04794_009   note=34035 mode=observation
+2019-12-13 22:24:13.647000
+
+
+Run times：18069 
+Last id : 34035 
+obj_name=G191213_C05277 objsour=GWAC_followup observer=GWAC objra=109.931 objdec=51.9433 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05277_001   note=34036 mode=observation
+2019-12-13 22:38:29.859000
+
+
+Run times：18307 
+Last id : 34036 
+obj_name=G191213_C05277 objsour=GWAC_followup observer=GWAC objra=109.955 objdec=51.944 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05277_002   note=34037 mode=observation
+2019-12-13 22:41:11.768000
+
+
+Run times：18315 
+Last id : 34037 
+obj_name=G191213_C05277 objsour=GWAC_followup observer=GWAC objra=109.955 objdec=51.944 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05277_003   note=34038 mode=observation
+2019-12-13 22:41:17.445000
+
+
+Run times：18706 
+Last id : 34038 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.644 objdec=-19.8443 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05294_001   note=34039 mode=observation
+2019-12-13 22:46:19.466000
+
+
+Run times：18858 
+Last id : 34039 
+obj_name=G191213_C05297 objsour=GWAC_followup observer=GWAC objra=163.056 objdec=68.9834 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05297_001   note=34040 mode=observation
+2019-12-13 22:48:54.958000
+
+
+Run times：19625 
+Last id : 34040 
+obj_name=G191213_C05310 objsour=GWAC_followup observer=GWAC objra=163.079 objdec=68.973 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05310_001   note=34041 mode=observation
+2019-12-13 23:01:42.959000
+
+
+Run times：20252 
+Last id : 34041 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.762 objdec=32.8725 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05360_001   note=34042 mode=observation
+2019-12-13 23:11:55.722000
+
+
+Run times：20316 
+Last id : 34042 
+obj_name=G191213_C05330 objsour=GWAC_followup observer=GWAC objra=40.2267 objdec=35.6002 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05330_001   note=34043 mode=observation
+2019-12-13 23:13:03.564000
+
+
+Run times：20401 
+Last id : 34043 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_002   note=34044 mode=observation
+2019-12-13 23:14:33.826000
+
+
+Run times：20402 
+Last id : 34044 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_003   note=34045 mode=observation
+2019-12-13 23:14:34.152000
+
+
+Run times：20527 
+Last id : 34045 
+obj_name=G191213_C05478 objsour=GWAC_followup observer=GWAC objra=42.0459 objdec=39.4605 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05478_001   note=34046 mode=observation
+2019-12-13 23:16:35.954000
+
+
+Run times：20540 
+Last id : 34046 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=36 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_004   note=34047 mode=observation
+2019-12-13 23:16:50.108000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=36 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_005   note=34048 mode=observation
+2019-12-13 23:16:50.451000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=36 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_006   note=34049 mode=observation
+2019-12-13 23:16:50.798000
+
+
+Run times：20541 
+Last id : 34049 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=36 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_007   note=34050 mode=observation
+2019-12-13 23:16:51.127000
+
+
+Run times：20832 
+Last id : 34050 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=43 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_008   note=34051 mode=observation
+2019-12-13 23:21:56.353000
+
+
+Run times：20833 
+Last id : 34051 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=43 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_009   note=34052 mode=observation
+2019-12-13 23:21:56.928000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=43 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_010   note=34053 mode=observation
+2019-12-13 23:21:57.253000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=43 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_011   note=34054 mode=observation
+2019-12-13 23:21:57.576000
+
+
+Run times：21374 
+Last id : 34054 
+obj_name=G191213_C05478 objsour=GWAC_followup observer=GWAC objra=42.0463 objdec=39.4622 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05478_002   note=34055 mode=observation
+2019-12-13 23:31:32.462000
+obj_name=G191213_C05478 objsour=GWAC_followup observer=GWAC objra=42.0463 objdec=39.4622 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05478_003   note=34056 mode=observation
+2019-12-13 23:31:32.782000
+
+
+Run times：21670 
+Last id : 34056 
+obj_name=G191213_C05478 objsour=GWAC_followup observer=GWAC objra=42.0463 objdec=39.4622 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05478_004   note=34057 mode=observation
+2019-12-13 23:36:31.707000
+obj_name=G191213_C05478 objsour=GWAC_followup observer=GWAC objra=42.0463 objdec=39.4622 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05478_005   note=34058 mode=observation
+2019-12-13 23:36:32.289000
+
+
+Run times：21916 
+Last id : 34058 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=43 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_012   note=34059 mode=observation
+2019-12-13 23:40:50.897000
+
+
+Run times：21917 
+Last id : 34059 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=43 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_013   note=34060 mode=observation
+2019-12-13 23:40:56.492000
+
+
+Run times：22224 
+Last id : 34060 
+obj_name=G191213_C05610 objsour=GWAC_followup observer=GWAC objra=129.148 objdec=18.9503 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05610_001   note=34061 mode=observation
+2019-12-13 23:46:10.213000
+
+
+Run times：22337 
+Last id : 34061 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=48 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_014   note=34062 mode=observation
+2019-12-13 23:48:11.294000
+
+
+Run times：22338 
+Last id : 34062 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=48 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_015   note=34063 mode=observation
+2019-12-13 23:48:11.609000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=48 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_016   note=34064 mode=observation
+2019-12-13 23:48:11.923000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=48 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_017   note=34065 mode=observation
+2019-12-13 23:48:12.247000
+
+
+Run times：23728 
+Last id : 34065 
+obj_name=G191213_C05719 objsour=GWAC_followup observer=GWAC objra=78.2233 objdec=-1.34569 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05719_001   note=34066 mode=observation
+2019-12-14 00:11:53.344000
+
+
+Run times：23808 
+Last id : 34066 
+obj_name=G191213_C05730 objsour=GWAC_followup observer=GWAC objra=80.2389 objdec=-0.341759 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05730_001   note=34067 mode=observation
+2019-12-14 00:13:14.072000
+
+
+Run times：23843 
+Last id : 34067 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2121 objdec=-1.94341 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05736_001   note=34068 mode=observation
+2019-12-14 00:13:54.423000
+
+
+Run times：24091 
+Last id : 34068 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05736_002   note=34069 mode=observation
+2019-12-14 00:18:07.856000
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05736_003   note=34070 mode=observation
+2019-12-14 00:18:08.241000
+
+
+Run times：24224 
+Last id : 34070 
+obj_name=G191213_C05761 objsour=GWAC_followup observer=GWAC objra=79.7955 objdec=-0.997991 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05761_001   note=34071 mode=observation
+2019-12-14 00:20:27.349000
+
+
+Run times：24364 
+Last id : 34071 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_004   note=34072 mode=observation
+2019-12-14 00:22:45.629000
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_005   note=34073 mode=observation
+2019-12-14 00:22:45.972000
+
+
+Run times：24370 
+Last id : 34073 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05294_002   note=34074 mode=observation
+2019-12-14 00:22:58.385000
+
+
+Run times：24371 
+Last id : 34074 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=41 run_name=G191213_C05294_003   note=34075 mode=observation
+2019-12-14 00:22:58.724000
+
+
+Run times：24638 
+Last id : 34075 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_004   note=34076 mode=observation
+2019-12-14 00:27:53.375000
+
+
+Run times：24639 
+Last id : 34076 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_005   note=34077 mode=observation
+2019-12-14 00:27:54.983000
+
+
+Run times：24774 
+Last id : 34077 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=53 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_018   note=34078 mode=observation
+2019-12-14 00:30:22.075000
+
+
+Run times：24775 
+Last id : 34078 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=53 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_019   note=34079 mode=observation
+2019-12-14 00:30:22.619000
+obj_name=G191213_C05797 objsour=GWAC_followup observer=GWAC objra=79.2605 objdec=-2.33834 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05797_001   note=34080 mode=observation
+2019-12-14 00:30:26.179000
+
+
+Run times：24946 
+Last id : 34080 
+obj_name=G191213_C05811 objsour=GWAC_followup observer=GWAC objra=77.7993 objdec=-5.31052 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05811_001   note=34081 mode=observation
+2019-12-14 00:33:41.486000
+
+
+Run times：25107 
+Last id : 34081 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=63 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_020   note=34082 mode=observation
+2019-12-14 00:36:37.770000
+
+
+Run times：25108 
+Last id : 34082 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=63 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_021   note=34083 mode=observation
+2019-12-14 00:36:38.368000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=63 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_022   note=34084 mode=observation
+2019-12-14 00:36:38.701000
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=63 delay=0 frmcnt=1 priority=41 run_name=G191213_C05360_023   note=34085 mode=observation
+2019-12-14 00:36:39.027000
+
+
+Run times：25344 
+Last id : 34085 
+obj_name=G191213_C05823 objsour=GWAC_followup observer=GWAC objra=125.351 objdec=14.0187 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05823_001   note=34086 mode=observation
+2019-12-14 00:41:03.953000
+
+
+Run times：25376 
+Last id : 34086 
+obj_name=G191213_C05826 objsour=GWAC_followup observer=GWAC objra=146.762 objdec=0.291245 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C05826_001   note=34087 mode=observation
+2019-12-14 00:41:38.657000
+
+
+Run times：25988 
+Last id : 34087 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_006   note=34088 mode=observation
+2019-12-14 00:51:10.785000
+
+
+Run times：25989 
+Last id : 34088 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_007   note=34089 mode=observation
+2019-12-14 00:51:11.345000
+
+
+Run times：26138 
+Last id : 34089 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_006   note=34090 mode=observation
+2019-12-14 00:52:26.891000
+
+
+Run times：26146 
+Last id : 34090 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_007   note=34091 mode=observation
+2019-12-14 00:52:32.480000
+
+
+Run times：26466 
+Last id : 34091 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=63 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_024   note=34092 mode=observation
+2019-12-14 00:58:11.078000
+
+
+Run times：26467 
+Last id : 34092 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=63 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_025   note=34093 mode=observation
+2019-12-14 00:58:11.668000
+
+
+Run times：27542 
+Last id : 34093 
+obj_name=G191213_C06113 objsour=GWAC_followup observer=GWAC objra=117.353 objdec=75.852 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C06113_001   note=34094 mode=observation
+2019-12-14 01:16:48.369000
+
+
+Run times：28492 
+Last id : 34094 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_008   note=34095 mode=observation
+2019-12-14 01:32:52.739000
+
+
+Run times：28493 
+Last id : 34095 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_009   note=34096 mode=observation
+2019-12-14 01:32:53.352000
+
+
+Run times：28611 
+Last id : 34096 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_008   note=34097 mode=observation
+2019-12-14 01:34:58.082000
+
+
+Run times：28612 
+Last id : 34097 
+obj_name=G191213_C05736 objsour=GWAC_followup observer=GWAC objra=78.2094 objdec=-1.93774 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05736_009   note=34098 mode=observation
+2019-12-14 01:35:03.707000
+
+
+Run times：29084 
+Last id : 34098 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=63 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_026   note=34099 mode=observation
+2019-12-14 01:43:07.738000
+
+
+Run times：29085 
+Last id : 34099 
+obj_name=G191213_C05360 objsour=GWAC_followup observer=GWAC objra=54.7625 objdec=32.8749 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=63 delay=0 frmcnt=1 priority=40 run_name=G191213_C05360_027   note=34100 mode=observation
+2019-12-14 01:43:08.297000
+
+
+Run times：29379 
+Last id : 34100 
+obj_name=G191213_C06242 objsour=GWAC_followup observer=GWAC objra=149.111 objdec=48.4253 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C06242_001   note=34101 mode=observation
+2019-12-14 01:48:10.239000
+
+
+Run times：29421 
+Last id : 34101 
+obj_name=G191213_C06967 objsour=GWAC_followup observer=GWAC objra=147.838 objdec=19.1082 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C06967_001   note=34102 mode=observation
+2019-12-14 01:48:57.085000
+
+
+Run times：29458 
+Last id : 34102 
+obj_name=G191213_C06976 objsour=GWAC_followup observer=GWAC objra=147.958 objdec=18.9387 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C06976_001   note=34103 mode=observation
+2019-12-14 01:49:39.042000
+
+
+Run times：29837 
+Last id : 34103 
+obj_name=G191213_C06992 objsour=GWAC_followup observer=GWAC objra=146.495 objdec=28.8563 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C06992_001   note=34104 mode=observation
+2019-12-14 01:56:07.134000
+
+
+Run times：30947 
+Last id : 34104 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_010   note=34105 mode=observation
+2019-12-14 02:14:45.296000
+
+
+Run times：30948 
+Last id : 34105 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_011   note=34106 mode=observation
+2019-12-14 02:14:50.877000
+
+
+Run times：31327 
+Last id : 34106 
+obj_name=G191213_C07018 objsour=GWAC_followup observer=GWAC objra=172.053 objdec=47.4283 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07018_001   note=34107 mode=observation
+2019-12-14 02:21:22.588000
+
+
+Run times：31328 
+Last id : 34107 
+obj_name=G191213_C07023 objsour=GWAC_followup observer=GWAC objra=159.479 objdec=2.34975 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07023_001   note=34108 mode=observation
+2019-12-14 02:21:29.107000
+
+
+Run times：31379 
+Last id : 34108 
+obj_name=G191213_C07039 objsour=GWAC_followup observer=GWAC objra=159.618 objdec=2.25102 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07039_001   note=34109 mode=observation
+2019-12-14 02:22:26.317000
+
+
+Run times：32052 
+Last id : 34109 
+obj_name=G191213_C07082 objsour=GWAC_followup observer=GWAC objra=179.937 objdec=54.0972 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07082_001   note=34110 mode=observation
+2019-12-14 02:33:56.727000
+
+
+Run times：32755 
+Last id : 34110 
+obj_name=G191213_C07101 objsour=GWAC_followup observer=GWAC objra=172.291 objdec=1.8523 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07101_001   note=34111 mode=observation
+2019-12-14 02:45:46.169000
+
+
+Run times：33265 
+Last id : 34111 
+obj_name=G191213_C07116 objsour=GWAC_followup observer=GWAC objra=152.368 objdec=13.0722 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07116_001   note=34112 mode=observation
+2019-12-14 02:54:43.768000
+
+
+Run times：33282 
+Last id : 34112 
+obj_name=G191213_C07122 objsour=GWAC_followup observer=GWAC objra=172.297 objdec=69.5464 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07122_001   note=34113 mode=observation
+2019-12-14 02:55:01.470000
+
+
+Run times：33324 
+Last id : 34113 
+obj_name=G191213_C07131 objsour=GWAC_followup observer=GWAC objra=141.666 objdec=2.26994 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07131_001   note=34114 mode=observation
+2019-12-14 02:55:44.254000
+
+
+Run times：33403 
+Last id : 34114 
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=B expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_012   note=34115 mode=observation
+2019-12-14 02:57:12.219000
+obj_name=G191213_C05294 objsour=GWAC_followup observer=GWAC objra=107.638 objdec=-19.8363 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=1 priority=40 run_name=G191213_C05294_013   note=34116 mode=observation
+2019-12-14 02:57:12.804000
+
+
+Run times：33434 
+Last id : 34116 
+obj_name=G191213_C07155 objsour=GWAC_followup observer=GWAC objra=154.305 objdec=1.87482 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07155_001   note=34117 mode=observation
+2019-12-14 02:57:53.156000
+
+
+Run times：35210 
+Last id : 34117 
+obj_name=G191213_C07272 objsour=GWAC_followup observer=GWAC objra=198.904 objdec=19.0232 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07272_001   note=34118 mode=observation
+2019-12-14 03:28:17.008000
+
+
+Run times：35292 
+Last id : 34118 
+obj_name=G191213_C07357 objsour=GWAC_followup observer=GWAC objra=197.172 objdec=30.0205 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07357_001   note=34119 mode=observation
+2019-12-14 03:29:40.722000
+
+
+Run times：40285 
+Last id : 34119 
+obj_name=G191213_C07694 objsour=GWAC_followup observer=GWAC objra=213.985 objdec=30.1199 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07694_001   note=34120 mode=observation
+2019-12-14 04:51:59.077000
+
+
+Run times：41142 
+Last id : 34120 
+obj_name=G191213_C07720 objsour=GWAC_followup observer=GWAC objra=213.995 objdec=35.8263 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07720_001   note=34121 mode=observation
+2019-12-14 05:05:50.276000
+
+
+Run times：41773 
+Last id : 34121 
+obj_name=G191213_C07827 objsour=GWAC_followup observer=GWAC objra=216.198 objdec=43.8844 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07827_001   note=34122 mode=observation
+2019-12-14 05:15:53.950000
+
+
+Run times：41834 
+Last id : 34122 
+obj_name=G191213_C07871 objsour=GWAC_followup observer=GWAC objra=217.871 objdec=42.6206 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07871_001   note=34123 mode=observation
+2019-12-14 05:17:02.014000
+
+
+Run times：42008 
+Last id : 34123 
+obj_name=G191213_C07996 objsour=GWAC_followup observer=GWAC objra=225.594 objdec=51.5067 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C07996_001   note=34124 mode=observation
+2019-12-14 05:20:05.114000
+
+
+Run times：42599 
+Last id : 34124 
+obj_name=G191213_C08097 objsour=GWAC_followup observer=GWAC objra=221.266 objdec=30.6863 objepoch=2000 objerror=0.0|0.0 objrank=0 group_id=XL002 unit_id=001 obs_type=goa obs_stra=pointing date_beg=2019/12/13 date_end=2019/12/13 day_int=0 imgtype=object filter=R expdur=30 delay=0 frmcnt=2 priority=40 run_name=G191213_C08097_001   note=34125 mode=observation
+2019-12-14 05:29:58.609000

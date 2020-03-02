@@ -1,0 +1,3455 @@
+
+###### Get news (2019-12-30 00:00:14) ######
+##### F60 : Case 2
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161126 of GWAC: Sending.##
+161126,
+tryclient 'append_gwac Op_sn=161126, Op_time=2019-12-29T16:00:19, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=16810765, Obj_ID=moniotr,RA=168.18, DEC=76.5, Epoch=2000, ObjRA=168.18, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T16:00:19, end_time=2019-12-29T16:30:19 Pair_ID=0',
+send_beg_time:2019-12-30 00:00:19,
+send_end_time:2019-12-30 00:00:25
+##
+##### The obj 161126 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 161102 of GWAC: Sending.##
+161102,
+tryclient 'append_gwac Op_sn=161102, Op_time=2019-12-29T16:00:45, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=16280425, Obj_ID=moniotr,RA=162.84, DEC=42.5, Epoch=2000, ObjRA=162.84, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T16:00:45, end_time=2019-12-29T16:30:45 Pair_ID=0',
+send_beg_time:2019-12-30 00:00:44,
+send_end_time:2019-12-30 00:00:51
+##
+##### The obj 161102 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:19:42) ######
+##### F60 : Case 2
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161085, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161085, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:31:25) ######
+##### GWAC : Case 1
+##### F60 : Case 2
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161085, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161085, don't need to send.
+###### Ready to get news #######
+2019-12-30 00:33:57 The obj of 161126 is complete.#
+###### Get news (2019-12-30 00:34:10) ######
+##### F30 : Case 2
+##### F60 : Case 2
+##### GWAC : Case 1
+###### The obj 161085 of GWAC: Sending.##
+161085,
+tryclient 'append_gwac Op_sn=161085, Op_time=2019-12-29T16:34:13, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=15990255, Obj_ID=moniotr,RA=159.99, DEC=25.5, Epoch=2000, ObjRA=159.99, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T16:34:13, end_time=2019-12-29T17:04:13 Pair_ID=0',
+send_beg_time:2019-12-30 00:34:13,
+send_end_time:2019-12-30 00:34:19
+###
+2019-12-30 00:34:01 The obj of 161102 is complete.#
+##### The obj 161085 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 161116 of GWAC: Sending.##
+161116,
+tryclient 'append_gwac Op_sn=161116, Op_time=2019-12-29T16:34:32, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=15730595, Obj_ID=moniotr,RA=157.31, DEC=59.5, Epoch=2000, ObjRA=157.31, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T16:34:32, end_time=2019-12-29T17:04:32 Pair_ID=0',
+send_beg_time:2019-12-30 00:34:32,
+send_end_time:2019-12-30 00:34:39
+##
+##### The obj 161116 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:34:48) ######
+##### F30 : Case 2
+##### F60 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161053, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161053, don't need to send.
+###### Ready to get news #######
+2019-12-30 00:35:26 The obj of 161085 is complete.#
+###### Get news (2019-12-30 00:35:44) ######
+##### F60 : Case 2
+##### GWAC : Case 1
+##### F30 : Case 2
+###### The obj 161053 of GWAC: Sending.##
+161053,
+tryclient 'append_gwac Op_sn=161053, Op_time=2019-12-29T16:35:48, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=15300085, Obj_ID=moniotr,RA=153.0, DEC=8.5, Epoch=2000, ObjRA=153.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T16:35:48, end_time=2019-12-29T17:05:48 Pair_ID=0',
+send_beg_time:2019-12-30 00:35:47,
+send_end_time:2019-12-30 00:35:53
+##
+##### The obj 161053 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161084, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:37:43) ######
+##### F30 : Case 2
+##### F60 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161084, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161084, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:45:47) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161086, don't need to send.
+##### GWAC : Case 1
+###### The obj 161130 of F60: Sending.
+##### There is no free units of GWAC when send 161086, don't need to send.##
+161130,
+append_plan GWAC goa && append_object G191229_C01249 11.3888666667 43.5748 2000 4 30.0 2 R 80 -1 -1 G191229_C01249_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:45:55,
+send_end_time:2019-12-30 00:46:00
+##
+##### The obj 161130 of F60: Send Wrong.
+###### The obj 161132 of F60: Sending.##
+161132,
+append_plan GWAC goa && append_object G191229_C01708 9.61566666667 4.35952 2000 4 30.0 2 R 80 -1 -1 G191229_C01708_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:46:24,
+send_end_time:2019-12-30 00:46:26
+##
+##### The obj 161132 of F60: Send Wrong.
+###### The obj 161131 of F60: Sending.##
+161131,
+append_plan GWAC goa && append_object G191229_C01593 4.55232 77.6695 2000 4 30.0 2 R 80 -1 -1 G191229_C01593_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:46:32,
+send_end_time:2019-12-30 00:46:34
+##
+##### The obj 161131 of F60: Send Wrong.
+###### Get news (2019-12-30 00:48:34) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+###### The obj 161130 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.##
+161130,
+append_plan GWAC goa && append_object G191229_C01249 11.3888666667 43.5748 2000 4 30.0 2 R 80 -1 -1 G191229_C01249_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:48:41,
+send_end_time:2019-12-30 00:48:47
+##
+##### The obj 161130 of F60: Send ok.
+###### The obj 161132 of F60: Sending.##
+161132,
+append_plan GWAC goa && append_object G191229_C01708 9.61566666667 4.35952 2000 4 30.0 2 R 80 -1 -1 G191229_C01708_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:48:57,
+send_end_time:2019-12-30 00:49:04
+##
+##### The obj 161132 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 00:50:09 The obj of 161130 is complete.#
+###### Get news (2019-12-30 00:50:27) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+##### GWAC : Case 1
+###### The obj 161131 of F60: Sending.
+##### There is no free units of GWAC when send 161086, don't need to send.##
+161131,
+append_plan GWAC goa && append_object G191229_C01593 4.55232 77.6695 2000 4 30.0 2 R 80 -1 -1 G191229_C01593_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:50:34,
+send_end_time:2019-12-30 00:50:41
+##
+##### The obj 161131 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 00:51:38 The obj of 161132 is complete.#
+###### Get news (2019-12-30 00:51:48) ######
+##### F30 : Case 2
+##### F60 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+###### Ready to get news #######
+2019-12-30 00:52:57 The obj of 161131 is complete.#
+###### Get news (2019-12-30 00:53:09) ######
+##### F30 : Case 2
+##### F60 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 00:58:52) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.
+###### The obj 161149 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161086, don't need to send.##
+161149,
+append_plan guangxi oba && append_object AT2019xcv 1.47513333333 48.3846 2000 4 150.0 2 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:58:59,
+send_end_time:2019-12-30 00:59:04
+##
+##### The obj 161149 of F60: Send ok.
+###### The obj 161150 of F60: Sending.##
+161150,
+append_plan guangxi oba && append_object AT2019xcv 1.47513333333 48.3846 2000 4 150.0 2 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-30 00:59:16,
+send_end_time:2019-12-30 00:59:21
+##
+##### The obj 161150 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 01:00:05 The obj of 161149 is complete.#
+###### Get news (2019-12-30 01:00:08) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:00:21 The obj of 161150 is complete.#
+###### Get news (2019-12-30 01:00:27) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:01:16) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:02:05) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:02:54) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:03:41) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:04:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:05:03) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:05:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:06:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:07:04) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:07:14 The obj of 161116 is complete.#
+###### Get news (2019-12-30 01:07:25) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161103, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+###### The obj 161103 of GWAC: Sending.##
+161103,
+tryclient 'append_gwac Op_sn=161103, Op_time=2019-12-29T17:07:34, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18450425, Obj_ID=moniotr,RA=184.55, DEC=42.5, Epoch=2000, ObjRA=184.55, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T17:07:34, end_time=2019-12-29T17:37:34 Pair_ID=0',
+send_beg_time:2019-12-30 01:07:33,
+send_end_time:2019-12-30 01:07:41
+##
+##### The obj 161103 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-30 01:08:09 The obj of 161053 is complete.#
+###### Get news (2019-12-30 01:08:33) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+###### The obj 161086 of GWAC: Sending.##
+161086,
+tryclient 'append_gwac Op_sn=161086, Op_time=2019-12-29T17:08:39, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17880255, Obj_ID=moniotr,RA=178.81, DEC=25.5, Epoch=2000, ObjRA=178.81, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T17:08:39, end_time=2019-12-29T17:38:39 Pair_ID=0',
+send_beg_time:2019-12-30 01:08:39,
+send_end_time:2019-12-30 01:08:46
+##
+##### The obj 161086 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:08:59) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:09:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:11:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161154 of F60: Sending.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.##
+161154,
+append_plan GWAC goa && append_object G191229_C02190 9.7928 10.6694 2000 4 10.0 1 R 90 -1 -1 G191229_C02190_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:11:09,
+send_end_time:2019-12-30 01:11:16
+##
+##### The obj 161154 of F60: Send ok.
+###### The obj 161133 of F60: Sending.##
+161133,
+append_plan GWAC goa && append_object G191229_C01932 10.4205333333 64.6372 2000 4 30.0 2 R 80 -1 -1 G191229_C01932_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:11:30,
+send_end_time:2019-12-30 01:11:36
+##
+##### The obj 161133 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:11:44) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161153, don't need to send.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:12:02 The obj of 161154 is complete.#
+###### Get news (2019-12-30 01:12:21) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161153 of F60: Sending.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.##
+161153,
+append_plan GWAC goa && append_object G191229_C02159 10.4196666667 64.6328 2000 4 30.0 2 R 80 -1 -1 G191229_C02159_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:12:27,
+send_end_time:2019-12-30 01:12:32
+##
+##### The obj 161153 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 01:13:19 The obj of 161133 is complete.#
+###### Get news (2019-12-30 01:13:46) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:14:08) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### The obj 161155 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.##
+161155,
+append_plan GWAC goa && append_object G191229_C02190 9.7928 10.6694 2000 4 10.0 1 R 90 -1 -1 G191229_C02190_002 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:14:14,
+send_end_time:2019-12-30 01:14:21
+##
+##### The obj 161155 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:14:43) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161156, don't need to send.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:14:43 The obj of 161155 is complete.#
+###### Get news (2019-12-30 01:14:53) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+###### The obj 161156 of F60: Sending.
+##### There is no free units of GWAC when send 161054, don't need to send.##
+161156,
+append_plan GWAC goa && append_object G191229_C02190 9.7928 10.6694 2000 4 10.0 1 R 90 -1 -1 G191229_C02190_003 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:15:00,
+send_end_time:2019-12-30 01:15:05
+##
+##### The obj 161156 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 01:15:27 The obj of 161156 is complete.#
+###### Get news (2019-12-30 01:15:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:16:14 The obj of 161153 is complete.#
+###### Get news (2019-12-30 01:16:24) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:17:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:17:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:18:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:19:37) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161054, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161054, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:20:27) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:21:16) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:22:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:22:52) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:23:42) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:24:33) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:25:20) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:26:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:27:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:27:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:28:40) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:29:28) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:30:13) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:31:01) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:31:51) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:32:37) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:33:24) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:34:15) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:35:06) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:35:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:36:40) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:37:29) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:38:17) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:38:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### The obj 161157 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.##
+161157,
+append_plan GWAC goa && append_object G191229_C03271 13.0056666667 35.2006 2000 4 30.0 2 R 80 -1 -1 G191229_C03271_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:38:34,
+send_end_time:2019-12-30 01:38:39
+##
+##### The obj 161157 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:39:33) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:40:04 The obj of 161157 is complete.#
+###### Get news (2019-12-30 01:40:19) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:40:27 The obj of 161103 is complete.#
+###### Get news (2019-12-30 01:40:42) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161117, don't need to send.
+##### GWAC : Case 1
+###### The obj 161117 of GWAC: Sending.##
+161117,
+tryclient 'append_gwac Op_sn=161117, Op_time=2019-12-29T17:40:53, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=18590595, Obj_ID=moniotr,RA=185.91, DEC=59.5, Epoch=2000, ObjRA=185.91, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T17:40:53, end_time=2019-12-29T18:10:53 Pair_ID=0',
+send_beg_time:2019-12-30 01:40:52,
+send_end_time:2019-12-30 01:40:59
+##
+##### The obj 161117 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-30 01:41:22 The obj of 161086 is complete.#
+###### Get news (2019-12-30 01:41:42) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+###### The obj 161054 of GWAC: Sending.##
+161054,
+tryclient 'append_gwac Op_sn=161054, Op_time=2019-12-29T17:41:48, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=17100085, Obj_ID=moniotr,RA=171.0, DEC=8.5, Epoch=2000, ObjRA=171.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T17:41:48, end_time=2019-12-29T18:11:48 Pair_ID=0',
+send_beg_time:2019-12-30 01:41:47,
+send_end_time:2019-12-30 01:41:53
+##
+##### The obj 161054 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:42:45) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:43:23) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### The obj 161158 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.##
+161158,
+append_plan GWAC goa && append_object G191229_C03346 11.4966 14.0274 2000 4 30.0 2 R 80 -1 -1 G191229_C03346_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:43:29,
+send_end_time:2019-12-30 01:43:35
+##
+##### The obj 161158 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:44:28) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:45:01 The obj of 161158 is complete.#
+###### Get news (2019-12-30 01:45:12) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:46:02) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:46:52) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:47:38) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:48:26) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:49:13) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:49:59) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:50:06) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### The obj 161159 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.##
+161159,
+append_plan GWAC goa && append_object G191229_C03600 12.0889333333 12.3641 2000 4 30.0 2 R 80 -1 -1 G191229_C03600_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 01:50:14,
+send_end_time:2019-12-30 01:50:19
+##
+##### The obj 161159 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:51:09) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news #######
+2019-12-30 01:51:27 The obj of 161159 is complete.#
+###### Get news (2019-12-30 01:51:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:52:38) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:53:24) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:54:13) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:54:58) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:55:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:56:36) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:57:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:58:15) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:59:06) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 01:59:55) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:00:43) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:01:32) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:01:42) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### The obj 161160 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.##
+161160,
+append_plan GWAC goa && append_object G191229_C03847 10.7551333333 18.5144 2000 4 30.0 2 R 80 -1 -1 G191229_C03847_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 02:01:49,
+send_end_time:2019-12-30 02:01:53
+##
+##### The obj 161160 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:02:47) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news #######
+2019-12-30 02:03:04 The obj of 161160 is complete.#
+###### Get news (2019-12-30 02:03:24) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:04:10) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:04:58) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:05:44) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:06:29) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:07:18) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:08:06) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:08:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:09:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:10:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:11:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:12:02) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:12:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:13:37) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161087, don't need to send.
+###### Ready to get news #######
+2019-12-30 02:13:41 The obj of 161117 is complete.#
+###### Get news (2019-12-30 02:13:51) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161087, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+###### The obj 161087 of GWAC: Sending.##
+161087,
+tryclient 'append_gwac Op_sn=161087, Op_time=2019-12-29T18:13:59, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=19760255, Obj_ID=moniotr,RA=197.64, DEC=25.5, Epoch=2000, ObjRA=197.64, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T18:13:59, end_time=2019-12-29T18:43:59 Pair_ID=0',
+send_beg_time:2019-12-30 02:13:59,
+send_end_time:2019-12-30 02:14:06
+##
+##### The obj 161087 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-30 02:14:19 The obj of 161054 is complete.#
+###### Get news (2019-12-30 02:14:28) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+###### The obj 161055 of GWAC: Sending.##
+161055,
+tryclient 'append_gwac Op_sn=161055, Op_time=2019-12-29T18:14:35, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=18900085, Obj_ID=moniotr,RA=189.0, DEC=8.5, Epoch=2000, ObjRA=189.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T18:14:35, end_time=2019-12-29T18:44:35 Pair_ID=0',
+send_beg_time:2019-12-30 02:14:34,
+send_end_time:2019-12-30 02:14:44
+##
+##### The obj 161055 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:15:31) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161161 of F60: Sending.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.##
+161161,
+append_plan GWAC goa && append_object G191229_C03964 12.3299333333 25.8946 2000 4 30.0 2 R 80 -1 -1 G191229_C03964_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 02:15:36,
+send_end_time:2019-12-30 02:15:41
+##
+##### The obj 161161 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:16:31) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:16:42) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161162 of F60: Sending.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.##
+161162,
+append_plan GWAC goa && append_object G191229_C04013 12.7696 30.7272 2000 4 30.0 2 R 80 -1 -1 G191229_C04013_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 02:16:48,
+send_end_time:2019-12-30 02:16:53
+##
+##### The obj 161162 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 02:16:51 The obj of 161161 is complete.#
+###### Get news (2019-12-30 02:17:07) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+###### The obj 161163 of F60: Sending.
+##### There is no free units of GWAC when send 161071, don't need to send.##
+161163,
+append_plan GWAC goa && append_object G191229_C04032 12.4644 15.8589 2000 4 30.0 2 R 80 -1 -1 G191229_C04032_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 02:17:13,
+send_end_time:2019-12-30 02:17:19
+##
+##### The obj 161163 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 02:18:23 The obj of 161162 is complete.#
+###### Get news (2019-12-30 02:18:32) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:19:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news #######
+2019-12-30 02:19:56 The obj of 161163 is complete.#
+###### Get news (2019-12-30 02:20:11) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:20:59) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:21:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:22:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:23:24) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:24:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:25:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:25:49) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:26:39) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:27:27) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:28:12) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:28:22) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:29:13) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:30:02) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:30:50) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:31:37) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:32:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:33:16) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:34:04) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:34:52) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:35:39) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:36:25) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:37:13) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:38:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:38:45) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:39:31) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161071, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161071, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:40:24) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:41:14) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:42:01) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:42:51) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:43:39) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:44:28) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:45:16) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:46:07) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:46:53) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161104, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161104, don't need to send.
+###### Ready to get news #######
+2019-12-30 02:46:54 The obj of 161087 is complete.#
+###### Get news (2019-12-30 02:47:20) #######
+2019-12-30 02:47:01 The obj of 161055 is complete.#
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+###### The obj 161104 of GWAC: Sending.##
+161104,
+tryclient 'append_gwac Op_sn=161104, Op_time=2019-12-29T18:47:28, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=20620425, Obj_ID=moniotr,RA=206.26, DEC=42.5, Epoch=2000, ObjRA=206.26, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T18:47:28, end_time=2019-12-29T19:17:28 Pair_ID=0',
+send_beg_time:2019-12-30 02:47:26,
+send_end_time:2019-12-30 02:47:35
+##
+##### The obj 161104 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 161071 of GWAC: Sending.##
+161071,
+tryclient 'append_gwac Op_sn=161071, Op_time=2019-12-29T18:47:53, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=17101085, Obj_ID=moniotr,RA=171.0, DEC=-8.5, Epoch=2000, ObjRA=171.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T18:47:53, end_time=2019-12-29T19:17:53 Pair_ID=0',
+send_beg_time:2019-12-30 02:47:53,
+send_end_time:2019-12-30 02:47:59
+##
+##### The obj 161071 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:48:09) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:48:57) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:49:46) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:50:33) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:51:24) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:52:11) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:52:59) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:53:46) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:54:37) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:55:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:56:13) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:57:00) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161165 of F60: Sending.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.##
+161165,
+append_plan GWAC goa && append_object G191229_C04684 13.6020666667 51.8825 2000 4 10.0 1 R 90 -1 -1 G191229_C04684_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 02:57:05,
+send_end_time:2019-12-30 02:57:13
+##
+##### The obj 161165 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:57:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news #######
+2019-12-30 02:57:46 The obj of 161165 is complete.#
+###### Get news (2019-12-30 02:57:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:58:48) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:58:56) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 02:59:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161070, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161070, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:00:36) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161164 of F60: Sending.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.##
+161164,
+append_plan GWAC goa && append_object G191229_C04339 13.253 6.32881 2000 4 30.0 2 R 80 -1 -1 G191229_C04339_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 03:00:41,
+send_end_time:2019-12-30 03:00:46
+##
+##### The obj 161164 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:01:40) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:02:28) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:03:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:04:06) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:04:51) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:05:37) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:06:25) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:07:14) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:08:02) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:08:50) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:09:41) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:10:34) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:11:24) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:12:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:13:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:13:44) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:13:54 The obj of 161164 is complete.#
+###### Get news (2019-12-30 03:14:17) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:15:06) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:15:54) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:16:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:17:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:18:17) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:19:07) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:19:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:20:43) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1#
+2019-12-30 03:20:34 The obj of 161104 is complete.#
+###### The obj 161088 of GWAC: Sending.#
+2019-12-30 03:20:36 The obj of 161071 is complete.#
+##### The obj 161141 of F60: Need Wait.##
+161088,
+tryclient 'append_gwac Op_sn=161088, Op_time=2019-12-29T19:20:48, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=21640255, Obj_ID=moniotr,RA=216.46, DEC=25.5, Epoch=2000, ObjRA=216.46, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T19:20:48, end_time=2019-12-29T19:50:48 Pair_ID=0',
+send_beg_time:2019-12-30 03:20:47,
+send_end_time:2019-12-30 03:20:55
+##
+##### The obj 161088 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 161127 of GWAC: Sending.##
+161127,
+tryclient 'append_gwac Op_sn=161127, Op_time=2019-12-29T19:21:10, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=21620765, Obj_ID=moniotr,RA=216.23, DEC=76.5, Epoch=2000, ObjRA=216.23, ObjDEC=76.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T19:21:10, end_time=2019-12-29T19:51:10 Pair_ID=0',
+send_beg_time:2019-12-30 03:21:09,
+send_end_time:2019-12-30 03:21:17
+##
+##### The obj 161127 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:21:33) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:21:44) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:22:33) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:23:21) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:24:09) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:24:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:25:07) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+###### The obj 161167 of F60: Sending.
+##### There is no free units of GWAC when send 161118, don't need to send.##
+161167,
+append_plan GWAC goa && append_object G191229_C05015 13.3864 80.1786 2000 4 30.0 2 R 80 -1 -1 G191229_C05015_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 03:25:14,
+send_end_time:2019-12-30 03:25:20
+##
+##### The obj 161167 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:26:10) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:26:35 The obj of 161167 is complete.#
+###### Get news (2019-12-30 03:26:50) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:27:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:28:23) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:29:11) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:29:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### The obj 161168 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.##
+161168,
+append_plan GWAC goa && append_object G191229_C05099 8.33086666667 77.0896 2000 4 30.0 2 R 80 -1 -1 G191229_C05099_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 03:30:05,
+send_end_time:2019-12-30 03:30:10
+##
+##### The obj 161168 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:30:25) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:31:13) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:31:26 The obj of 161168 is complete.#
+###### Get news (2019-12-30 03:31:45) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:32:33) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:33:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:34:12) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:34:59) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:35:47) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:36:37) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:37:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:38:14) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:38:55) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+###### The obj 161169 of F60: Sending.
+##### There is no free units of GWAC when send 161118, don't need to send.##
+161169,
+append_plan GWAC goa && append_object G191229_C05416 12.6933333333 69.7622 2000 4 30.0 2 R 80 -1 -1 G191229_C05416_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 03:39:01,
+send_end_time:2019-12-30 03:39:07
+##
+##### The obj 161169 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:39:57) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:40:21 The obj of 161169 is complete.#
+###### Get news (2019-12-30 03:40:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:41:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:41:57) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161170 of F60: Sending.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.##
+161170,
+append_plan GWAC goa && append_object G191229_C05553 14.4722 67.6736 2000 4 30.0 2 R 80 -1 -1 G191229_C05553_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 03:42:02,
+send_end_time:2019-12-30 03:42:08
+##
+##### The obj 161170 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:43:01) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:43:32 The obj of 161170 is complete.#
+###### Get news (2019-12-30 03:43:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:44:39) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:45:27) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:46:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:47:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:48:00) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:48:51) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:49:40) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:50:28) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:51:15) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:52:01) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:52:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161118, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:53:17 The obj of 161088 is complete.#
+###### Get news (2019-12-30 03:53:25) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161118 of GWAC: Sending.
+##### The obj 161141 of F60: Need Wait.##
+161118,
+tryclient 'append_gwac Op_sn=161118, Op_time=2019-12-29T19:53:32, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=21450595, Obj_ID=moniotr,RA=214.52, DEC=59.5, Epoch=2000, ObjRA=214.52, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T19:53:32, end_time=2019-12-29T20:23:32 Pair_ID=0',
+send_beg_time:2019-12-30 03:53:32,
+send_end_time:2019-12-30 03:53:40
+##
+##### The obj 161118 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161056, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:54:39) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161056, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161056, don't need to send.
+###### Ready to get news #######
+2019-12-30 03:54:51 The obj of 161127 is complete.#
+###### Get news (2019-12-30 03:55:06) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161056, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+###### The obj 161056 of GWAC: Sending.##
+161056,
+tryclient 'append_gwac Op_sn=161056, Op_time=2019-12-29T19:55:17, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=20700085, Obj_ID=moniotr,RA=207.0, DEC=8.5, Epoch=2000, ObjRA=207.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T19:55:17, end_time=2019-12-29T20:25:17 Pair_ID=0',
+send_beg_time:2019-12-30 03:55:16,
+send_end_time:2019-12-30 03:55:23
+##
+##### The obj 161056 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:56:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:57:01) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:57:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:58:39) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 03:59:27) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:00:17) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+###### The obj 161166 of F60: Sending.
+##### There is no free units of GWAC when send 161105, don't need to send.##
+161166,
+append_plan GWAC goa && append_object G191229_C04702 11.7733333333 -20.046 2000 4 30.0 2 R 80 -1 -1 G191229_C04702_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:00:26,
+send_end_time:2019-12-30 04:00:32
+##
+##### The obj 161166 of F60: Send ok.
+##### The obj 161141 of F60: Need Wait.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:01:22) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:02:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:02:59) ######
+##### GWAC : Case 1
+##### F30 : Case 2
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:03:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:04:37) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:05:27) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:06:20) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:07:09) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:07:57) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:08:45) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:09:32) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:10:17) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:11:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:11:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:12:46) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:13:34) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:14:21) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:15:07) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:15:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:16:43) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:17:32) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:18:20) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:19:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:19:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:20:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:21:35) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:22:26) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:23:14) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:24:02) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:24:49) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:25:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.
+##### GWAC : Case 1
+##### The obj 161141 of F60: Need Wait.
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:26:12) ######
+##### F60 : Case 1
+##### GWAC : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161089, don't need to send.
+###### The obj 161171 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161089, don't need to send.##
+161171,
+append_plan GWAC goa && append_object G191229_C07479 13.5384 9.72101 2000 4 30.0 2 R 80 -1 -1 G191229_C07479_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:26:19,
+send_end_time:2019-12-30 04:26:25
+##
+##### The obj 161171 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:26:30 The obj of 161118 is complete.#
+###### Get news (2019-12-30 04:26:49) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161141, don't need to send.
+###### The obj 161089 of GWAC: Sending.##
+161089,
+tryclient 'append_gwac Op_sn=161089, Op_time=2019-12-29T20:26:55, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=23520255, Obj_ID=moniotr,RA=235.28, DEC=25.5, Epoch=2000, ObjRA=235.28, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T20:26:55, end_time=2019-12-29T20:56:55 Pair_ID=0',
+send_beg_time:2019-12-30 04:26:55,
+send_end_time:2019-12-30 04:27:01
+##
+##### The obj 161089 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news #######
+2019-12-30 04:27:52 The obj of 161171 is complete.#
+###### Get news (2019-12-30 04:28:11) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+###### Ready to get news #######
+2019-12-30 04:28:18 The obj of 161056 is complete.#
+###### Get news (2019-12-30 04:28:31) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161105, don't need to send.
+##### The obj 161141 of F60: Need Wait.
+##### GWAC : Case 1
+###### The obj 161105 of GWAC: Sending.##
+161105,
+tryclient 'append_gwac Op_sn=161105, Op_time=2019-12-29T20:28:41, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=22790425, Obj_ID=moniotr,RA=227.98, DEC=42.5, Epoch=2000, ObjRA=227.98, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T20:28:41, end_time=2019-12-29T20:58:41 Pair_ID=0',
+send_beg_time:2019-12-30 04:28:41,
+send_end_time:2019-12-30 04:28:47
+##
+##### The obj 161105 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:28:59) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+###### The obj 161172 of F60: Sending.
+##### There is no free units of GWAC when send 161073, don't need to send.##
+161172,
+append_plan GWAC goa && append_object G191229_C07571 15.9360666667 29.2445 2000 4 30.0 2 R 80 -1 -1 G191229_C07571_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:29:05,
+send_end_time:2019-12-30 04:29:11
+##
+##### The obj 161172 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:31:30) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 161173, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:33:16) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161174, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:34:28) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### There is no free units of F60 when send 161174, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 04:35:47) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161176, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 04:39:57 The obj of 161172 is complete.#
+###### Get news (2019-12-30 04:40:05) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.
+###### The obj 161176 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.##
+161176,
+append_plan GWAC goa && append_object G191229_C08268 15.4625333333 19.5574 2000 4 30.0 2 R 80 -1 -1 G191229_C08268_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:40:11,
+send_end_time:2019-12-30 04:40:16
+##
+##### The obj 161176 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:41:23 The obj of 161176 is complete.#
+###### Get news (2019-12-30 04:41:42) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.
+##### GWAC : Case 1
+###### The obj 161174 of F60: Sending.
+##### There is no free units of GWAC when send 161057, don't need to send.##
+161174,
+append_plan GWAC goa && append_object G191229_C08027 15.4256666667 31.4778 2000 4 30.0 2 R 80 -1 -1 G191229_C08027_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:41:49,
+send_end_time:2019-12-30 04:41:56
+##
+##### The obj 161174 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:43:02 The obj of 161174 is complete.#
+###### Get news (2019-12-30 04:43:23) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.
+###### The obj 161175 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.##
+161175,
+append_plan GWAC goa && append_object G191229_C07963 14.7635333333 33.7552 2000 4 30.0 2 R 80 -1 -1 G191229_C07963_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:43:29,
+send_end_time:2019-12-30 04:43:35
+##
+##### The obj 161175 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:45:01 The obj of 161175 is complete.#
+###### Get news (2019-12-30 04:45:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.
+##### GWAC : Case 1
+###### The obj 161173 of F60: Sending.
+##### There is no free units of GWAC when send 161057, don't need to send.##
+161173,
+append_plan GWAC goa && append_object G191229_C07867 14.1706 42.2769 2000 4 30.0 2 R 80 -1 -1 G191229_C07867_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:45:19,
+send_end_time:2019-12-30 04:45:26
+##
+##### The obj 161173 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:46:31 The obj of 161173 is complete.#
+###### Get news (2019-12-30 04:46:40) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+###### The obj 161141 of F60: Sending.
+##### There is no free units of GWAC when send 161057, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161057, don't need to send.##
+161141,
+append_plan guangxi oba && append_object AT2019yfx 13.5124666667 -13.427 2000 4 150.0 3 B 21 && append_plan gwac default ,
+send_beg_time:2019-12-30 04:46:44,
+send_end_time:2019-12-30 04:46:51
+##
+##### The obj 161141 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 04:59:42 The obj of 161089 is complete.#
+###### Get news (2019-12-30 04:59:58) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161142, don't need to send.
+###### The obj 161057 of GWAC: Sending.##
+161057,
+tryclient 'append_gwac Op_sn=161057, Op_time=2019-12-29T21:00:03, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=22500085, Obj_ID=moniotr,RA=225.0, DEC=8.5, Epoch=2000, ObjRA=225.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T21:00:03, end_time=2019-12-29T21:30:03 Pair_ID=0',
+send_beg_time:2019-12-30 05:00:02,
+send_end_time:2019-12-30 05:00:10
+##
+##### The obj 161057 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 05:01:31 The obj of 161105 is complete.#
+###### Get news (2019-12-30 05:01:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161142, don't need to send.
+##### There is no free units of GWAC when send 161119, don't need to send.
+##### GWAC : Case 1
+###### The obj 161119 of GWAC: Sending.##
+161119,
+tryclient 'append_gwac Op_sn=161119, Op_time=2019-12-29T21:01:56, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=24310595, Obj_ID=moniotr,RA=243.12, DEC=59.5, Epoch=2000, ObjRA=243.12, ObjDEC=59.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T21:01:56, end_time=2019-12-29T21:31:56 Pair_ID=0',
+send_beg_time:2019-12-30 05:01:55,
+send_end_time:2019-12-30 05:02:03
+##
+##### The obj 161119 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:07:35) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161177, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:10:36) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### There is no free units of F60 when send 161178, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:11:12) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161178, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:14:28) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of F60 when send 161178, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:18:57) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161178 of F60: Sending.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.##
+161178,
+append_plan GWAC goa && append_object G191229_C09621 14.4736666667 18.9305 2000 4 30.0 2 R 80 -1 -1 G191229_C09621_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:19:01,
+send_end_time:2019-12-30 05:19:07
+##
+##### The obj 161178 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:19:14) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### There is no free units of F60 when send 161181, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 05:20:21 The obj of 161178 is complete.#
+###### Get news (2019-12-30 05:20:37) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.
+###### The obj 161180 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.##
+161180,
+append_plan GWAC goa && append_object G191229_C09723 17.5076 70.5308 2000 4 30.0 2 R 80 -1 -1 G191229_C09723_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:20:42,
+send_end_time:2019-12-30 05:20:47
+##
+##### The obj 161180 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 05:22:11 The obj of 161180 is complete.#
+###### Get news (2019-12-30 05:22:30) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.
+##### GWAC : Case 1
+###### The obj 161181 of F60: Sending.
+##### There is no free units of GWAC when send 161106, don't need to send.##
+161181,
+append_plan GWAC goa && append_object G191229_C09964 16.3132666667 62.5039 2000 4 30.0 2 R 80 -1 -1 G191229_C09964_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:22:36,
+send_end_time:2019-12-30 05:22:41
+##
+##### The obj 161181 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 05:22:40 The obj of 161181 is complete.#
+###### Get news (2019-12-30 05:23:12) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.
+##### GWAC : Case 1
+###### The obj 161177 of F60: Sending.
+##### There is no free units of GWAC when send 161106, don't need to send.##
+161177,
+append_plan GWAC goa && append_object G191229_C09540 14.4692666667 6.54397 2000 4 30.0 2 R 80 -1 -1 G191229_C09540_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:23:17,
+send_end_time:2019-12-30 05:23:22
+##
+##### The obj 161177 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 05:27:43 The obj of 161141 is complete.#
+###### Get news (2019-12-30 05:27:54) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161179 of F60: Sending.
+##### There is no free units of GWAC when send 161106, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.##
+161179,
+append_plan GWAC goa && append_object G191229_C09636 14.2806666667 5.85474 2000 4 30.0 2 R 80 -1 -1 G191229_C09636_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:27:57,
+send_end_time:2019-12-30 05:28:03
+##
+##### The obj 161179 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:28:42) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161106, don't need to send.
+##### There is no free units of F60 when send 161142, don't need to send.
+##### GWAC : Case 1
+###### The obj 161106 of GWAC: Sending.##
+161106,
+tryclient 'append_gwac Op_sn=161106, Op_time=2019-12-29T21:28:52, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=24960425, Obj_ID=moniotr,RA=249.69, DEC=42.5, Epoch=2000, ObjRA=249.69, ObjDEC=42.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T21:28:52, end_time=2019-12-29T21:58:52 Pair_ID=0',
+send_beg_time:2019-12-30 05:28:52,
+send_end_time:2019-12-30 05:28:58
+##
+##### The obj 161106 of GWAC: Send ok.
+###### Ready to get news #######
+2019-12-30 05:29:20 The obj of 161177 is complete.#
+###### Get news (2019-12-30 05:29:38) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+###### The obj 161142 of F60: Sending.
+##### There is no free units of GWAC when send 161073, don't need to send.##
+161142,
+append_plan guangxi oba && append_object AT2019yfx 13.5124666667 -13.427 2000 4 150.0 3 V 21 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:29:46,
+send_end_time:2019-12-30 05:29:51
+##
+##### The obj 161142 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:30:25) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### The obj 161182 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.##
+161182,
+append_plan GWAC goa && append_object G191229_C09540 14.4694 6.54556 2000 4 30.0 1 B 81 -1 -1 G191229_C09540_002 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:30:30,
+send_end_time:2019-12-30 05:30:36
+##
+##### The obj 161182 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:30:43) ######
+##### GWAC : Case 1
+##### F60 : Case 1
+##### F30 : Case 2
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161183, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 05:31:15 The obj of 161182 is complete.#
+###### Get news (2019-12-30 05:31:24) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161183 of F60: Sending.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.##
+161183,
+append_plan GWAC goa && append_object G191229_C09540 14.4694 6.54556 2000 4 30.0 1 R 81 -1 -1 G191229_C09540_003 && append_plan gwac default ,
+send_beg_time:2019-12-30 05:31:29,
+send_end_time:2019-12-30 05:31:34
+##
+##### The obj 161183 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:32:13) ######
+##### F30 : Case 2
+##### GWAC : Case 1
+##### F60 : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### There is no free units of F60 when send 161184, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 05:32:17 The obj of 161183 is complete.#
+###### Get news (2019-12-30 05:32:30) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161184, don't need to send.
+##### There is no free units of GWAC when send 161073, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161073, don't need to send.
+###### Ready to get news #######
+2019-12-30 05:32:39 The obj of 161057 is complete.#
+###### Get news (2019-12-30 05:32:48) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161184, don't need to send.
+###### The obj 161073 of GWAC: Sending.##
+161073,
+tryclient 'append_gwac Op_sn=161073, Op_time=2019-12-29T21:32:53, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=20701085, Obj_ID=moniotr,RA=207.0, DEC=-8.5, Epoch=2000, ObjRA=207.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T21:32:53, end_time=2019-12-29T22:02:53 Pair_ID=0',
+send_beg_time:2019-12-30 05:32:52,
+send_end_time:2019-12-30 05:33:00
+##
+##### The obj 161073 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 05:34:46) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+##### There is no free units of F60 when send 161184, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161072, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:01:03) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161186, don't need to send.
+##### There is no free units of GWAC when send 161090, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161090, don't need to send.
+###### Ready to get news #######
+2019-12-30 06:01:11 The obj of 161142 is complete.##
+2019-12-30 06:01:11 The obj of 161179 is complete.#
+###### Get news (2019-12-30 06:01:14) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161090, don't need to send.
+###### The obj 161186 of F60: Sending.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161090, don't need to send.##
+161186,
+append_plan GWAC goa && append_object G191229_C11228 17.0570666667 31.568 2000 4 30.0 2 R 80 -1 -1 G191229_C11228_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 06:01:19,
+send_end_time:2019-12-30 06:01:25
+##
+##### The obj 161186 of F60: Send ok.
+###### The obj 161184 of F60: Sending.##
+161184,
+append_plan GWAC goa && append_object G191229_C10524 16.5293333333 37.2937 2000 4 30.0 2 R 80 -1 -1 G191229_C10524_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 06:01:36,
+send_end_time:2019-12-30 06:01:41
+##
+##### The obj 161184 of F60: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:01:50) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161090, don't need to send.
+##### There is no free units of F60 when send 161185, don't need to send.
+##### GWAC : Case 1#
+2019-12-30 06:01:37 The obj of 161106 is complete.#
+###### The obj 161090 of GWAC: Sending.##
+161090,
+tryclient 'append_gwac Op_sn=161090, Op_time=2019-12-29T22:02:01, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=25410255, Obj_ID=moniotr,RA=254.1, DEC=25.5, Epoch=2000, ObjRA=254.1, ObjDEC=25.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T22:02:01, end_time=2019-12-29T22:32:01 Pair_ID=0',
+send_beg_time:2019-12-30 06:02:01,
+send_end_time:2019-12-30 06:02:08
+##
+##### The obj 161090 of GWAC: Send ok.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:02:19) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161185, don't need to send.
+##### There is no free units of GWAC when send 161058, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161058, don't need to send.
+###### Ready to get news #######
+2019-12-30 06:04:00 The obj of 161186 is complete.#
+###### Get news (2019-12-30 06:04:15) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161185 of F60: Sending.
+##### There is no free units of GWAC when send 161058, don't need to send.
+##### GWAC : Case 1##
+161185,
+append_plan GWAC goa && append_object G191229_C10752 14.2433333333 -5.76154 2000 4 30.0 2 R 80 -1 -1 G191229_C10752_001 && append_plan gwac default ,
+send_beg_time:2019-12-30 06:04:18,
+send_end_time:2019-12-30 06:04:24
+##
+##### There is no free units of GWAC when send 161058, don't need to send.
+##### The obj 161185 of F60: Send ok.
+###### Ready to get news #######
+2019-12-30 06:05:09 The obj of 161184 is complete.#
+###### Get news (2019-12-30 06:05:32) #######
+2019-12-30 06:05:22 The obj of 161073 is complete.#
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+###### The obj 161143 of F60: Sending.
+###### The obj 161058 of GWAC: Sending.##
+161143,
+append_plan guangxi oba && append_object AT2019yfx 13.5124666667 -13.427 2000 4 150.0 3 R 21 && append_plan gwac default ,
+send_beg_time:2019-12-30 06:05:39,
+send_end_time:2019-12-30 06:05:43
+####
+161058,
+tryclient 'append_gwac Op_sn=161058, Op_time=2019-12-29T22:05:39, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=24300085, Obj_ID=moniotr,RA=243.0, DEC=8.5, Epoch=2000, ObjRA=243.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-29T22:05:39, end_time=2019-12-29T22:35:39 Pair_ID=0',
+send_beg_time:2019-12-30 06:05:39,
+send_end_time:2019-12-30 06:05:46
+##
+##### The obj 161143 of F60: Send ok.
+##### The obj 161058 of GWAC: Send ok.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:06:02) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161144, don't need to send.
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:15:17) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### There is no free units of F60 when send 161187, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:15:28) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161187, don't need to send.
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:16:38) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161187, don't need to send.
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:17:09) ######
+##### F60 : Case 1
+##### F30 : Case 2
+##### GWAC : Case 1
+##### There is no free units of F60 when send 161187, don't need to send.
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news ######
+###### Get news (2019-12-30 06:18:00) ######
+##### F30 : Case 2
+##### F60 : Case 1
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+##### There is no free units of F60 when send 161187, don't need to send.
+##### GWAC : Case 1
+##### There is no free units of GWAC when send 161074, don't need to send.
+###### Ready to get news #######
+2019-12-30 06:20:04 The obj of 161143 is complete.##
+2019-12-30 06:20:06 The obj of 161185 is complete.##
+2019-12-30 06:20:10 The obj of 161058 is complete.##
+2019-12-30 06:20:12 The obj of 161090 is complete.#
+###### Get news (2019-12-30 18:19:23) ######
+##### F60 : Case 2
+##### F30 : Case 2
+##### GWAC : Case 1
+###### The obj 161218 of GWAC: Sending.##
+161218,
+tryclient 'append_gwac Op_sn=161218, Op_time=2019-12-30T10:19:31, Op_type=obs,Group_ID=001, Unit_ID=002, ObsType=Mon, Grid_ID=G0014, Field_ID=35100085, Obj_ID=moniotr,RA=351.0, DEC=8.5, Epoch=2000, ObjRA=351.0, ObjDEC=8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-30T10:19:31, end_time=2019-12-30T10:49:31 Pair_ID=0',
+send_beg_time:2019-12-30 18:19:31,
+send_end_time:2019-12-30 18:19:38
+##
+##### The obj 161218 of GWAC: Send ok.
+##### GWAC : Case 1
+###### The obj 161232 of GWAC: Sending.##
+161232,
+tryclient 'append_gwac Op_sn=161232, Op_time=2019-12-30T10:19:53, Op_type=obs,Group_ID=001, Unit_ID=004, ObsType=Mon, Grid_ID=G0014, Field_ID=35101085, Obj_ID=moniotr,RA=351.0, DEC=-8.5, Epoch=2000, ObjRA=351.0, ObjDEC=-8.5, ObjEpoch=2000, ObjError=0.0|0.0, ImgType=object,expdur=10.0, delay=5.0, frmcnt=120, priority=10, begin_time=2019-12-30T10:19:53, end_time=2019-12-30T10:49:53 Pair_ID=0',
+send_beg_time:2019-12-30 18:19:51,
+send_end_time:2019-12-30 18:20:00
+##
+##### The obj 161232 of GWAC: Send ok.
+###### Ready to get news ######
